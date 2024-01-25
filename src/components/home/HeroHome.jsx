@@ -1,7 +1,19 @@
 import React, { useState, useEffect } from "react";
 /* import { Link } from "react-scroll"; */
 /* import { motion } from "framer-motion"; */
+const images = [
+  "https://i.ibb.co/dBv7XkS/male-veterinarian-with-blue-scrubs-gloves-using-stethoscope-listen-heart-beagle-dog-woman-vet-holdin.jpg",
+  "https://i.ibb.co/FVJWyk2/close-up-veterinarian-taking-care-pet.jpg",
+  "https://i.ibb.co/bzmbxqc/high-angle-careful-doctors-helping-sick-dog.jpg",
+  "https://i.ibb.co/mD8Gy8S/caucasian-hispanic-veterinarians-smiling-while-examining-beagle-dog-exam-table-happy-vets-with-steth.jpg",
+  // Agrega más URLs de imágenes según sea necesario
+];
 
+function preloadImages(urls) {
+  urls.forEach((url) => {
+    new Image().src = url;
+  });
+}
 const HeroHome = () => {
   const language = "es";
   const messages = {
@@ -74,14 +86,11 @@ const HeroHome = () => {
     }
   }, [language]);
 
-  const images = [
-    "url(https://static.wixstatic.com/media/863055_797b59f1342445a19f07a0cee65d9812~mv2.jpg/v1/fill/w_1652,h_671,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/863055_797b59f1342445a19f07a0cee65d9812~mv2.jpg)",
-    "url(https://static.wixstatic.com/media/11062b_5f2e403e4cfa46e29ca37202af7f6f12~mv2.jpg/v1/fill/w_1903,h_549,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/11062b_5f2e403e4cfa46e29ca37202af7f6f12~mv2.jpg)",
-
-    // Agrega más URLs de imágenes según sea necesario
-  ];
-
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    preloadImages(images);
+  }, []);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -90,18 +99,17 @@ const HeroHome = () => {
       );
     }, 5000);
 
-    return () => clearInterval(intervalId); // Limpiar el intervalo cuando el componente se desmonta
-  }, [currentImageIndex, images.length]);
+    return () => clearInterval(intervalId);
+  }, []);
 
   const currentImageStyle = {
-    backgroundImage: images[currentImageIndex],
+    backgroundImage: `url(${images[currentImageIndex]})`,
     transition: "background-image 1.5s linear",
   };
-
   return (
     <>
       <div className="hero min-h-[100vh]" style={currentImageStyle}>
-        <div className="hero-overlay bg-black opacity-50" />
+        <div className="hero-overlay bg-black opacity-30" />
         <div className="hero-content text-center text-white">
           <div className="max-w-5xl">
             <h1 className="my-5 lg:text-5xl md:text-3xl text-2xl font-bold tracking-wider">

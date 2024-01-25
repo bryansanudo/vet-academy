@@ -21,27 +21,27 @@ const Footer = ({ darkMode }) => {
     {
       id: 3,
       logo: <FaWhatsapp />,
-      link: "https://twitter.com/eb3wfs",
+      link: "https://api.whatsapp.com/send?phone=573243291412",
     },
-    {
+    /* {
       id: 5,
       logo: <FaTiktok />,
       link: "https://www.tiktok.com/@eb3wfs",
-    },
+    }, */
     {
       id: 6,
       logo: <FaYoutube />,
-      link: "https://www.youtube.com/@eb3wfs",
+      link: "https://www.youtube.com/@vet.academy",
     },
     {
       id: 2,
       logo: <FaInstagram />,
-      link: "https://www.instagram.com/eb3wfs/",
+      link: "https://www.instagram.com/vet.academyedu",
     },
     {
       id: 1,
       logo: <FaFacebookF />,
-      link: "https://www.facebook.com/eb3wfs",
+      link: "https://www.facebook.com/vet.academyedu/",
     },
   ];
   return (
@@ -99,36 +99,51 @@ const Footer = ({ darkMode }) => {
         </div> */}
       </aside>
       <nav>
+        <header className={`${styles.title}`}>Acerca De</header>
+        <div className={`${styles.subtitle} hover:font-medium cursor-pointer`}>
+          <div>Eventos</div>
+        </div>
+        <div className={`${styles.subtitle} hover:font-medium cursor-pointer`}>
+          <div>Proximos Cursos</div>
+        </div>
+        <div className={`${styles.subtitle} hover:font-medium cursor-pointer`}>
+          <div>Preguntas Frecuentes</div>
+        </div>
+        <div className={`${styles.subtitle} hover:font-medium cursor-pointer`}>
+          <div>Contacto</div>
+        </div>
+      </nav>
+      <nav>
         <header className={`${styles.title}`}>Cursos</header>
         <div className={`${styles.subtitle} hover:font-medium cursor-pointer`}>
-          <Link to="/eb1a">EB-1</Link>
+          <div to="/eb1a">Curso 1</div>
         </div>
         <div className={`${styles.subtitle} hover:font-medium cursor-pointer`}>
-          <Link to="/eb2">EB-2</Link>
+          <div to="/eb2">Curso 2</div>
         </div>
         <div className={`${styles.subtitle} hover:font-medium cursor-pointer`}>
-          <Link to="/eb3a">EB-3</Link>
+          <div to="/eb3a">Curso 3</div>
         </div>
         <div className={`${styles.subtitle} hover:font-medium cursor-pointer`}>
-          <Link to="/eb5">EB-5</Link>
+          <div to="/eb5">Curso 4</div>
         </div>
         <div className={`${styles.subtitle} hover:font-medium cursor-pointer`}>
-          <Link to="/faq">FAQ</Link>
+          <div to="/faq">FAQ</div>
         </div>
       </nav>
 
       <nav>
         <header className={`${styles.title}`}>Legal</header>
-        <Link to="/terms">
+        <div to="/terms">
           <p className={`${styles.subtitle} hover:font-medium cursor-pointer`}>
             Terms of use
           </p>
-        </Link>
-        <Link to="/privacy">
+        </div>
+        <div to="/privacy">
           <p className={`${styles.subtitle} hover:font-medium cursor-pointer`}>
             Privacy policy
           </p>
-        </Link>
+        </div>
       </nav>
     </footer>
   );

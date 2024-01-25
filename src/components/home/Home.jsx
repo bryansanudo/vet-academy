@@ -1,7 +1,7 @@
 import styles from "@/style";
 
 import Business from "@/components/home/Business";
-import Achieve from "@/components/home/Achieve";
+
 import Ally from "@/components/home/Ally";
 import Practices from "@/components/home/Practices";
 import Services from "@/components/home/Services";

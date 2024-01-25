@@ -10,26 +10,26 @@ const cards = [
   {
     id: 1,
     img: <SlLocationPin />,
-    title: "Where we are",
-    subtitle: "1401 Brickell Avenue Miami, FL 33131",
+    title: "Donde estamos",
+    subtitle: "Medellín - Colombia",
   },
   {
     id: 2,
     img: <MdSchedule />,
-    title: "Attention schedule",
-    subtitle: "Monday to Friday 9AM to 5PM ",
+    title: "Horario de atención",
+    subtitle: "Lunes a Viernes: 08:00 am - 6:00 pm. Hora Colombia.",
   },
   {
     id: 3,
     img: <MdOutlineMailOutline />,
     title: "Email",
-    subtitle: "info@ebvisalaw.com",
+    subtitle: "vet.academyeducacion@gmail.com",
   },
   {
     id: 4,
     img: <FaPhone />,
-    title: "Phone",
-    subtitle: "+1 (305) 791-5610",
+    title: "Teléfono",
+    subtitle: "+57 (324) 3291412",
   },
 ];
 
@@ -52,12 +52,12 @@ const Contact = ({ darkMode }) => {
           <h2
             className={`font-semibold xs:text-[48px] text-[40px]  xs:leading-[76.8px] leading-[66.8px] w-full text-primary mr-4`}
           >
-            Contact Us
+            ¿Tienes Preguntas o Comentarios?
           </h2>
           <div className="w-full md:mt-0 mt-6">
             <p className={`${styles.paragraph} text-left max-w-[600px] mb-2`}>
-              Empowering Your Journey, One Immigration Case at a Time. Reach Out
-              for Expert Guidance and Personalized Solutions.
+              Estamos aquí para escucharte, Esperamos poder ayudarte en
+              cualquier pregunta o consulta que tengas.
             </p>
           </div>
         </div>
@@ -77,7 +77,7 @@ const Contact = ({ darkMode }) => {
                     <label
                       className={` font-semibold dark:text-white  text-[16px] leading-[23.4px] ml-2 `}
                     >
-                      Name
+                      Nombre
                     </label>
                     <input
                       type="text"
@@ -93,7 +93,7 @@ const Contact = ({ darkMode }) => {
                     <label
                       className={` font-semibold dark:text-white  text-[16px] leading-[23.4px] ml-2 `}
                     >
-                      Last name
+                      Apellido
                     </label>
                     <input
                       type="text"
@@ -127,7 +127,7 @@ const Contact = ({ darkMode }) => {
                     <label
                       className={` font-semibold dark:text-white  text-[16px] leading-[23.4px] ml-2 `}
                     >
-                      Phone
+                      Telefono
                     </label>
                     <input
                       type="text"
@@ -145,7 +145,7 @@ const Contact = ({ darkMode }) => {
                   <label
                     className={` font-semibold dark:text-white  text-[16px] leading-[23.4px] ml-2 `}
                   >
-                    Message
+                    Mensaje
                   </label>
                   <textarea
                     name="Questions"
@@ -161,12 +161,12 @@ const Contact = ({ darkMode }) => {
                 <button
                   className={`btn  font-semibold dark:text-white  text-[16px] leading-[23.4px] ml-2 btn-primary  `}
                 >
-                  Submit
+                  Enviar
                 </button>
               </div>
             </form>
 
-            <div className="grid md:grid-cols-2 grid-cols-1   rounded-[20px]   md:gap-10 gap-4   w-full  ">
+            <div className="grid md:grid-cols-2 grid-cols-1   rounded-[20px]   md:gap-6 gap-4   w-full  ">
               {cards.map(({ id, img, title, subtitle }) => (
                 <div
                   key={id}

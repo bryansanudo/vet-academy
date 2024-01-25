@@ -12,38 +12,37 @@ const catalogue = [
     id: 1,
     img: curso,
     logo: logo,
-    title: "EB-1 Visa",
-    subtitle:
-      "Designed for those with extraordinary abilities, outstanding professors, researchers, and certain executives or managers, the EB-1 Visa is a preferred option that doesn't require labor certification. ",
-    link: "/eb1a",
-    price: "130.000",
+    title: "Curso 1",
+    subtitle: "Descripcion del curso 1",
+    link: "/curso1",
+    price: "350.000",
   },
   {
     id: 2,
     img: curso,
-    title: "EB-1 Visa",
-    subtitle:
-      "Designed for those with extraordinary abilities, outstanding professors, researchers, and certain executives or managers, the EB-1 Visa is a preferred option that doesn't require labor certification. ",
-    link: "/eb1a",
-    price: "130.000",
+    logo: logo,
+    title: "Curso 2",
+    subtitle: "Descripcion del curso 2",
+    link: "/curso2",
+    price: "350.000",
   },
   {
     id: 3,
     img: curso,
-    title: "EB-1 Visa",
-    subtitle:
-      "Designed for those with extraordinary abilities, outstanding professors, researchers, and certain executives or managers, the EB-1 Visa is a preferred option that doesn't require labor certification. ",
-    link: "/eb1a",
-    price: "130.000",
+    logo: logo,
+    title: "Curso 3",
+    subtitle: "Descripcion del curso 3",
+    link: "/curso3",
+    price: "350.000",
   },
   {
     id: 4,
     img: curso,
-    title: "EB-1 Visa",
-    subtitle:
-      "Designed for those with extraordinary abilities, outstanding professors, researchers, and certain executives or managers, the EB-1 Visa is a preferred option that doesn't require labor certification. ",
-    link: "/eb1a",
-    price: "130.000",
+    logo: logo,
+    title: "Curso 4",
+    subtitle: "Descripcion del curso 4",
+    link: "/curso4",
+    price: "350.000",
   },
 ];
 
@@ -112,8 +111,8 @@ const Catalogue = ({ darkMode }) => (
             </div>
           </figure>
           <div className="card-body">
-            <h2 className="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
+            <h2 className="card-title">{title}</h2>
+            <p>{subtitle}</p>
             <div className="card-actions justify-end">
               <div>
                 <span className="text-primary">${price}</span>

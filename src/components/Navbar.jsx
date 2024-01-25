@@ -42,18 +42,23 @@ const Navbar = ({ darkMode, setDarkMode }) => {
   const eb1 = [
     {
       id: 1,
-      name: "Extraordinary Ability Visa",
-      link: "/eb1a",
+      name: "Curso 1",
+      link: "/curso1",
     },
     {
       id: 2,
-      name: "Outstanding Professor or Researcher Visa",
-      link: "/eb1b",
+      name: "Curso 2",
+      link: "/curso2",
     },
     {
       id: 3,
-      name: "Multinational Manager or Executive Visa",
-      link: "/eb1c",
+      name: "Curso 3",
+      link: "/curso3",
+    },
+    {
+      id: 4,
+      name: "Curso 4",
+      link: "/curso4",
     },
   ];
 
@@ -131,7 +136,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                     </div>
                     <ul className="dropdown-content  z-[1]   shadow bg-base-100 dark:bg-accent w-52">
                       {eb1.map(({ id, link, name }) => (
-                        <Link key={id} to={link}>
+                        <div key={id} to={link}>
                           <div
                             className={`flex  justify-center items-start  hover:bg-primary hover:text-white  `}
                           >
@@ -142,7 +147,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                               <p className="text-[14px]">{name}</p>
                             </li>
                           </div>
-                        </Link>
+                        </div>
                       ))}
                     </ul>
                   </div>

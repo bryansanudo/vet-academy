@@ -57,11 +57,9 @@ const FeatureCard = ({ icon, title, content, index, darkMode }) => (
 const Business = ({ darkMode }) => (
   <section id="features" className={layout.section}>
     <div className={layout.sectionInfo}>
-      <h2 className={styles.heading2}>
-        Descubre Tu Próximo Paso en la Veterinaria
-      </h2>
+      <h2 className={styles.heading2}>Descubre Tu Próximo Paso</h2>
       <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-        Explora nuestras ventajas y descubre por qué somos la opción preferida
+        Conoce nuestras ventajas y descubre por qué somos la opción preferida
         para profesionales veterinarios en busca de formación de calidad y
         relevante.
       </p>
