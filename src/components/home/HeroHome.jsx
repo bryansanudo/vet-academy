@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-/* import { Link } from "react-scroll"; */
-/* import { motion } from "framer-motion"; */
+import { Link } from "react-scroll";
+import { motion } from "framer-motion";
+
 const images = [
   "https://i.ibb.co/dBv7XkS/male-veterinarian-with-blue-scrubs-gloves-using-stethoscope-listen-heart-beagle-dog-woman-vet-holdin.jpg",
   "https://i.ibb.co/FVJWyk2/close-up-veterinarian-taking-care-pet.jpg",
@@ -126,26 +127,21 @@ const HeroHome = () => {
             </a> */}
           </div>
           <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center cursor-pointer">
-            {/* <Link
-              to="teach me"
-              smooth
-              duration={500}
-              className="hidden sm:flex"
-            > */}
-            <div className="w-[35px] h-[64px] rounded-3xl border-4 border-white flex justify-center items-start p-2">
-              <div
-                /* animate={{
-                  y: [0, 24, 0],
-                }}
-                transition={{
-                  duration: 1.5,
-                  repeat: Infinity,
-                  repeatType: "loop",
-                }} */
-                className="w-3 h-3 rounded-full bg-white mb-1"
-              />
-            </div>
-            {/* </Link> */}
+            <Link to="scrol" smooth duration={500} className="hidden sm:flex">
+              <div className="w-[35px] h-[64px] rounded-3xl border-4 border-white flex justify-center items-start p-2">
+                <motion.div
+                  animate={{
+                    y: [0, 24, 0],
+                  }}
+                  transition={{
+                    duration: 1.5,
+                    repeat: Infinity,
+                    repeatType: "loop",
+                  }}
+                  className="w-3 h-3 rounded-full bg-white mb-1"
+                />
+              </div>
+            </Link>
           </div>
         </div>
       </div>

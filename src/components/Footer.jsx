@@ -46,6 +46,8 @@ const Footer = ({ darkMode }) => {
   ];
   return (
     <footer className="footer justify-between  border-t p-6  mb-10 ">
+      <div name="scrol " className="pt-20" />
+
       <div>
         <div className="flex gap-1 items-end  ">
           <img
@@ -131,7 +133,6 @@ const Footer = ({ darkMode }) => {
           <div to="/faq">FAQ</div>
         </div>
       </nav>
-
       <nav>
         <header className={`${styles.title}`}>Legal</header>
         <div to="/terms">
