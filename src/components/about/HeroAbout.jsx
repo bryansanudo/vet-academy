@@ -10,7 +10,7 @@ const Hero = ({ darkMode }) => {
   return (
     <section
       id="home"
-      className={`flex md:flex-row flex-col ${styles.paddingY}  h-screen `}
+      className={`flex md:flex-row flex-col ${styles.paddingY}  h-screen md:mt-0 mt-24 `}
     >
       <div
         className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}
@@ -49,7 +49,7 @@ const Hero = ({ darkMode }) => {
         <img
           src={about}
           alt="billing"
-          className="w-[100%] h-[100%] object-contain relative z-[5]"
+          className="lg:w-[800px] h-[100%] w-[400px]  object-contain relative z-[5]"
         />
 
         {/* gradient start */}

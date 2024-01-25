@@ -199,17 +199,17 @@ const Navbar = ({ darkMode, setDarkMode }) => {
 
             <div className="ml-auto gap-1 md:hidden flex items-end">
               <img
-                src={darkMode ? logoWhite : logoRedBlack}
-                className="w-10 object-contain"
+                src={darkMode ? logoVet : logoVet}
+                className="w-40 object-contain"
                 alt=""
               />
-              <p
+              {/* <p
                 className={` ${
                   darkMode ? "text-white" : "text-black"
                 } text-[24px] tangerine   `}
               >
                 Visa Law
-              </p>
+              </p> */}
             </div>
           </div>
         </div>
@@ -228,7 +228,13 @@ const Navbar = ({ darkMode, setDarkMode }) => {
               onClick={() => setIsMenuShown(!isMenuShown)}
               className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
             >
-              <Link to="/">Home</Link>
+              <Link to="/">Inicio</Link>
+            </li>
+            <li
+              onClick={() => setIsMenuShown(!isMenuShown)}
+              className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
+            >
+              <Link to="/about">Nosotros</Link>
             </li>
 
             {/* visa eb1 */}
@@ -238,7 +244,9 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                   tabIndex={0}
                   className={`mt-1 text-[18px] flex items-center   capitalize duration-300  hover:font-semibold hover:text-primary  cursor-pointer `}
                 >
-                  <p>Visa EB-1</p>
+                  <Link to="/courses">
+                    <p onClick={() => setIsMenuShown(!isMenuShown)}>Cursos</p>
+                  </Link>
                   <div className="cursor-pointer">
                     <div className="flex items-center gap-2">
                       <IoMdArrowDropdown />
@@ -251,41 +259,6 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                       <li
                         onClick={() => setIsMenuShown(!isMenuShown)}
                         className={`w-full duration-300 hover:font-semibold hover:text-primary`}
-                      >
-                        <p className="px-4 text-[14px]">{name}</p>
-                      </li>
-                    </Link>
-                  ))}
-                </ul>
-              </div>
-            </li>
-            {/* visa eb2 */}
-            <li
-              onClick={() => setIsMenuShown(!isMenuShown)}
-              className={`mt-1 text-[18px] hover:font-semibold hover:text-primary  capitalize duration-300   cursor-pointer `}
-            >
-              <Link to="/eb2">Visa EB-2</Link>
-            </li>
-            {/* visa eb3 */}
-            <li>
-              <div className="dropdown dropdown-bottom dropdown-hover">
-                <div
-                  tabIndex={0}
-                  className={`mt-1 text-[18px] flex items-center   capitalize duration-300  hover:font-semibold hover:text-primary  cursor-pointer `}
-                >
-                  <p>Visa EB-3</p>
-                  <div className="cursor-pointer">
-                    <div className="flex items-center gap-2">
-                      <IoMdArrowDropdown />
-                    </div>
-                  </div>
-                </div>
-                <ul className="dropdown-content  z-[1]   shadow bg-base-100 dark:bg-accent w-52">
-                  {eb3.map(({ id, link, name }) => (
-                    <Link key={id} to={link}>
-                      <li
-                        onClick={() => setIsMenuShown(!isMenuShown)}
-                        className={`w-full hover:font-semibold hover:text-primary duration-300`}
                       >
                         <p className="px-4 text-[14px]">{name}</p>
                       </li>
