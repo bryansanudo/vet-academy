@@ -11,44 +11,44 @@ const cards = [
   {
     id: 1,
     img: <GrStatusGood />,
-    title: "Experienced Professionals",
+    title: "Flexibilidad de Horarios",
     subtitle:
-      "Leverage our wealth of experience and proven methods to expedite the legalization of your immigration status.",
+      "Aprende a tu propio ritmo con nuestros cursos virtuales. Accede al contenido en cualquier momento y desde cualquier lugar.",
   },
   {
     id: 2,
     img: <VscServerProcess />,
-    title: "Agility at the Core",
+    title: "Variedad de Contenido Especializado",
     subtitle:
-      "We craft an efficient, user-friendly process tailored for your ease of understanding and swift navigation.",
+      "Descubre una amplia gama de cursos especializados en áreas clave de la Medicina Veterinaria. ",
   },
   {
     id: 3,
     img: <MdDashboardCustomize />,
-    title: "Tailored Solutions",
+    title: "Expertos de la Industria como Instructores",
     subtitle:
-      "Recognizing the uniqueness of each case, we provide attentive ears to understand the specific needs of families, companies, and individuals, tailoring solutions accordingly.",
+      "Aprende de los mejores en el campo veterinario. Nuestros cursos están dirigidos por expertos con una vasta experiencia en la industria.",
   },
   {
     id: 4,
     img: <HiOutlineDocumentMagnifyingGlass />,
-    title: "Comprehensive Oversight",
+    title: "Interactividad y Participación Activa",
     subtitle:
-      "From form preparation to its successful submission, we ensure thorough and detailed monitoring of the entire process for a successful outcome.	",
+      "Sumérgete en experiencias de aprendizaje interactivas que fomentan la participación activa y el compromiso. 	",
   },
   {
     id: 5,
     img: <GrCycle />,
-    title: "Holistic Solutions",
+    title: "Apoyo Continuo del Equipo de Vet Academy",
     subtitle:
-      "Beyond immigration processes, we offer consultations with specialized financial advisors, providing a comprehensive solution.",
+      "No estás solo en tu viaje de aprendizaje. Nuestro equipo de soporte está siempre disponible para asegurarse de que tengas una experiencia educativa exitosa y enriquecedora.",
   },
   {
     id: 6,
     img: <MdMoreTime />,
-    title: "Time and Cost Savings",
+    title: "Acceso a una Comunidad Profesional Global",
     subtitle:
-      "Our service not only saves you time but also helps you avoid costly errors that could lead to delays or visa denials, offering a valuable saving of both time and money.",
+      "Únete a una red de profesionales veterinarios de todo el mundo. Con nuestros cursos, obtienes acceso a una comunidad activa y colaborativa.",
   },
 ];
 
@@ -62,7 +62,7 @@ const Advantages = ({ darkMode }) => (
     />
 
     <div className="w-full flex justify-between items-center md:flex-row flex-col sm:mb-16 mb-6 relative z-[1]">
-      <h2 className={styles.heading2}>Advantages</h2>
+      <h2 className={styles.heading2}>Ventajas</h2>
       {/* <div className="w-full md:mt-0 mt-6">
         <p className={`${styles.paragraph} text-left max-w-[450px]`}>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab esse

@@ -37,9 +37,9 @@ const Hero = ({ darkMode }) => {
           </h1>
         </div>
 
-        <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
+        {/* <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
           Navigating the Pathways to Success in the United States.
-        </p>
+        </p> */}
       </div>
 
       <div

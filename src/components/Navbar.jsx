@@ -29,7 +29,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
 
     {
       id: 6,
-      name: "Contact",
+      name: "Contacto",
       link: "/contact",
     },
     /* {
@@ -105,12 +105,12 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                 <li
                   className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
                 >
-                  <Link to="/">Home</Link>
+                  <Link to="/">Inicio</Link>
                 </li>
                 <li
                   className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
                 >
-                  <Link to="/">About</Link>
+                  <Link to="/about">Nosotros</Link>
                 </li>
 
                 {/* visa eb1 */}
@@ -120,7 +120,9 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                       tabIndex={0}
                       className={`mt-1 text-[18px] flex items-center   capitalize duration-300  hover:font-semibold hover:text-primary  cursor-pointer `}
                     >
-                      <p>Visa EB-1</p>
+                      <Link to="/courses">
+                        <p>Cursos</p>
+                      </Link>
                       <div className="cursor-pointer">
                         <div className="flex items-center gap-2">
                           <IoMdArrowDropdown />

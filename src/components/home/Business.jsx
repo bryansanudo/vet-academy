@@ -12,23 +12,23 @@ export const features = [
   {
     id: "feature-1",
     icon: <HiUserGroup />,
-    title: "Unlocking Legal Excellence",
+    title: "Aprendizaje Interactivo",
     content:
-      "Discover enticing assortments of legal promotions and professional rewards through our array of expert legal services.",
+      "Sumérgete en una experiencia de aprendizaje virtual envolvente con nuestros cursos. Accede al contenido desde cualquier lugar y en cualquier momento, adaptado a tu ritmo y necesidades.",
   },
   {
     id: "feature-2",
     icon: <MdOutlineSecurity />,
-    title: "Complete Legal Assurance",
+    title: "Plataforma Intuitiva y Accesible",
     content:
-      "We take proactive measures to safeguard your confidential information and legal transactions, offering you a shield against any potential legal concerns.",
+      "Nuestra plataforma está diseñada pensando en ti, ofreciendo una navegación fácil e intuitiva. Aprende de manera efectiva y cómoda con recursos didácticos de calidad y soporte técnico dedicado.",
   },
   {
     id: "feature-3",
     icon: <BiTransfer />,
-    title: "Seamless Case Transfers",
+    title: "Certificado de Asistencia",
     content:
-      "Effortlessly entrust your legal cases to our expert handling. Our streamlined process can save you time and resources in the management of legal matters.",
+      "Aprovecha al máximo tu inversión en educación con nuestros cursos, respaldados por certificaciones. Obtén reconocimiento por tu dedicación y esfuerzo en la mejora continua de tus habilidades veterinarias.",
   },
 ];
 
@@ -58,16 +58,18 @@ const Business = ({ darkMode }) => (
   <section id="features" className={layout.section}>
     <div className={layout.sectionInfo}>
       <h2 className={styles.heading2}>
-        Your Immigration Journey, Our Legal Expertise
+        Descubre Tu Próximo Paso en la Veterinaria
       </h2>
       <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-        Navigate employment-based immigration effortlessly with our skilled
-        attorneys. From visas to green cards, we've got you covered for a smooth
-        journey to your U.S. professional goals.
+        Explora nuestras ventajas y descubre por qué somos la opción preferida
+        para profesionales veterinarios en busca de formación de calidad y
+        relevante.
       </p>
 
       <Link to="/contact">
-        <button className={`${styles.button} bg-primary `}>Get Started</button>
+        <button className={`${styles.button} bg-primary `}>
+          ¡Quiero saber más!
+        </button>
       </Link>
     </div>
 

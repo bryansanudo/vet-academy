@@ -19,24 +19,9 @@ import { FaInstagram, FaXTwitter } from "react-icons/fa6";
 const Footer = ({ darkMode }) => {
   const socials = [
     {
-      id: 1,
-      logo: <FaFacebookF />,
-      link: "https://www.facebook.com/eb3wfs",
-    },
-    {
-      id: 2,
-      logo: <FaInstagram />,
-      link: "https://www.instagram.com/eb3wfs/",
-    },
-    {
       id: 3,
       logo: <FaWhatsapp />,
       link: "https://twitter.com/eb3wfs",
-    },
-    {
-      id: 4,
-      logo: <FaLinkedinIn />,
-      link: "https://www.linkedin.com/company/eb3wfs",
     },
     {
       id: 5,
@@ -47,6 +32,16 @@ const Footer = ({ darkMode }) => {
       id: 6,
       logo: <FaYoutube />,
       link: "https://www.youtube.com/@eb3wfs",
+    },
+    {
+      id: 2,
+      logo: <FaInstagram />,
+      link: "https://www.instagram.com/eb3wfs/",
+    },
+    {
+      id: 1,
+      logo: <FaFacebookF />,
+      link: "https://www.facebook.com/eb3wfs",
     },
   ];
   return (

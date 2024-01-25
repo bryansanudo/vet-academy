@@ -6,6 +6,8 @@ import { FaArrowUp } from "react-icons/fa";
 import Faq from "@/components/Faq";
 
 import Home from "@/components/home/Home";
+import About from "@/components/about/About";
+import Courses from "@/components/courses/Courses";
 
 import Footer from "@/components/Footer";
 
@@ -42,6 +44,8 @@ const App = () => {
       <div className="dark:bg-accent w-full overflow-hidden">
         <Routes>
           <Route path="/" element={<Home darkMode={darkMode} />} />
+          <Route path="/about" element={<About darkMode={darkMode} />} />
+          <Route path="/courses" element={<Courses darkMode={darkMode} />} />
 
           <Route path="/contact" element={<Contact darkMode={darkMode} />} />
           <Route path="/faq" element={<Faq darkMode={darkMode} />} />
