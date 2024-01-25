@@ -29,7 +29,7 @@ import { useState } from "react";
 
 const App = () => {
   const [isMenuShown, setIsMenuShown] = useState(false);
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
 
   return (
     <div className={darkMode && "dark"}>

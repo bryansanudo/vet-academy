@@ -1,6 +1,7 @@
 import styles from "@/style";
 
 import test from "@/assets/test.png";
+import heroHome from "@/assets/hero-home.png";
 
 import { FaStar } from "react-icons/fa";
 
@@ -8,7 +9,7 @@ const Hero = ({ darkMode }) => {
   return (
     <section
       id="home"
-      className={`flex md:flex-row flex-col ${styles.paddingY} mt-20 `}
+      className={`flex md:flex-row flex-col ${styles.paddingY}  h-screen `}
     >
       <div
         className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}
@@ -45,7 +46,7 @@ const Hero = ({ darkMode }) => {
         className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}
       >
         <img
-          src={test}
+          src={heroHome}
           alt="billing"
           className="w-[100%] h-[100%] object-contain relative z-[5]"
         />

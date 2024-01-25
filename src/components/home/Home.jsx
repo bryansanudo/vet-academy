@@ -36,11 +36,11 @@ const Home = ({ darkMode }) => {
             className={`
                pink__gradient absolute z-[0] w-[50%] h-[50%] -left-1/2 bottom-0 rounded-full `}
           />
-          <Ally />
+          {/* <Ally /> */}
           <Practices darkMode={darkMode} />
           {/*      <Services darkMode={darkMode} /> */}
           <Advantages darkMode={darkMode} />
-          <Timeline darkMode={darkMode} />
+          {/*  <Timeline darkMode={darkMode} /> */}
           {/*  <Clients /> */}
           <CTA darkMode={darkMode} />
         </div>
