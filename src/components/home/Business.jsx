@@ -2,6 +2,8 @@ import styles, { layout } from "@/style";
 
 import { FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { staggerContainer, zoomIn, fadeIn } from "@/utils/motion";
 
 import { GrUserExpert } from "react-icons/gr";
 import { MdOutlineSecurity } from "react-icons/md";
@@ -11,6 +13,7 @@ import { HiUserGroup } from "react-icons/hi";
 export const features = [
   {
     id: "feature-1",
+    motionTime: 1,
     icon: <HiUserGroup />,
     title: "Aprendizaje Interactivo",
     content:
@@ -18,6 +21,7 @@ export const features = [
   },
   {
     id: "feature-2",
+    motionTime: 2,
     icon: <MdOutlineSecurity />,
     title: "Plataforma Intuitiva y Accesible",
     content:
@@ -25,6 +29,7 @@ export const features = [
   },
   {
     id: "feature-3",
+    motionTime: 3,
     icon: <BiTransfer />,
     title: "Certificado de Asistencia",
     content:
@@ -32,8 +37,9 @@ export const features = [
   },
 ];
 
-const FeatureCard = ({ icon, title, content, index, darkMode }) => (
-  <div
+const FeatureCard = ({ icon, title, content, index, darkMode, motionTime }) => (
+  <motion.div
+    variants={fadeIn("up", "spring", motionTime * 0.5, 0.1)}
     className={`flex items-center md:flex-row flex-col gap-2 md:gap-0 p-6 rounded-[20px] ${
       index !== features.length - 1 ? "mb-6" : "mb-0"
     } ${
@@ -51,11 +57,11 @@ const FeatureCard = ({ icon, title, content, index, darkMode }) => (
       <h4 className={`${styles.title} mb-1`}>{title}</h4>
       <p className={`${styles.subtitle}`}>{content}</p>
     </div>
-  </div>
+  </motion.div>
 );
 
 const Business = ({ darkMode }) => (
-  <section id="features" className={layout.section}>
+  <section id="features" className={`${layout.section}  `}>
     <div className={layout.sectionInfo}>
       <h2 className={styles.heading2}>Descubre Tu Próximo Paso</h2>
       <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
@@ -64,14 +70,20 @@ const Business = ({ darkMode }) => (
         relevante.
       </p>
 
-      <Link to="/contact">
+      <Link to="/courses">
         <button className={`${styles.button} bg-primary `}>
           ¡Quiero saber más!
         </button>
       </Link>
     </div>
 
-    <div className={`${layout.sectionImg} flex-col`}>
+    <motion.div
+      variants={staggerContainer()}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.25 }}
+      className={`${layout.sectionImg} flex-col`}
+    >
       {features.map((feature, index) => (
         <FeatureCard
           key={feature.id}
@@ -80,7 +92,7 @@ const Business = ({ darkMode }) => (
           darkMode={darkMode}
         />
       ))}
-    </div>
+    </motion.div>
   </section>
 );
 

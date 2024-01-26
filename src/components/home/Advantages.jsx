@@ -7,6 +7,9 @@ import { HiOutlineDocumentMagnifyingGlass } from "react-icons/hi2";
 import { GrCycle } from "react-icons/gr";
 import { MdMoreTime } from "react-icons/md";
 
+import { motion } from "framer-motion";
+import { staggerContainer, zoomIn, fadeIn } from "@/utils/motion";
+
 const cards = [
   {
     id: 1,
@@ -70,11 +73,11 @@ const Advantages = ({ darkMode }) => (
         </p>
       </div> */}
     </div>
-
     <div className="flex flex-wrap sm:justify-start justify-center w-full  relative z-[1]">
-      <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1  w-full gap-6 ">
+      <motion.div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1  w-full gap-6 ">
         {cards.map(({ id, img, title, subtitle }) => (
-          <div
+          <motion.div
+            variants={fadeIn("left", "spring", 0.5, 2)}
             key={id}
             className={`flex flex-col  items-start justify-center  md:gap-6 ${
               darkMode
@@ -93,9 +96,9 @@ rounded-[20px]  p-8 `}
               <p className={`${styles.title} mb-1`}>{title}</p>
               <p className={`${styles.subtitle}`}>{subtitle}</p>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   </section>
 );

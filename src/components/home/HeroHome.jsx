@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
+import { staggerContainer, zoomIn } from "@/utils/motion";
 
 const images = [
   "https://i.ibb.co/dBv7XkS/male-veterinarian-with-blue-scrubs-gloves-using-stethoscope-listen-heart-beagle-dog-woman-vet-holdin.jpg",
@@ -112,10 +113,19 @@ const HeroHome = () => {
       <div className="hero min-h-[100vh]" style={currentImageStyle}>
         <div className="hero-overlay bg-black opacity-30" />
         <div className="hero-content text-center text-white">
-          <div className="max-w-5xl">
-            <h1 className="my-5 lg:text-5xl md:text-3xl text-2xl font-bold tracking-wider">
+          <motion.div
+            variants={staggerContainer()}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.25 }}
+            className="max-w-5xl"
+          >
+            <motion.h1
+              variants={zoomIn(0, 2)}
+              className="my-5 lg:text-5xl md:text-3xl text-2xl font-bold tracking-wider"
+            >
               {randomMessage}
-            </h1>
+            </motion.h1>
 
             {/*  <a
               href="https://form.jotform.com/EB3_Recruiter/eligibility-eb3wfs"
@@ -125,10 +135,10 @@ const HeroHome = () => {
                 {btnContent.title}
               </button>
             </a> */}
-          </div>
+          </motion.div>
           <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center cursor-pointer">
-            <Link to="scrol" smooth duration={500} className="hidden sm:flex">
-              <div className="w-[35px] h-[64px] rounded-3xl border-4 border-white flex justify-center items-start p-2">
+            <Link to="scrol" smooth duration={50} className="hidden sm:flex">
+              <div className="w-[35px] h-[64px] rounded-3xl border-4 border-white flex justify-center items-start p-2 mb-56">
                 <motion.div
                   animate={{
                     y: [0, 24, 0],

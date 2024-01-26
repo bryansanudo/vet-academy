@@ -28,6 +28,7 @@ const Home = ({ darkMode }) => {
         className={`dark:bg-accent  ${styles.paddingX} ${styles.flexCenter}`}
       >
         <div className={`${styles.boxWidth}`}>
+          <div name="scrol" className="pt-20" />
           <Business darkMode={darkMode} />
 
           {/* <Achieve /> */}
