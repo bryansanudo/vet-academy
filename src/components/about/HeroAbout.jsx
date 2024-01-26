@@ -5,10 +5,16 @@ import heroHome from "@/assets/hero-home.png";
 import about from "@/assets/about-us.png";
 
 import { FaStar } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { staggerContainer, zoomIn, fadeIn } from "@/utils/motion";
 
 const Hero = ({ darkMode }) => {
   return (
-    <section
+    <motion.section
+      variants={staggerContainer()}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.25 }}
       id="home"
       className={`flex md:flex-row flex-col ${styles.paddingY}  h-screen md:mt-0 mt-24 `}
     >
@@ -28,7 +34,10 @@ const Hero = ({ darkMode }) => {
           </p>
         </div> */}
 
-        <div className="flex flex-row justify-between items-center w-full">
+        <motion.div
+          variants={fadeIn("right", "spring", 0.3, 2.5)}
+          className="flex flex-row justify-between items-center w-full"
+        >
           <h1 className="flex-1 font-poppins font-semibold ss:text-[72px] text-[40px] dark:text-white ss:leading-[100.8px] leading-[75px]">
             Vet Academy
             <br className="sm:block hidden" />{" "}
@@ -36,14 +45,15 @@ const Hero = ({ darkMode }) => {
               Somos Compañeros en tu Trayectoria Veterinaria
             </span>
           </h1>
-        </div>
+        </motion.div>
 
         {/* <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
           Navigating the Pathways to Success in the United States.
         </p> */}
       </div>
 
-      <div
+      <motion.div
+        variants={fadeIn("left", "spring", 0.3, 2.5)}
         className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}
       >
         <img
@@ -65,12 +75,12 @@ const Hero = ({ darkMode }) => {
         />
 
         {/* gradient end */}
-      </div>
+      </motion.div>
 
       {/*   <div className={`ss:hidden ${styles.flexCenter}`}>
         <GetStarted />
       </div> */}
-    </section>
+    </motion.section>
   );
 };
 

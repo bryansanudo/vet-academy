@@ -79,10 +79,10 @@ const Advantages = ({ darkMode }) => (
           <motion.div
             variants={fadeIn("left", "spring", 0.5, 2)}
             key={id}
-            className={`flex flex-col  items-start justify-center  md:gap-6 ${
+            className={`flex flex-col  items-start justify-center md:gap-6 ${
               darkMode
                 ? "shadow-sm shadow-white feedback-card "
-                : "shadow-md shadow-black hover:scale-105 duration-500"
+                : "shadow-md shadow-black  duration-500"
             }
 rounded-[20px]  p-8 `}
           >

@@ -18,11 +18,11 @@ import { FaInstagram, FaXTwitter } from "react-icons/fa6";
 
 const Footer = ({ darkMode }) => {
   const socials = [
-    {
+    /* {
       id: 3,
       logo: <FaWhatsapp />,
       link: "https://api.whatsapp.com/send?phone=573243291412",
-    },
+    }, */
     /* {
       id: 5,
       logo: <FaTiktok />,
@@ -45,11 +45,11 @@ const Footer = ({ darkMode }) => {
     },
   ];
   return (
-    <footer className="footer justify-between  border-t p-6  mb-10 ">
+    <footer className="footer  border-t p-6  mb-10 ">
       <div name="scrol " className="pt-20" />
 
-      <div>
-        <div className="flex gap-1 items-end  ">
+      <div className="">
+        <div className="flex gap-1 items-start   ">
           <img
             src={darkMode ? logoVet : logoVet}
             className="w-48 object-contain"
@@ -63,11 +63,11 @@ const Footer = ({ darkMode }) => {
             Visa Law
           </p> */}
         </div>
-        <div className="flex items-center w-full    gap-1  ">
+        <div className="flex items-center justify-between w-full mt-2  gap-1  ">
           {socials.map(({ id, logo, link }) => (
             <a key={id} href={link} target="_blank">
               <div
-                className={` h-[30px] w-[30px]  md:w-[40px] md:h-[40px] rounded-lg ${styles.flexCenter} hover:scale-105 group  duration-300 cursor-pointer bg-primary`}
+                className={` h-[30px] w-[30px]  md:w-[50px] md:h-[50px] rounded-lg ${styles.flexCenter} hover:scale-105 group  duration-300 cursor-pointer bg-primary`}
               >
                 {/*                 <FaLinkedinIn className="dark:text-white text-2xl" /> */}
                 <span className="group-hover: duration-300 text-white text-lg md:text-2xl">
@@ -78,28 +78,7 @@ const Footer = ({ darkMode }) => {
           ))}
         </div>
       </div>
-      <aside className="flex flex-col items-center justify-center">
-        {/*   <div className="flex items-center justify-center gap-2 mt-2">
-          <div
-            className={`w-[40px] h-[40px] mask mask-hexagon-2 ${
-              styles.flexCenter
-            } hover:scale-105 duration-700 cursor-pointer ${
-              blue ? "bg-primary " : "  bg-secondary "
-            }  `}
-          >
-            <FaFacebookF className="text-white text-lg" />
-          </div>
-          <div
-            className={`w-[40px] h-[40px] mask mask-hexagon-2 ${
-              styles.flexCenter
-            } hover:scale-105 duration-700 cursor-pointer ${
-              blue ? "bg-primary " : "  bg-secondary "
-            }`}
-          >
-            <FaLinkedinIn className="text-white text-lg" />
-          </div>
-        </div> */}
-      </aside>
+
       <nav>
         <header className={`${styles.title}`}>Acerca De</header>
         <div className={`${styles.subtitle} hover:font-medium cursor-pointer`}>
@@ -128,9 +107,6 @@ const Footer = ({ darkMode }) => {
         </div>
         <div className={`${styles.subtitle} hover:font-medium cursor-pointer`}>
           <div to="/eb5">Curso 4</div>
-        </div>
-        <div className={`${styles.subtitle} hover:font-medium cursor-pointer`}>
-          <div to="/faq">FAQ</div>
         </div>
       </nav>
       <nav>

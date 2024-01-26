@@ -28,7 +28,7 @@ import Privacy from "@/components/PrivacyPolicy";
 import FeedComponent from "@/components/FeedComponent";
 import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
-
+import { FaWhatsapp } from "react-icons/fa";
 const App = () => {
   const [isMenuShown, setIsMenuShown] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
@@ -85,6 +85,17 @@ const App = () => {
       >
         <FaArrowUp className="animate-pulse text-white" />
       </div> */}
+      <div
+        className={`fixed flex items-center justify-center hover:scale-110 duration-700 rounded-full w-14 h-14 bg-[#00E676] text-yellow-500 z-[100] right-6 bottom-6   `}
+      >
+        <a
+          href="https://api.whatsapp.com/send?phone=573243291412"
+          className=""
+          target="_blank"
+        >
+          <FaWhatsapp className="text-white text-3xl" />
+        </a>
+      </div>
     </div>
   );
 };
