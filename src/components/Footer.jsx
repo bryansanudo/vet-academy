@@ -3,8 +3,6 @@ import React from "react";
 import styles from "@/style";
 import { Link } from "react-router-dom";
 
-import logoRedBlack from "@/assets/logo-red-black.png";
-import logoWhite from "@/assets/logo-white.png";
 import logoVet from "@/assets/vet-academy-logo.jpg";
 import {
   FaLinkedinIn,

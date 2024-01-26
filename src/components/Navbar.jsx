@@ -6,8 +6,7 @@ import { MdNightsStay, MdWbSunny } from "react-icons/md";
 import { GoDot } from "react-icons/go";
 
 import { Link } from "react-router-dom";
-import logoRedBlack from "@/assets/logo-red-black.png";
-import logoWhite from "@/assets/logo-white.png";
+
 import logoVet from "@/assets/vet-academy-logo.jpg";
 
 import { IoMdArrowDropdown } from "react-icons/io";

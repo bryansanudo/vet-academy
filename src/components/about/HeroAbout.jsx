@@ -1,10 +1,7 @@
 import styles from "@/style";
 
-import test from "@/assets/test.png";
-import heroHome from "@/assets/hero-home.png";
 import about from "@/assets/about-us.png";
 
-import { FaStar } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { staggerContainer, zoomIn, fadeIn } from "@/utils/motion";
 

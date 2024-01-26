@@ -1,14 +1,8 @@
 import styles from "@/style";
 
 import HeroAbout from "@/components/about/HeroAbout";
-import Business from "@/components/home/Business";
+
 import Achieve from "@/components/about/Achieve";
-import Ally from "@/components/home/Ally";
-import Practices from "@/components/home/Practices";
-import Services from "@/components/home/Services";
-import Advantages from "@/components/home/Advantages";
-import Timeline from "@/components/home/Timeline";
-import Clients from "@/components/home/Clients";
 
 import CTA from "@/components/CTA";
 import { useEffect } from "react";

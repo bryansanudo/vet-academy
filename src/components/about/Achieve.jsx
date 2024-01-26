@@ -1,6 +1,5 @@
 import styles, { layout } from "@/style";
 
-import test5 from "@/assets/test5.png";
 import aboutUs from "@/assets/about-us-2.jpg";
 
 const Achieve = () => (

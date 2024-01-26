@@ -5,7 +5,6 @@ import curso from "@/assets/curso.jpg";
 import logo from "@/assets/vet-academy-logo.jpg";
 import { CiSearch } from "react-icons/ci";
 
-import medicinaInterna from "@/assets/c_medicina_interna_felina.jpg";
 import { useEffect, useState } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
