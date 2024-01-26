@@ -5,13 +5,17 @@ import styles from "@/style";
 import { MdNightsStay, MdWbSunny } from "react-icons/md";
 import { GoDot } from "react-icons/go";
 
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import logoVet from "@/assets/vet-academy-logo.jpg";
 
 import { IoMdArrowDropdown } from "react-icons/io";
 
 const Navbar = ({ darkMode, setDarkMode }) => {
+  const activeLink = ({ isActive }) =>
+    isActive
+      ? " relative after:content-[''] after:absolute after:left-0 after:bottom-[-3px] after:w-full after:h-[2px] after:bg-primary"
+      : "";
   const [isMenuShown, setIsMenuShown] = useState(false);
 
   const links2 = [
@@ -109,12 +113,16 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                 <li
                   className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
                 >
-                  <Link to="/">Inicio</Link>
+                  <NavLink to="/" className={activeLink}>
+                    Inicio
+                  </NavLink>
                 </li>
                 <li
                   className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
                 >
-                  <Link to="/about">Nosotros</Link>
+                  <NavLink to="/about" className={activeLink}>
+                    Nosotros
+                  </NavLink>
                 </li>
 
                 {/* visa eb1 */}
@@ -124,9 +132,9 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                       tabIndex={0}
                       className={`mt-1 text-[18px] flex items-center   capitalize duration-300  hover:font-semibold hover:text-primary  cursor-pointer `}
                     >
-                      <Link to="/courses">
+                      <NavLink to="/courses" className={activeLink}>
                         <p>Cursos</p>
-                      </Link>
+                      </NavLink>
                       <div className="cursor-pointer">
                         <div className="flex items-center gap-2">
                           <IoMdArrowDropdown />
@@ -164,7 +172,9 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                     key={id}
                     className={`mt-1 text-[18px]  capitalize duration-300  hover:font-semibold hover:text-primary   cursor-pointer `}
                   >
-                    <Link to={link}>{name}</Link>
+                    <NavLink className={activeLink} to={link}>
+                      {name}
+                    </NavLink>
                   </li>
                 ))}
               </ul>
