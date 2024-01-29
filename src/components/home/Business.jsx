@@ -72,7 +72,7 @@ const Business = ({ darkMode }) => (
 
       <Link to="/courses">
         <button className={`${styles.button} bg-primary `}>
-          ¡Quiero saber más!
+          ¡Todos Los Cursos!
         </button>
       </Link>
     </div>
