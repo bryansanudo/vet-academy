@@ -237,9 +237,9 @@ const Business = ({ darkMode }) => {
               } collapse collapse-arrow text-primary  my-4 rounded-box w-full`}
             >
               <div className="collapse-title flex items-center gap-4 ">
-                <div className={`${darkMode ? "text-white" : "text-black"}`}>
+                {/* <div className={`${darkMode ? "text-white" : "text-black"}`}>
                   Icono
-                </div>
+                </div> */}
                 <div className={`${styles.title}   `}>{name}</div>
               </div>
               <div
