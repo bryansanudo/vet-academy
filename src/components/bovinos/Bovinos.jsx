@@ -38,6 +38,7 @@ const Bovinos = ({ darkMode }) => {
           {/* <Practices darkMode={darkMode} /> */}
           {/*      <Services darkMode={darkMode} /> */}
           {/*  <Advantages darkMode={darkMode} /> */}
+          <Advantages />
           <div className="mt-40">
             <h2 className={styles.heading2}>Docentes</h2>
             <Clients />
