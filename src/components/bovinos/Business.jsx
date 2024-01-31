@@ -5,11 +5,14 @@ import image from "@/assets/about-us-2.jpg";
 
 import { GoDot } from "react-icons/go";
 import CountDown from "@/components/CountDown";
+import { motion } from "framer-motion";
+import { staggerContainer, zoomIn, fadeIn } from "@/utils/motion";
 
 const Business = ({ darkMode }) => {
   const services = [
     {
       id: 100,
+      motionTime: 1,
       name: "Bienestar Animal",
       consultorias: [
         {
@@ -29,6 +32,7 @@ const Business = ({ darkMode }) => {
     },
     {
       id: 200,
+      motionTime: 2,
       name: "Nutrición",
       consultorias: [
         {
@@ -48,6 +52,7 @@ const Business = ({ darkMode }) => {
     },
     {
       id: 300,
+      motionTime: 3,
       name: "Medicina",
       consultorias: [
         { id: 10, title: "Planes sanitarios en bovinos.", date: "Abril 2" },
@@ -97,6 +102,7 @@ const Business = ({ darkMode }) => {
     },
     {
       id: 400,
+      motionTime: 4,
       name: "Anestesia y Cirugía",
       consultorias: [
         { id: 25, title: "Anestesia.", date: "Mayo 9" },
@@ -112,6 +118,7 @@ const Business = ({ darkMode }) => {
     },
     {
       id: 500,
+      motionTime: 5,
       name: "Reproducción",
       consultorias: [
         {
@@ -138,7 +145,14 @@ const Business = ({ darkMode }) => {
   ];
 
   return (
-    <section id="features" className="flex flex-col md:flex-row justify-start ">
+    <motion.section
+      variants={staggerContainer()}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.25 }}
+      id="features"
+      className="flex flex-col md:flex-row justify-start "
+    >
       <div className={`${layout.sectionInfo} items-start`}>
         <h2 className={`${styles.heading2} `}>Bovinos en la clínica diaria</h2>
         {/* <p className={`${styles.paragraph} `}>
@@ -149,70 +163,73 @@ const Business = ({ darkMode }) => {
           cada módulo está diseñado para ofrecerte una perspectiva integral
           sobre el manejo clínico y quirúrgico del ganado.
         </p> */}
-        <ul className="w-[250px] md:w-[500px] ">
-          <li
-            className={` ${
-              styles.paragraph
-            } w-full border-b-2 border-neutral-100 border-opacity-100 dark:border-opacity-50 ${
-              darkMode ? "text-white" : "text-black"
-            }`}
-          >
-            ✅ 32 charlas en vivo por la plataforma Zoom.
-          </li>
-          <li
-            className={` ${
-              styles.paragraph
-            } w-full border-b-2 border-neutral-100 border-opacity-100  dark:border-opacity-50 ${
-              darkMode ? "text-white" : "text-black"
-            }`}
-          >
-            ✅ Grabaciones disponibles durante 2 meses.
-          </li>
-          <li
-            className={` ${
-              styles.paragraph
-            } w-full border-b-2 border-neutral-100 border-opacity-100  dark:border-opacity-50 ${
-              darkMode ? "text-white" : "text-black"
-            }`}
-          >
-            ✅ Docentes expertos en el área con reconocimiento internacional y
-            experiencia en docencia en pregrado y posgrado.
-          </li>
-          <li
-            className={` ${
-              styles.paragraph
-            } w-full border-b-2 border-neutral-100 border-opacity-100  dark:border-opacity-50 ${
-              darkMode ? "text-white" : "text-black"
-            }`}
-          >
-            ✅ Certificado de asistencia al finalizar.
-          </li>
-          <li
-            className={` ${styles.paragraph} w-full  ${
-              darkMode ? "text-white" : "text-black"
-            }`}
-          >
-            <span className="font-bold">
-              Precio (300 USD🌎 - 1.000.000 COP)
-            </span>
-          </li>
-        </ul>
+        <motion.div variants={zoomIn(0, 1)}>
+          <motion.ul className="w-[250px] md:w-[500px] ">
+            <li
+              className={` ${
+                styles.paragraph
+              } w-full border-b-2 border-neutral-100 border-opacity-100 dark:border-opacity-50 ${
+                darkMode ? "text-white" : "text-black"
+              }`}
+            >
+              ✅ 32 charlas en vivo por la plataforma Zoom.
+            </li>
+            <li
+              className={` ${
+                styles.paragraph
+              } w-full border-b-2 border-neutral-100 border-opacity-100  dark:border-opacity-50 ${
+                darkMode ? "text-white" : "text-black"
+              }`}
+            >
+              ✅ Grabaciones disponibles durante 2 meses.
+            </li>
+            <li
+              className={` ${
+                styles.paragraph
+              } w-full border-b-2 border-neutral-100 border-opacity-100  dark:border-opacity-50 ${
+                darkMode ? "text-white" : "text-black"
+              }`}
+            >
+              ✅ Docentes expertos en el área con reconocimiento internacional y
+              experiencia en docencia en pregrado y posgrado.
+            </li>
+            <li
+              className={` ${
+                styles.paragraph
+              } w-full border-b-2 border-neutral-100 border-opacity-100  dark:border-opacity-50 ${
+                darkMode ? "text-white" : "text-black"
+              }`}
+            >
+              ✅ Certificado de asistencia al finalizar.
+            </li>
+            <li
+              className={` ${styles.paragraph} w-full  ${
+                darkMode ? "text-white" : "text-black"
+              }`}
+            >
+              <span className="font-bold">
+                Precio (300 USD🌎 - 1.000.000 COP)
+              </span>
+            </li>
+          </motion.ul>
 
-        <CountDown />
+          <CountDown />
 
-        <div className="flex w-full items-end justify-start ">
-          <Link to="/contact">
-            <button className={`${styles.button} bg-primary  `}>
-              Inscripciones
-            </button>
-          </Link>
-        </div>
+          <div className="flex w-full items-end justify-start ">
+            <Link to="/contact">
+              <button className={`${styles.button} bg-primary  `}>
+                Inscripciones
+              </button>
+            </Link>
+          </div>
+        </motion.div>
       </div>
 
       <div className={`${layout.sectionImg} flex-col`}>
         <div className="md:col-span-2 flex flex-col items-center  justify-center w-full">
-          {services.map(({ id, name, consultorias }) => (
-            <div
+          {services.map(({ id, name, consultorias, motionTime }) => (
+            <motion.div
+              variants={fadeIn("up", "spring", motionTime * 0.7, 1.5)}
               tabIndex={0}
               key={id}
               className={`  ${
@@ -259,11 +276,11 @@ const Business = ({ darkMode }) => {
                   </ul>
                 )}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
