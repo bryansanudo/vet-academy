@@ -163,59 +163,57 @@ const Business = ({ darkMode }) => {
           cada módulo está diseñado para ofrecerte una perspectiva integral
           sobre el manejo clínico y quirúrgico del ganado.
         </p> */}
-        <motion.div variants={zoomIn(0, 1)}>
-          <motion.ul className="w-[250px] md:w-[500px] ">
-            <li
-              className={` ${
-                styles.paragraph
-              } w-full border-b-2 border-neutral-100 border-opacity-100 dark:border-opacity-50 ${
-                darkMode ? "text-white" : "text-black"
-              }`}
-            >
-              ✅ 32 charlas en vivo por la plataforma Zoom.
-            </li>
-            <li
-              className={` ${
-                styles.paragraph
-              } w-full border-b-2 border-neutral-100 border-opacity-100  dark:border-opacity-50 ${
-                darkMode ? "text-white" : "text-black"
-              }`}
-            >
-              ✅ Grabaciones disponibles durante 2 meses.
-            </li>
-            <li
-              className={` ${
-                styles.paragraph
-              } w-full border-b-2 border-neutral-100 border-opacity-100  dark:border-opacity-50 ${
-                darkMode ? "text-white" : "text-black"
-              }`}
-            >
-              ✅ Docentes expertos en el área con reconocimiento internacional y
-              experiencia en docencia en pregrado y posgrado.
-            </li>
-            <li
-              className={` ${
-                styles.paragraph
-              } w-full border-b-2 border-neutral-100 border-opacity-100  dark:border-opacity-50 ${
-                darkMode ? "text-white" : "text-black"
-              }`}
-            >
-              ✅ Certificado de asistencia al finalizar.
-            </li>
-            <li
-              className={` ${styles.paragraph} w-full  ${
-                darkMode ? "text-white" : "text-black"
-              }`}
-            >
-              <span className="font-bold">
-                Precio (300 USD🌎 - 1.000.000 COP)
-              </span>
-            </li>
+        <motion.div
+          variants={zoomIn(0, 1)}
+          className=" flex flex-col items-center md:items-start mt-6"
+        >
+          <motion.ul className="w-[300px] md:w-[500px]  ">
+            <div className="flex items-start justify-start border-b-2 border-neutral-100 border-opacity-100 dark:border-opacity-50 gap-2 py-1">
+              <GoDot className="text-primary text-3xl" />
+              <li
+                className={` w-full text-[18px] leading-[30.8px]  ${
+                  darkMode ? "text-dimWhite" : "text-black"
+                }`}
+              >
+                32 charlas en vivo por la plataforma Zoom.
+              </li>
+            </div>
+            <div className="flex items-start justify-center border-b-2 border-neutral-100 border-opacity-100 dark:border-opacity-50 gap-2 py-1">
+              <GoDot className="text-primary text-3xl" />
+              <li
+                className={` w-full text-[18px] leading-[30.8px]  ${
+                  darkMode ? "text-dimWhite" : "text-black"
+                }`}
+              >
+                Grabaciones disponibles durante 2 meses.
+              </li>
+            </div>
+            <div className="flex items-start justify-center border-b-2 border-neutral-100 border-opacity-100 dark:border-opacity-50 gap-2 py-1">
+              <GoDot className="text-primary text-3xl" />
+              <li
+                className={` w-full text-[18px] leading-[30.8px]  ${
+                  darkMode ? "text-dimWhite" : "text-black"
+                }`}
+              >
+                Docentes expertos en el área con reconocimiento internacional y
+                experiencia en docencia en pregrado y posgrado.
+              </li>
+            </div>
+            <div className="flex items-start justify-center border-b-2 border-neutral-100 border-opacity-100 dark:border-opacity-50 gap-2 py-1">
+              <GoDot className="text-primary text-3xl" />
+              <li
+                className={` w-full text-[18px] leading-[30.8px]  ${
+                  darkMode ? "text-dimWhite" : "text-black"
+                }`}
+              >
+                Certificado de asistencia al finalizar.
+              </li>
+            </div>
           </motion.ul>
 
           <CountDown />
 
-          <div className="flex w-full items-end justify-start ">
+          <div className="flex w-full items-center md:justify-start justify-center ">
             <Link to="/contact">
               <button className={`${styles.button} bg-primary  `}>
                 Inscripciones
