@@ -9,13 +9,16 @@ import Courses from "@/components/courses/Courses";
 import Footer from "@/components/Footer";
 
 import Contact from "@/components/Contact";
+import GalleryAbout from "@/components/GalleryAbout";
+import Bovinos from "@/components/bovinos/Bovinos";
 
 import { Routes, Route } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 const App = () => {
   const [isMenuShown, setIsMenuShown] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
+  const [b, setB] = useState(true);
 
   return (
     <div className={darkMode && "dark"}>
@@ -27,11 +30,19 @@ const App = () => {
       />
       <div className="dark:bg-accent w-full overflow-hidden">
         <Routes>
-          <Route path="/" element={<Home darkMode={darkMode} />} />
+          <Route
+            path="/"
+            element={<Home b={b} setB={setB} darkMode={darkMode} />}
+          />
           <Route path="/about" element={<About darkMode={darkMode} />} />
           <Route path="/courses" element={<Courses darkMode={darkMode} />} />
 
           <Route path="/contact" element={<Contact darkMode={darkMode} />} />
+          <Route path="/bovinos" element={<Bovinos darkMode={darkMode} />} />
+          <Route
+            path="/gallery-about"
+            element={<GalleryAbout darkMode={darkMode} />}
+          />
           {/*  <Route path="/faq" element={<Faq darkMode={darkMode} />} /> */}
           {/* <Route path="/terms" element={<Terms darkMode={darkMode} />} />
           <Route path="/privacy" element={<Privacy darkMode={darkMode} />} /> */}

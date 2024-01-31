@@ -124,9 +124,23 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                     Nosotros
                   </NavLink>
                 </li>
+                <li
+                  className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
+                >
+                  <NavLink to="/bovinos" className={activeLink}>
+                    Bovinos
+                  </NavLink>
+                </li>
+                <li
+                  className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
+                >
+                  <NavLink to="/courses" className={activeLink}>
+                    Cursos
+                  </NavLink>
+                </li>
 
                 {/* visa eb1 */}
-                <li>
+                {/* <li>
                   <div className="dropdown dropdown-bottom dropdown-hover">
                     <div
                       tabIndex={0}
@@ -158,7 +172,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                       ))}
                     </ul>
                   </div>
-                </li>
+                </li> */}
                 {/* visa eb2 */}
                 {/*  <li
                   className={`mt-1 text-[18px] hover:font-semibold hover:text-primary  capitalize duration-300   cursor-pointer `}
@@ -245,9 +259,21 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             >
               <Link to="/about">Nosotros</Link>
             </li>
+            <li
+              onClick={() => setIsMenuShown(!isMenuShown)}
+              className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
+            >
+              <Link to="/bovinos">Bovinos</Link>
+            </li>
+            <li
+              onClick={() => setIsMenuShown(!isMenuShown)}
+              className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
+            >
+              <Link to="/courses">Cursos</Link>
+            </li>
 
             {/* visa eb1 */}
-            <li>
+            {/*  <li>
               <div className="dropdown dropdown-bottom dropdown-hover">
                 <div
                   tabIndex={0}
@@ -275,7 +301,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                   ))}
                 </ul>
               </div>
-            </li>
+            </li> */}
 
             {/* faq contact */}
             {links2.map(({ id, link, name }) => (

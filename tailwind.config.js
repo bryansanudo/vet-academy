@@ -17,7 +17,7 @@ module.exports = {
         dimBlue: "rgba(9, 151, 124, 0.1)",
       },
       animation: {
-        "loop-scroll": "loop-scroll 20s linear infinite",
+        "loop-scroll": "loop-scroll 100s linear infinite",
       },
       keyframes: {
         "loop-scroll": {

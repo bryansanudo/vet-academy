@@ -21,12 +21,12 @@ const Achieve = () => (
         En Vet Academy, nos apasiona brindar la mejor educación veterinaria
         disponible.
       </h2> */}
-      <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
+      <p className={`${styles.subtitle} max-w-[600px] mt-5`}>
         VET Academy es una plataforma desarrollada para la educación continua de
         médicos veterinarios, estudiantes y auxiliares con el fin de aportar al
         crecimiento profesional y perfeccionamiento de habilidades técnicas.
       </p>
-      <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
+      <p className={`${styles.subtitle} max-w-[600px] mt-5`}>
         Nuestra metodología se basa en la formación virtual y presencial en
         áreas como, medicina interna, cirugía, anestesia, manejo del dolor,
         cuidado crítico, etología y demás especialidades; contando con la
