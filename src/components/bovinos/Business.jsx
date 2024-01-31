@@ -209,6 +209,16 @@ const Business = ({ darkMode }) => {
                 Certificado de asistencia al finalizar.
               </li>
             </div>
+            <div className="flex items-start justify-center border-b-2 border-neutral-100 border-opacity-100 dark:border-opacity-50 gap-2 py-1">
+              <GoDot className="text-primary text-3xl" />
+              <li
+                className={` w-full text-[18px] leading-[30.8px]  ${
+                  darkMode ? "text-dimWhite" : "text-black"
+                }`}
+              >
+                Precio (300 USD🌎 - 1'000.000 COP)
+              </li>
+            </div>
           </motion.ul>
 
           <CountDown />
