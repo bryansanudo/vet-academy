@@ -11,6 +11,7 @@ import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 import GalleryAbout from "@/components/GalleryAbout";
 import Bovinos from "@/components/bovinos/Bovinos";
+import Practices from "@/components/practices/Practices";
 
 import { Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -39,6 +40,10 @@ const App = () => {
 
           <Route path="/contact" element={<Contact darkMode={darkMode} />} />
           <Route path="/bovinos" element={<Bovinos darkMode={darkMode} />} />
+          <Route
+            path="/practices"
+            element={<Practices darkMode={darkMode} />}
+          />
           <Route
             path="/gallery-about"
             element={<GalleryAbout darkMode={darkMode} />}

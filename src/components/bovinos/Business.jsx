@@ -153,7 +153,7 @@ const Business = ({ darkMode }) => {
       id="features"
       className="flex flex-col md:flex-row justify-start "
     >
-      <div className={`${layout.sectionInfo} items-start`}>
+      <div className={`${layout.sectionInfo} items-start `}>
         <h2 className={`${styles.heading2} `}>Bovinos en la clínica diaria</h2>
         {/* <p className={`${styles.paragraph} `}>
           La ciencia detrás del cuidado de los bovinos con nuestro curso único{" "}
@@ -168,7 +168,7 @@ const Business = ({ darkMode }) => {
           className=" flex flex-col items-center md:items-start mt-6"
         >
           <motion.ul className="w-[300px] md:w-[500px]  ">
-            <div className="flex items-start justify-start border-b-2 border-neutral-100 border-opacity-100 dark:border-opacity-50 gap-2 py-1">
+            <div className="flex items-start justify-start border-b-2 border-gray-300 border-opacity-100 dark:border-opacity-50 gap-2 py-1">
               <GoDot className="text-primary text-3xl" />
               <li
                 className={` w-full text-[18px] leading-[30.8px]  ${
@@ -178,7 +178,7 @@ const Business = ({ darkMode }) => {
                 32 charlas en vivo por la plataforma Zoom.
               </li>
             </div>
-            <div className="flex items-start justify-center border-b-2 border-neutral-100 border-opacity-100 dark:border-opacity-50 gap-2 py-1">
+            <div className="flex items-start justify-center border-b-2 border-gray-300 border-opacity-100 dark:border-opacity-50 gap-2 py-1">
               <GoDot className="text-primary text-3xl" />
               <li
                 className={` w-full text-[18px] leading-[30.8px]  ${
@@ -188,7 +188,7 @@ const Business = ({ darkMode }) => {
                 Grabaciones disponibles durante 2 meses.
               </li>
             </div>
-            <div className="flex items-start justify-center border-b-2 border-neutral-100 border-opacity-100 dark:border-opacity-50 gap-2 py-1">
+            <div className="flex items-start justify-center border-b-2 border-gray-300 border-opacity-100 dark:border-opacity-50 gap-2 py-1">
               <GoDot className="text-primary text-3xl" />
               <li
                 className={` w-full text-[18px] leading-[30.8px]  ${
@@ -199,7 +199,7 @@ const Business = ({ darkMode }) => {
                 experiencia en docencia en pregrado y posgrado.
               </li>
             </div>
-            <div className="flex items-start justify-center border-b-2 border-neutral-100 border-opacity-100 dark:border-opacity-50 gap-2 py-1">
+            <div className="flex items-start justify-center border-b-2 border-gray-300 border-opacity-100 dark:border-opacity-50 gap-2 py-1">
               <GoDot className="text-primary text-3xl" />
               <li
                 className={` w-full text-[18px] leading-[30.8px]  ${
@@ -209,7 +209,7 @@ const Business = ({ darkMode }) => {
                 Certificado de asistencia al finalizar.
               </li>
             </div>
-            <div className="flex items-start justify-center border-b-2 border-neutral-100 border-opacity-100 dark:border-opacity-50 gap-2 py-1">
+            <div className="flex items-start justify-center border-b-2 border-gray-300 border-opacity-100 dark:border-opacity-50 gap-2 py-1">
               <GoDot className="text-primary text-3xl" />
               <li
                 className={` w-full text-[18px] leading-[30.8px]  ${
@@ -235,7 +235,7 @@ const Business = ({ darkMode }) => {
 
       <div className={`${layout.sectionImg} flex-col`}>
         <div className="md:col-span-2 flex flex-col items-center  justify-center w-full">
-          {services.map(({ id, name, consultorias, motionTime }) => (
+          {/* {services.map(({ id, name, consultorias, motionTime }) => (
             <motion.div
               variants={fadeIn("up", "spring", motionTime * 0.7, 1.5)}
               tabIndex={0}
@@ -247,10 +247,7 @@ const Business = ({ darkMode }) => {
               } collapse collapse-arrow text-primary  my-4 rounded-box w-full`}
             >
               <div className="collapse-title flex items-center gap-4 ">
-                {/* <div className={`${darkMode ? "text-white" : "text-black"}`}>
-                  Icono
-                </div> */}
-                <div className={`${styles.title}   `}>{name}</div>
+                <div className={`${styles.title} `}>{name}</div>
               </div>
               <div
                 className={`${styles.sectionText} collapse-content font-poppins font-normal text-[16px] leading-[24px]  mr-10`}
@@ -285,7 +282,8 @@ const Business = ({ darkMode }) => {
                 )}
               </div>
             </motion.div>
-          ))}
+          ))} */}
+          <h2>imagen o texto</h2>
         </div>
       </div>
     </motion.section>

@@ -3,6 +3,7 @@ import styles from "@/style";
 import Business from "@/components/bovinos/Business";
 
 import Advantages from "@/components/bovinos/Advantages";
+import Metodology from "@/components/bovinos/Metodology";
 
 import HeroHome from "@/components/bovinos/HeroHome";
 import Clients from "@/components/bovinos/Clients";
@@ -38,11 +39,11 @@ const Bovinos = ({ darkMode }) => {
           {/* <Practices darkMode={darkMode} /> */}
           {/*      <Services darkMode={darkMode} /> */}
           {/*  <Advantages darkMode={darkMode} /> */}
-          <Advantages />
-          <div className="mt-40">
+          <Metodology darkMode={darkMode} />
+          {/*  <div className="mt-40">
             <h2 className={styles.heading2}>Docentes</h2>
             <Clients />
-          </div>
+          </div> */}
           {/*  <Timeline darkMode={darkMode} /> */}
           {/*  <Clients /> */}
           <CTA darkMode={darkMode} />
