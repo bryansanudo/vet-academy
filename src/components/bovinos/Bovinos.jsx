@@ -39,14 +39,14 @@ const Bovinos = ({ darkMode }) => {
           {/* <Practices darkMode={darkMode} /> */}
           {/*      <Services darkMode={darkMode} /> */}
           {/*  <Advantages darkMode={darkMode} /> */}
-          <Metodology darkMode={darkMode} />
+          {/* <Metodology darkMode={darkMode} /> */}
           {/*  <div className="mt-40">
             <h2 className={styles.heading2}>Docentes</h2>
             <Clients />
           </div> */}
           {/*  <Timeline darkMode={darkMode} /> */}
           {/*  <Clients /> */}
-          <CTA darkMode={darkMode} />
+          {/* <CTA darkMode={darkMode} /> */}
         </div>
       </div>
     </>

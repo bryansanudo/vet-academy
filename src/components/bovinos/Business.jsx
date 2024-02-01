@@ -8,6 +8,8 @@ import CountDown from "@/components/CountDown";
 import { motion } from "framer-motion";
 import { staggerContainer, zoomIn, fadeIn } from "@/utils/motion";
 
+import Metodology from "@/components/bovinos/Metodology";
+
 const Business = ({ darkMode }) => {
   const services = [
     {
@@ -155,15 +157,8 @@ const Business = ({ darkMode }) => {
     >
       <div className={`${layout.sectionInfo} items-start `}>
         <h2 className={`${styles.heading2} `}>Bovinos en la clínica diaria</h2>
-        {/* <p className={`${styles.paragraph} `}>
-          La ciencia detrás del cuidado de los bovinos con nuestro curso único{" "}
-          <span className="text-primary font-bold">
-            "Bovinos en la Clínica Diaria".
-          </span>{" "}
-          cada módulo está diseñado para ofrecerte una perspectiva integral
-          sobre el manejo clínico y quirúrgico del ganado.
-        </p> */}
-        <motion.div
+
+        {/* <motion.div
           variants={zoomIn(0, 1)}
           className=" flex flex-col items-center md:items-start mt-6"
         >
@@ -230,64 +225,137 @@ const Business = ({ darkMode }) => {
               </button>
             </Link>
           </div>
-        </motion.div>
+        </motion.div> */}
+        <Metodology darkMode={darkMode} />
       </div>
 
-      <div className={`${layout.sectionImg} flex-col`}>
-        <div className="md:col-span-2 flex flex-col items-center  justify-center w-full">
-          {/* {services.map(({ id, name, consultorias, motionTime }) => (
-            <motion.div
-              variants={fadeIn("up", "spring", motionTime * 0.7, 1.5)}
-              tabIndex={0}
-              key={id}
-              className={`  ${
-                darkMode
-                  ? "shadow-sm shadow-white duration-700 "
-                  : "shadow-md shadow-black  duration-700"
-              } collapse collapse-arrow text-primary  my-4 rounded-box w-full`}
-            >
-              <div className="collapse-title flex items-center gap-4 ">
-                <div className={`${styles.title} `}>{name}</div>
+      <div
+        className={`flex-1 flex ${styles.flexStart} md:ml-10 ml-0 md:mt-0 mt-10 relative `}
+      >
+        <div
+          className={`md:w-1/3 flex flex-col items-center  justify-center fixed shadow-md  rounded-xl pb-6 ${
+            darkMode ? "shadow-white" : "shadow-black"
+          }`}
+        >
+          <motion.div className=" flex flex-col items-center md:items-start mt-6">
+            <motion.ul className="w-[300px] md:w-[500px]  ">
+              <div className="flex items-start justify-start border-b-2 border-gray-300 border-opacity-100 dark:border-opacity-50 gap-2 py-1">
+                <GoDot className="text-primary text-3xl" />
+                <li
+                  className={` w-full text-[18px] leading-[30.8px]  ${
+                    darkMode ? "text-dimWhite" : "text-black"
+                  }`}
+                >
+                  32 charlas en vivo por la plataforma Zoom.
+                </li>
               </div>
-              <div
-                className={`${styles.sectionText} collapse-content font-poppins font-normal text-[16px] leading-[24px]  mr-10`}
-              >
-                {consultorias && consultorias.length > 0 && (
-                  <ul>
-                    {consultorias.map(({ id, title, date }) => (
-                      <li key={id} className=" border-b-2 w-full">
-                        <div className="flex gap-2">
-                          <div className="font-bold text-lg text-primary">
-                            {id}
-                          </div>
+              <div className="flex items-start justify-center border-b-2 border-gray-300 border-opacity-100 dark:border-opacity-50 gap-2 py-1">
+                <GoDot className="text-primary text-3xl" />
+                <li
+                  className={` w-full text-[18px] leading-[30.8px]  ${
+                    darkMode ? "text-dimWhite" : "text-black"
+                  }`}
+                >
+                  Grabaciones disponibles durante 2 meses.
+                </li>
+              </div>
+              <div className="flex items-start justify-center border-b-2 border-gray-300 border-opacity-100 dark:border-opacity-50 gap-2 py-1">
+                <GoDot className="text-primary text-3xl" />
+                <li
+                  className={` w-full text-[18px] leading-[30.8px]  ${
+                    darkMode ? "text-dimWhite" : "text-black"
+                  }`}
+                >
+                  Docentes expertos en el área con reconocimiento internacional
+                  y experiencia en docencia en pregrado y posgrado.
+                </li>
+              </div>
+              <div className="flex items-start justify-center border-b-2 border-gray-300 border-opacity-100 dark:border-opacity-50 gap-2 py-1">
+                <GoDot className="text-primary text-3xl" />
+                <li
+                  className={` w-full text-[18px] leading-[30.8px]  ${
+                    darkMode ? "text-dimWhite" : "text-black"
+                  }`}
+                >
+                  Certificado de asistencia al finalizar.
+                </li>
+              </div>
+              <div className="flex items-start justify-center border-b-2 border-gray-300 border-opacity-100 dark:border-opacity-50 gap-2 py-1">
+                <GoDot className="text-primary text-3xl" />
+                <li
+                  className={` w-full text-[18px] leading-[30.8px]  ${
+                    darkMode ? "text-dimWhite" : "text-black"
+                  }`}
+                >
+                  Precio (300 USD🌎 - 1'000.000 COP)
+                </li>
+              </div>
+            </motion.ul>
 
-                          <div className="flex flex-col w-full">
-                            <div
-                              className={` ${styles.subtitle} ${
-                                darkMode ? "text-white" : "text-black"
-                              } mr-4 mt-[2px] `}
-                            >
-                              {title}
-                            </div>
-                            <div className=" w-full flex items-center justify-end">
-                              <span className={`    text-primary  `}>
-                                {date}
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            </motion.div>
-          ))} */}
-          <h2>imagen o texto</h2>
+            <CountDown />
+
+            <div className="flex w-full items-center md:justify-start justify-center ">
+              <Link to="/contact">
+                <button className={`${styles.button} bg-primary  `}>
+                  Inscripciones
+                </button>
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </div>
     </motion.section>
   );
 };
 
+{
+  /* {services.map(({ id, name, consultorias, motionTime }) => (
+  <motion.div
+    variants={fadeIn("up", "spring", motionTime * 0.7, 1.5)}
+    tabIndex={0}
+    key={id}
+    className={`  ${
+      darkMode
+        ? "shadow-sm shadow-white duration-700 "
+        : "shadow-md shadow-black  duration-700"
+    } collapse collapse-arrow text-primary  my-4 rounded-box w-full`}
+  >
+    <div className="collapse-title flex items-center gap-4 ">
+      <div className={`${styles.title} `}>{name}</div>
+    </div>
+    <div
+      className={`${styles.sectionText} collapse-content font-poppins font-normal text-[16px] leading-[24px]  mr-10`}
+    >
+      {consultorias && consultorias.length > 0 && (
+        <ul>
+          {consultorias.map(({ id, title, date }) => (
+            <li key={id} className=" border-b-2 w-full">
+              <div className="flex gap-2">
+                <div className="font-bold text-lg text-primary">
+                  {id}
+                </div>
+
+                <div className="flex flex-col w-full">
+                  <div
+                    className={` ${styles.subtitle} ${
+                      darkMode ? "text-white" : "text-black"
+                    } mr-4 mt-[2px] `}
+                  >
+                    {title}
+                  </div>
+                  <div className=" w-full flex items-center justify-end">
+                    <span className={`    text-primary  `}>
+                      {date}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  </motion.div>
+))} */
+}
 export default Business;

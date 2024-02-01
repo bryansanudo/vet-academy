@@ -104,7 +104,7 @@ const Advantages = ({ darkMode }) => (
             whileInView="show"
             viewport={{ once: true, amount: 0.25 }}
             key={id}
-            className={` p-2 w-[100%] md:w-[60%] `}
+            className={` p-2 w-[100%]  `}
           >
             <motion.img
               variants={zoomIn(0.2, 2)}
