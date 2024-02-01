@@ -91,9 +91,9 @@ const Advantages = ({ darkMode }) => (
     id="clients"
     className={`${styles.paddingY} ${styles.flexCenter}  w-full flex-col relative `}
   >
-    <div
-      className={` red__gradient absolute z-[0] w-[30%] h-[60%] -left-[50%] rounded-full  bottom-40`}
-    />
+    {/* <div
+      className={` red__gradient absolute z-[0] w-[10%] h-[0%] -left-[50%] rounded-full  bottom-40`}
+    /> */}
 
     <div className="flex flex-wrap sm:justify-start justify-center w-full  relative z-[1]">
       <motion.div className="flex flex-col items-center justify-center mx-auto ">

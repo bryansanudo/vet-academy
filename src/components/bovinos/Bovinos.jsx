@@ -26,7 +26,7 @@ const Bovinos = ({ darkMode }) => {
         className={`dark:bg-accent  ${styles.paddingX} ${styles.flexCenter} mt-20`}
       >
         <div className={`${styles.boxWidth}`}>
-          <div name="scrol" className="pt-20" />
+          <div name="scrol" className="" />
 
           <Business darkMode={darkMode} />
 

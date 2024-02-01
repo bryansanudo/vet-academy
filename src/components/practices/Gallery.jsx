@@ -276,7 +276,7 @@ const Gallery = ({ darkMode }) => {
           <div className="fixed inset-0 bg-black opacity-50"></div>
 
           <motion.div
-            variants={fadeIn("up", "spring", 0.3, 2.5)}
+            variants={fadeIn("up", "spring", 0.1, 2.5)}
             className="relative mx-4"
           >
             <img

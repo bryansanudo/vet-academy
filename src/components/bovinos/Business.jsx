@@ -156,8 +156,6 @@ const Business = ({ darkMode }) => {
       className="flex flex-col md:flex-row justify-start "
     >
       <div className={`${layout.sectionInfo} items-start `}>
-        <h2 className={`${styles.heading2} `}>Bovinos en la clínica diaria</h2>
-
         {/* <motion.div
           variants={zoomIn(0, 1)}
           className=" flex flex-col items-center md:items-start mt-6"
@@ -230,15 +228,15 @@ const Business = ({ darkMode }) => {
       </div>
 
       <div
-        className={`flex-1 flex ${styles.flexStart} md:ml-10 ml-0 md:mt-0 mt-10 relative `}
+        className={`flex-1 flex ${styles.flexStart} md:ml-10 ml-0  mt-20  relative `}
       >
         <div
-          className={`md:w-1/3 flex flex-col items-center  justify-center fixed shadow-md  rounded-xl pb-6 ${
+          className={`md:w-1/4 flex flex-col items-center  justify-center fixed shadow-md  rounded-xl pb-6 ${
             darkMode ? "shadow-white" : "shadow-black"
           }`}
         >
-          <motion.div className=" flex flex-col items-center md:items-start mt-6">
-            <motion.ul className="w-[300px] md:w-[500px]  ">
+          <motion.div className=" flex flex-col items-center md:items-start mt-6 px-6 ">
+            <motion.ul className="w-full  ">
               <div className="flex items-start justify-start border-b-2 border-gray-300 border-opacity-100 dark:border-opacity-50 gap-2 py-1">
                 <GoDot className="text-primary text-3xl" />
                 <li
