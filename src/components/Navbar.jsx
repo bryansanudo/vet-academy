@@ -131,13 +131,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                     Bovinos
                   </NavLink>
                 </li>
-                <li
-                  className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
-                >
-                  <NavLink to="/courses" className={activeLink}>
-                    Cursos
-                  </NavLink>
-                </li>
+
                 <li
                   className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
                 >
@@ -276,9 +270,15 @@ const Navbar = ({ darkMode, setDarkMode }) => {
               onClick={() => setIsMenuShown(!isMenuShown)}
               className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
             >
+              <Link to="/practices">Prácticas</Link>
+            </li>
+            {/*   <li
+              onClick={() => setIsMenuShown(!isMenuShown)}
+              className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
+            >
               <Link to="/courses">Cursos</Link>
             </li>
-
+ */}
             {/* visa eb1 */}
             {/*  <li>
               <div className="dropdown dropdown-bottom dropdown-hover">

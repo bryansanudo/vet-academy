@@ -28,6 +28,7 @@ const Practices = ({ darkMode }) => {
         <div className={`${styles.boxWidth}`}>
           {/* <Business darkMode={darkMode} /> */}
           {/* <Business /> */}
+
           <Gallery darkMode={darkMode} />
 
           <div

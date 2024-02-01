@@ -95,7 +95,9 @@ const Gallery = ({ darkMode }) => {
       <div
         className={` red__gradient absolute z-[0] w-[30%] h-[60%] -left-[50%] rounded-full  bottom-40`}
       />
-
+      <h2 className={`${styles.heading2} mb-10`}>
+        Cursos presenciales - Prácticas
+      </h2>
       <motion.div
         variants={fadeIn("down", "spring", 0.3, 2.5)}
         className="grid grid-cols-2 md:grid-cols-4 gap-5"
