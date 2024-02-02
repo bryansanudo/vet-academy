@@ -241,7 +241,7 @@ const Catalogue = ({ darkMode }) => {
               <p className={`${styles.subtitle}`}>Descripción</p>
               <div className="card-actions justify-end">
                 <div>
-                  <span className="text-primary font-bold ">${price}</span>
+                  <span className="text-primary  ">${price}</span>
                 </div>
               </div>
             </div>

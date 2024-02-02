@@ -1,11 +1,12 @@
 import styles from "@/style";
 
-import { GrStatusGood } from "react-icons/gr";
-import { VscServerProcess } from "react-icons/vsc";
-import { MdDashboardCustomize } from "react-icons/md";
-import { HiOutlineDocumentMagnifyingGlass } from "react-icons/hi2";
-import { GrCycle } from "react-icons/gr";
 import { MdMoreTime } from "react-icons/md";
+
+import { FaPhotoVideo } from "react-icons/fa";
+import { GiTeacher } from "react-icons/gi";
+import { AiOutlineMessage } from "react-icons/ai";
+import { FaUserDoctor } from "react-icons/fa6";
+import { GiWorld } from "react-icons/gi";
 
 import { motion } from "framer-motion";
 import { staggerContainer, zoomIn, fadeIn } from "@/utils/motion";
@@ -13,42 +14,42 @@ import { staggerContainer, zoomIn, fadeIn } from "@/utils/motion";
 const cards = [
   {
     id: 1,
-    img: <GrStatusGood />,
+    img: <MdMoreTime />,
     title: "Flexibilidad de Horarios",
     subtitle:
       "Aprende a tu propio ritmo con nuestros cursos virtuales. Accede al contenido en cualquier momento y desde cualquier lugar.",
   },
   {
     id: 2,
-    img: <VscServerProcess />,
+    img: <FaPhotoVideo />,
     title: "Variedad de Contenido Especializado",
     subtitle:
       "Descubre una amplia gama de cursos especializados en áreas clave de la Medicina Veterinaria. ",
   },
   {
     id: 3,
-    img: <MdDashboardCustomize />,
+    img: <GiTeacher />,
     title: "Expertos de la Industria como Instructores",
     subtitle:
       "Aprende de los mejores en el campo veterinario. Nuestros cursos están dirigidos por expertos con una vasta experiencia en la industria.",
   },
   {
     id: 4,
-    img: <HiOutlineDocumentMagnifyingGlass />,
+    img: <AiOutlineMessage />,
     title: "Interactividad y Participación Activa",
     subtitle:
       "Sumérgete en experiencias de aprendizaje interactivas que fomentan la participación activa y el compromiso. 	",
   },
   {
     id: 5,
-    img: <GrCycle />,
+    img: <FaUserDoctor />,
     title: "Apoyo Continuo del Equipo de Vet Academy",
     subtitle:
       "No estás solo en tu viaje de aprendizaje. Nuestro equipo de soporte está siempre disponible para asegurarse de que tengas una experiencia educativa exitosa y enriquecedora.",
   },
   {
     id: 6,
-    img: <MdMoreTime />,
+    img: <GiWorld />,
     title: "Acceso a una Comunidad Profesional Global",
     subtitle:
       "Únete a una red de profesionales veterinarios de todo el mundo. Con nuestros cursos, obtienes acceso a una comunidad activa y colaborativa.",

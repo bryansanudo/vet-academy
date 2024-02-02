@@ -93,12 +93,14 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         <div className="w-full h-20 dark:text-white ">
           <div className="flex justify-start   md:justify-end md:gap-5 items-center  mx-auto  h-full">
             <div className="mr-auto    hidden md:flex items-end">
-              <div className="flex gap-1 items-end ">
-                <img
-                  src={darkMode ? logoVet : logoVet}
-                  className="w-48  object-contain"
-                  alt=""
-                />
+              <div className="flex gap-1 items-end">
+                <NavLink to="/" className={activeLink}>
+                  <img
+                    src={darkMode ? logoVet : logoVet}
+                    className="w-48  object-contain hover:scale-105 duration-500"
+                    alt=""
+                  />
+                </NavLink>
                 {/*   <p
                   className={` ${
                     darkMode ? "text-white" : "text-black"
@@ -110,13 +112,6 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             </div>
             <div className="hidden lg:flex items-center">
               <ul className="flex gap-6 ">
-                <li
-                  className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
-                >
-                  <NavLink to="/" className={activeLink}>
-                    Inicio
-                  </NavLink>
-                </li>
                 <li
                   className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
                 >
@@ -146,9 +141,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                     Prácticas
                   </NavLink>
                 </li>
-                <li
-                  className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
-                >
+                <li className="mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer">
                   <NavLink to="/masterclass" className={activeLink}>
                     Masterclass Gratuitas
                   </NavLink>
@@ -236,11 +229,13 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             </div>
 
             <div className="ml-auto gap-1 md:hidden flex items-end">
-              <img
-                src={darkMode ? logoVet : logoVet}
-                className="w-40 object-contain"
-                alt=""
-              />
+              <NavLink to="/" className={activeLink}>
+                <img
+                  src={darkMode ? logoVet : logoVet}
+                  className="w-40 object-contain"
+                  alt=""
+                />
+              </NavLink>
               {/* <p
                 className={` ${
                   darkMode ? "text-white" : "text-black"
@@ -266,37 +261,41 @@ const Navbar = ({ darkMode, setDarkMode }) => {
               onClick={() => setIsMenuShown(!isMenuShown)}
               className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
             >
-              <Link to="/">Inicio</Link>
+              <NavLink to="/about" className={activeLink}>
+                Nosotros
+              </NavLink>
             </li>
             <li
               onClick={() => setIsMenuShown(!isMenuShown)}
               className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
             >
-              <Link to="/about">Nosotros</Link>
+              <NavLink to="/bovinos" className={activeLink}>
+                Bovinos
+              </NavLink>
             </li>
             <li
               onClick={() => setIsMenuShown(!isMenuShown)}
               className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
             >
-              <Link to="/bovinos">Bovinos</Link>
+              <NavLink to="/courses" className={activeLink}>
+                Cursos
+              </NavLink>
             </li>
             <li
               onClick={() => setIsMenuShown(!isMenuShown)}
               className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
             >
-              <Link to="/courses">Cursos</Link>
+              <NavLink to="/practices" className={activeLink}>
+                Prácticas
+              </NavLink>
             </li>
             <li
               onClick={() => setIsMenuShown(!isMenuShown)}
               className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
             >
-              <Link to="/practices">Prácticas</Link>
-            </li>
-            <li
-              onClick={() => setIsMenuShown(!isMenuShown)}
-              className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
-            >
-              <Link to="/masterclass">Masterclass Gratuitas</Link>
+              <NavLink to="/masterclass" className={activeLink}>
+                Masterclass Gratuitas
+              </NavLink>
             </li>
             {/*   <li
               onClick={() => setIsMenuShown(!isMenuShown)}
@@ -337,15 +336,14 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             </li> */}
 
             {/* faq contact */}
-            {links2.map(({ id, link, name }) => (
-              <li
-                onClick={() => setIsMenuShown(!isMenuShown)}
-                key={id}
-                className={`mt-1 text-[18px]  capitalize duration-300  hover:font-semibold hover:text-primary   cursor-pointer `}
-              >
-                <Link to={link}>{name}</Link>
-              </li>
-            ))}
+            <li
+              onClick={() => setIsMenuShown(!isMenuShown)}
+              className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
+            >
+              <NavLink to="/contact" className={activeLink}>
+                Contacto
+              </NavLink>
+            </li>
           </ul>
         </div>
       </div>

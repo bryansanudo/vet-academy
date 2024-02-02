@@ -9,12 +9,15 @@ import { GrUserExpert } from "react-icons/gr";
 import { MdOutlineSecurity } from "react-icons/md";
 import { BiTransfer } from "react-icons/bi";
 import { HiUserGroup } from "react-icons/hi";
+import { GrCertificate } from "react-icons/gr";
+import { FaRegHandPointer } from "react-icons/fa";
+import { HiOutlineComputerDesktop } from "react-icons/hi2";
 
 export const features = [
   {
     id: "feature-1",
     motionTime: 1,
-    icon: <HiUserGroup />,
+    icon: <FaRegHandPointer />,
     title: "Aprendizaje Interactivo",
     content:
       "Sumérgete en una experiencia de aprendizaje virtual envolvente con nuestros cursos. Accede al contenido desde cualquier lugar y en cualquier momento, adaptado a tu ritmo y necesidades.",
@@ -22,7 +25,7 @@ export const features = [
   {
     id: "feature-2",
     motionTime: 2,
-    icon: <MdOutlineSecurity />,
+    icon: <HiOutlineComputerDesktop />,
     title: "Plataforma Intuitiva y Accesible",
     content:
       "Nuestra plataforma está diseñada pensando en ti, ofreciendo una navegación fácil e intuitiva. Aprende de manera efectiva y cómoda con recursos didácticos de calidad y soporte técnico dedicado.",
@@ -30,7 +33,7 @@ export const features = [
   {
     id: "feature-3",
     motionTime: 3,
-    icon: <BiTransfer />,
+    icon: <GrCertificate />,
     title: "Certificado de Asistencia",
     content:
       "Aprovecha al máximo tu inversión en educación con nuestros cursos, respaldados por certificaciones. Obtén reconocimiento por tu dedicación y esfuerzo en la mejora continua de tus habilidades veterinarias.",
