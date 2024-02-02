@@ -31,6 +31,28 @@ const Catalogue = ({ darkMode }) => {
   const [language, setLanguage] = useState("en");
   const feed = [
     {
+      id: 6,
+      img: curso6,
+      logo: logo,
+      title: "Bovinos",
+      subtitle: "Descripcion del curso 6",
+      link: "/bovinos",
+      cop: "1.000.000",
+      usd: "350",
+      sessions: "32",
+    },
+    {
+      id: 13,
+      img: curso13,
+      logo: logo,
+      title: "Manejo del dolor en Caninos y Felinos",
+      subtitle: "Descripcion del curso 12",
+      link: "/curso12",
+      cop: "1.000.000",
+      usd: "350",
+      sessions: "7",
+    },
+    {
       id: 1,
       img: curso1,
       logo: logo,
@@ -39,6 +61,7 @@ const Catalogue = ({ darkMode }) => {
       link: "/curso1",
       cop: "1.000.000",
       usd: "350",
+      sessions: "10",
     },
     {
       id: 2,
@@ -49,6 +72,7 @@ const Catalogue = ({ darkMode }) => {
       link: "/curso2",
       cop: "1.000.000",
       usd: "350",
+      sessions: "6",
     },
     {
       id: 3,
@@ -59,6 +83,7 @@ const Catalogue = ({ darkMode }) => {
       link: "/curso3",
       cop: "1.000.000",
       usd: "350",
+      sessions: "7",
     },
     {
       id: 4,
@@ -69,6 +94,7 @@ const Catalogue = ({ darkMode }) => {
       link: "/curso4",
       cop: "1.000.000",
       usd: "350",
+      sessions: "6",
     },
     {
       id: 5,
@@ -79,16 +105,7 @@ const Catalogue = ({ darkMode }) => {
       link: "/curso5",
       cop: "1.000.000",
       usd: "350",
-    },
-    {
-      id: 6,
-      img: curso6,
-      logo: logo,
-      title: "Bovinos",
-      subtitle: "Descripcion del curso 6",
-      link: "/bovinos",
-      cop: "1.000.000",
-      usd: "350",
+      sessions: "13",
     },
     {
       id: 7,
@@ -99,6 +116,7 @@ const Catalogue = ({ darkMode }) => {
       link: "/curso7",
       cop: "1.000.000",
       usd: "350",
+      sessions: "14",
     },
     {
       id: 8,
@@ -109,6 +127,7 @@ const Catalogue = ({ darkMode }) => {
       link: "/curso8",
       cop: "1.000.000",
       usd: "350",
+      sessions: "20",
     },
     {
       id: 9,
@@ -119,16 +138,7 @@ const Catalogue = ({ darkMode }) => {
       link: "/curso9",
       cop: "1.000.000",
       usd: "350",
-    },
-    {
-      id: 10,
-      img: curso10,
-      logo: logo,
-      title: "Mascotas exóticas",
-      subtitle: "Descripcion del curso 10",
-      link: "/curso10",
-      cop: "1.000.000",
-      usd: "350",
+      sessions: "18",
     },
     {
       id: 11,
@@ -139,6 +149,18 @@ const Catalogue = ({ darkMode }) => {
       link: "/curso11",
       cop: "1.000.000",
       usd: "350",
+      sessions: "18",
+    },
+    {
+      id: 10,
+      img: curso10,
+      logo: logo,
+      title: "Mascotas exóticas",
+      subtitle: "Descripcion del curso 10",
+      link: "/curso10",
+      cop: "1.000.000",
+      usd: "350",
+      sessions: "17",
     },
     {
       id: 12,
@@ -149,16 +171,7 @@ const Catalogue = ({ darkMode }) => {
       link: "/curso12",
       cop: "1.000.000",
       usd: "350",
-    },
-    {
-      id: 12,
-      img: curso13,
-      logo: logo,
-      title: "Manejo del dolor en Caninos y Felinos",
-      subtitle: "Descripcion del curso 12",
-      link: "/curso12",
-      cop: "1.000.000",
-      usd: "350",
+      sessions: "9",
     },
   ];
 
@@ -255,7 +268,7 @@ const Catalogue = ({ darkMode }) => {
       ))} */}
 
         {currentItems.map(
-          ({ id, img, logo, title, subtitle, usd, cop, link }) => (
+          ({ id, img, logo, title, subtitle, usd, cop, link, sessions }) => (
             <div
               key={id}
               className={`card   shadow-sm ${
@@ -275,8 +288,11 @@ const Catalogue = ({ darkMode }) => {
               <div className="card-body">
                 <h2 className={`${styles.title}`}>{title}</h2>
                 <p className={`${styles.subtitle}`}>Descripción</p>
-                <div className="card-actions justify-end">
+                <div className="card-actions justify-between ">
                   <div>
+                    <span className="text-primary">{sessions} clases</span>
+                  </div>
+                  <div className="flex justify-between">
                     {language === "en" ? (
                       <div className="flex  gap-2 items-end justify-center">
                         <span className="text-primary ">${usd} </span>
