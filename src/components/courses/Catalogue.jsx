@@ -222,7 +222,12 @@ const Catalogue = ({ darkMode }) => {
       ))} */}
 
         {currentItems.map(({ id, img, logo, title, subtitle, price, link }) => (
-          <div key={id} className="card bg-base-100  shadow-sm shadow-primary">
+          <div
+            key={id}
+            className={`card   shadow-sm ${
+              darkMode ? "bg-dark shadow-white" : "bg-base-100 shadow-gray-300"
+            }`}
+          >
             <figure className="relative">
               <img src={img} alt="Shoes" />
               <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
@@ -232,8 +237,8 @@ const Catalogue = ({ darkMode }) => {
               </div>
             </figure>
             <div className="card-body">
-              <h2 className="card-title">{title}</h2>
-              <p>Descripción</p>
+              <h2 className={`${styles.title}`}>{title}</h2>
+              <p className={`${styles.subtitle}`}>Descripción</p>
               <div className="card-actions justify-end">
                 <div>
                   <span className="text-primary font-bold ">${price}</span>

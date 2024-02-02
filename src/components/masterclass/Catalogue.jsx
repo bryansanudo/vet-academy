@@ -90,7 +90,11 @@ const Catalogue = ({ darkMode }) => {
           ({ id, img, logo, title, subtitle, price, link, italic }) => (
             <div
               key={id}
-              className="card bg-base-100  shadow-sm shadow-primary"
+              className={`card   shadow-sm ${
+                darkMode
+                  ? "bg-dark shadow-white"
+                  : "bg-base-100 shadow-gray-300"
+              }`}
             >
               <figure className="relative">
                 <img src={img} alt="Shoes" />
@@ -99,12 +103,12 @@ const Catalogue = ({ darkMode }) => {
                 </div>
               </figure>
               <div className="card-body">
-                <h2 className={`card-title ${italic} `}>{title}</h2>
-                <p>{subtitle}</p>
+                <h2 className={` ${styles.title} ${italic} `}>{title}</h2>
+                <p className={`${styles.subtitle}`}>{subtitle}</p>
                 <div className="card-actions justify-end">
-                  <div>
+                  {/* <div>
                     <span className="text-primary  font-bold">${price}</span>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

@@ -154,9 +154,9 @@ const Business = ({ darkMode }) => {
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
       id="features"
-      className="md:w-[80%] flex flex-col md:flex-row justify-start mr-4 "
+      className="w-full  md:w-[60%] lg:w-[80%] flex flex-col md:flex-row justify-start mr-4 "
     >
-      <div className={`${layout.sectionInfo}  items-start `}>
+      <div className={`${layout.sectionInfo}   items-start `}>
         {/* <motion.div
           variants={zoomIn(0, 1)}
           className=" flex flex-col items-center md:items-start mt-6"

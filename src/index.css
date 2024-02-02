@@ -179,6 +179,9 @@
 .feedback-card {
   background: transparent;
 }
+.bg-dark {
+  background: var(--black-gradient);
+}
 
 .feedback-card:hover {
   background: var(--black-gradient);

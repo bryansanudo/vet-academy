@@ -22,6 +22,10 @@ import d8 from "@/assets/gallery/d8.png";
 import d9 from "@/assets/gallery/d9.png";
 import Advantages from "./Advantages";
 
+import { Link } from "react-router-dom";
+import CountDown from "@/components/CountDown";
+import bovinos from "@/assets/courses/curso-6.png";
+
 import { FaWhatsapp } from "react-icons/fa";
 
 const cards = [
@@ -240,6 +244,37 @@ const Metodology = ({ darkMode }) => (
           suscipit ipsum laudantium cupiditate voluptatibus
         </p>
       </div> */}
+    </div>
+    {/* mobile card */}
+    <div
+      className={`card  ${
+        darkMode ? "bg-dark shadow-white" : "bg-base-100 shadow-gray-300"
+      }   shadow-sm   mb-20 flex md:hidden     `}
+    >
+      <figure className="relative">
+        <img src={bovinos} className=" object-contain" alt="Shoes" />
+        {/* <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+          <Link to="">
+            <button className="btn btn-primary">Más Información</button>
+          </Link>
+        </div> */}
+      </figure>
+      <div className="flex flex-col items-center rounded-b-2xl justify-center mt-4  ">
+        {/*   <h2 className={`${styles.title}`}>Bovinos en la clínica diaria</h2> */}
+
+        <div className="flex items-center justify-center  ">
+          <CountDown />
+        </div>
+        {/* <span className={`font-bold mt-4  ${styles.title}`}>
+          $1.000.000 COP
+        </span> */}
+        <span className={`font-bold   ${styles.title} mt-4 `}>$300 USD</span>
+        <Link to="/contact">
+          <button className={`${styles.button} bg-primary my-4  `}>
+            Inscripciones
+          </button>
+        </Link>
+      </div>
     </div>
     <div className="flex flex-wrap sm:justify-start justify-center w-full  relative z-[1]">
       <motion.div className="flex flex-col items-center justify-center mx-auto  ">

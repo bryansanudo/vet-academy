@@ -40,7 +40,7 @@ const CountDown = () => {
 
   return (
     <>
-      <div className="grid grid-flow-col gap-5 text-center auto-cols-max mt-4">
+      <div className="grid grid-flow-col gap-5 text-center auto-cols-max ">
         <div className={`${styles.subtitle} flex flex-col`}>
           <span className="text-primary font-bold">Días</span>
           <span className={`countdown ${styles.title}`}>

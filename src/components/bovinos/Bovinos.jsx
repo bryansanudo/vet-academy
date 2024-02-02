@@ -26,7 +26,7 @@ const Bovinos = ({ darkMode }) => {
         className={`dark:bg-accent  ${styles.paddingX} ${styles.flexCenter} mt-20`}
       >
         <div className={`${styles.boxWidth}`}>
-          <Inscriptions />
+          <Inscriptions darkMode={darkMode} />
         </div>
       </div>
       <div className={`dark:bg-accent  ${styles.flexStart} `}>
@@ -36,7 +36,7 @@ const Bovinos = ({ darkMode }) => {
       </div>
 
       <div
-        className={`dark:bg-accent  ${styles.paddingX} ${styles.flexCenter} mt-20`}
+        className={`dark:bg-accent  ${styles.paddingX} ${styles.flexCenter} md:mt-20`}
       >
         <div className={`${styles.boxWidth}`}>
           <div name="bovinos" className="pt-20" />

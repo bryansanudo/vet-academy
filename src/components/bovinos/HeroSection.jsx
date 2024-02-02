@@ -24,7 +24,7 @@ const HeroSection = () => {
   return (
     <div
       name="inicio"
-      className="flex items-end justify-center w-full h-[100vh] text-center"
+      className="md:flex hidden items-end justify-center w-full h-[100vh] text-center"
     >
       <video
         ref={videoRef}
