@@ -8,6 +8,11 @@ import { CiSearch } from "react-icons/ci";
 import { useEffect, useState } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
+import colImg from "@/assets/col.png";
+import enImg from "@/assets/en.png";
+
+import Price from "@/components/courses/Price";
+
 import curso1 from "@/assets/courses/curso-1.png";
 import curso2 from "@/assets/courses/curso-2.png";
 import curso3 from "@/assets/courses/curso-3.png";
@@ -23,6 +28,7 @@ import curso12 from "@/assets/courses/curso-12.png";
 import curso13 from "@/assets/courses/curso-13.png";
 
 const Catalogue = ({ darkMode }) => {
+  const [language, setLanguage] = useState("en");
   const feed = [
     {
       id: 1,
@@ -31,7 +37,8 @@ const Catalogue = ({ darkMode }) => {
       title: "Etología en la clínica diaria",
       subtitle: "Descripcion de Etología en la clínica diaria",
       link: "/curso1",
-      price: "350.000",
+      cop: "1.000.000",
+      usd: "350",
     },
     {
       id: 2,
@@ -40,7 +47,8 @@ const Catalogue = ({ darkMode }) => {
       title: "Oftalmología",
       subtitle: "Descripcion del curso 2",
       link: "/curso2",
-      price: "350.000",
+      cop: "1.000.000",
+      usd: "350",
     },
     {
       id: 3,
@@ -49,7 +57,8 @@ const Catalogue = ({ darkMode }) => {
       title: "Endocrinología",
       subtitle: "Descripcion del curso 3",
       link: "/curso3",
-      price: "350.000",
+      cop: "1.000.000",
+      usd: "350",
     },
     {
       id: 4,
@@ -58,7 +67,8 @@ const Catalogue = ({ darkMode }) => {
       title: "Oncología",
       subtitle: "Descripcion del curso 4",
       link: "/curso4",
-      price: "350.000",
+      cop: "1.000.000",
+      usd: "350",
     },
     {
       id: 5,
@@ -67,7 +77,8 @@ const Catalogue = ({ darkMode }) => {
       title: "Hospitalización",
       subtitle: "Descripcion del curso 5",
       link: "/curso5",
-      price: "350.000",
+      cop: "1.000.000",
+      usd: "350",
     },
     {
       id: 6,
@@ -76,7 +87,8 @@ const Catalogue = ({ darkMode }) => {
       title: "Bovinos",
       subtitle: "Descripcion del curso 6",
       link: "/bovinos",
-      price: "350.000",
+      cop: "1.000.000",
+      usd: "350",
     },
     {
       id: 7,
@@ -85,7 +97,8 @@ const Catalogue = ({ darkMode }) => {
       title: "Enfermedades Infecciosas",
       subtitle: "Descripcion del curso 7",
       link: "/curso7",
-      price: "350.000",
+      cop: "1.000.000",
+      usd: "350",
     },
     {
       id: 8,
@@ -94,7 +107,8 @@ const Catalogue = ({ darkMode }) => {
       title: "Emergencias Veterinarias",
       subtitle: "Descripcion del curso 8",
       link: "/curso8",
-      price: "350.000",
+      cop: "1.000.000",
+      usd: "350",
     },
     {
       id: 9,
@@ -103,7 +117,8 @@ const Catalogue = ({ darkMode }) => {
       title: "Enfermeria",
       subtitle: "Descripcion del curso 9",
       link: "/curso9",
-      price: "350.000",
+      cop: "1.000.000",
+      usd: "350",
     },
     {
       id: 10,
@@ -112,7 +127,8 @@ const Catalogue = ({ darkMode }) => {
       title: "Mascotas exóticas",
       subtitle: "Descripcion del curso 10",
       link: "/curso10",
-      price: "350.000",
+      cop: "1.000.000",
+      usd: "350",
     },
     {
       id: 11,
@@ -121,7 +137,8 @@ const Catalogue = ({ darkMode }) => {
       title: "Paciente Crítico",
       subtitle: "Descripcion del curso 11",
       link: "/curso11",
-      price: "350.000",
+      cop: "1.000.000",
+      usd: "350",
     },
     {
       id: 12,
@@ -130,7 +147,8 @@ const Catalogue = ({ darkMode }) => {
       title: "Resistencia Microbiana",
       subtitle: "Descripcion del curso 12",
       link: "/curso12",
-      price: "350.000",
+      cop: "1.000.000",
+      usd: "350",
     },
     {
       id: 12,
@@ -139,7 +157,8 @@ const Catalogue = ({ darkMode }) => {
       title: "Manejo del dolor en Caninos y Felinos",
       subtitle: "Descripcion del curso 12",
       link: "/curso12",
-      price: "350.000",
+      cop: "1.000.000",
+      usd: "350",
     },
   ];
 
@@ -180,7 +199,8 @@ const Catalogue = ({ darkMode }) => {
           <br className="sm:block hidden" />
         </h2>
       </div>
-      <div className="max-w-md shadow-black shadow-md rounded-xl mb-6">
+
+      {/*  <div className="max-w-md shadow-black shadow-md rounded-xl mb-6">
         <div className="relative flex items-center w-full h-12 rounded-lg focus-within:shadow-lg bg-white overflow-hidden">
           <div className="grid place-items-center h-full w-12 text-gray-300">
             <CiSearch />
@@ -191,6 +211,19 @@ const Catalogue = ({ darkMode }) => {
             type="text"
             id="search"
             placeholder="Buscar..."
+          />
+        </div>
+      </div> */}
+      <div className=" w-full flex items-center justify-end">
+        <div
+          className={`mb-20 shadow-sm ${
+            darkMode ? "bg-dark shadow-white" : "bg-base-100 shadow-gray-300"
+          } rounded-lg p-2`}
+        >
+          <Price
+            language={language}
+            setLanguage={setLanguage}
+            darkMode={darkMode}
           />
         </div>
       </div>
@@ -221,32 +254,48 @@ const Catalogue = ({ darkMode }) => {
         </div>
       ))} */}
 
-        {currentItems.map(({ id, img, logo, title, subtitle, price, link }) => (
-          <div
-            key={id}
-            className={`card   shadow-sm ${
-              darkMode ? "bg-dark shadow-white" : "bg-base-100 shadow-gray-300"
-            }`}
-          >
-            <figure className="relative">
-              <img src={img} alt="Shoes" />
-              <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                <Link to={link}>
-                  <button className="btn btn-primary">Más Información</button>
-                </Link>
-              </div>
-            </figure>
-            <div className="card-body">
-              <h2 className={`${styles.title}`}>{title}</h2>
-              <p className={`${styles.subtitle}`}>Descripción</p>
-              <div className="card-actions justify-end">
-                <div>
-                  <span className="text-primary  ">${price}</span>
+        {currentItems.map(
+          ({ id, img, logo, title, subtitle, usd, cop, link }) => (
+            <div
+              key={id}
+              className={`card   shadow-sm ${
+                darkMode
+                  ? "bg-dark shadow-white"
+                  : "bg-base-100 shadow-gray-300"
+              }`}
+            >
+              <figure className="relative">
+                <img src={img} alt="Shoes" />
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                  <Link to={link}>
+                    <button className="btn btn-primary">Más Información</button>
+                  </Link>
+                </div>
+              </figure>
+              <div className="card-body">
+                <h2 className={`${styles.title}`}>{title}</h2>
+                <p className={`${styles.subtitle}`}>Descripción</p>
+                <div className="card-actions justify-end">
+                  <div>
+                    {language === "en" ? (
+                      <div className="flex  gap-2 items-end justify-center">
+                        <span className="text-primary ">${usd} </span>
+                        <img src={enImg} className="h-6" alt="" />
+                      </div>
+                    ) : language === "es" ? (
+                      <div className="flex  gap-2 items-end justify-center">
+                        <span className="text-primary ">${cop} </span>
+                        <img src={colImg} className="h-6" alt="" />
+                      </div>
+                    ) : (
+                      <span className="text-primary">Otro</span>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
+          )
+        )}
       </div>
       <div className="hidden md:flex  items-center w-full justify-center gap-4 ">
         <button className="" onClick={prevPage}>
