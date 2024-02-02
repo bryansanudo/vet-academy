@@ -154,7 +154,7 @@ const Business = ({ darkMode }) => {
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
       id="features"
-      className="md:w-[78%] flex flex-col md:flex-row justify-start mr-4 "
+      className="md:w-[80%] flex flex-col md:flex-row justify-start mr-4 "
     >
       <div className={`${layout.sectionInfo}  items-start `}>
         {/* <motion.div

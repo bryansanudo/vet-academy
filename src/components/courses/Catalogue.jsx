@@ -28,8 +28,8 @@ const Catalogue = ({ darkMode }) => {
       id: 1,
       img: curso1,
       logo: logo,
-      title: "Curso 1",
-      subtitle: "Descripcion del curso 1",
+      title: "Etología en la clínica diaria",
+      subtitle: "Descripcion de Etología en la clínica diaria",
       link: "/curso1",
       price: "350.000",
     },
@@ -37,7 +37,7 @@ const Catalogue = ({ darkMode }) => {
       id: 2,
       img: curso2,
       logo: logo,
-      title: "Curso 2",
+      title: "Oftalmología",
       subtitle: "Descripcion del curso 2",
       link: "/curso2",
       price: "350.000",
@@ -46,7 +46,7 @@ const Catalogue = ({ darkMode }) => {
       id: 3,
       img: curso3,
       logo: logo,
-      title: "Curso 3",
+      title: "Endocrinología",
       subtitle: "Descripcion del curso 3",
       link: "/curso3",
       price: "350.000",
@@ -55,7 +55,7 @@ const Catalogue = ({ darkMode }) => {
       id: 4,
       img: curso4,
       logo: logo,
-      title: "Curso 4",
+      title: "Oncología",
       subtitle: "Descripcion del curso 4",
       link: "/curso4",
       price: "350.000",
@@ -64,7 +64,7 @@ const Catalogue = ({ darkMode }) => {
       id: 5,
       img: curso5,
       logo: logo,
-      title: "Curso 5",
+      title: "Hospitalización",
       subtitle: "Descripcion del curso 5",
       link: "/curso5",
       price: "350.000",
@@ -73,16 +73,16 @@ const Catalogue = ({ darkMode }) => {
       id: 6,
       img: curso6,
       logo: logo,
-      title: "Curso 6",
+      title: "Bovinos",
       subtitle: "Descripcion del curso 6",
-      link: "/curso6",
+      link: "/bovinos",
       price: "350.000",
     },
     {
       id: 7,
       img: curso7,
       logo: logo,
-      title: "Curso 7",
+      title: "Enfermedades Infecciosas",
       subtitle: "Descripcion del curso 7",
       link: "/curso7",
       price: "350.000",
@@ -91,7 +91,7 @@ const Catalogue = ({ darkMode }) => {
       id: 8,
       img: curso8,
       logo: logo,
-      title: "Curso 8",
+      title: "Emergencias Veterinarias",
       subtitle: "Descripcion del curso 8",
       link: "/curso8",
       price: "350.000",
@@ -100,7 +100,7 @@ const Catalogue = ({ darkMode }) => {
       id: 9,
       img: curso9,
       logo: logo,
-      title: "Curso 9",
+      title: "Enfermeria",
       subtitle: "Descripcion del curso 9",
       link: "/curso9",
       price: "350.000",
@@ -109,7 +109,7 @@ const Catalogue = ({ darkMode }) => {
       id: 10,
       img: curso10,
       logo: logo,
-      title: "Curso 10",
+      title: "Mascotas exóticas",
       subtitle: "Descripcion del curso 10",
       link: "/curso10",
       price: "350.000",
@@ -118,7 +118,7 @@ const Catalogue = ({ darkMode }) => {
       id: 11,
       img: curso11,
       logo: logo,
-      title: "Curso 11",
+      title: "Paciente Crítico",
       subtitle: "Descripcion del curso 11",
       link: "/curso11",
       price: "350.000",
@@ -127,7 +127,7 @@ const Catalogue = ({ darkMode }) => {
       id: 12,
       img: curso12,
       logo: logo,
-      title: "Curso 12",
+      title: "Resistencia Microbiana",
       subtitle: "Descripcion del curso 12",
       link: "/curso12",
       price: "350.000",
@@ -136,14 +136,14 @@ const Catalogue = ({ darkMode }) => {
       id: 12,
       img: curso13,
       logo: logo,
-      title: "Curso 12",
+      title: "Manejo del dolor en Caninos y Felinos",
       subtitle: "Descripcion del curso 12",
       link: "/curso12",
       price: "350.000",
     },
   ];
 
-  const itemsPerPage = 4;
+  const itemsPerPage = 20;
   const [currentPage, setCurrentPage] = useState(1);
 
   const indexOfLastItem = currentPage * itemsPerPage;
@@ -194,7 +194,7 @@ const Catalogue = ({ darkMode }) => {
           />
         </div>
       </div>
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1  w-full gap-10 mb-16  ">
+      <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1  w-full gap-10 mb-16  ">
         {/* {cards.map(({ id, img, title, subtitle, link }) => (
         <div
           key={id}
@@ -226,15 +226,17 @@ const Catalogue = ({ darkMode }) => {
             <figure className="relative">
               <img src={img} alt="Shoes" />
               <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                <button className="btn btn-primary">Más Información</button>
+                <Link to={link}>
+                  <button className="btn btn-primary">Más Información</button>
+                </Link>
               </div>
             </figure>
             <div className="card-body">
               <h2 className="card-title">{title}</h2>
-              <p>{subtitle}</p>
+              <p>Descripción</p>
               <div className="card-actions justify-end">
                 <div>
-                  <span className="text-primary">${price}</span>
+                  <span className="text-primary font-bold ">${price}</span>
                 </div>
               </div>
             </div>

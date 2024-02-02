@@ -24,7 +24,7 @@ const HeroSection = () => {
   return (
     <div
       name="inicio"
-      className="flex items-end justify-center w-full h-screen text-center"
+      className="flex items-end justify-center w-full h-[100vh] text-center"
     >
       <video
         ref={videoRef}
@@ -57,7 +57,7 @@ const HeroSection = () => {
       <div className="absolute top-1/2 left-0 w-full text-white lg:text-5xl md:text-3xl text-2xl font-bold tracking-wider text-center">
         {/* Aquí puedes colocar tu componente de título */}
 
-        <Link to="scrol" smooth duration={50} className="hidden sm:flex z-50">
+        <Link to="bovinos" smooth duration={50} className="hidden sm:flex z-50">
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-white flex justify-center items-start p-2 mb-56 mx-auto mt-20 cursor-pointer">
             <motion.div
               animate={{

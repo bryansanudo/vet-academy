@@ -146,6 +146,13 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                     Prácticas
                   </NavLink>
                 </li>
+                <li
+                  className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
+                >
+                  <NavLink to="/masterclass" className={activeLink}>
+                    Masterclass Gratuitas
+                  </NavLink>
+                </li>
 
                 {/* visa eb1 */}
                 {/* <li>
@@ -284,6 +291,12 @@ const Navbar = ({ darkMode, setDarkMode }) => {
               className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
             >
               <Link to="/practices">Prácticas</Link>
+            </li>
+            <li
+              onClick={() => setIsMenuShown(!isMenuShown)}
+              className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
+            >
+              <Link to="/masterclass">Masterclass Gratuitas</Link>
             </li>
             {/*   <li
               onClick={() => setIsMenuShown(!isMenuShown)}
