@@ -106,39 +106,93 @@ const Gallery = ({ darkMode }) => {
           <div
             onClick={() =>
               openModal(
-                "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg"
+                "https://i.ibb.co/M1cJkyt/Foto-2024-02-02-09-25-09-a-m.jpg"
               )
             }
           >
             <img
-              className="h-auto max-w-full rounded-lg cursor-pointer hover:scale-105 duration-500 shadow-md shadow-gray-400"
-              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg"
+              className="h-auto max-w-full rounded-lg cursor-pointer hover:scale-105 duration-500 shadow-lg shadow-gray-400"
+              src="https://i.ibb.co/M1cJkyt/Foto-2024-02-02-09-25-09-a-m.jpg"
+              alt=""
+            />
+          </div>
+          <div
+            onClick={() => openModal("https://i.ibb.co/YjCrL0Q/IMG-1115.jpg")}
+          >
+            <img
+              className="h-auto max-w-full rounded-lg cursor-pointer hover:scale-105 duration-500 shadow-lg shadow-gray-400"
+              src="https://i.ibb.co/YjCrL0Q/IMG-1115.jpg"
+              alt=""
+            />
+          </div>
+          <div
+            onClick={() => openModal("https://i.ibb.co/0rZzs2y/IMG-1240.jpg")}
+          >
+            <img
+              className="h-auto max-w-full rounded-lg cursor-pointer hover:scale-105 duration-500 shadow-lg shadow-gray-400"
+              src="https://i.ibb.co/0rZzs2y/IMG-1240.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div className="grid ">
+          <div
+            onClick={() =>
+              openModal("https://i.ibb.co/3kh3ph3/IMG-1338-jpg-1.jpg")
+            }
+          >
+            <img
+              className="h-auto max-w-full rounded-lg cursor-pointer hover:scale-105 duration-500 shadow-lg shadow-gray-400"
+              src="https://i.ibb.co/3kh3ph3/IMG-1338-jpg-1.jpg"
+              alt=""
+            />
+          </div>
+          <div
+            onClick={() => openModal("https://i.ibb.co/nBg09yW/IMG-1422.jpg")}
+          >
+            <img
+              className="h-auto max-w-full rounded-lg cursor-pointer hover:scale-105 duration-500 shadow-lg shadow-gray-400"
+              src="https://i.ibb.co/nBg09yW/IMG-1422.jpg"
               alt=""
             />
           </div>
           <div
             onClick={() =>
-              openModal(
-                "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg"
-              )
+              openModal("https://i.ibb.co/Wc3b1VL/IMG-1338-jpg.jpg")
             }
           >
             <img
-              className="h-auto max-w-full rounded-lg cursor-pointer hover:scale-105 duration-500 shadow-md shadow-gray-400"
-              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg"
+              className="h-auto max-w-full rounded-lg cursor-pointer hover:scale-105 duration-500 shadow-lg shadow-gray-400"
+              src="https://i.ibb.co/Wc3b1VL/IMG-1338-jpg.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div className="grid gap-5">
+          <div
+            onClick={() => openModal("https://i.ibb.co/zbv0WPw/IMG-5083.jpg")}
+          >
+            <img
+              className="h-auto max-w-full rounded-lg cursor-pointer hover:scale-105 duration-500 shadow-lg shadow-gray-400"
+              src="https://i.ibb.co/zbv0WPw/IMG-5083.jpg"
               alt=""
             />
           </div>
           <div
-            onClick={() =>
-              openModal(
-                "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg"
-              )
-            }
+            onClick={() => openModal("https://i.ibb.co/9Gr3ssy/IMG-8035.jpg")}
           >
             <img
-              className="h-auto max-w-full rounded-lg cursor-pointer hover:scale-105 duration-500 shadow-md shadow-gray-400"
-              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg"
+              className="h-auto max-w-full rounded-lg cursor-pointer hover:scale-105 duration-500 shadow-lg shadow-gray-400"
+              src="https://i.ibb.co/9Gr3ssy/IMG-8035.jpg"
+              alt=""
+            />
+          </div>
+          <div
+            onClick={() => openModal("https://i.ibb.co/72rn3Vh/IMG-8036.jpg")}
+          >
+            <img
+              className="h-auto max-w-full rounded-lg cursor-pointer hover:scale-105 duration-500 shadow-lg shadow-gray-400"
+              src="https://i.ibb.co/72rn3Vh/IMG-8036.jpg"
               alt=""
             />
           </div>
@@ -146,122 +200,36 @@ const Gallery = ({ darkMode }) => {
         <div className="grid gap-5">
           <div
             onClick={() =>
-              openModal(
-                "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg"
-              )
+              openModal("https://i.ibb.co/Xb80SS3/IMG-8069-jpg.jpg")
             }
           >
             <img
-              className="h-auto max-w-full rounded-lg cursor-pointer hover:scale-105 duration-500 shadow-md shadow-gray-400"
-              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg"
+              className="h-auto max-w-full rounded-lg cursor-pointer hover:scale-105 duration-500 shadow-lg shadow-gray-400"
+              src="https://i.ibb.co/Xb80SS3/IMG-8069-jpg.jpg"
               alt=""
             />
           </div>
           <div
             onClick={() =>
               openModal(
-                "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg"
+                "https://i.ibb.co/M1cJkyt/Foto-2024-02-02-09-25-09-a-m.jpg"
               )
             }
           >
             <img
-              className="h-auto max-w-full rounded-lg cursor-pointer hover:scale-105 duration-500 shadow-md shadow-gray-400"
-              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg"
+              className="h-auto max-w-full rounded-lg cursor-pointer hover:scale-105 duration-500 shadow-lg shadow-gray-400"
+              src="https://i.ibb.co/M1cJkyt/Foto-2024-02-02-09-25-09-a-m.jpg"
               alt=""
             />
           </div>
           <div
             onClick={() =>
-              openModal(
-                "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg"
-              )
+              openModal("https://i.ibb.co/m6CztFj/IMG-1056-jpg.jpg")
             }
           >
             <img
-              className="h-auto max-w-full rounded-lg cursor-pointer hover:scale-105 duration-500 shadow-md shadow-gray-400"
-              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg"
-              alt=""
-            />
-          </div>
-        </div>
-        <div className="grid gap-5">
-          <div
-            onClick={() =>
-              openModal(
-                "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg"
-              )
-            }
-          >
-            <img
-              className="h-auto max-w-full rounded-lg cursor-pointer hover:scale-105 duration-500 shadow-md shadow-gray-400"
-              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg"
-              alt=""
-            />
-          </div>
-          <div
-            onClick={() =>
-              openModal(
-                "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg"
-              )
-            }
-          >
-            <img
-              className="h-auto max-w-full rounded-lg cursor-pointer hover:scale-105 duration-500 shadow-md shadow-gray-400"
-              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg"
-              alt=""
-            />
-          </div>
-          <div
-            onClick={() =>
-              openModal(
-                "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg"
-              )
-            }
-          >
-            <img
-              className="h-auto max-w-full rounded-lg cursor-pointer hover:scale-105 duration-500 shadow-md shadow-gray-400"
-              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg"
-              alt=""
-            />
-          </div>
-        </div>
-        <div className="grid gap-5">
-          <div
-            onClick={() =>
-              openModal(
-                "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg"
-              )
-            }
-          >
-            <img
-              className="h-auto max-w-full rounded-lg cursor-pointer hover:scale-105 duration-500 shadow-md shadow-gray-400"
-              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg"
-              alt=""
-            />
-          </div>
-          <div
-            onClick={() =>
-              openModal(
-                "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg"
-              )
-            }
-          >
-            <img
-              className="h-auto max-w-full rounded-lg cursor-pointer hover:scale-105 duration-500 shadow-md shadow-gray-400"
-              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg"
-              alt=""
-            />
-          </div>
-          <div
-            onClick={() =>
-              openModal(
-                "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg"
-              )
-            }
-          >
-            <img
-              className="h-auto max-w-full rounded-lg cursor-pointer hover:scale-105 duration-500 shadow-md shadow-gray-400"
-              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg"
+              className="h-auto max-w-full rounded-lg cursor-pointer hover:scale-105 duration-500 shadow-lg shadow-gray-400"
+              src="https://i.ibb.co/m6CztFj/IMG-1056-jpg.jpg"
               alt=""
             />
           </div>
