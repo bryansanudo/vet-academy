@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import { staggerContainer, zoomIn, fadeIn } from "@/utils/motion";
 
 import Metodology from "@/components/bovinos/Metodology";
+import Inscriptions from "./Inscriptions";
 
 const Business = ({ darkMode }) => {
   const services = [
@@ -153,9 +154,9 @@ const Business = ({ darkMode }) => {
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
       id="features"
-      className="flex flex-col md:flex-row justify-start "
+      className="md:w-[78%] flex flex-col md:flex-row justify-start mr-4 "
     >
-      <div className={`${layout.sectionInfo} items-start `}>
+      <div className={`${layout.sectionInfo}  items-start `}>
         {/* <motion.div
           variants={zoomIn(0, 1)}
           className=" flex flex-col items-center md:items-start mt-6"
@@ -225,82 +226,6 @@ const Business = ({ darkMode }) => {
           </div>
         </motion.div> */}
         <Metodology darkMode={darkMode} />
-      </div>
-
-      <div
-        className={`flex-1 flex ${styles.flexStart} md:ml-10 ml-0  mt-20  relative `}
-      >
-        <div
-          className={`md:w-1/4 flex flex-col items-center  justify-center fixed shadow-md  rounded-xl pb-6 ${
-            darkMode ? "shadow-white" : "shadow-black"
-          }`}
-        >
-          <motion.div className=" flex flex-col items-center md:items-start mt-6 px-6 ">
-            <motion.ul className="w-full  ">
-              <div className="flex items-start justify-start border-b-2 border-gray-300 border-opacity-100 dark:border-opacity-50 gap-2 py-1">
-                <GoDot className="text-primary text-3xl" />
-                <li
-                  className={` w-full text-[18px] leading-[30.8px]  ${
-                    darkMode ? "text-dimWhite" : "text-black"
-                  }`}
-                >
-                  32 charlas en vivo por la plataforma Zoom.
-                </li>
-              </div>
-              <div className="flex items-start justify-center border-b-2 border-gray-300 border-opacity-100 dark:border-opacity-50 gap-2 py-1">
-                <GoDot className="text-primary text-3xl" />
-                <li
-                  className={` w-full text-[18px] leading-[30.8px]  ${
-                    darkMode ? "text-dimWhite" : "text-black"
-                  }`}
-                >
-                  Grabaciones disponibles durante 2 meses.
-                </li>
-              </div>
-              <div className="flex items-start justify-center border-b-2 border-gray-300 border-opacity-100 dark:border-opacity-50 gap-2 py-1">
-                <GoDot className="text-primary text-3xl" />
-                <li
-                  className={` w-full text-[18px] leading-[30.8px]  ${
-                    darkMode ? "text-dimWhite" : "text-black"
-                  }`}
-                >
-                  Docentes expertos en el área con reconocimiento internacional
-                  y experiencia en docencia en pregrado y posgrado.
-                </li>
-              </div>
-              <div className="flex items-start justify-center border-b-2 border-gray-300 border-opacity-100 dark:border-opacity-50 gap-2 py-1">
-                <GoDot className="text-primary text-3xl" />
-                <li
-                  className={` w-full text-[18px] leading-[30.8px]  ${
-                    darkMode ? "text-dimWhite" : "text-black"
-                  }`}
-                >
-                  Certificado de asistencia al finalizar.
-                </li>
-              </div>
-              <div className="flex items-start justify-center border-b-2 border-gray-300 border-opacity-100 dark:border-opacity-50 gap-2 py-1">
-                <GoDot className="text-primary text-3xl" />
-                <li
-                  className={` w-full text-[18px] leading-[30.8px]  ${
-                    darkMode ? "text-dimWhite" : "text-black"
-                  }`}
-                >
-                  Precio (300 USD🌎 - 1'000.000 COP)
-                </li>
-              </div>
-            </motion.ul>
-
-            <CountDown />
-
-            <div className="flex w-full items-center md:justify-start justify-center ">
-              <Link to="/contact">
-                <button className={`${styles.button} bg-primary  `}>
-                  Inscripciones
-                </button>
-              </Link>
-            </div>
-          </motion.div>
-        </div>
       </div>
     </motion.section>
   );

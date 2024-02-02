@@ -9,7 +9,11 @@ import HeroHome from "@/components/bovinos/HeroHome";
 import Clients from "@/components/bovinos/Clients";
 import CountDown from "@/components/CountDown";
 
+import HeroSection from "@/components/bovinos/HeroSection";
+
 import CTA from "@/components/CTA";
+
+import Inscriptions from "@/components/bovinos/Inscriptions";
 import { useEffect } from "react";
 
 const Bovinos = ({ darkMode }) => {
@@ -18,16 +22,24 @@ const Bovinos = ({ darkMode }) => {
   }, []);
   return (
     <>
-      {/*   <div className={`dark:bg-accent  ${styles.flexStart} `}>
-        <div className={`${styles.boxWidth}`}></div>
-      </div> */}
+      <div
+        className={`dark:bg-accent  ${styles.paddingX} ${styles.flexCenter} mt-20`}
+      >
+        <div className={`${styles.boxWidth}`}>
+          <Inscriptions />
+        </div>
+      </div>
+      <div className={`dark:bg-accent  ${styles.flexStart} `}>
+        <div className={`${styles.boxWidth}`}>
+          <HeroSection />
+        </div>
+      </div>
 
       <div
         className={`dark:bg-accent  ${styles.paddingX} ${styles.flexCenter} mt-20`}
       >
         <div className={`${styles.boxWidth}`}>
           <div name="scrol" className="" />
-
           <Business darkMode={darkMode} />
 
           {/* <Achieve /> */}

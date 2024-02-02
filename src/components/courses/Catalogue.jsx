@@ -8,11 +8,25 @@ import { CiSearch } from "react-icons/ci";
 import { useEffect, useState } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
+import curso1 from "@/assets/courses/curso-1.png";
+import curso2 from "@/assets/courses/curso-2.png";
+import curso3 from "@/assets/courses/curso-3.png";
+import curso4 from "@/assets/courses/curso-4.png";
+import curso5 from "@/assets/courses/curso-5.png";
+import curso6 from "@/assets/courses/curso-6.png";
+import curso7 from "@/assets/courses/curso-7.png";
+import curso8 from "@/assets/courses/curso-8.png";
+import curso9 from "@/assets/courses/curso-9.png";
+import curso10 from "@/assets/courses/curso-10.png";
+import curso11 from "@/assets/courses/curso-11.png";
+import curso12 from "@/assets/courses/curso-12.png";
+import curso13 from "@/assets/courses/curso-13.png";
+
 const Catalogue = ({ darkMode }) => {
   const feed = [
     {
       id: 1,
-      img: curso,
+      img: curso1,
       logo: logo,
       title: "Curso 1",
       subtitle: "Descripcion del curso 1",
@@ -21,7 +35,7 @@ const Catalogue = ({ darkMode }) => {
     },
     {
       id: 2,
-      img: curso,
+      img: curso2,
       logo: logo,
       title: "Curso 2",
       subtitle: "Descripcion del curso 2",
@@ -30,7 +44,7 @@ const Catalogue = ({ darkMode }) => {
     },
     {
       id: 3,
-      img: curso,
+      img: curso3,
       logo: logo,
       title: "Curso 3",
       subtitle: "Descripcion del curso 3",
@@ -39,7 +53,7 @@ const Catalogue = ({ darkMode }) => {
     },
     {
       id: 4,
-      img: curso,
+      img: curso4,
       logo: logo,
       title: "Curso 4",
       subtitle: "Descripcion del curso 4",
@@ -48,7 +62,7 @@ const Catalogue = ({ darkMode }) => {
     },
     {
       id: 5,
-      img: curso,
+      img: curso5,
       logo: logo,
       title: "Curso 5",
       subtitle: "Descripcion del curso 5",
@@ -57,7 +71,7 @@ const Catalogue = ({ darkMode }) => {
     },
     {
       id: 6,
-      img: curso,
+      img: curso6,
       logo: logo,
       title: "Curso 6",
       subtitle: "Descripcion del curso 6",
@@ -66,7 +80,7 @@ const Catalogue = ({ darkMode }) => {
     },
     {
       id: 7,
-      img: curso,
+      img: curso7,
       logo: logo,
       title: "Curso 7",
       subtitle: "Descripcion del curso 7",
@@ -75,7 +89,7 @@ const Catalogue = ({ darkMode }) => {
     },
     {
       id: 8,
-      img: curso,
+      img: curso8,
       logo: logo,
       title: "Curso 8",
       subtitle: "Descripcion del curso 8",
@@ -84,7 +98,7 @@ const Catalogue = ({ darkMode }) => {
     },
     {
       id: 9,
-      img: curso,
+      img: curso9,
       logo: logo,
       title: "Curso 9",
       subtitle: "Descripcion del curso 9",
@@ -93,7 +107,7 @@ const Catalogue = ({ darkMode }) => {
     },
     {
       id: 10,
-      img: curso,
+      img: curso10,
       logo: logo,
       title: "Curso 10",
       subtitle: "Descripcion del curso 10",
@@ -102,7 +116,7 @@ const Catalogue = ({ darkMode }) => {
     },
     {
       id: 11,
-      img: curso,
+      img: curso11,
       logo: logo,
       title: "Curso 11",
       subtitle: "Descripcion del curso 11",
@@ -111,7 +125,16 @@ const Catalogue = ({ darkMode }) => {
     },
     {
       id: 12,
-      img: curso,
+      img: curso12,
+      logo: logo,
+      title: "Curso 12",
+      subtitle: "Descripcion del curso 12",
+      link: "/curso12",
+      price: "350.000",
+    },
+    {
+      id: 12,
+      img: curso13,
       logo: logo,
       title: "Curso 12",
       subtitle: "Descripcion del curso 12",

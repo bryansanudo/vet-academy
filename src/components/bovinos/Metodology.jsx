@@ -22,6 +22,8 @@ import d8 from "@/assets/gallery/d8.png";
 import d9 from "@/assets/gallery/d9.png";
 import Advantages from "./Advantages";
 
+import { FaWhatsapp } from "react-icons/fa";
+
 const cards = [
   {
     id: 1,
@@ -241,74 +243,106 @@ const Metodology = ({ darkMode }) => (
     </div>
     <div className="flex flex-wrap sm:justify-start justify-center w-full  relative z-[1]">
       <motion.div className="flex flex-col items-center justify-center mx-auto  ">
-        <h2 className={`${styles.heading3} w-full text-primary  text-center `}>
-          Plan de Estudios
-        </h2>
-        <div className="w-full h-[1px] bg-gray-200" />
-        <div className={`${styles.subtitle} my-6`}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias id
-          amet deserunt dolorum eos? Expedita sit rerum quidem, doloremque
-          cupiditate accusamus placeat a quod repudiandae nisi officia voluptas
-          magni culpa?Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Molestias id amet deserunt dolorum eos? Expedita sit rerum quidem,
-          doloremque cupiditate accusamus placeat a quod repudiandae nisi
-          officia voluptas magni culpa?
-        </div>
-        <div className={`${styles.subtitle} mb-6`}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias id
-          amet deserunt dolorum eos? Expedita sit rerum quidem, doloremque
-          cupiditate accusamus placeat a quod repudiandae nisi officia voluptas
-          magni culpa?Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Molestias id amet deserunt dolorum eos? Expedita sit rerum quidem,
-          doloremque cupiditate accusamus placeat a quod repudiandae nisi
-          officia voluptas magni culpa?
-        </div>
-        <div className={`${styles.subtitle} mb-6 w-full`}>
-          <p>
-            <span className={`${styles.title}`}>
-              ¿A quién va dirigido el curso?:
-            </span>{" "}
-            Este curso está orientado para estudiantes de medicina veterinaria,
-            estudiantes de técnica auxiliar y auxiliares graduados con o sin
-            experiencia.
-          </p>
-          <p>
-            <span className={`${styles.title}`}>Modalidad:</span> Online.
-          </p>
-          <span className={`${styles.title}`}>
-            Semipersonalizado Consultas académicas:
-          </span>{" "}
-          vet.academyeducacion@gmail.com
-        </div>
-
         {/* metodologia */}
-        <div className="w-full h-[1px] bg-gray-200" />
+
         <h2 className={`${styles.heading3} w-full text-primary  text-center `}>
           Metodología
         </h2>
         <div className="w-full h-[1px] bg-gray-200" />
         <div className={`${styles.subtitle} my-6`}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias id
-          amet deserunt dolorum eos? Expedita sit rerum quidem, doloremque
-          cupiditate accusamus placeat a quod repudiandae nisi officia voluptas
-          magni culpa?Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Molestias id amet deserunt dolorum eos? Expedita sit rerum quidem,
-          doloremque cupiditate accusamus placeat a quod repudiandae nisi
-          officia voluptas magni culpa?
+          Modalidad virtual, compuesta de{" "}
+          <span className="text-primary font-bold">32</span> sesiones en vivo a
+          través de ZOOM con ingreso a la plataforma académica virtual{" "}
+          <span className="cursor-pointer text-primary font-bold">
+            <a href=""></a>www.vetacademy.com.co
+          </span>
+          , donde podrá ver las grabaciones de las clases, material de apoyo y
+          demás, podrá acceder desde cualquier lugar del mundo, desde cualquier
+          navegador y estará a su disposición 24/7.
         </div>
-        <div className={`${styles.subtitle} mb-6`}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias id
-          amet deserunt dolorum eos? Expedita sit rerum quidem, doloremque
-          cupiditate accusamus placeat a quod repudiandae nisi officia voluptas
-          magni culpa?Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Molestias id amet deserunt dolorum eos? Expedita sit rerum quidem,
-          doloremque cupiditate accusamus placeat a quod repudiandae nisi
-          officia voluptas magni culpa?
+        <div className={`${styles.subtitle} mb-6 w-full`}>
+          <div>
+            <span className={`${styles.title}`}>Consultas académicas</span>{" "}
+            <div className="flex items-center gap-2">
+              <a
+                href="mailto:vet.academyeducacion@gmail.com"
+                className="hover:scale-105 duration-500 hover:text-primary"
+              >
+                <span>vet.academyeducacion@gmail.com</span>
+              </a>
+              <a
+                href="https://api.whatsapp.com/send?phone=573243291412"
+                className=""
+                target="_blank"
+              >
+                <FaWhatsapp className="text-xl text-primary hover:scale-125 duration-500" />
+              </a>
+            </div>
+          </div>
         </div>
+
+        {/* que incluye este curso */}
+        <div className="w-full h-[1px] bg-gray-200" />
+        <h2 className={`${styles.heading3} w-full text-primary  text-center `}>
+          ¿Qué incluye este curso?
+        </h2>
+        <div className="w-full h-[1px] bg-gray-200" />
+        <div className={`${styles.subtitle} my-6 w-full`}>
+          <div className="flex items-center justify-center  gap-2 py-2">
+            <GoDot className="text-primary text-3xl" />
+            <div className={` w-full `}>
+              Curso impartido por docentes con gran experiencia y
+              reconocimiento.
+            </div>
+          </div>
+          <div className="flex items-center justify-center  gap-2 py-2">
+            <GoDot className="text-primary text-3xl" />
+            <div className={` w-full `}>Clases en vivo.</div>
+          </div>
+          <div className="flex items-center justify-center  gap-2 py-2">
+            <GoDot className="text-primary text-3xl" />
+            <div className={` w-full `}>
+              Acceso a las grabaciones en cualquier horario (durante 2 meses
+              después de la última clase).
+            </div>
+          </div>
+          <div className="flex items-center justify-center  gap-2 py-2">
+            <GoDot className="text-primary text-3xl" />
+            <div className={` w-full `}>
+              Quiz para evaluar los conocimientos adquiridos.
+            </div>
+          </div>
+          <div className="flex items-center justify-center   gap-2 py-2 ">
+            <GoDot className="text-primary text-3xl" />
+            <div className={` w-full  `}>Literatura descargable.</div>
+          </div>
+          <div className="flex items-center justify-center   gap-2 py-2 ">
+            <GoDot className="text-primary text-3xl" />
+            <div className={` w-full  `}>Certificado digital.</div>
+          </div>
+          <div className="flex items-center justify-center   gap-2 py-2 ">
+            <GoDot className="text-primary text-3xl" />
+            <div className={` w-full  `}>
+              Acumulas puntos que te dan descuento en futuros cursos.
+            </div>
+          </div>
+        </div>
+        {/* a quien va dirigido */}
+        <div className="w-full h-[1px] bg-gray-200" />
+        <h2 className={`${styles.heading3} w-full text-primary  text-center `}>
+          ¿A quién está dirigido este curso?
+        </h2>
+        <div className="w-full h-[1px] bg-gray-200" />
+        <div className={`${styles.subtitle} my-6`}>
+          Médicos veterinarios y estudiantes de medicina veterinaria que estén
+          interesados en profundizar sus conocimientos en temas que se presentan
+          en la clínica diaria de bovinos.
+        </div>
+
         {/*  clases */}
         <div className="w-full h-[1px] bg-gray-200" />
         <h2 className={`${styles.heading3} w-full text-primary  text-center `}>
-          Clases
+          Plan de estudios
         </h2>
         <div className="w-full h-[1px] bg-gray-200" />
         {services.map(({ id, name, consultorias, motionTime }) => (

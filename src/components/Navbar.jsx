@@ -135,6 +135,13 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                 <li
                   className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
                 >
+                  <NavLink to="/courses" className={activeLink}>
+                    Cursos
+                  </NavLink>
+                </li>
+                <li
+                  className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
+                >
                   <NavLink to="/practices" className={activeLink}>
                     Prácticas
                   </NavLink>
@@ -265,6 +272,12 @@ const Navbar = ({ darkMode, setDarkMode }) => {
               className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
             >
               <Link to="/bovinos">Bovinos</Link>
+            </li>
+            <li
+              onClick={() => setIsMenuShown(!isMenuShown)}
+              className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
+            >
+              <Link to="/courses">Cursos</Link>
             </li>
             <li
               onClick={() => setIsMenuShown(!isMenuShown)}
