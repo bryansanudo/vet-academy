@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 import { staggerContainer, zoomIn } from "@/utils/motion";
 
 const images = [
-  "https://i.ibb.co/dBv7XkS/male-veterinarian-with-blue-scrubs-gloves-using-stethoscope-listen-heart-beagle-dog-woman-vet-holdin.jpg",
-  "https://i.ibb.co/FVJWyk2/close-up-veterinarian-taking-care-pet.jpg",
-  "https://i.ibb.co/bzmbxqc/high-angle-careful-doctors-helping-sick-dog.jpg",
-  "https://i.ibb.co/mD8Gy8S/caucasian-hispanic-veterinarians-smiling-while-examining-beagle-dog-exam-table-happy-vets-with-steth.jpg",
+  "https://i.ibb.co/M1cJkyt/Foto-2024-02-02-09-25-09-a-m.jpg",
+  "https://i.ibb.co/zbv0WPw/IMG-5083.jpg",
+  "https://i.ibb.co/LY26469/about-us-2.jpg",
   // Agrega más URLs de imágenes según sea necesario
+  ,
 ];
 
 function preloadImages(urls) {

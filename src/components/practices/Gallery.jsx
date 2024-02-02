@@ -100,6 +100,7 @@ const Gallery = ({ darkMode }) => {
         variants={fadeIn("down", "spring", 0.3, 2.5)}
         className="grid grid-cols-2 md:grid-cols-4 gap-5"
       >
+        {/* primer columna */}
         <div className="grid gap-5 ">
           <div
             onClick={() =>
@@ -133,6 +134,7 @@ const Gallery = ({ darkMode }) => {
             />
           </div>
         </div>
+        {/* Segunda columna */}
         <div className="grid gap-5 ">
           <div
             onClick={() =>
@@ -166,6 +168,7 @@ const Gallery = ({ darkMode }) => {
             />
           </div>
         </div>
+        {/* tercera columna */}
         <div className="grid gap-5">
           <div
             onClick={() => openModal("https://i.ibb.co/zbv0WPw/IMG-5083.jpg")}
@@ -195,6 +198,7 @@ const Gallery = ({ darkMode }) => {
             />
           </div>
         </div>
+        {/* cuarta columna */}
         <div className="grid gap-5">
           <div
             onClick={() =>
