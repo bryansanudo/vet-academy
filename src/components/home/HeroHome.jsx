@@ -7,8 +7,6 @@ const images = [
   "https://i.ibb.co/M1cJkyt/Foto-2024-02-02-09-25-09-a-m.jpg",
   "https://i.ibb.co/zbv0WPw/IMG-5083.jpg",
   "https://i.ibb.co/LY26469/about-us-2.jpg",
-  // Agrega más URLs de imágenes según sea necesario
-  ,
 ];
 
 function preloadImages(urls) {
