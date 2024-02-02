@@ -134,13 +134,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                     Cursos
                   </NavLink>
                 </li>
-                <li
-                  className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
-                >
-                  <NavLink to="/practices" className={activeLink}>
-                    Prácticas
-                  </NavLink>
-                </li>
+
                 <li className="mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer">
                   <NavLink to="/masterclass" className={activeLink}>
                     Masterclass Gratuitas
@@ -281,14 +275,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                 Cursos
               </NavLink>
             </li>
-            <li
-              onClick={() => setIsMenuShown(!isMenuShown)}
-              className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
-            >
-              <NavLink to="/practices" className={activeLink}>
-                Prácticas
-              </NavLink>
-            </li>
+
             <li
               onClick={() => setIsMenuShown(!isMenuShown)}
               className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}

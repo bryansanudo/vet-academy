@@ -90,14 +90,12 @@ const Gallery = ({ darkMode }) => {
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
       id="clients"
-      className={`${styles.paddingY} ${styles.flexCenter} flex-col relative mt-28 `}
+      className={`${styles.paddingY} ${styles.flexCenter} flex-col relative  `}
     >
       <div
         className={` red__gradient absolute z-[0] w-[30%] h-[60%] -left-[50%] rounded-full  bottom-40`}
       />
-      <h2 className={`${styles.heading2} mb-10`}>
-        Cursos presenciales - Prácticas
-      </h2>
+
       <motion.div
         variants={fadeIn("down", "spring", 0.3, 2.5)}
         className="grid grid-cols-2 md:grid-cols-4 gap-5"
@@ -135,7 +133,7 @@ const Gallery = ({ darkMode }) => {
             />
           </div>
         </div>
-        <div className="grid ">
+        <div className="grid gap-5 ">
           <div
             onClick={() =>
               openModal("https://i.ibb.co/3kh3ph3/IMG-1338-jpg-1.jpg")
@@ -148,11 +146,11 @@ const Gallery = ({ darkMode }) => {
             />
           </div>
           <div
-            onClick={() => openModal("https://i.ibb.co/nBg09yW/IMG-1422.jpg")}
+            onClick={() => openModal("https://i.ibb.co/LY26469/about-us-2.jpg")}
           >
             <img
               className="h-auto max-w-full rounded-lg cursor-pointer hover:scale-105 duration-500 shadow-lg shadow-gray-400"
-              src="https://i.ibb.co/nBg09yW/IMG-1422.jpg"
+              src="https://i.ibb.co/LY26469/about-us-2.jpg"
               alt=""
             />
           </div>

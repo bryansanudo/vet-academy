@@ -3,6 +3,7 @@ import styles from "@/style";
 import HeroAbout from "@/components/about/HeroAbout";
 
 import Achieve from "@/components/about/Achieve";
+import Gallery from "@/components/practices/Gallery";
 
 import CTA from "@/components/CTA";
 import { useEffect } from "react";
@@ -26,6 +27,7 @@ const About = ({ darkMode }) => {
           {/* <Business darkMode={darkMode} /> */}
 
           <Achieve />
+          <Gallery />
           <div
             className={`
                pink__gradient absolute z-[0] w-[50%] h-[50%] -left-1/2 bottom-0 rounded-full `}
