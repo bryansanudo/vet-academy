@@ -38,7 +38,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
     },
     {
       id: 4,
-      name: "Masterclass Gratuistas",
+      name: "Masterclass Gratuitas",
       link: "/masterclass",
     },
     {

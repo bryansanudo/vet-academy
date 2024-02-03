@@ -64,14 +64,14 @@ const Business = ({ darkMode }) => (
           <div
             className={`flex   ${
               darkMode ? "shadow-sm shadow-white  " : "shadow-md shadow-black"
-            } rounded-[20px]  flex-col md:gap-8 gap-4 md:p-10 p-6  w-full h-full mb-4 `}
+            } rounded-[20px]  flex-col md:p-10 p-6  w-full h-full mb-4 `}
           >
             <div className="flex flex-col md:flex-row items-center  justify-center gap-4">
               <div className="flex flex-col w-full">
                 <label
-                  className={` font-semibold dark:text-white  text-[16px] leading-[23.4px] ml-2 `}
+                  className={` flex items-center justify-center  ${styles.title} `}
                 >
-                  Nombre
+                  Correo Electronico
                 </label>
                 <input
                   type="text"
@@ -83,32 +83,16 @@ const Business = ({ darkMode }) => (
                   }   bg-dimWhite border outline-none text-black font-normal text-[16px] leading-[24px]  w-full pl-4 mt-2`}
                 />
               </div>
-              <div className="flex flex-col w-full">
-                <label
-                  className={` font-semibold dark:text-white  text-[16px] leading-[23.4px] ml-2 `}
-                >
-                  Apellido
-                </label>
-                <input
-                  type="text"
-                  required
-                  name="Last Name"
-                  autoComplete="off"
-                  className={` h-10 rounded-[10px] ${
-                    darkMode ? " " : " border-black  "
-                  }   bg-dimWhite border outline-none text-black font-normal text-[16px] leading-[24px]  w-full pl-4 mt-2`}
-                />
-              </div>
             </div>
-            <div className="flex flex-col md:flex-row items-center  justify-center gap-4">
+            <div className="flex flex-col md:flex-row items-center  justify-center gap-4 mt-8">
               <div className="flex flex-col w-full">
                 <label
-                  className={` font-semibold dark:text-white  text-[16px] leading-[23.4px] ml-2 `}
+                  className={` flex items-center justify-center  ${styles.title} `}
                 >
-                  Email
+                  Contraseña
                 </label>
                 <input
-                  type="text"
+                  type="password"
                   required
                   name="Name"
                   autoComplete="off"
@@ -117,45 +101,16 @@ const Business = ({ darkMode }) => (
                   }   bg-dimWhite border outline-none text-black font-normal text-[16px] leading-[24px]  w-full pl-4 mt-2`}
                 />
               </div>
-              <div className="flex flex-col w-full">
-                <label
-                  className={` font-semibold dark:text-white  text-[16px] leading-[23.4px] ml-2 `}
-                >
-                  Telefono
-                </label>
-                <input
-                  type="text"
-                  required
-                  name="Last Name"
-                  autoComplete="off"
-                  className={` h-10 rounded-[10px] ${
-                    darkMode ? " " : " border-black  "
-                  }   bg-dimWhite border outline-none text-black font-normal text-[16px] leading-[24px]  w-full pl-4 mt-2`}
-                />
-              </div>
             </div>
-
-            <div className="flex flex-col w-full">
-              <label
-                className={` font-semibold dark:text-white  text-[16px] leading-[23.4px] ml-2 `}
-              >
-                Mensaje
-              </label>
-              <textarea
-                name="Questions"
-                rows="3"
-                required
-                autoComplete="off"
-                className={`  rounded-[10px] ${
-                  darkMode ? " " : " border-black  "
-                }   bg-dimWhite border outline-none text-black font-normal text-[16px] leading-[24px]  w-full pl-4 py-2 mt-2`}
-              />
+            <div className=" flex items-center justify-end mt-8 mb-2">
+              <span className="text-primary hover:scale-105 duration-500 cursor-pointer">
+                Cambiar Contraseña
+              </span>
             </div>
-
             <button
-              className={`btn  font-semibold dark:text-white  text-[16px] leading-[23.4px] ml-2 btn-primary  `}
+              className={`btn font-semibold dark:text-white  text-[16px] leading-[23.4px] ml-2 btn-primary `}
             >
-              Enviar
+              Iniciar Sesión
             </button>
           </div>
         </form>

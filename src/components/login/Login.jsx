@@ -29,6 +29,12 @@ const Login = ({ darkMode, b, setB }) => {
       >
         <div className={`${styles.boxWidth}`}>
           <div name="scrol" className="pt-20" />
+          <div className="w-full flex justify-between items-center md:flex-row flex-col relative z-[1] mt-20">
+            <h2 className={styles.heading2}>
+              Iniciar Sesión
+              <br className="sm:block hidden" />
+            </h2>
+          </div>
           <Business darkMode={darkMode} />
 
           {/* <Achieve /> */}
