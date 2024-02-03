@@ -1,11 +1,9 @@
-import styles from "@/style";
-
 import HeroAbout from "@/components/about/HeroAbout";
-
-import Achieve from "@/components/about/Achieve";
+import AboutUs from "@/components/about/AboutUs";
 import Gallery from "@/components/about/Gallery";
-
 import CTA from "@/components/CTA";
+
+import styles from "@/style";
 import { useEffect } from "react";
 
 const About = ({ darkMode }) => {
@@ -24,20 +22,12 @@ const About = ({ darkMode }) => {
         className={`dark:bg-accent  ${styles.paddingX} ${styles.flexCenter}`}
       >
         <div className={`${styles.boxWidth}`}>
-          {/* <Business darkMode={darkMode} /> */}
-
-          <Achieve />
-          <Gallery />
           <div
             className={`
-               pink__gradient absolute z-[0] w-[50%] h-[50%] -left-1/2 bottom-0 rounded-full `}
+            pink__gradient absolute z-[0] w-[50%] h-[50%] -left-1/2 bottom-0 rounded-full `}
           />
-          {/* <Ally /> */}
-          {/* <Practices darkMode={darkMode} /> */}
-          {/*      <Services darkMode={darkMode} /> */}
-          {/*  <Advantages darkMode={darkMode} /> */}
-          {/*  <Timeline darkMode={darkMode} /> */}
-          {/*  <Clients /> */}
+          <AboutUs />
+          <Gallery />
           <CTA darkMode={darkMode} />
         </div>
       </div>

@@ -5,7 +5,7 @@ import about from "@/assets/about-us.png";
 import { motion } from "framer-motion";
 import { staggerContainer, zoomIn, fadeIn } from "@/utils/motion";
 
-const Hero = ({ darkMode }) => {
+const Hero = () => {
   return (
     <motion.section
       variants={staggerContainer()}
@@ -18,19 +18,6 @@ const Hero = ({ darkMode }) => {
       <div
         className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}
       >
-        {/*  <div
-          className={`flex flex-row items-center py-[6px] px-4  ${
-            darkMode ? "bg-black-gradient-2" : "bg-black-gradient"
-          } rounded-[10px] mb-2`}
-        >
-          <FaStar className={` text-primary `} />
-          <p className={`font-normal  text-[18px] leading-[30.8px] ml-2`}>
-            <span className="text-white ">
-              Immigration Law Services in the US
-            </span>
-          </p>
-        </div> */}
-
         <motion.div
           variants={fadeIn("right", "spring", 0.3, 2.5)}
           className="flex flex-row justify-between items-center w-full"
@@ -43,10 +30,6 @@ const Hero = ({ darkMode }) => {
             </span>
           </h1>
         </motion.div>
-
-        {/* <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-          Navigating the Pathways to Success in the United States.
-        </p> */}
       </div>
 
       <motion.div
@@ -73,10 +56,6 @@ const Hero = ({ darkMode }) => {
 
         {/* gradient end */}
       </motion.div>
-
-      {/*   <div className={`ss:hidden ${styles.flexCenter}`}>
-        <GetStarted />
-      </div> */}
     </motion.section>
   );
 };

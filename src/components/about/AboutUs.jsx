@@ -2,7 +2,7 @@ import styles, { layout } from "@/style";
 
 import aboutUs from "@/assets/about-us-2.jpg";
 
-const Achieve = () => (
+const AboutUS = () => (
   <section id="product" className={layout.sectionReverse}>
     <div className={layout.sectionImgReverse}>
       <img
@@ -37,4 +37,4 @@ const Achieve = () => (
   </section>
 );
 
-export default Achieve;
+export default AboutUS;
