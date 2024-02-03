@@ -86,14 +86,16 @@ const cards = [
   },
 ];
 
-const Advantages = ({ darkMode }) => (
+const Professors = ({ darkMode }) => (
   <section
     id="clients"
     className={`${styles.paddingY} ${styles.flexCenter}  w-full flex-col relative `}
   >
-    {/* <div
-      className={` red__gradient absolute z-[0] w-[10%] h-[0%] -left-[50%] rounded-full  bottom-40`}
-    /> */}
+    <div className="w-full h-[1px] bg-gray-200" />
+    <h2 className={`${styles.heading3} w-full text-primary  text-center `}>
+      Docentes del curso
+    </h2>
+    <div className="w-full h-[1px] bg-gray-200" />
 
     <div className="flex flex-wrap sm:justify-start justify-center w-full  relative z-[1]">
       <motion.div className="flex flex-col items-center justify-center mx-auto ">
@@ -104,7 +106,7 @@ const Advantages = ({ darkMode }) => (
             whileInView="show"
             viewport={{ once: true, amount: 0.25 }}
             key={id}
-            className={` p-2 w-[100%]  `}
+            className={` p-2 w-[100%] sm:w-[60%]    `}
           >
             <motion.img
               variants={zoomIn(0.2, 2)}
@@ -121,4 +123,4 @@ const Advantages = ({ darkMode }) => (
   </section>
 );
 
-export default Advantages;
+export default Professors;

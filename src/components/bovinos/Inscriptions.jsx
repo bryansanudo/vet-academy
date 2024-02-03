@@ -10,7 +10,6 @@ import bovinos from "@/assets/courses/curso-6.png";
 import { motion } from "framer-motion";
 import { staggerContainer, zoomIn, fadeIn } from "@/utils/motion";
 
-import Metodology from "@/components/bovinos/Metodology";
 const Inscriptions = ({ darkMode }) => {
   return (
     /*  <div

@@ -1,24 +1,4 @@
 import styles from "@/style";
-import doc1 from "@/assets/gallery/doc1.png";
-import doc2 from "@/assets/gallery/doc2.png";
-import doc3 from "@/assets/gallery/doc3.png";
-import doc4 from "@/assets/gallery/doc4.png";
-import doc5 from "@/assets/gallery/doc5.png";
-import doc6 from "@/assets/gallery/doc6.png";
-import doc7 from "@/assets/gallery/doc7.png";
-import doc8 from "@/assets/gallery/doc8.png";
-import doc9 from "@/assets/gallery/doc9.png";
-import { FaBars, FaTimes } from "react-icons/fa";
-
-import d1 from "@/assets/gallery/d1.png";
-import d2 from "@/assets/gallery/d2.png";
-import d3 from "@/assets/gallery/d3.png";
-import d4 from "@/assets/gallery/d4.png";
-import d5 from "@/assets/gallery/d5.png";
-import d6 from "@/assets/gallery/d6.png";
-import d7 from "@/assets/gallery/d7.png";
-import d8 from "@/assets/gallery/d8.png";
-import d9 from "@/assets/gallery/d9.png";
 
 const Clients = () => (
   <section className={`${styles.flexCenter} my-20  `}>
@@ -28,7 +8,7 @@ const Clients = () => (
         aria-hidden="true"
       >
         {/* doc1 */}
-        <div className="w-[200px] flex-col flex items-center justify-center">
+        {/* <div className="w-[200px] flex-col flex items-center justify-center">
           <img
             src={doc1}
             alt=""
@@ -53,9 +33,9 @@ const Clients = () => (
           </dialog>
           <h1 className={`${styles.title} mt-4`}>Diego Suárez</h1>
           <h2 className={`${styles.subtitle} mt-4`}>Médico Veterinario</h2>
-        </div>
+        </div> */}
         {/* doc2 */}
-        <div className="w-[200px] flex-col flex items-center justify-center">
+        {/* <div className="w-[200px] flex-col flex items-center justify-center">
           <img
             src={doc2}
             alt=""
@@ -80,9 +60,9 @@ const Clients = () => (
           </dialog>
           <h1 className={`${styles.title} mt-4`}>Nicolás Arias</h1>
           <h2 className={`${styles.subtitle} mt-4`}>Zootecnista</h2>
-        </div>
+        </div> */}
         {/* doc3 */}
-        <div className="w-[200px] flex-col flex items-center justify-center">
+        {/* <div className="w-[200px] flex-col flex items-center justify-center">
           <img
             src={doc3}
             alt=""
@@ -107,9 +87,9 @@ const Clients = () => (
           </dialog>
           <h1 className={`${styles.title} mt-4`}>Brahian Tuberquia</h1>
           <h2 className={`${styles.subtitle} mt-4`}>Médico Veterinario</h2>
-        </div>
+        </div> */}
         {/* doc4 */}
-        <div className="w-[200px] flex-col flex items-center justify-center">
+        {/* <div className="w-[200px] flex-col flex items-center justify-center">
           <img
             src={doc4}
             alt=""
@@ -134,9 +114,9 @@ const Clients = () => (
           </dialog>
           <h1 className={`${styles.title} mt-4`}>Nathalia Correa</h1>
           <h2 className={`${styles.subtitle} mt-4`}>Médica Veterinaria</h2>
-        </div>
+        </div> */}
         {/* doc5 */}
-        <div className="w-[200px] flex-col flex items-center justify-center">
+        {/* <div className="w-[200px] flex-col flex items-center justify-center">
           <img
             src={doc5}
             alt=""
@@ -161,9 +141,9 @@ const Clients = () => (
           </dialog>
           <h1 className={`${styles.title} mt-4`}>Sofía Agredo</h1>
           <h2 className={`${styles.subtitle} mt-4`}>Médica Veterinaria</h2>
-        </div>
+        </div> */}
         {/* doc6 */}
-        <div className="w-[200px] flex-col flex items-center justify-center">
+        {/* <div className="w-[200px] flex-col flex items-center justify-center">
           <img
             src={doc6}
             alt=""
@@ -188,9 +168,9 @@ const Clients = () => (
           </dialog>
           <h1 className={`${styles.title} mt-4`}>Ferney Arango</h1>
           <h2 className={`${styles.subtitle} mt-4`}>Médico Veterinario</h2>
-        </div>
+        </div> */}
         {/* doc7 */}
-        <div className="w-[200px] flex-col flex items-center justify-center">
+        {/* <div className="w-[200px] flex-col flex items-center justify-center">
           <img
             src={doc7}
             alt=""
@@ -215,9 +195,9 @@ const Clients = () => (
           </dialog>
           <h1 className={`${styles.title} mt-4`}>Carlos Oviedo</h1>
           <h2 className={`${styles.subtitle} mt-4`}>Médico Veterinario</h2>
-        </div>
+        </div> */}
         {/* doc8 */}
-        <div className="w-[200px] flex-col flex items-center justify-center">
+        {/* <div className="w-[200px] flex-col flex items-center justify-center">
           <img
             src={doc8}
             alt=""
@@ -242,9 +222,9 @@ const Clients = () => (
           </dialog>
           <h1 className={`${styles.title} mt-4`}>Iván Castaño</h1>
           <h2 className={`${styles.subtitle} mt-4`}>Zootecnista</h2>
-        </div>
+        </div> */}
         {/* doc9 */}
-        <div className="w-[200px] flex-col flex items-center justify-center">
+        {/* <div className="w-[200px] flex-col flex items-center justify-center">
           <img
             src={doc9}
             alt=""
@@ -269,7 +249,7 @@ const Clients = () => (
           </dialog>
           <h1 className={`${styles.title} mt-4`}>Andrés Mejía</h1>
           <h2 className={`${styles.subtitle} mt-4`}>Médico Veterinario</h2>
-        </div>
+        </div> */}
       </div>
     </div>
   </section>
