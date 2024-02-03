@@ -1,12 +1,5 @@
 import styles from "@/style";
 
-import { GrStatusGood } from "react-icons/gr";
-import { VscServerProcess } from "react-icons/vsc";
-import { MdDashboardCustomize } from "react-icons/md";
-import { HiOutlineDocumentMagnifyingGlass } from "react-icons/hi2";
-import { GrCycle } from "react-icons/gr";
-import { MdMoreTime } from "react-icons/md";
-
 import { motion } from "framer-motion";
 import { staggerContainer, zoomIn, fadeIn } from "@/utils/motion";
 

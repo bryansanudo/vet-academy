@@ -46,7 +46,7 @@ const Price = ({ language, setLanguage, darkMode }) => {
       <details className={`dropdown dropdown-left  ${styles.subtitle}`}>
         <summary
           onClick={handleDropdown}
-          className="uppercase  flex  items-center justify-center gap-1 cursor-pointer"
+          className={`uppercase  flex  items-center justify-center gap-1 cursor-pointer ${styles.title}`}
         >
           {languageText}
           <img src={languageIcon} className="w-6 h-6" alt="ico" />
