@@ -3,7 +3,7 @@ import styles from "@/style";
 import HeroAbout from "@/components/about/HeroAbout";
 
 import Achieve from "@/components/about/Achieve";
-import Gallery from "@/components/practices/Gallery";
+import Gallery from "@/components/about/Gallery";
 
 import CTA from "@/components/CTA";
 import { useEffect } from "react";

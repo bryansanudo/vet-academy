@@ -133,7 +133,7 @@ const Catalogue = ({ darkMode }) => {
       id: 9,
       img: curso9,
       logo: logo,
-      title: "Enfermeria",
+      title: "Enfermería",
       subtitle: "Descripcion del curso 9",
       link: "/curso9",
       cop: "1.000.000",
