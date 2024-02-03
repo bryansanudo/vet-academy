@@ -84,65 +84,83 @@ const Navbar = ({ darkMode, setDarkMode }) => {
   ];
 
   return (
-    <div
-      className={` ${styles.paddingX} ${
-        styles.flexCenter
-      } fixed  w-full z-50   ${darkMode ? "bg-[#0D0E1C]" : "bg-white"}    `}
-    >
-      <div className={`${styles.boxWidth} `}>
-        <div className="w-full h-20 dark:text-white ">
-          <div className="flex justify-start   md:justify-end md:gap-5 items-center  mx-auto  h-full">
-            <div className="mr-auto    hidden md:flex items-end">
-              <div className="flex gap-1 items-end">
-                <NavLink to="/" className={activeLink}>
-                  <img
-                    src={darkMode ? logoVet : logoVet}
-                    className="w-48  object-contain hover:scale-105 duration-500"
-                    alt=""
-                  />
-                </NavLink>
-                {/*   <p
+    <>
+      <div
+        className={`bg-primary fixed w-full flex items-center justify-center h-6 z-50 ${styles.paddingX}`}
+      >
+        <div className={`${styles.boxWidth} `}>
+          <div className={`flex items-center  justify-between w-full`}>
+            <div>contenido</div>
+          </div>
+        </div>
+      </div>
+      {/* navbar 1 */}
+      <div
+        className={` ${styles.paddingX} ${
+          styles.flexCenter
+        } fixed mt-6  w-full z-50 ${
+          darkMode ? "bg-[#0D0E1C]" : "bg-white "
+        }    `}
+      >
+        <div className={`${styles.boxWidth} `}>
+          <div className="w-full h-20 dark:text-white ">
+            <div className="flex justify-start   md:justify-end md:gap-5 items-center  mx-auto  h-full">
+              <div className="mr-auto    hidden md:flex items-end">
+                <div className="flex gap-1 items-end">
+                  <NavLink to="/" className={activeLink}>
+                    <img
+                      src={darkMode ? logoVet : logoVet}
+                      className="w-48  object-contain hover:scale-105 duration-500"
+                      alt=""
+                    />
+                  </NavLink>
+                  {/*   <p
                   className={` ${
                     darkMode ? "text-white" : "text-black"
                   } text-[30px] tangerine       `}
                 >
                   Visa Law
                 </p> */}
+                </div>
               </div>
-            </div>
-            <div className="hidden lg:flex items-center">
-              <ul className="flex gap-6 ">
-                <li
-                  className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
-                >
-                  <NavLink to="/about" className={activeLink}>
-                    Nosotros
-                  </NavLink>
-                </li>
-                <li
-                  className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
-                >
-                  <NavLink to="/bovinos" className={activeLink}>
-                    Bovinos
-                  </NavLink>
-                </li>
+              <div className="hidden lg:flex items-center">
+                <ul className="flex gap-6 ">
+                  <li
+                    className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
+                  >
+                    <NavLink to="/about" className={activeLink}>
+                      Nosotros
+                    </NavLink>
+                  </li>
+                  <li
+                    className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
+                  >
+                    <NavLink to="/bovinos" className={activeLink}>
+                      Bovinos
+                    </NavLink>
+                  </li>
 
-                <li
-                  className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
-                >
-                  <NavLink to="/courses" className={activeLink}>
-                    Cursos
-                  </NavLink>
-                </li>
+                  <li
+                    className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
+                  >
+                    <NavLink to="/courses" className={activeLink}>
+                      Cursos
+                    </NavLink>
+                  </li>
 
-                <li className="mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer">
-                  <NavLink to="/masterclass" className={activeLink}>
-                    Masterclass Gratuitas
-                  </NavLink>
-                </li>
+                  <li className="mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer">
+                    <NavLink to="/masterclass" className={activeLink}>
+                      Masterclass Gratuitas
+                    </NavLink>
+                  </li>
+                  {/* <li className="mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer">
+                    <NavLink to="/login" className={activeLink}>
+                      Login
+                    </NavLink>
+                  </li> */}
 
-                {/* visa eb1 */}
-                {/* <li>
+                  {/* visa eb1 */}
+                  {/* <li>
                   <div className="dropdown dropdown-bottom dropdown-hover">
                     <div
                       tabIndex={0}
@@ -175,124 +193,124 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                     </ul>
                   </div>
                 </li> */}
-                {/* visa eb2 */}
-                {/*  <li
+                  {/* visa eb2 */}
+                  {/*  <li
                   className={`mt-1 text-[18px] hover:font-semibold hover:text-primary  capitalize duration-300   cursor-pointer `}
                 >
                   <Link to="/eb2">Visa EB-2</Link>
                 </li> */}
 
-                {/* faq contact */}
-                {links2.map(({ id, link, name }) => (
-                  <li
-                    key={id}
-                    className={`mt-1 text-[18px]  capitalize duration-300  hover:font-semibold hover:text-primary   cursor-pointer `}
-                  >
-                    <NavLink className={activeLink} to={link}>
-                      {name}
-                    </NavLink>
-                  </li>
-                ))}
-              </ul>
-            </div>
+                  {/* faq contact */}
+                  {links2.map(({ id, link, name }) => (
+                    <li
+                      key={id}
+                      className={`mt-1 text-[18px]  capitalize duration-300  hover:font-semibold hover:text-primary   cursor-pointer `}
+                    >
+                      <NavLink className={activeLink} to={link}>
+                        {name}
+                      </NavLink>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-            <div
-              onClick={() => setIsMenuShown(!isMenuShown)}
-              className="block lg:hidden cursor-pointer mr-4"
-            >
-              {isMenuShown ? (
-                <FaTimes className="hover:text-primary" size={30} />
-              ) : (
-                <FaBars className="hover:text-primary" size={30} />
-              )}
-            </div>
-
-            <div className="flex items-center flex-row justify-center gap-2 ">
-              <div className="bg-gray-300 h-7 mr-2 w-[1px] hidden md:flex"></div>
-              <div onClick={() => setDarkMode(!darkMode)}>
-                {darkMode ? (
-                  <MdWbSunny
-                    className={`mt-1 text-2xl hover:text-primary  cursor-pointer duration-300  `}
-                  />
+              <div
+                onClick={() => setIsMenuShown(!isMenuShown)}
+                className="block lg:hidden cursor-pointer mr-4"
+              >
+                {isMenuShown ? (
+                  <FaTimes className="hover:text-primary" size={30} />
                 ) : (
-                  <MdNightsStay
-                    className={`mt-1 text-2xl hover:text-primary   cursor-pointer duration-300  `}
-                  />
+                  <FaBars className="hover:text-primary" size={30} />
                 )}
               </div>
-            </div>
 
-            <div className="ml-auto gap-1 md:hidden flex items-end">
-              <NavLink to="/" className={activeLink}>
-                <img
-                  src={darkMode ? logoVet : logoVet}
-                  className="w-40 object-contain"
-                  alt=""
-                />
-              </NavLink>
-              {/* <p
+              <div className="flex items-center flex-row justify-center gap-2 ">
+                <div className="bg-gray-300 h-7 mr-2 w-[1px] hidden md:flex"></div>
+                <div onClick={() => setDarkMode(!darkMode)}>
+                  {darkMode ? (
+                    <MdWbSunny
+                      className={`mt-1 text-2xl hover:text-primary  cursor-pointer duration-300  `}
+                    />
+                  ) : (
+                    <MdNightsStay
+                      className={`mt-1 text-2xl hover:text-primary   cursor-pointer duration-300  `}
+                    />
+                  )}
+                </div>
+              </div>
+
+              <div className="ml-auto gap-1 md:hidden flex items-end">
+                <NavLink to="/" className={activeLink}>
+                  <img
+                    src={darkMode ? logoVet : logoVet}
+                    className="w-40 object-contain"
+                    alt=""
+                  />
+                </NavLink>
+                {/* <p
                 className={` ${
                   darkMode ? "text-white" : "text-black"
                 } text-[24px] tangerine   `}
               >
                 Visa Law
               </p> */}
+              </div>
             </div>
           </div>
-        </div>
 
-        <div
-          className={`absolute w-full  z-[50] left-0 h-fit py-12 lg:hidden flex justify-center text-center text-2xl duration-500 ${
-            isMenuShown ? "top-20 rounded-b-2xl  opacity-100" : "top-[-600px]"
-          } ${darkMode ? "bg-[#0D0E1C]" : "bg-gray-100"}`}
-        >
-          <ul
-            className={`flex flex-col gap-6 text-left dark:text-white ${
-              darkMode ? " " : ""
-            }`}
+          <div
+            className={`absolute w-full  z-[50] left-0 h-fit py-12 lg:hidden flex justify-center text-center text-2xl duration-500 ${
+              isMenuShown ? "top-20 rounded-b-2xl  opacity-100" : "top-[-600px]"
+            } ${darkMode ? "bg-[#0D0E1C]" : "bg-gray-100"}`}
           >
-            <li
-              onClick={() => setIsMenuShown(!isMenuShown)}
-              className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
+            <ul
+              className={`flex flex-col gap-6 text-left dark:text-white ${
+                darkMode ? " " : ""
+              }`}
             >
-              <NavLink to="/about" className={activeLink}>
-                Nosotros
-              </NavLink>
-            </li>
-            <li
-              onClick={() => setIsMenuShown(!isMenuShown)}
-              className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
-            >
-              <NavLink to="/bovinos" className={activeLink}>
-                Bovinos
-              </NavLink>
-            </li>
-            <li
-              onClick={() => setIsMenuShown(!isMenuShown)}
-              className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
-            >
-              <NavLink to="/courses" className={activeLink}>
-                Cursos
-              </NavLink>
-            </li>
+              <li
+                onClick={() => setIsMenuShown(!isMenuShown)}
+                className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
+              >
+                <NavLink to="/about" className={activeLink}>
+                  Nosotros
+                </NavLink>
+              </li>
+              <li
+                onClick={() => setIsMenuShown(!isMenuShown)}
+                className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
+              >
+                <NavLink to="/bovinos" className={activeLink}>
+                  Bovinos
+                </NavLink>
+              </li>
+              <li
+                onClick={() => setIsMenuShown(!isMenuShown)}
+                className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
+              >
+                <NavLink to="/courses" className={activeLink}>
+                  Cursos
+                </NavLink>
+              </li>
 
-            <li
-              onClick={() => setIsMenuShown(!isMenuShown)}
-              className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
-            >
-              <NavLink to="/masterclass" className={activeLink}>
-                Masterclass Gratuitas
-              </NavLink>
-            </li>
-            {/*   <li
+              <li
+                onClick={() => setIsMenuShown(!isMenuShown)}
+                className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
+              >
+                <NavLink to="/masterclass" className={activeLink}>
+                  Masterclass Gratuitas
+                </NavLink>
+              </li>
+              {/*   <li
               onClick={() => setIsMenuShown(!isMenuShown)}
               className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
             >
               <Link to="/courses">Cursos</Link>
             </li>
  */}
-            {/* visa eb1 */}
-            {/*  <li>
+              {/* visa eb1 */}
+              {/*  <li>
               <div className="dropdown dropdown-bottom dropdown-hover">
                 <div
                   tabIndex={0}
@@ -322,19 +340,20 @@ const Navbar = ({ darkMode, setDarkMode }) => {
               </div>
             </li> */}
 
-            {/* faq contact */}
-            <li
-              onClick={() => setIsMenuShown(!isMenuShown)}
-              className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
-            >
-              <NavLink to="/contact" className={activeLink}>
-                Contacto
-              </NavLink>
-            </li>
-          </ul>
+              {/* faq contact */}
+              <li
+                onClick={() => setIsMenuShown(!isMenuShown)}
+                className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
+              >
+                <NavLink to="/contact" className={activeLink}>
+                  Contacto
+                </NavLink>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

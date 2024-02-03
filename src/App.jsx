@@ -13,6 +13,7 @@ import GalleryAbout from "@/components/GalleryAbout";
 import Bovinos from "@/components/bovinos/Bovinos";
 import Practices from "@/components/practices/Practices";
 import Masterclass from "@/components/masterclass/Masterclass";
+import Login from "@/components/login/Login";
 
 import { Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -49,6 +50,7 @@ const App = () => {
             path="/masterclass"
             element={<Masterclass darkMode={darkMode} />}
           />
+          <Route path="/login" element={<Login darkMode={darkMode} />} />
           <Route
             path="/gallery-about"
             element={<GalleryAbout darkMode={darkMode} />}

@@ -295,12 +295,14 @@ const Catalogue = ({ darkMode }) => {
                   <div className="flex justify-between">
                     {language === "en" ? (
                       <div className="flex  gap-2 items-end justify-center">
-                        <span className="text-primary ">${usd} </span>
+                        <span className="text-primary ">${usd}</span>
+                        <span className="text-primary ">USD</span>
                         <img src={enImg} className="h-6" alt="" />
                       </div>
                     ) : language === "es" ? (
                       <div className="flex  gap-2 items-end justify-center">
                         <span className="text-primary ">${cop} </span>
+                        <span className="text-primary ">COP</span>
                         <img src={colImg} className="h-6" alt="" />
                       </div>
                     ) : (
