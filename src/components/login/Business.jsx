@@ -18,25 +18,18 @@ export const features = [
     id: "feature-1",
     motionTime: 1,
     icon: <FaRegHandPointer />,
-    title: "Aprendizaje Interactivo",
+    title: "(Información Relevante)",
     content:
-      "Sumérgete en una experiencia de aprendizaje virtual envolvente con nuestros cursos. Accede al contenido desde cualquier lugar y en cualquier momento, adaptado a tu ritmo y necesidades.",
+      " Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quia maiores, cupiditate odio tempore rerum sapiente quibusdam,",
   },
+
   {
     id: "feature-2",
     motionTime: 2,
     icon: <HiOutlineComputerDesktop />,
-    title: "Plataforma Intuitiva y Accesible",
+    title: "(Información Relevante)",
     content:
-      "Nuestra plataforma está diseñada pensando en ti, ofreciendo una navegación fácil e intuitiva. Aprende de manera efectiva y cómoda con recursos didácticos de calidad y soporte técnico dedicado.",
-  },
-  {
-    id: "feature-3",
-    motionTime: 3,
-    icon: <GrCertificate />,
-    title: "Certificado de Asistencia",
-    content:
-      "Aprovecha al máximo tu inversión en educación con nuestros cursos, respaldados por certificaciones. Obtén reconocimiento por tu dedicación y esfuerzo en la mejora continua de tus habilidades veterinarias.",
+      " Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quia maiores, cupiditate odio tempore rerum sapiente quibusdam,",
   },
 ];
 
@@ -66,14 +59,107 @@ const FeatureCard = ({ icon, title, content, index, darkMode, motionTime }) => (
 const Business = ({ darkMode }) => (
   <section id="features" className={`${layout.section}  `}>
     <div className={layout.sectionInfo}>
-      {features.map((feature, index) => (
-        <FeatureCard
-          key={feature.id}
-          {...feature}
-          index={index}
-          darkMode={darkMode}
-        />
-      ))}
+      <div className="w-full  ">
+        <form className=" w-full">
+          <div
+            className={`flex   ${
+              darkMode ? "shadow-sm shadow-white  " : "shadow-md shadow-black"
+            } rounded-[20px]  flex-col md:gap-8 gap-4 md:p-10 p-6  w-full h-full mb-4 `}
+          >
+            <div className="flex flex-col md:flex-row items-center  justify-center gap-4">
+              <div className="flex flex-col w-full">
+                <label
+                  className={` font-semibold dark:text-white  text-[16px] leading-[23.4px] ml-2 `}
+                >
+                  Nombre
+                </label>
+                <input
+                  type="text"
+                  required
+                  name="Name"
+                  autoComplete="off"
+                  className={` h-10 rounded-[10px] ${
+                    darkMode ? " " : " border-black  "
+                  }   bg-dimWhite border outline-none text-black font-normal text-[16px] leading-[24px]  w-full pl-4 mt-2`}
+                />
+              </div>
+              <div className="flex flex-col w-full">
+                <label
+                  className={` font-semibold dark:text-white  text-[16px] leading-[23.4px] ml-2 `}
+                >
+                  Apellido
+                </label>
+                <input
+                  type="text"
+                  required
+                  name="Last Name"
+                  autoComplete="off"
+                  className={` h-10 rounded-[10px] ${
+                    darkMode ? " " : " border-black  "
+                  }   bg-dimWhite border outline-none text-black font-normal text-[16px] leading-[24px]  w-full pl-4 mt-2`}
+                />
+              </div>
+            </div>
+            <div className="flex flex-col md:flex-row items-center  justify-center gap-4">
+              <div className="flex flex-col w-full">
+                <label
+                  className={` font-semibold dark:text-white  text-[16px] leading-[23.4px] ml-2 `}
+                >
+                  Email
+                </label>
+                <input
+                  type="text"
+                  required
+                  name="Name"
+                  autoComplete="off"
+                  className={` h-10 rounded-[10px] ${
+                    darkMode ? " " : " border-black  "
+                  }   bg-dimWhite border outline-none text-black font-normal text-[16px] leading-[24px]  w-full pl-4 mt-2`}
+                />
+              </div>
+              <div className="flex flex-col w-full">
+                <label
+                  className={` font-semibold dark:text-white  text-[16px] leading-[23.4px] ml-2 `}
+                >
+                  Telefono
+                </label>
+                <input
+                  type="text"
+                  required
+                  name="Last Name"
+                  autoComplete="off"
+                  className={` h-10 rounded-[10px] ${
+                    darkMode ? " " : " border-black  "
+                  }   bg-dimWhite border outline-none text-black font-normal text-[16px] leading-[24px]  w-full pl-4 mt-2`}
+                />
+              </div>
+            </div>
+
+            <div className="flex flex-col w-full">
+              <label
+                className={` font-semibold dark:text-white  text-[16px] leading-[23.4px] ml-2 `}
+              >
+                Mensaje
+              </label>
+              <textarea
+                name="Questions"
+                rows="3"
+                required
+                autoComplete="off"
+                className={`  rounded-[10px] ${
+                  darkMode ? " " : " border-black  "
+                }   bg-dimWhite border outline-none text-black font-normal text-[16px] leading-[24px]  w-full pl-4 py-2 mt-2`}
+              />
+            </div>
+
+            <button
+              className={`btn  font-semibold dark:text-white  text-[16px] leading-[23.4px] ml-2 btn-primary  `}
+            >
+              Enviar
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
 
     <motion.div
@@ -83,7 +169,14 @@ const Business = ({ darkMode }) => (
       viewport={{ once: true, amount: 0.25 }}
       className={`${layout.sectionImg} flex-col`}
     >
-      <div className="w-full bg-red-500 h-full">a</div>
+      {features.map((feature, index) => (
+        <FeatureCard
+          key={feature.id}
+          {...feature}
+          index={index}
+          darkMode={darkMode}
+        />
+      ))}
     </motion.div>
   </section>
 );
