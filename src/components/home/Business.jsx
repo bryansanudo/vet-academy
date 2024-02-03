@@ -1,14 +1,8 @@
 import styles, { layout } from "@/style";
 
-import { FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { staggerContainer, zoomIn, fadeIn } from "@/utils/motion";
-
-import { GrUserExpert } from "react-icons/gr";
-import { MdOutlineSecurity } from "react-icons/md";
-import { BiTransfer } from "react-icons/bi";
-import { HiUserGroup } from "react-icons/hi";
 import { GrCertificate } from "react-icons/gr";
 import { FaRegHandPointer } from "react-icons/fa";
 import { HiOutlineComputerDesktop } from "react-icons/hi2";

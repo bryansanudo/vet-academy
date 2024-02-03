@@ -1,7 +1,5 @@
 import styles from "@/style";
-
 import { MdMoreTime } from "react-icons/md";
-
 import { FaPhotoVideo } from "react-icons/fa";
 import { GiTeacher } from "react-icons/gi";
 import { AiOutlineMessage } from "react-icons/ai";

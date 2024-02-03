@@ -1,7 +1,8 @@
 import styles from "@/style";
-import { FaTimes } from "react-icons/fa";
 import posterBovinos from "@/assets/poster-bovinos.png";
+import { FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
+
 const FirstLoadNotification = ({ setB }) => {
   const closeModal = () => {
     setB(false);

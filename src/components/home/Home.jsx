@@ -1,15 +1,11 @@
-import styles from "@/style";
-
 import Business from "@/components/home/Business";
-
 import Advantages from "@/components/home/Advantages";
-
 import HeroHome from "@/components/home/HeroHome";
-
 import CTA from "@/components/CTA";
-
-import { useEffect } from "react";
 import FirstLoadNotification from "@/components/home/FirstLoadNotification";
+
+import styles from "@/style";
+import { useEffect } from "react";
 
 const Home = ({ darkMode, b, setB }) => {
   useEffect(() => {
