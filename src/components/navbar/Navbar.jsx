@@ -1,23 +1,54 @@
-import React, { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
-import styles from "@/style";
-
-import { MdNightsStay, MdWbSunny } from "react-icons/md";
-import { GoDot } from "react-icons/go";
-
-import { Link, NavLink } from "react-router-dom";
-
 import logoVet from "@/assets/vet-academy-logo.jpg";
-
-import { IoMdArrowDropdown } from "react-icons/io";
-
 import NavbarTop from "@/components/navbar/NavbarTop";
 
+import { useState, useEffect } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
+import { MdNightsStay, MdWbSunny } from "react-icons/md";
+import { NavLink } from "react-router-dom";
+import styles from "@/style";
+
+/* firebaselogic */
+
+import { useDispatch } from "react-redux";
+import { SET_ACTIVE_USER, REMOVE_ACTIVE_USER } from "@/redux/slice/authSlice";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "@/configFirebase";
+
 const Navbar = ({ darkMode, setDarkMode }) => {
+  /* firebase logic */
+  const [displayName, setDisplayName] = useState("");
+  const dispatch = useDispatch();
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        if (user.displayName == null) {
+          const u1 = user.email.substring(0, user.email.indexOf("@"));
+          const uName = u1.charAt(0).toUpperCase() + u1.slice(1);
+          setDisplayName(uName);
+        } else {
+          setDisplayName(user.displayName);
+        }
+
+        dispatch(
+          SET_ACTIVE_USER({
+            email: user.email,
+            userName: user.displayName ? user.displayName : displayName,
+            userID: user.uid,
+          })
+        );
+      } else {
+        setDisplayName("");
+        dispatch(REMOVE_ACTIVE_USER());
+      }
+    });
+  }, [dispatch, displayName]);
+
+  /* navbar funcionality */
   const activeLink = ({ isActive }) =>
     isActive
       ? " relative after:content-[''] after:absolute after:left-0 after:bottom-[-3px] after:w-full after:h-[2px] after:bg-primary"
       : "";
+
   const [isMenuShown, setIsMenuShown] = useState(false);
 
   const links = [
@@ -69,6 +100,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                       alt=""
                     />
                   </NavLink>
+                  hola{displayName}
                 </div>
               </div>
               <div className="hidden lg:flex items-center">
