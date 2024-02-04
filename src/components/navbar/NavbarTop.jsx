@@ -76,7 +76,7 @@ const NavbarTop = ({ displayName }) => {
           className={`flex  items-center  sm:justify-between justify-end w-full`}
         >
           {/* socials */}
-          <div className="hidden sm:flex">
+          <div className="flex">
             <div className="flex items-center justify-center gap-6  ">
               {socials.map(({ id, logo, link }) => (
                 <a key={id} href={link} target="_blank">
