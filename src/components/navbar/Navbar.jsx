@@ -101,17 +101,14 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                       alt=""
                     />
                   </NavLink>
-                  <ShowOnLogin>
-                    <button className={`${styles.button}`}>Mis Cursos</button>
-                  </ShowOnLogin>
                 </div>
               </div>
               <div className="hidden lg:flex items-center">
-                <ul className="flex gap-6 ">
+                <ul className="flex gap-6 items-center justify-center">
                   {links.map(({ id, name, link }) => (
                     <li
                       key={id}
-                      className={`mt-1 text-[18px] hover:font-semibold hover:text-primary capitalize duration-300 cursor-pointer `}
+                      className={`text-[18px]  hover:text-primary capitalize duration-300 cursor-pointer `}
                     >
                       <NavLink to={link} className={activeLink}>
                         {name}

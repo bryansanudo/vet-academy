@@ -8,6 +8,7 @@ import Contact from "@/components/Contact";
 import Bovinos from "@/components/bovinos/Bovinos";
 
 import Masterclass from "@/components/masterclass/Masterclass";
+import { ShowOnLogin, ShowOnLogout } from "@/components/HiddenLink";
 
 import Login from "@/components/login/Login";
 
@@ -18,6 +19,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import UserCourses from "@/components/userCourses/UserCourses";
 
 const App = () => {
   const [isMenuShown, setIsMenuShown] = useState(false);
@@ -50,6 +52,15 @@ const App = () => {
             <Route path="/contact" element={<Contact darkMode={darkMode} />} />
 
             <Route path="/login" element={<Login darkMode={darkMode} />} />
+
+            <Route
+              path="/my-courses"
+              element={
+                <ShowOnLogin>
+                  <UserCourses darkMode={darkMode} />
+                </ShowOnLogin>
+              }
+            />
 
             {/*  <Route path="/faq" element={<Faq darkMode={darkMode} />} /> */}
             {/* <Route path="/terms" element={<Terms darkMode={darkMode} />} />

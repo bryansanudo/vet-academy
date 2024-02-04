@@ -1,5 +1,7 @@
 import styles from "@/style";
 import { Link, NavLink, useNavigate } from "react-router-dom";
+
+import { FaPhotoVideo } from "react-icons/fa";
 import {
   FaLinkedinIn,
   FaFacebookF,
@@ -76,7 +78,7 @@ const NavbarTop = ({ displayName }) => {
           className={`flex  items-center  sm:justify-between justify-end w-full`}
         >
           {/* socials */}
-          <div className="flex">
+          <div className="hidden sm:flex">
             <div className="flex items-center justify-center gap-6  ">
               {socials.map(({ id, logo, link }) => (
                 <a key={id} href={link} target="_blank">
@@ -104,15 +106,25 @@ const NavbarTop = ({ displayName }) => {
           </ShowOnLogout>
           {/*  logout */}
           <ShowOnLogin>
-            <div
-              onClick={logout}
-              className={`flex items-center justify-center text-white gap-2 cursor-pointer hover:scale-105 duration-500  `}
-            >
-              <div className="flex flex-col md:flex-row items-center justify-center ">
-                <div className="text-white mr-2">{displayName}</div>
-                <div className="flex items-center justify-center gap-2">
+            <div className="flex items-center justify-center gap-4">
+              <NavLink to="/my-courses" className={activeLink}>
+                <div
+                  className={`flex items-center justify-center text-white  cursor-pointer hover:scale-105 duration-500  `}
+                >
+                  <div className="flex items-center justify-center gap-2  rounded-lg">
+                    <FaPhotoVideo className="text-xl " />
+                    <div>Mis cursos</div>
+                  </div>
+                </div>
+              </NavLink>
+              {/* cursos */}
+              <div
+                onClick={logout}
+                className={`flex items-center justify-center text-white gap-2 cursor-pointer hover:scale-105 duration-500  `}
+              >
+                <div className="flex items-center justify-center gap-2 border-2 py-[2px] px-2 rounded-lg">
                   <GrPowerShutdown className="text-xl " />
-                  <div>Cerrar Sesión</div>
+                  <div>salir</div>
                 </div>
               </div>
             </div>
