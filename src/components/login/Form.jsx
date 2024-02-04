@@ -9,6 +9,7 @@ import { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "@/configFirebase";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Form = ({ darkMode }) => {
   const [email, setEmail] = useState("");
@@ -25,10 +26,12 @@ const Form = ({ darkMode }) => {
         const user = userCredential.user;
         console.log(user);
         setIsLoading(false);
+        toast.success("Inicio de sesion exitoso ");
         redirect("/");
       })
       .catch((error) => {
         console.log(error.message);
+        toast.error(error.message);
         setIsLoading(false);
       });
   };

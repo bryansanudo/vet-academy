@@ -6,7 +6,7 @@ import {
 } from "firebase/auth";
 import { auth } from "@/configFirebase";
 import { useNavigate } from "react-router-dom";
-/* import { toast } from "react-toastify"; */
+import { toast } from "react-toastify";
 import { FcGoogle } from "react-icons/fc";
 /* import Loader from "@/components/Loader"; eliana, mymoney */
 
@@ -26,11 +26,11 @@ const LoginForm = () => {
         const user = userCredential.user;
         console.log(user);
         setIsLoading(false);
-        /* toast.success("Inicio de sesion exitoso "); */
+        toast.success("Inicio de sesion exitoso ");
         redirect("/");
       })
       .catch((error) => {
-        /*  toast.error(error.message); */
+        alert(error.message);
         console.log(error.message);
         setIsLoading(false);
       });
