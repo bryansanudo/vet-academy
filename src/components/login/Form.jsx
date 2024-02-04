@@ -1,23 +1,51 @@
-import styles, { layout } from "@/style";
+import styles from "@/style";
 import { FaRegUser } from "react-icons/fa";
 import { RiLockPasswordLine } from "react-icons/ri";
 import { motion } from "framer-motion";
-import { staggerContainer, zoomIn, fadeIn } from "@/utils/motion";
+import { zoomIn } from "@/utils/motion";
+
+import { useState } from "react";
+
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "@/configFirebase";
+import { useNavigate } from "react-router-dom";
 
 const Form = ({ darkMode }) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
+  const redirect = useNavigate();
+
+  const loginUser = (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        console.log(user);
+        setIsLoading(false);
+        redirect("/");
+      })
+      .catch((error) => {
+        console.log(error.message);
+        setIsLoading(false);
+      });
+  };
+
   return (
-    <motion.form variants={zoomIn(0.5, 0.8)} className=" w-[600px] mx-auto  ">
+    <motion.div variants={zoomIn(0.5, 0.8)} className=" w-[600px] mx-auto  ">
       <h2
         className={`${styles.heading2} mb-2  flex items-center justify-center`}
       >
         Aula Virtual
       </h2>
-      <div
+      <form
+        onSubmit={loginUser}
         className={`flex   ${
           darkMode ? "shadow-sm shadow-white  " : "shadow-md shadow-black"
         } rounded-[20px]  flex-col md:p-10 p-6  w-full `}
       >
-        {/*   <h2 className={`${styles.headingForm}`}>Inicia sesion en tu cuenta</h2> */}
         <div className="flex flex-col md:flex-row items-center  justify-center gap-4">
           <div className="flex flex-col w-full">
             <label
@@ -27,6 +55,7 @@ const Form = ({ darkMode }) => {
             </label>
             <div className="flex items-center justify-center gap-2 mt-2">
               <input
+                onChange={(e) => setEmail(e.target.value)}
                 type="text"
                 placeholder="correo@correo.com"
                 required
@@ -51,6 +80,7 @@ const Form = ({ darkMode }) => {
             </label>
             <div className="flex items-center justify-center gap-2 mt-2">
               <input
+                onChange={(e) => setPassword(e.target.value)}
                 type="password"
                 placeholder="••••••••"
                 required
@@ -72,8 +102,8 @@ const Form = ({ darkMode }) => {
         <button className={`${styles.button} flex items-center justify-center`}>
           Iniciar Sesión
         </button>
-      </div>
-    </motion.form>
+      </form>
+    </motion.div>
   );
 };
 
