@@ -5,7 +5,6 @@ import { staggerContainer, zoomIn, fadeIn } from "@/utils/motion";
 
 import { FaRegHandPointer } from "react-icons/fa";
 import { HiOutlineComputerDesktop } from "react-icons/hi2";
-import LoginForm from "./LoginForm";
 
 export const features = [
   {
@@ -109,7 +108,7 @@ const Business = ({ darkMode }) => (
           </div>
         </form>
       </div> */}
-      <LoginForm />
+      {/*  form */}
     </div>
 
     <motion.div
