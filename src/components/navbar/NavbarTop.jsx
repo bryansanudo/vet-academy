@@ -1,5 +1,5 @@
 import styles from "@/style";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import {
   FaLinkedinIn,
   FaFacebookF,
@@ -12,8 +12,13 @@ import { FaInstagram } from "react-icons/fa6";
 import { IoIosMail } from "react-icons/io";
 
 import { FaRegUser } from "react-icons/fa";
+import { GrPowerShutdown } from "react-icons/gr";
 
-const NavbarTop = () => {
+import { ShowOnLogin, ShowOnLogout } from "@/components/HiddenLink";
+import { signOut } from "firebase/auth";
+import { auth } from "@/configFirebase";
+
+const NavbarTop = ({ displayName }) => {
   const activeLink = ({ isActive }) =>
     isActive
       ? " relative after:content-[''] after:absolute after:left-0 after:bottom-[-3px] after:w-full after:h-[2px] after:bg-white"
@@ -50,12 +55,26 @@ const NavbarTop = () => {
       link: "mailto:vet.academyeducacion@gmail.com",
     },
   ];
+
+  const redirect = useNavigate();
+  const logout = () => {
+    redirect("/");
+    signOut(auth)
+      .then(() => {
+        /* toast.success("Logout Successfully."); */
+      })
+      .catch((error) => {
+        /*  toast(error.message); */
+      });
+  };
   return (
     <div
-      className={`bg-primary fixed w-full flex items-center justify-center h-10 z-50 ${styles.paddingX}`}
+      className={`bg-primary fixed w-full flex items-center justify-center h-12 z-50 ${styles.paddingX}`}
     >
       <div className={`${styles.boxWidth} `}>
-        <div className={`flex  items-center  justify-between w-full`}>
+        <div
+          className={`flex  items-center  sm:justify-between justify-end w-full`}
+        >
           {/* socials */}
           <div className="hidden sm:flex">
             <div className="flex items-center justify-center gap-6  ">
@@ -73,14 +92,31 @@ const NavbarTop = () => {
             </div>
           </div>
           {/*  login */}
-          <NavLink to="/login" className={activeLink}>
+          <ShowOnLogout>
+            <NavLink to="/login" className={activeLink}>
+              <div
+                className={`flex items-center justify-center text-white gap-2 cursor-pointer hover:scale-105 duration-500  `}
+              >
+                <FaRegUser className="text-xl" />
+                <div>Iniciar Sesión</div>
+              </div>
+            </NavLink>
+          </ShowOnLogout>
+          {/*  logout */}
+          <ShowOnLogin>
             <div
+              onClick={logout}
               className={`flex items-center justify-center text-white gap-2 cursor-pointer hover:scale-105 duration-500  `}
             >
-              <FaRegUser className="text-xl" />
-              <div>Iniciar Sesión</div>
+              <div className="flex flex-col md:flex-row items-center justify-center ">
+                <div className="text-white mr-2">{displayName}</div>
+                <div className="flex items-center justify-center gap-2">
+                  <GrPowerShutdown className="text-xl " />
+                  <div>Cerrar Sesión</div>
+                </div>
+              </div>
             </div>
-          </NavLink>
+          </ShowOnLogin>
         </div>
       </div>
     </div>

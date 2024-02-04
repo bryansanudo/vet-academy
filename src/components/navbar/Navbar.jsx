@@ -7,12 +7,13 @@ import { MdNightsStay, MdWbSunny } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 import styles from "@/style";
 
-/* firebaselogic */
+/* impoet firebase */
 
 import { useDispatch } from "react-redux";
 import { SET_ACTIVE_USER, REMOVE_ACTIVE_USER } from "@/redux/slice/authSlice";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "@/configFirebase";
+import { ShowOnLogin, ShowOnLogout } from "@/components/HiddenLink";
 
 const Navbar = ({ darkMode, setDarkMode }) => {
   /* firebase logic */
@@ -80,11 +81,11 @@ const Navbar = ({ darkMode, setDarkMode }) => {
   ];
   return (
     <>
-      <NavbarTop />
+      <NavbarTop displayName={displayName} />
       <div
         className={` ${styles.paddingX} ${
           styles.flexCenter
-        } fixed mt-10  w-full z-50 ${
+        } fixed mt-12  w-full z-50 ${
           darkMode ? "bg-[#0D0E1C]" : "bg-white "
         }    `}
       >
@@ -100,7 +101,9 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                       alt=""
                     />
                   </NavLink>
-                  hola{displayName}
+                  <ShowOnLogin>
+                    <button className={`${styles.button}`}>Mis Cursos</button>
+                  </ShowOnLogin>
                 </div>
               </div>
               <div className="hidden lg:flex items-center">
