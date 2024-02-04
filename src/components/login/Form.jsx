@@ -6,7 +6,7 @@ import { staggerContainer, zoomIn, fadeIn } from "@/utils/motion";
 
 const Form = ({ darkMode }) => {
   return (
-    <motion.form variants={zoomIn(0.5, 0.8)} className=" w-[600px] mx-auto ">
+    <motion.form variants={zoomIn(0.5, 0.8)} className=" w-[600px] mx-auto  ">
       <h2
         className={`${styles.heading2} mb-2  flex items-center justify-center`}
       >
@@ -15,7 +15,7 @@ const Form = ({ darkMode }) => {
       <div
         className={`flex   ${
           darkMode ? "shadow-sm shadow-white  " : "shadow-md shadow-black"
-        } rounded-[20px]  flex-col md:p-10 p-6  w-full h-full `}
+        } rounded-[20px]  flex-col md:p-10 p-6  w-full `}
       >
         {/*   <h2 className={`${styles.headingForm}`}>Inicia sesion en tu cuenta</h2> */}
         <div className="flex flex-col md:flex-row items-center  justify-center gap-4">
