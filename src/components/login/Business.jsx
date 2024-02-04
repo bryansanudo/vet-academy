@@ -1,17 +1,11 @@
 import styles, { layout } from "@/style";
 
-import { FaStar } from "react-icons/fa";
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { staggerContainer, zoomIn, fadeIn } from "@/utils/motion";
 
-import { GrUserExpert } from "react-icons/gr";
-import { MdOutlineSecurity } from "react-icons/md";
-import { BiTransfer } from "react-icons/bi";
-import { HiUserGroup } from "react-icons/hi";
-import { GrCertificate } from "react-icons/gr";
 import { FaRegHandPointer } from "react-icons/fa";
 import { HiOutlineComputerDesktop } from "react-icons/hi2";
+import LoginForm from "./LoginForm";
 
 export const features = [
   {
@@ -59,7 +53,7 @@ const FeatureCard = ({ icon, title, content, index, darkMode, motionTime }) => (
 const Business = ({ darkMode }) => (
   <section id="features" className={`${layout.section}  `}>
     <div className={layout.sectionInfo}>
-      <div className="w-full  ">
+      {/*  <div className="w-full  ">
         <form className=" w-full">
           <div
             className={`flex   ${
@@ -114,7 +108,8 @@ const Business = ({ darkMode }) => (
             </button>
           </div>
         </form>
-      </div>
+      </div> */}
+      <LoginForm />
     </div>
 
     <motion.div
