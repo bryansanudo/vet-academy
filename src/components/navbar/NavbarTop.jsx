@@ -72,68 +72,318 @@ const NavbarTop = ({ displayName }) => {
       });
   };
   return (
-    <div
-      className={`bg-primary fixed w-full flex items-center justify-center h-12 z-50 ${styles.paddingX}`}
-    >
-      <div className={`${styles.boxWidth} `}>
-        <div
-          className={`flex  items-center  sm:justify-between justify-end w-full`}
-        >
-          {/* socials */}
-          <div className="hidden sm:flex">
-            <div className="flex items-center justify-center gap-6  ">
-              {socials.map(({ id, logo, link }) => (
-                <a key={id} href={link} target="_blank">
-                  <div
-                    className={` h-[30px] w-[30px]  rounded-lg ${styles.flexCenter} hover:scale-105 group  duration-300 cursor-pointer bg-primary`}
-                  >
-                    <span className="group-hover: duration-300 text-white text-lg md:text-2xl">
-                      {logo}
-                    </span>
-                  </div>
-                </a>
-              ))}
-            </div>
-          </div>
-          {/*  login */}
-          <ShowOnLogout>
-            <NavLink to="/login" className={activeLink}>
-              <div
-                className={`flex items-center justify-center text-white gap-2 cursor-pointer hover:scale-105 duration-500  `}
-              >
-                <FaRegUser className="text-xl" />
-                <div>Iniciar Sesión</div>
+    <>
+      <div
+        className={`bg-primary fixed w-full flex items-center justify-center  h-12 z-50 ${styles.paddingX}`}
+      >
+        <div className={`${styles.boxWidth} `}>
+          <div
+            className={`flex  items-center  sm:justify-between justify-end w-full`}
+          >
+            {/* socials */}
+            <div className="hidden sm:flex">
+              <div className="flex items-center justify-center gap-6  ">
+                {socials.map(({ id, logo, link }) => (
+                  <a key={id} href={link} target="_blank">
+                    <div
+                      className={` h-[30px] w-[30px]  rounded-lg ${styles.flexCenter} hover:scale-105 group  duration-300 cursor-pointer `}
+                    >
+                      <span className="group-hover: duration-300 text-white text-lg md:text-2xl">
+                        {logo}
+                      </span>
+                    </div>
+                  </a>
+                ))}
               </div>
-            </NavLink>
-          </ShowOnLogout>
-          {/*  logout */}
-          <ShowOnLogin>
-            <div className="flex items-center justify-center gap-4">
-              <NavLink to="/study-plan" className={activeLink}>
+            </div>
+            {/*  login */}
+            <ShowOnLogout>
+              <NavLink to="/login" className={activeLink}>
                 <div
-                  className={`flex items-center justify-center text-white  cursor-pointer hover:scale-105 duration-500  `}
+                  className={`flex items-center justify-center text-white gap-2 cursor-pointer hover:scale-105 duration-500  `}
                 >
-                  <div className="flex items-center justify-center gap-2  rounded-lg">
-                    <FaUserDoctor className="text-xl " />
-                    <div>Mi Plan de Estudios</div>
-                  </div>
+                  <FaRegUser className="text-xl" />
+                  <div>Iniciar Sesión</div>
                 </div>
               </NavLink>
-              {/* cursos */}
-              <div
-                onClick={logout}
-                className={`flex items-center justify-center text-white gap-2 cursor-pointer hover:scale-105 duration-500  `}
-              >
-                <div className="flex items-center justify-center gap-2 border-2 py-[2px] px-2 rounded-lg">
-                  <GrPowerShutdown className="text-xl " />
-                  <div>Salir</div>
+            </ShowOnLogout>
+            {/*  logout */}
+            <ShowOnLogin>
+              <div className="flex items-center justify-center gap-4">
+                <NavLink to="/study-plan" className={activeLink}>
+                  <div
+                    className={`flex items-center justify-center text-white  cursor-pointer hover:scale-105 duration-500  `}
+                  >
+                    <div className="flex items-center justify-center gap-2  rounded-lg">
+                      <FaUserDoctor className="text-xl " />
+                      <div>Mi Plan de Estudios</div>
+                    </div>
+                  </div>
+                </NavLink>
+                {/* cursos */}
+                <div
+                  onClick={logout}
+                  className={`flex items-center justify-center text-white gap-2 cursor-pointer hover:scale-105 duration-500  `}
+                >
+                  <div className="flex items-center justify-center gap-2 border-2 py-[2px] px-2 rounded-lg">
+                    <GrPowerShutdown className="text-xl " />
+                    <div>Salir</div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </ShowOnLogin>
+            </ShowOnLogin>
+          </div>
         </div>
       </div>
-    </div>
+      <div
+        className={`bg-[#004E80] fixed mt-20  w-full flex items-center justify-center h-12 z-50 ${styles.paddingX}`}
+      >
+        <div className={`${styles.boxWidth} `}>
+          <div
+            className={`flex  items-center  sm:justify-between justify-end w-full`}
+          >
+            {/* socials */}
+            <div className="hidden sm:flex">
+              <div className="flex items-center justify-center gap-6  ">
+                {socials.map(({ id, logo, link }) => (
+                  <a key={id} href={link} target="_blank">
+                    <div
+                      className={` h-[30px] w-[30px]  rounded-lg ${styles.flexCenter} hover:scale-105 group  duration-300 cursor-pointer `}
+                    >
+                      <span className="group-hover: duration-300 text-white text-lg md:text-2xl">
+                        {logo}
+                      </span>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+            {/*  login */}
+            <ShowOnLogout>
+              <NavLink to="/login" className={activeLink}>
+                <div
+                  className={`flex items-center justify-center text-white gap-2 cursor-pointer hover:scale-105 duration-500  `}
+                >
+                  <FaRegUser className="text-xl" />
+                  <div>Iniciar Sesión</div>
+                </div>
+              </NavLink>
+            </ShowOnLogout>
+            {/*  logout */}
+            <ShowOnLogin>
+              <div className="flex items-center justify-center gap-4">
+                <NavLink to="/study-plan" className={activeLink}>
+                  <div
+                    className={`flex items-center justify-center text-white  cursor-pointer hover:scale-105 duration-500  `}
+                  >
+                    <div className="flex items-center justify-center gap-2  rounded-lg">
+                      <FaUserDoctor className="text-xl " />
+                      <div>Mi Plan de Estudios</div>
+                    </div>
+                  </div>
+                </NavLink>
+                {/* cursos */}
+                <div
+                  onClick={logout}
+                  className={`flex items-center justify-center text-white gap-2 cursor-pointer hover:scale-105 duration-500  `}
+                >
+                  <div className="flex items-center justify-center gap-2 border-2 py-[2px] px-2 rounded-lg">
+                    <GrPowerShutdown className="text-xl " />
+                    <div>Salir</div>
+                  </div>
+                </div>
+              </div>
+            </ShowOnLogin>
+          </div>
+        </div>
+      </div>
+      <div
+        className={`bg-[#005F99] fixed mt-40  w-full flex items-center justify-center h-12 z-50 ${styles.paddingX}`}
+      >
+        <div className={`${styles.boxWidth} `}>
+          <div
+            className={`flex  items-center  sm:justify-between justify-end w-full`}
+          >
+            {/* socials */}
+            <div className="hidden sm:flex">
+              <div className="flex items-center justify-center gap-6  ">
+                {socials.map(({ id, logo, link }) => (
+                  <a key={id} href={link} target="_blank">
+                    <div
+                      className={` h-[30px] w-[30px]  rounded-lg ${styles.flexCenter} hover:scale-105 group  duration-300 cursor-pointer `}
+                    >
+                      <span className="group-hover: duration-300 text-white text-lg md:text-2xl">
+                        {logo}
+                      </span>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+            {/*  login */}
+            <ShowOnLogout>
+              <NavLink to="/login" className={activeLink}>
+                <div
+                  className={`flex items-center justify-center text-white gap-2 cursor-pointer hover:scale-105 duration-500  `}
+                >
+                  <FaRegUser className="text-xl" />
+                  <div>Iniciar Sesión</div>
+                </div>
+              </NavLink>
+            </ShowOnLogout>
+            {/*  logout */}
+            <ShowOnLogin>
+              <div className="flex items-center justify-center gap-4">
+                <NavLink to="/study-plan" className={activeLink}>
+                  <div
+                    className={`flex items-center justify-center text-white  cursor-pointer hover:scale-105 duration-500  `}
+                  >
+                    <div className="flex items-center justify-center gap-2  rounded-lg">
+                      <FaUserDoctor className="text-xl " />
+                      <div>Mi Plan de Estudios</div>
+                    </div>
+                  </div>
+                </NavLink>
+                {/* cursos */}
+                <div
+                  onClick={logout}
+                  className={`flex items-center justify-center text-white gap-2 cursor-pointer hover:scale-105 duration-500  `}
+                >
+                  <div className="flex items-center justify-center gap-2 border-2 py-[2px] px-2 rounded-lg">
+                    <GrPowerShutdown className="text-xl " />
+                    <div>Salir</div>
+                  </div>
+                </div>
+              </div>
+            </ShowOnLogin>
+          </div>
+        </div>
+      </div>
+      <div
+        className={`bg-[#007B7F] fixed mt-60 w-full flex items-center justify-center h-12 z-50 ${styles.paddingX}`}
+      >
+        <div className={`${styles.boxWidth} `}>
+          <div
+            className={`flex  items-center  sm:justify-between justify-end w-full`}
+          >
+            {/* socials */}
+            <div className="hidden sm:flex">
+              <div className="flex items-center justify-center gap-6  ">
+                {socials.map(({ id, logo, link }) => (
+                  <a key={id} href={link} target="_blank">
+                    <div
+                      className={` h-[30px] w-[30px]  rounded-lg ${styles.flexCenter} hover:scale-105 group  duration-300 cursor-pointer `}
+                    >
+                      <span className="group-hover: duration-300 text-white text-lg md:text-2xl">
+                        {logo}
+                      </span>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+            {/*  login */}
+            <ShowOnLogout>
+              <NavLink to="/login" className={activeLink}>
+                <div
+                  className={`flex items-center justify-center text-white gap-2 cursor-pointer hover:scale-105 duration-500  `}
+                >
+                  <FaRegUser className="text-xl" />
+                  <div>Iniciar Sesión</div>
+                </div>
+              </NavLink>
+            </ShowOnLogout>
+            {/*  logout */}
+            <ShowOnLogin>
+              <div className="flex items-center justify-center gap-4">
+                <NavLink to="/study-plan" className={activeLink}>
+                  <div
+                    className={`flex items-center justify-center text-white  cursor-pointer hover:scale-105 duration-500  `}
+                  >
+                    <div className="flex items-center justify-center gap-2  rounded-lg">
+                      <FaUserDoctor className="text-xl " />
+                      <div>Mi Plan de Estudios</div>
+                    </div>
+                  </div>
+                </NavLink>
+                {/* cursos */}
+                <div
+                  onClick={logout}
+                  className={`flex items-center justify-center text-white gap-2 cursor-pointer hover:scale-105 duration-500  `}
+                >
+                  <div className="flex items-center justify-center gap-2 border-2 py-[2px] px-2 rounded-lg">
+                    <GrPowerShutdown className="text-xl " />
+                    <div>Salir</div>
+                  </div>
+                </div>
+              </div>
+            </ShowOnLogin>
+          </div>
+        </div>
+      </div>
+      <div
+        className={`bg-[#00B3A0] fixed mt-96 w-full flex items-center justify-center h-12 z-50 ${styles.paddingX}`}
+      >
+        <div className={`${styles.boxWidth} `}>
+          <div
+            className={`flex  items-center  sm:justify-between justify-end w-full`}
+          >
+            {/* socials */}
+            <div className="hidden sm:flex">
+              <div className="flex items-center justify-center gap-6  ">
+                {socials.map(({ id, logo, link }) => (
+                  <a key={id} href={link} target="_blank">
+                    <div
+                      className={` h-[30px] w-[30px]  rounded-lg ${styles.flexCenter} hover:scale-105 group  duration-300 cursor-pointer `}
+                    >
+                      <span className="group-hover: duration-300 text-white text-lg md:text-2xl">
+                        {logo}
+                      </span>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+            {/*  login */}
+            <ShowOnLogout>
+              <NavLink to="/login" className={activeLink}>
+                <div
+                  className={`flex items-center justify-center text-white gap-2 cursor-pointer hover:scale-105 duration-500  `}
+                >
+                  <FaRegUser className="text-xl" />
+                  <div>Iniciar Sesión</div>
+                </div>
+              </NavLink>
+            </ShowOnLogout>
+            {/*  logout */}
+            <ShowOnLogin>
+              <div className="flex items-center justify-center gap-4">
+                <NavLink to="/study-plan" className={activeLink}>
+                  <div
+                    className={`flex items-center justify-center text-white  cursor-pointer hover:scale-105 duration-500  `}
+                  >
+                    <div className="flex items-center justify-center gap-2  rounded-lg">
+                      <FaUserDoctor className="text-xl " />
+                      <div>Mi Plan de Estudios</div>
+                    </div>
+                  </div>
+                </NavLink>
+                {/* cursos */}
+                <div
+                  onClick={logout}
+                  className={`flex items-center justify-center text-white gap-2 cursor-pointer hover:scale-105 duration-500  `}
+                >
+                  <div className="flex items-center justify-center gap-2 border-2 py-[2px] px-2 rounded-lg">
+                    <GrPowerShutdown className="text-xl " />
+                    <div>Salir</div>
+                  </div>
+                </div>
+              </div>
+            </ShowOnLogin>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 

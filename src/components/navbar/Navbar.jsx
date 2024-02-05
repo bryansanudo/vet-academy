@@ -86,7 +86,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
       <div
         className={` ${styles.paddingX} ${
           styles.flexCenter
-        } fixed mt-12  w-full z-50 ${
+        } fixed /*mt-12*/ mt-[600px]  w-full z-50 ${
           darkMode ? "bg-[#0D0E1C]" : "bg-white "
         }    `}
       >
