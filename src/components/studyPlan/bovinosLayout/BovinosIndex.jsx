@@ -9,7 +9,7 @@ import { GiWorld } from "react-icons/gi";
 import { motion } from "framer-motion";
 import { staggerContainer, zoomIn, fadeIn } from "@/utils/motion";
 import { LuFileVideo } from "react-icons/lu";
-import { Link, Route, Routes } from "react-router-dom";
+import { NavLink, Route, Routes } from "react-router-dom";
 import VideoComponent from "@/components/studyPlan/bovinosLayout/VideoComponent";
 import { useEffect } from "react";
 
@@ -352,6 +352,8 @@ const BovinosIndex = ({ darkMode }) => {
   const scroltop = () => {
     window.scrollTo(0, 0);
   };
+  const activeLink = ({ isActive }) =>
+    isActive ? " border m-4 p-1 rounded-xl" : "";
 
   return (
     <section
@@ -392,20 +394,24 @@ const BovinosIndex = ({ darkMode }) => {
                           {id}
                         </div>
 
-                        <div className="flex items-center  w-full">
-                          <div
-                            className={` ${styles.subtitle} ${
-                              darkMode ? "text-white" : "text-black"
-                            } mr-4 mt-[2px] `}
-                          >
-                            {title}
-                          </div>
-                          <div>
-                            <Link onClick={scroltop} to={title}>
+                        <NavLink
+                          onClick={scroltop}
+                          to={title}
+                          className={activeLink}
+                        >
+                          <div className="flex items-center  w-full">
+                            <div
+                              className={` ${styles.subtitle} ${
+                                darkMode ? "text-white" : "text-black"
+                              } mr-4 mt-[2px] `}
+                            >
+                              {title}
+                            </div>
+                            <div>
                               <LuFileVideo className="text-2xl hover:scale-105 duration-500 cursor-pointer" />
-                            </Link>
+                            </div>
                           </div>
-                        </div>
+                        </NavLink>
                       </div>
                       <div className="w-full h-[1px] bg-gray-200" />
                     </li>
@@ -422,7 +428,13 @@ const BovinosIndex = ({ darkMode }) => {
           <Route
             key={id}
             path={title}
-            element={<VideoComponent title={title} module={module} />}
+            element={
+              <VideoComponent
+                darkMode={darkMode}
+                title={title}
+                module={module}
+              />
+            }
           />
         ))}
       </Routes>
