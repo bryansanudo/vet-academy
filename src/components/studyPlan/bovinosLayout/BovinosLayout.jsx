@@ -24,7 +24,6 @@ const BovinosLayout = ({ darkMode }) => {
           />
 
           <BovinosIndex />
-          <CTA darkMode={darkMode} />
         </div>
       </div>
     </>

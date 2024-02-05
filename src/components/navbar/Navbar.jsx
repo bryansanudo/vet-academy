@@ -82,6 +82,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
   return (
     <>
       <NavbarTop displayName={displayName} />
+
       <div
         className={` ${styles.paddingX} ${
           styles.flexCenter

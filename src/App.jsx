@@ -37,6 +37,7 @@ const App = () => {
           isMenuShown={isMenuShown}
           setIsMenuShown={setIsMenuShown}
         />
+
         <div className="dark:bg-accent w-full overflow-hidden">
           <Routes>
             <Route
