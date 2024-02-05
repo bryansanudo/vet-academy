@@ -1,11 +1,14 @@
 import React from "react";
 import styles, { layout } from "@/style";
 
-const VideoComponent = ({ title, module, darkMode }) => {
+const VideoComponent = ({ title, module, darkMode, id }) => {
   return (
     <div className=" w-full mr-10   mt-40 md:mt-0 ">
       <div className={`${styles.title}`}>{module}</div>
-      <div className={`${styles.subtitle}`}>{title}</div>
+      <div className={`${styles.subtitle} mt-4`}>
+        <span className="text-primary font-bold mr-2">{id}</span>
+        {title}
+      </div>
       <div className="w-full   ">
         <iframe
           className={`${

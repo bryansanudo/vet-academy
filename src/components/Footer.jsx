@@ -12,20 +12,23 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 
-import { FaInstagram, FaXTwitter } from "react-icons/fa6";
+import { FaUserDoctor } from "react-icons/fa6";
+
+import { FaInstagram } from "react-icons/fa6";
+import { IoIosMail } from "react-icons/io";
 
 const Footer = ({ darkMode }) => {
   const socials = [
     /* {
-      id: 3,
-      logo: <FaWhatsapp />,
-      link: "https://api.whatsapp.com/send?phone=573243291412",
-    }, */
+          id: 3,
+          logo: <FaWhatsapp />,
+          link: "https://api.whatsapp.com/send?phone=573243291412",
+        }, */
     /* {
-      id: 5,
-      logo: <FaTiktok />,
-      link: "https://www.tiktok.com/@eb3wfs",
-    }, */
+          id: 5,
+          logo: <FaTiktok />,
+          link: "https://www.tiktok.com/@eb3wfs",
+        }, */
     {
       id: 6,
       logo: <FaYoutube />,
@@ -41,6 +44,11 @@ const Footer = ({ darkMode }) => {
       logo: <FaFacebookF />,
       link: "https://www.facebook.com/vet.academyedu/",
     },
+    {
+      id: 4,
+      logo: <IoIosMail />,
+      link: "mailto:vet.academyeducacion@gmail.com",
+    },
   ];
   return (
     <footer className="footer  border-t p-6  mb-10 ">
@@ -53,19 +61,12 @@ const Footer = ({ darkMode }) => {
             className="w-48 object-contain"
             alt=""
           />
-          {/*  <p
-            className={` ${
-              darkMode ? "text-white" : "text-black"
-            } text-[30px] tangerine mb-2 py-1      `}
-          >
-            Visa Law
-          </p> */}
         </div>
         <div className="flex items-center justify-between w-full mt-2  gap-1  ">
           {socials.map(({ id, logo, link }) => (
             <a key={id} href={link} target="_blank">
               <div
-                className={` h-[30px] w-[30px]  md:w-[50px] md:h-[50px] rounded-lg ${styles.flexCenter} hover:scale-105 group  duration-300 cursor-pointer bg-primary`}
+                className={` h-[30px] w-[30px]  md:w-[40px] md:h-[40px] rounded-lg ${styles.flexCenter} hover:scale-105 group  duration-300 cursor-pointer bg-primary`}
               >
                 {/*                 <FaLinkedinIn className="dark:text-white text-2xl" /> */}
                 <span className="group-hover: duration-300 text-white text-lg md:text-2xl">

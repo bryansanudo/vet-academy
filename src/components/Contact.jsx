@@ -39,7 +39,7 @@ const Contact = ({ darkMode }) => {
   }, []);
   return (
     <div
-      className={`dark:bg-accent mt-28  ${styles.paddingX} ${styles.flexCenter}`}
+      className={`dark:bg-accent mt-40  ${styles.paddingX} ${styles.flexCenter}`}
     >
       <div className={`${styles.boxWidth} `}>
         <div
@@ -77,7 +77,7 @@ const Contact = ({ darkMode }) => {
                 <div className="flex flex-col md:flex-row items-center  justify-center gap-4">
                   <div className="flex flex-col w-full">
                     <label
-                      className={` font-semibold dark:text-white  text-[16px] leading-[23.4px] ml-2 `}
+                      className={`flex items-center justify-start mb-1  ${styles.title} `}
                     >
                       Nombre
                     </label>
@@ -88,12 +88,12 @@ const Contact = ({ darkMode }) => {
                       autoComplete="off"
                       className={` h-10 rounded-[10px] ${
                         darkMode ? " " : " border-black  "
-                      }   bg-dimWhite border outline-none text-black font-normal text-[16px] leading-[24px]  w-full pl-4 mt-2`}
+                      }   input-primary  border outline-none text-black font-normal text-[16px] leading-[24px]  w-full pl-4 `}
                     />
                   </div>
                   <div className="flex flex-col w-full">
                     <label
-                      className={` font-semibold dark:text-white  text-[16px] leading-[23.4px] ml-2 `}
+                      className={` flex items-center justify-start mb-1  ${styles.title} `}
                     >
                       Apellido
                     </label>
@@ -104,14 +104,14 @@ const Contact = ({ darkMode }) => {
                       autoComplete="off"
                       className={` h-10 rounded-[10px] ${
                         darkMode ? " " : " border-black  "
-                      }   bg-dimWhite border outline-none text-black font-normal text-[16px] leading-[24px]  w-full pl-4 mt-2`}
+                      }   input-primary  border outline-none text-black font-normal text-[16px] leading-[24px]  w-full pl-4 `}
                     />
                   </div>
                 </div>
                 <div className="flex flex-col md:flex-row items-center  justify-center gap-4">
                   <div className="flex flex-col w-full">
                     <label
-                      className={` font-semibold dark:text-white  text-[16px] leading-[23.4px] ml-2 `}
+                      className={`flex items-center justify-start mb-1  ${styles.title} `}
                     >
                       Email
                     </label>
@@ -122,12 +122,12 @@ const Contact = ({ darkMode }) => {
                       autoComplete="off"
                       className={` h-10 rounded-[10px] ${
                         darkMode ? " " : " border-black  "
-                      }   bg-dimWhite border outline-none text-black font-normal text-[16px] leading-[24px]  w-full pl-4 mt-2`}
+                      }   input-primary  border outline-none text-black font-normal text-[16px] leading-[24px]  w-full pl-4 `}
                     />
                   </div>
                   <div className="flex flex-col w-full">
                     <label
-                      className={` font-semibold dark:text-white  text-[16px] leading-[23.4px] ml-2 `}
+                      className={` flex items-center justify-start mb-1  ${styles.title} `}
                     >
                       Telefono
                     </label>
@@ -138,14 +138,14 @@ const Contact = ({ darkMode }) => {
                       autoComplete="off"
                       className={` h-10 rounded-[10px] ${
                         darkMode ? " " : " border-black  "
-                      }   bg-dimWhite border outline-none text-black font-normal text-[16px] leading-[24px]  w-full pl-4 mt-2`}
+                      }   input-primary  border outline-none text-black font-normal text-[16px] leading-[24px]  w-full pl-4 `}
                     />
                   </div>
                 </div>
 
                 <div className="flex flex-col w-full">
                   <label
-                    className={` font-semibold dark:text-white  text-[16px] leading-[23.4px] ml-2 `}
+                    className={` flex items-center justify-start mb-1  ${styles.title} `}
                   >
                     Mensaje
                   </label>
@@ -156,12 +156,12 @@ const Contact = ({ darkMode }) => {
                     autoComplete="off"
                     className={`  rounded-[10px] ${
                       darkMode ? " " : " border-black  "
-                    }   bg-dimWhite border outline-none text-black font-normal text-[16px] leading-[24px]  w-full pl-4 py-2 mt-2`}
+                    }   input-primary  border outline-none text-black font-normal text-[16px] leading-[24px]  w-full pl-4 `}
                   />
                 </div>
 
                 <button
-                  className={`btn  font-semibold dark:text-white  text-[16px] leading-[23.4px] ml-2 btn-primary  `}
+                  className={`${styles.button} flex items-center justify-center`}
                 >
                   Enviar
                 </button>

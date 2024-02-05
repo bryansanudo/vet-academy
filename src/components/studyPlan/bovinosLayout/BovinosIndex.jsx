@@ -353,7 +353,7 @@ const BovinosIndex = ({ darkMode }) => {
     window.scrollTo(0, 0);
   };
   const activeLink = ({ isActive }) =>
-    isActive ? " border m-4 p-1 rounded-xl" : "";
+    isActive ? " border border-primary m-4 p-1 rounded-xl" : "";
 
   return (
     <section
@@ -431,6 +431,7 @@ const BovinosIndex = ({ darkMode }) => {
             element={
               <VideoComponent
                 darkMode={darkMode}
+                id={id}
                 title={title}
                 module={module}
               />

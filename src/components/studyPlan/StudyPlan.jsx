@@ -11,7 +11,7 @@ const StudyPlan = ({ darkMode }) => {
   return (
     <>
       <div
-        className={`dark:bg-accent  ${styles.paddingX} ${styles.flexCenter} mt-20`}
+        className={`dark:bg-accent  ${styles.paddingX} ${styles.flexCenter} mt-28 mb-10`}
       >
         <div className={`${styles.boxWidth}`}>
           <div
@@ -19,7 +19,6 @@ const StudyPlan = ({ darkMode }) => {
                pink__gradient absolute z-[0] w-[50%] h-[50%] -left-1/2 bottom-0 rounded-full `}
           />
           <AvailableCourses darkMode={darkMode} />
-          <CTA darkMode={darkMode} />
         </div>
       </div>
     </>

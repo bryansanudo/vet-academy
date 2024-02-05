@@ -6,6 +6,7 @@ import { useEffect } from "react";
 
 import curso1 from "@/assets/masterclass/gratuito1.png";
 import curso2 from "@/assets/masterclass/gratuito2.png";
+import { Link } from "react-router-dom";
 
 const Catalogue = ({ darkMode }) => {
   const masterclass = [
@@ -15,7 +16,7 @@ const Catalogue = ({ darkMode }) => {
       logo: logo,
       title: "Lipidosis hepática",
       subtitle: "Descripcion del curso 1",
-      link: "/curso1",
+      link: "/contact",
       price: "350.000",
     },
     {
@@ -24,7 +25,7 @@ const Catalogue = ({ darkMode }) => {
       logo: logo,
       title: "Distemper canino",
       subtitle: "Descripcion del curso 2",
-      link: "/curso2",
+      link: "/contact",
       price: "350.000",
       italic: "italic",
     },
@@ -63,9 +64,11 @@ const Catalogue = ({ darkMode }) => {
               <figure className="relative">
                 <img src={img} alt="Shoes" />
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                  <button className={`${styles.button} `}>
-                    Más Información
-                  </button>
+                  <Link to="/contact">
+                    <button className={`${styles.button} `}>
+                      Más Información
+                    </button>
+                  </Link>
                 </div>
               </figure>
               <div className="card-body">
