@@ -74,7 +74,7 @@ const NavbarTop = ({ displayName }) => {
   return (
     <>
       <div
-        className={`bg-primary fixed w-full flex items-center justify-center  h-12 z-50 ${styles.paddingX}`}
+        className={`bg-secondary fixed w-full flex items-center justify-center  h-12 z-50 ${styles.paddingX}`}
       >
         <div className={`${styles.boxWidth} `}>
           <div
