@@ -29,7 +29,7 @@ const Form = ({ darkMode }) => {
         console.log(user);
         setIsLoading(false);
         toast.success("Inicio de sesion exitoso ");
-        redirect("/my-courses");
+        redirect("/study-plan");
       })
       .catch((error) => {
         console.log(error.message);
