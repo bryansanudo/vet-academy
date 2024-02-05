@@ -10,12 +10,14 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 
+import { FaUserDoctor } from "react-icons/fa6";
+
 import { FaInstagram } from "react-icons/fa6";
 import { IoIosMail } from "react-icons/io";
 
 import { FaRegUser } from "react-icons/fa";
 import { GrPowerShutdown } from "react-icons/gr";
-
+import { toast } from "react-toastify";
 import { ShowOnLogin, ShowOnLogout } from "@/components/HiddenLink";
 import { signOut } from "firebase/auth";
 import { auth } from "@/configFirebase";
@@ -63,10 +65,10 @@ const NavbarTop = ({ displayName }) => {
     redirect("/");
     signOut(auth)
       .then(() => {
-        /* toast.success("Logout Successfully."); */
+        toast.success("Cierre de sesión exitoso.");
       })
       .catch((error) => {
-        /*  toast(error.message); */
+        toast(error.message);
       });
   };
   return (
@@ -107,13 +109,13 @@ const NavbarTop = ({ displayName }) => {
           {/*  logout */}
           <ShowOnLogin>
             <div className="flex items-center justify-center gap-4">
-              <NavLink to="/my-courses" className={activeLink}>
+              <NavLink to="/study-plan" className={activeLink}>
                 <div
                   className={`flex items-center justify-center text-white  cursor-pointer hover:scale-105 duration-500  `}
                 >
                   <div className="flex items-center justify-center gap-2  rounded-lg">
-                    <FaPhotoVideo className="text-xl " />
-                    <div>Mis cursos</div>
+                    <FaUserDoctor className="text-xl " />
+                    <div>Plan de estudios</div>
                   </div>
                 </div>
               </NavLink>

@@ -10,83 +10,16 @@ import bovinos from "@/assets/courses/curso-6.png";
 import { motion } from "framer-motion";
 import { staggerContainer, zoomIn, fadeIn } from "@/utils/motion";
 
+import Price from "@/components/bovinos/Price";
+import { useState } from "react";
+
 const Inscriptions = ({ darkMode }) => {
+  const [language, setLanguage] = useState("en");
   return (
-    /*  <div
-      className={` bg-gray-100 w-[20%] flex-col items-center fixed right-0 top-32 md:flex hidden z-30 justify-center  shadow-md  rounded-xl pb-6 ml-auto mr-5   ${
-        darkMode ? "shadow-white" : "shadow-black"
-      }`}
-    >
-      <motion.div className=" flex flex-col items-center md:items-start mt-6 px-6 ">
-        <motion.ul className="w-full  ">
-          <div className="flex items-start justify-start border-b-2 border-gray-300 border-opacity-100 dark:border-opacity-50 gap-2 py-1">
-            <GoDot className="text-primary text-3xl" />
-            <li
-              className={` w-full text-[18px] leading-[30.8px]  ${
-                darkMode ? "text-dimWhite" : "text-black"
-              }`}
-            >
-              32 charlas en vivo por la plataforma Zoom.
-            </li>
-          </div>
-          <div className="flex items-start justify-center border-b-2 border-gray-300 border-opacity-100 dark:border-opacity-50 gap-2 py-1">
-            <GoDot className="text-primary text-3xl" />
-            <li
-              className={` w-full text-[18px] leading-[30.8px]  ${
-                darkMode ? "text-dimWhite" : "text-black"
-              }`}
-            >
-              Grabaciones disponibles durante 2 meses.
-            </li>
-          </div>
-          <div className="flex items-start justify-center border-b-2 border-gray-300 border-opacity-100 dark:border-opacity-50 gap-2 py-1">
-            <GoDot className="text-primary text-3xl" />
-            <li
-              className={` w-full text-[18px] leading-[30.8px]  ${
-                darkMode ? "text-dimWhite" : "text-black"
-              }`}
-            >
-              Docentes expertos en el área con reconocimiento internacional y
-              experiencia en docencia en pregrado y posgrado.
-            </li>
-          </div>
-          <div className="flex items-start justify-center border-b-2 border-gray-300 border-opacity-100 dark:border-opacity-50 gap-2 py-1">
-            <GoDot className="text-primary text-3xl" />
-            <li
-              className={` w-full text-[18px] leading-[30.8px]  ${
-                darkMode ? "text-dimWhite" : "text-black"
-              }`}
-            >
-              Certificado de asistencia al finalizar.
-            </li>
-          </div>
-          <div className="flex items-start justify-center border-b-2 border-gray-300 border-opacity-100 dark:border-opacity-50 gap-2 py-1">
-            <GoDot className="text-primary text-3xl" />
-            <li
-              className={` w-full text-[18px] leading-[30.8px]  ${
-                darkMode ? "text-dimWhite" : "text-black"
-              }`}
-            >
-              Precio (300 USD🌎 - 1'000.000 COP)
-            </li>
-          </div>
-        </motion.ul>
-
-        <CountDown />
-
-        <div className="flex w-full items-center md:justify-start justify-center ">
-          <Link to="/contact">
-            <button className={`${styles.button} bg-primary  `}>
-              Inscripciones
-            </button>
-          </Link>
-        </div>
-      </motion.div>
-    </div> */
     <div
       className={`card  ${
         darkMode ? "bg-dark shadow-white" : "bg-base-100 shadow-gray-300"
-      }   shadow-sm  fixed right-5 top-28 z-30 hidden md:flex  md:w-[20%]      `}
+      }   shadow-sm  fixed right-5 top-36 z-30 hidden md:flex  md:w-[20%]      `}
     >
       <figure className="relative">
         <img src={bovinos} className=" object-contain" alt="Shoes" />
@@ -105,7 +38,26 @@ const Inscriptions = ({ darkMode }) => {
         {/* <span className={`font-bold mt-4  ${styles.title}`}>
           $1.000.000 COP
         </span> */}
-        <span className={`font-bold   ${styles.title} mt-4 `}>$300 USD</span>
+        <div className="flex flex-col  items-center justify-center mt-4">
+          <Price
+            language={language}
+            setLanguage={setLanguage}
+            darkMode={darkMode}
+          />
+          <div className="flex justify-between mt-2">
+            {language === "en" ? (
+              <div className="flex  gap-2 items-end justify-center">
+                <span className="text-primary ">$350</span>
+              </div>
+            ) : language === "es" ? (
+              <div className="flex  gap-2 items-end justify-center">
+                <span className="text-primary ">$1.000.000 </span>
+              </div>
+            ) : (
+              <span className="text-primary">Otro</span>
+            )}
+          </div>
+        </div>
         <Link to="/contact">
           <button className={`${styles.button} bg-primary my-4  `}>
             Inscripciones

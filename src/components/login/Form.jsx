@@ -29,7 +29,7 @@ const Form = ({ darkMode }) => {
         console.log(user);
         setIsLoading(false);
         toast.success("Inicio de sesion exitoso ");
-        redirect("/");
+        redirect("/my-courses");
       })
       .catch((error) => {
         console.log(error.message);
@@ -41,7 +41,7 @@ const Form = ({ darkMode }) => {
   return (
     <>
       {isLoading && <Loader />}
-      <motion.div variants={zoomIn(0.5, 0.8)} className=" w-[600px] mx-auto  ">
+      <motion.div variants={zoomIn(0.1, 0.8)} className=" w-[600px] mx-auto  ">
         <h2
           className={`${styles.heading2} mb-2  flex items-center justify-center`}
         >
@@ -73,7 +73,7 @@ const Form = ({ darkMode }) => {
                   }   input-primary  border outline-none text-black font-normal text-[16px] leading-[24px]  w-full pl-4 `}
                 />
                 <FaRegUser
-                  className={`text-3xl ${
+                  className={`text-xl ${
                     darkMode ? "text-white" : "text-black"
                   }`}
                 />
@@ -100,7 +100,7 @@ const Form = ({ darkMode }) => {
                   }  input-primary  border outline-none text-black font-normal text-[16px] leading-[24px]  w-full pl-4 `}
                 />
                 <RiLockPasswordLine
-                  className={`text-3xl ${
+                  className={`text-xl ${
                     darkMode ? "text-white" : "text-black"
                   }`}
                 />

@@ -9,7 +9,7 @@ const FirstLoadNotification = ({ setB }) => {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center">
+    <div className="fixed inset-0 z-50 flex items-center justify-center md:mt-12">
       <div className="fixed inset-0 bg-black opacity-50"></div>
 
       <div className="relative mx-4 mt-10">

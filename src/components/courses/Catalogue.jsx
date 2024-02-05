@@ -214,7 +214,9 @@ const Catalogue = ({ darkMode }) => {
                 <img src={img} alt="Shoes" />
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
                   <Link to={link}>
-                    <button className="btn btn-primary">Más Información</button>
+                    <button className={`${styles.button} `}>
+                      Más Información
+                    </button>
                   </Link>
                 </div>
               </figure>

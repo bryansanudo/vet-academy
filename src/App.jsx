@@ -19,7 +19,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import UserCourses from "@/components/userCourses/UserCourses";
+import StudyPlan from "@/components/studyPlan/StudyPlan";
 
 const App = () => {
   const [isMenuShown, setIsMenuShown] = useState(false);
@@ -54,10 +54,10 @@ const App = () => {
             <Route path="/login" element={<Login darkMode={darkMode} />} />
 
             <Route
-              path="/my-courses"
+              path="/study-plan"
               element={
                 <ShowOnLogin>
-                  <UserCourses darkMode={darkMode} />
+                  <StudyPlan darkMode={darkMode} />
                 </ShowOnLogin>
               }
             />

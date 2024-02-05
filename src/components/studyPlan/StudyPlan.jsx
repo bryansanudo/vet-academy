@@ -2,8 +2,9 @@ import styles from "@/style";
 
 import CTA from "@/components/CTA";
 import { useEffect } from "react";
+import AvailableCourses from "@/components/studyPlan/AvailableCourses";
 
-const UserCourses = ({ darkMode }) => {
+const StudyPlan = ({ darkMode }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -17,7 +18,7 @@ const UserCourses = ({ darkMode }) => {
             className={`
                pink__gradient absolute z-[0] w-[50%] h-[50%] -left-1/2 bottom-0 rounded-full `}
           />
-
+          <AvailableCourses darkMode={darkMode} />
           <CTA darkMode={darkMode} />
         </div>
       </div>
@@ -25,4 +26,4 @@ const UserCourses = ({ darkMode }) => {
   );
 };
 
-export default UserCourses;
+export default StudyPlan;
