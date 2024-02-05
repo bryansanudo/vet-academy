@@ -12,10 +12,8 @@ const BovinosLayout = ({ darkMode }) => {
 
   return (
     <>
-      <div
-        className={`dark:bg-accent  ${styles.paddingX} ${styles.flexCenter}`}
-      >
-        <div className={`${styles.boxWidth}`}>
+      <div className={`dark:bg-accent `}>
+        <div className={`  w-full`}>
           <div name="scrol" className="pt-20" />
 
           <div
