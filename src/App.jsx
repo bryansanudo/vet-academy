@@ -20,6 +20,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import StudyPlan from "@/components/studyPlan/StudyPlan";
+import BovinosLayout from "@/components/studyPlan/bovinosLayout/BovinosLayout";
 
 const App = () => {
   const [isMenuShown, setIsMenuShown] = useState(false);
@@ -58,6 +59,14 @@ const App = () => {
               element={
                 <ShowOnLogin>
                   <StudyPlan darkMode={darkMode} />
+                </ShowOnLogin>
+              }
+            />
+            <Route
+              path="/bovinos-class"
+              element={
+                <ShowOnLogin>
+                  <BovinosLayout darkMode={darkMode} />
                 </ShowOnLogin>
               }
             />

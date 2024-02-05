@@ -29,12 +29,11 @@ const AvailableCourses = ({ darkMode }) => {
     {
       id: 6,
       img: curso6,
-      logo: logo,
+
       title: "Bovinos",
       subtitle: "Descripcion del curso 6",
-      link: "/bovinos",
-      cop: "1.000.000",
-      usd: "350",
+      link: "/bovinos-class",
+
       sessions: "32",
     },
   ];

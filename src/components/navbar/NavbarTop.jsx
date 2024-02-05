@@ -115,7 +115,7 @@ const NavbarTop = ({ displayName }) => {
                 >
                   <div className="flex items-center justify-center gap-2  rounded-lg">
                     <FaUserDoctor className="text-xl " />
-                    <div>Plan de estudios</div>
+                    <div>Mi Plan de Estudios</div>
                   </div>
                 </div>
               </NavLink>
@@ -126,7 +126,7 @@ const NavbarTop = ({ displayName }) => {
               >
                 <div className="flex items-center justify-center gap-2 border-2 py-[2px] px-2 rounded-lg">
                   <GrPowerShutdown className="text-xl " />
-                  <div>salir</div>
+                  <div>Salir</div>
                 </div>
               </div>
             </div>
