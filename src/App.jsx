@@ -64,7 +64,7 @@ const App = () => {
               }
             />
             <Route
-              path="/bovinos-class"
+              path="/bovinos-class/*"
               element={
                 <ShowOnLogin>
                   <BovinosLayout darkMode={darkMode} />

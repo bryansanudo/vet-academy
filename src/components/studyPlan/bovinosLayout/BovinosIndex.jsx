@@ -9,6 +9,8 @@ import { GiWorld } from "react-icons/gi";
 import { motion } from "framer-motion";
 import { staggerContainer, zoomIn, fadeIn } from "@/utils/motion";
 import { LuFileVideo } from "react-icons/lu";
+import { Link, Route, Routes } from "react-router-dom";
+import VideoComponent from "@/components/studyPlan/bovinosLayout/VideoComponent";
 
 const services = [
   {
@@ -164,6 +166,9 @@ const BovinosIndex = ({ darkMode }) => (
       </div> */}
     </div>
     <div className=" w-full  flex items-center justify-center">
+      <Routes>
+        <Route path="home" element={<VideoComponent />} />
+      </Routes>
       <motion.div className=" flex flex-col md:w-1/2 items-center justify-center  ">
         {services.map(({ id, name, sessions, motionTime }) => (
           <div
@@ -203,7 +208,9 @@ const BovinosIndex = ({ darkMode }) => (
                             {title}
                           </div>
                           <div>
-                            <LuFileVideo className="text-2xl hover:scale-105 duration-500 cursor-pointer" />
+                            <Link>
+                              <LuFileVideo className="text-2xl hover:scale-105 duration-500 cursor-pointer" />
+                            </Link>
                           </div>
                         </div>
                       </div>
