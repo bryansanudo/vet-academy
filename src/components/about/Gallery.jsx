@@ -7,18 +7,18 @@ import { useState } from "react";
 const Gallery = ({ darkMode }) => {
   const [selectedImageIndex, setSelectedImageIndex] = useState(null);
   const images = [
-    "https://i.ibb.co/M1cJkyt/Foto-2024-02-02-09-25-09-a-m.jpg",
     "https://i.ibb.co/9Gr3ssy/IMG-8035.jpg",
+    "https://i.ibb.co/M1cJkyt/Foto-2024-02-02-09-25-09-a-m.jpg",
     "https://i.ibb.co/YjCrL0Q/IMG-1115.jpg",
     "https://i.ibb.co/0rZzs2y/IMG-1240.jpg",
     "https://i.ibb.co/LY26469/about-us-2.jpg",
     "https://i.ibb.co/3kh3ph3/IMG-1338-jpg-1.jpg",
-    "https://i.ibb.co/zbv0WPw/IMG-5083.jpg",
     "https://i.ibb.co/72rn3Vh/IMG-8036.jpg",
     "https://i.ibb.co/Xb80SS3/IMG-8069-jpg.jpg",
+    "https://i.ibb.co/zbv0WPw/IMG-5083.jpg",
     "https://i.ibb.co/Wc3b1VL/IMG-1338-jpg.jpg",
-    "https://i.ibb.co/M1cJkyt/Foto-2024-02-02-09-25-09-a-m.jpg",
     "https://i.ibb.co/m6CztFj/IMG-1056-jpg.jpg",
+    "https://i.ibb.co/M1cJkyt/Foto-2024-02-02-09-25-09-a-m.jpg",
   ];
 
   const openModal = (index) => {

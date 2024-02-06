@@ -175,7 +175,7 @@ const Catalogue = ({ darkMode }) => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  });
+  }, []);
   return (
     <section
       id="clients"

@@ -51,77 +51,99 @@ const Footer = ({ darkMode }) => {
     },
   ];
   return (
-    <footer className="footer  border-t p-6  mb-10 ">
-      <div name="scrol " className="pt-20" />
-
-      <div className="">
-        <div className="flex gap-1 items-start   ">
+    <>
+      <footer className="flex flex-col md:flex-row   border-t pt-6   ">
+        <div className="flex flex-col mb-10   md:mr-40 ">
           <img
             src={darkMode ? logoVet : logoVet}
             className="w-48 object-contain"
             alt=""
           />
-        </div>
-        <div className="flex items-center justify-between w-full mt-2  gap-1  ">
-          {socials.map(({ id, logo, link }) => (
-            <a key={id} href={link} target="_blank">
-              <div
-                className={` h-[30px] w-[30px]  md:w-[40px] md:h-[40px] rounded-lg ${styles.flexCenter} hover:scale-105 group  duration-300 cursor-pointer bg-primary`}
-              >
-                {/*                 <FaLinkedinIn className="dark:text-white text-2xl" /> */}
-                <span className="group-hover: duration-300 text-white text-lg md:text-2xl">
-                  {logo}
-                </span>
-              </div>
-            </a>
-          ))}
-        </div>
-      </div>
 
-      <nav>
-        <header className={`${styles.title}`}>Acerca De</header>
-        <div className={`${styles.subtitle} hover:font-medium cursor-pointer`}>
-          <div>Eventos</div>
+          <div className="flex items-center justify-between w-48  mt-2  gap-1  ">
+            {socials.map(({ id, logo, link }) => (
+              <a key={id} href={link} target="_blank">
+                <div
+                  className={` h-[30px] w-[30px]  md:w-[40px] md:h-[40px] rounded-lg ${styles.flexCenter} hover:scale-105 group  duration-300 cursor-pointer bg-primary`}
+                >
+                  {/*                 <FaLinkedinIn className="dark:text-white text-2xl" /> */}
+                  <span className="group-hover: duration-300 text-white text-lg md:text-2xl">
+                    {logo}
+                  </span>
+                </div>
+              </a>
+            ))}
+          </div>
         </div>
-        <div className={`${styles.subtitle} hover:font-medium cursor-pointer`}>
-          <div>Proximos Cursos</div>
+
+        <div className="flex flex-col md:flex-row justify-between gap-6  w-full">
+          {/*  Institucion */}
+          <nav>
+            <header className={`${styles.title} mb-2`}>Institución</header>
+            <div
+              className={`${styles.subtitle} hover:font-medium cursor-pointer`}
+            >
+              <div>Nosotros</div>
+            </div>
+            <div
+              className={`${styles.subtitle} hover:font-medium cursor-pointer`}
+            >
+              <div>Preguntas Frecuentes</div>
+            </div>
+            <div
+              className={`${styles.subtitle} hover:font-medium cursor-pointer`}
+            >
+              <div>Proximos Lanzamientos</div>
+            </div>
+            <div
+              className={`${styles.subtitle} hover:font-medium cursor-pointer`}
+            >
+              <div>Contacto</div>
+            </div>
+          </nav>
+          {/* ayuda y soporte */}
+          <nav>
+            <header className={`${styles.title} mb-2`}>Ayuda y soporte</header>
+            <div to="/terms">
+              <p
+                className={`${styles.subtitle} hover:font-medium cursor-pointer`}
+              >
+                Whatshapp
+              </p>
+            </div>
+            <div to="/privacy">
+              <p
+                className={`${styles.subtitle} hover:font-medium cursor-pointer`}
+              >
+                Correo Electronico
+              </p>
+            </div>
+          </nav>
+          <nav>
+            <header className={`${styles.title} mb-2`}>Legal</header>
+            <div to="/terms">
+              <p
+                className={`${styles.subtitle} hover:font-medium cursor-pointer`}
+              >
+                Políticas de privacidad
+              </p>
+            </div>
+            <div to="/privacy">
+              <p
+                className={`${styles.subtitle} hover:font-medium cursor-pointer`}
+              >
+                Políticas devoluciones y reembolsos
+              </p>
+            </div>
+          </nav>
         </div>
-        <div className={`${styles.subtitle} hover:font-medium cursor-pointer`}>
-          <div>Preguntas Frecuentes</div>
-        </div>
-        <div className={`${styles.subtitle} hover:font-medium cursor-pointer`}>
-          <div>Contacto</div>
-        </div>
-      </nav>
-      <nav>
-        <header className={`${styles.title}`}>Cursos</header>
-        <div className={`${styles.subtitle} hover:font-medium cursor-pointer`}>
-          <div to="/eb1a">Curso 1</div>
-        </div>
-        <div className={`${styles.subtitle} hover:font-medium cursor-pointer`}>
-          <div to="/eb2">Curso 2</div>
-        </div>
-        <div className={`${styles.subtitle} hover:font-medium cursor-pointer`}>
-          <div to="/eb3a">Curso 3</div>
-        </div>
-        <div className={`${styles.subtitle} hover:font-medium cursor-pointer`}>
-          <div to="/eb5">Curso 4</div>
-        </div>
-      </nav>
-      <nav>
-        <header className={`${styles.title}`}>Legal</header>
-        <div to="/terms">
-          <p className={`${styles.subtitle} hover:font-medium cursor-pointer`}>
-            Terms of use
-          </p>
-        </div>
-        <div to="/privacy">
-          <p className={`${styles.subtitle} hover:font-medium cursor-pointer`}>
-            Privacy policy
-          </p>
-        </div>
-      </nav>
-    </footer>
+      </footer>
+      <div className=" flex   mt-4 mb-20 md:mb-6">
+        <h2 className={`${styles.title}`}>
+          Copyright © 2024 • vetacademy.com.co •
+        </h2>
+      </div>
+    </>
   );
 };
 
