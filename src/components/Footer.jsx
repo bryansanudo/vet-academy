@@ -117,18 +117,25 @@ const Footer = ({ darkMode }) => {
           <nav>
             <header className={`${styles.title} mb-2`}>Ayuda y soporte</header>
             <div to="/terms">
-              <p
-                className={`${styles.subtitle} hover:font-medium cursor-pointer`}
+              <a
+                href="https://api.whatsapp.com/send?phone=573243291412"
+                target="_blank"
               >
-                Whatshapp
-              </p>
+                <p
+                  className={`${styles.subtitle} hover:font-medium cursor-pointer`}
+                >
+                  Whatshapp
+                </p>
+              </a>
             </div>
             <div to="/privacy">
-              <p
-                className={`${styles.subtitle} hover:font-medium cursor-pointer`}
-              >
-                Correo Electronico
-              </p>
+              <a href="mailto:vet.academyeducacion@gmail.com" target="_blank">
+                <p
+                  className={`${styles.subtitle} hover:font-medium cursor-pointer`}
+                >
+                  Correo Electronico
+                </p>
+              </a>
             </div>
           </nav>
           <nav>
