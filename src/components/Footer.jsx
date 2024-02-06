@@ -11,6 +11,7 @@ import {
   FaYoutube,
   FaWhatsapp,
 } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 import { FaUserDoctor } from "react-icons/fa6";
 
@@ -18,6 +19,10 @@ import { FaInstagram } from "react-icons/fa6";
 import { IoIosMail } from "react-icons/io";
 
 const Footer = ({ darkMode }) => {
+  const activeLink = ({ isActive }) =>
+    isActive
+      ? " relative after:content-[''] after:absolute after:left-0 after:bottom-[-3px] after:w-full after:h-[2px] after:bg-primary"
+      : "";
   const socials = [
     /* {
           id: 3,
@@ -83,12 +88,17 @@ const Footer = ({ darkMode }) => {
             <div
               className={`${styles.subtitle} hover:font-medium cursor-pointer`}
             >
-              <div>Nosotros</div>
+              <NavLink to="/about">
+                <div>Nosotros</div>
+              </NavLink>
             </div>
+
             <div
               className={`${styles.subtitle} hover:font-medium cursor-pointer`}
             >
-              <div>Preguntas Frecuentes</div>
+              <NavLink to="faq">
+                <div>Preguntas Frecuentes</div>
+              </NavLink>
             </div>
             <div
               className={`${styles.subtitle} hover:font-medium cursor-pointer`}
@@ -98,7 +108,9 @@ const Footer = ({ darkMode }) => {
             <div
               className={`${styles.subtitle} hover:font-medium cursor-pointer`}
             >
-              <div>Contacto</div>
+              <NavLink to="/contact">
+                <div>Contacto</div>
+              </NavLink>
             </div>
           </nav>
           {/* ayuda y soporte */}

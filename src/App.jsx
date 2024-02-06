@@ -20,6 +20,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import StudyPlan from "@/components/studyPlan/StudyPlan";
+import Faq from "@/components/faq/Faq";
 import BovinosLayout from "@/components/studyPlan/bovinosLayout/BovinosLayout";
 
 const App = () => {
@@ -52,6 +53,7 @@ const App = () => {
               element={<Masterclass darkMode={darkMode} />}
             />
             <Route path="/contact" element={<Contact darkMode={darkMode} />} />
+            <Route path="/faq" element={<Faq darkMode={darkMode} />} />
 
             <Route path="/login" element={<Login darkMode={darkMode} />} />
 
