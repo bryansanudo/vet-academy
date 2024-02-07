@@ -7,53 +7,49 @@ const DropdownFaq = ({ darkMode }) => {
   const questions = [
     {
       id: 1,
-      question: "Pregunta 1",
-      answer: "Respuesta 1",
+      question:
+        "¿Ofrecen certificados al completar los cursos de educación veterinaria?",
+      answer: "Sí, se entrega un certificado digital al finalizar.",
     },
     {
       id: 2,
-      question: "Pregunta 2",
-      answer: "Respuesta 2",
+      question: "¿Cuáles son los medios de pago disponibles?",
+      answer:
+        "Los medios de pago disponibles son PayPal, tarjeta de crédito y transferencia bancaria.",
     },
     {
       id: 3,
-      question: "Pregunta 3",
-      answer: "Respuesta 3",
+      question: "¿Cómo puedo inscribirme en un curso de educación veterinaria?",
+      answer:
+        "Para inscribirte en algun curso de educación veterinaria, simplemente contáctanos a través de WhatsApp. Nuestro equipo estará encantado de proporcionarte toda la información necesaria y guiarte a través del proceso de inscripción. Estamos aquí para ayudarte en cada paso del camino hacia tu educación veterinaria. ¡Esperamos contar contigo pronto!",
     },
     {
       id: 4,
-      question: "Pregunta 4",
-      answer: "Respuesta 4",
+      question:
+        "¿Qué requisitos debo cumplir para participar en los cursos de educación veterinaria?",
+      answer:
+        "Los requisitos varían según el curso específico, pero en general, la mayoría de nuestros cursos están abiertos a estudiantes con interés en el campo de la veterinaria. Algunos cursos pueden requerir ciertos conocimientos previos o experiencia en el campo.",
     },
     {
       id: 5,
-      question: "Pregunta 5",
-      answer: "Respuesta 5",
+      question:
+        "¿Cuál es la duración típica de los cursos de educación veterinaria?",
+      answer:
+        "La duración de nuestros cursos de educación veterinaria varía según el nivel y la complejidad del curso. Algunos cursos pueden durar unas pocas semanas, mientras que otros pueden extenderse por varios meses, dependiendo de los objetivos y el contenido del curso.",
     },
     {
       id: 6,
-      question: "Pregunta 6",
-      answer: "Respuesta 6",
+      question:
+        "¿Hay oportunidades de clases prácticas a través de Vet Academy?",
+      answer:
+        "Sí, en algunos de nuestros cursos de educación veterinaria ofrecemos oportunidades de clases prácticas en colaboración con instituciones y clínicas veterinarias asociadas. Estas experiencias prácticas pueden proporcionar una valiosa exposición al trabajo en el campo veterinario.",
     },
     {
       id: 7,
-      question: "Pregunta 7",
-      answer: "Respuesta 7",
-    },
-    {
-      id: 8,
-      question: "Pregunta 8",
-      answer: "Respuesta 8",
-    },
-    {
-      id: 9,
-      question: "Pregunta 9",
-      answer: "Respuesta 9",
-    },
-    {
-      id: 10,
-      question: "Pregunta 10",
-      answer: "Respuesta 10",
+      question:
+        "¿Cómo puedo obtener más información sobre los cursos de educación veterinaria que ofrecen?",
+      answer:
+        "Para obtener más información sobre nuestros cursos de educación veterinaria, te invitamos a explorar nuestra página web, donde encontrarás detalles sobre los cursos disponibles, precios, y el plan de estudios. También puedes ponerte en contacto con nuestro equipo de soporte para recibir asistencia adicional.",
     },
   ];
   return (
