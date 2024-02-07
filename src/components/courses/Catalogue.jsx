@@ -220,9 +220,9 @@ const Catalogue = ({ darkMode }) => {
                   </Link>
                 </div>
               </figure>
-              <div className="card-body">
+              <div className="card-body justify-between">
                 <h2 className={`${styles.title}`}>{title}</h2>
-                <p className={`${styles.subtitle}`}>Descripción</p>
+
                 <div className="card-actions justify-between ">
                   <div>
                     <span className="text-primary">{sessions} clases</span>
