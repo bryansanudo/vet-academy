@@ -10,6 +10,9 @@ import Bovinos from "@/components/bovinos/Bovinos";
 import Masterclass from "@/components/masterclass/Masterclass";
 import { ShowOnLogin, ShowOnLogout } from "@/components/HiddenLink";
 
+import Terms from "@/components/TermsOfServices";
+import Privacy from "@/components/PrivacyPolicy";
+
 import Login from "@/components/login/Login";
 
 import styles from "@/style";
@@ -75,8 +78,8 @@ const App = () => {
             />
 
             {/*  <Route path="/faq" element={<Faq darkMode={darkMode} />} /> */}
-            {/* <Route path="/terms" element={<Terms darkMode={darkMode} />} />
-          <Route path="/privacy" element={<Privacy darkMode={darkMode} />} /> */}
+            <Route path="/terms" element={<Terms darkMode={darkMode} />} />
+            <Route path="/privacy" element={<Privacy darkMode={darkMode} />} />
           </Routes>
 
           <div

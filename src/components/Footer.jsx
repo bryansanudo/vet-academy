@@ -100,11 +100,7 @@ const Footer = ({ darkMode }) => {
                 <div>Preguntas Frecuentes</div>
               </NavLink>
             </div>
-            <div
-              className={`${styles.subtitle} hover:font-medium cursor-pointer`}
-            >
-              <div>Proximos Lanzamientos</div>
-            </div>
+
             <div
               className={`${styles.subtitle} hover:font-medium cursor-pointer`}
             >
@@ -140,20 +136,20 @@ const Footer = ({ darkMode }) => {
           </nav>
           <nav>
             <header className={`${styles.title} mb-2`}>Legal</header>
-            <div to="/terms">
+            <NavLink to="/privacy">
               <p
                 className={`${styles.subtitle} hover:font-medium cursor-pointer`}
               >
                 Políticas de privacidad
               </p>
-            </div>
-            <div to="/privacy">
+            </NavLink>
+            <NavLink to="/terms">
               <p
                 className={`${styles.subtitle} hover:font-medium cursor-pointer`}
               >
                 Políticas devoluciones y reembolsos
               </p>
-            </div>
+            </NavLink>
           </nav>
         </div>
       </footer>

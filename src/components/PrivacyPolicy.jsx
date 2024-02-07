@@ -10,91 +10,39 @@ const PrivacyPolicy = ({ darkMode }) => {
   const privacy = [
     {
       id: "0",
-      title: "Welcome to EB Visa Law!",
+      title: "Recopilación de Información Personal:",
       subtitle:
-        'This Privacy Policy outlines how we collect, use, disclose, and safeguard your personal information when you use our website at ebvisalaw.com (the "Website").',
+        "En Vet Academy, valoramos tu privacidad y nos comprometemos a proteger tus datos personales. Durante el proceso de inscripción en nuestros cursos en línea, podemos recopilar información personal como tu nombre, dirección de correo electrónico, información de pago, y detalles de contacto. Esta información se utiliza únicamente con el propósito de administrar tu cuenta y proporcionarte acceso a nuestros cursos y servicios.",
     },
     {
       id: "1",
-      title: "1. Information We Collect",
+      title: "Uso de la Información Personal:",
+      subtitle:
+        "La información personal que recopilamos se utiliza para gestionar tu participación en nuestros cursos en línea, procesar tus pagos, proporcionar soporte técnico y comunicarnos contigo sobre actualizaciones del curso, eventos y ofertas especiales relacionadas con Vet Academy. No compartiremos tus datos personales con terceros sin tu consentimiento expreso, a menos que sea necesario para cumplir con obligaciones legales o proteger nuestros derechos.",
     },
     {
       id: "11",
-      title: "Personal Information",
+      title: "Grabaciones de Contenido y Propiedad Intelectual:",
       subtitle:
-        "We may collect personal information, such as your name, contact details, and other identifiable information, when voluntarily provided by you through our contact forms, email communication, or other interactions on the Website.",
+        "Nuestros cursos en línea pueden incluir contenido grabado, como conferencias, presentaciones y material educativo. Estas grabaciones son propiedad exclusiva de Vet Academy. Los estudiantes no están autorizados a compartir, distribuir o reproducir este contenido de ninguna manera sin el consentimiento previo por escrito de Vet Academy.",
     },
     {
       id: "12",
-      title: "Log Data",
+      title: "Derechos del Usuario:",
       subtitle:
-        'We collect information that your browser sends whenever you visit our Website ("Log Data"). This Log Data may include information such as your computer Internet Protocol ("IP") address, browser type, browser version, the pages of our Website that you visit, the time and date of your visit, the time spent on those pages, and other statistics.',
+        "Tienes derecho a corregir o eliminar la información personal que tenemos sobre ti. Si deseas ejercer estos derechos o tienes preguntas sobre nuestra política de privacidad, no dudes en ponerte en contacto con nuestro equipo de atención al cliente.",
     },
     {
       id: "13",
-      title: "Cookies",
+      title: "Cambios en la Política de Privacidad:",
       subtitle:
-        "We use cookies to collect information and improve your experience on the Website. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Website.",
+        "Nos reservamos el derecho de actualizar o modificar esta política de privacidad en cualquier momento, y cualquier cambio significativo será comunicado a través de nuestro sitio web o por correo electrónico. Te recomendamos revisar esta página regularmente para estar al tanto de cualquier actualización.",
     },
     {
       id: "2",
-      title: "2. How We Use Your Information",
+
       subtitle:
-        "We may use the information collected for the following purposes:",
-    },
-    {
-      id: "20",
-      subtitle: "To provide, maintain, and improve our Website and services.",
-    },
-    {
-      id: "21",
-      subtitle: "To respond to your inquiries and communicate with you.",
-    },
-    {
-      id: "22",
-      subtitle:
-        " To personalize your experience and deliver content tailored to your interests.",
-    },
-    {
-      id: "23",
-      subtitle:
-        "  To monitor the usage of our Website and detect, prevent, and address technical issues.",
-    },
-    {
-      id: "3",
-      title: "3. Sharing Your Information",
-      subtitle:
-        "We do not sell, trade, or otherwise transfer your personal information to third parties without your consent. However, we may share information with trusted third-party service providers who assist us in operating our Website or conducting our business.",
-    },
-    {
-      id: "4",
-      title: "4. Security",
-      subtitle:
-        "We take reasonable measures to protect your personal information from unauthorized access, disclosure, alteration, and destruction. However, no method of transmission over the internet or electronic storage is completely secure, and we cannot guarantee absolute security.",
-    },
-    {
-      id: "5",
-      title: "5. Third-Party Links",
-      subtitle:
-        "Our Website may contain links to third-party websites. We have no control over the content and practices of these websites and encourage you to review their privacy policies.",
-    },
-    {
-      id: "6",
-      title: "6. Children's Privacy",
-      subtitle:
-        "Our services are not directed to individuals under the age of 13. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe that your child has provided us with personal information, please contact us, and we will take steps to remove such information.",
-    },
-    {
-      id: "7",
-      title: " 7. Changes to this Privacy Policy",
-      subtitle:
-        "We reserve the right to update or change our Privacy Policy at any time. Your continued use of the Website after any changes indicate your acceptance of the updated Privacy Policy.",
-    },
-    {
-      id: "8",
-      title: " 8. Contact Us",
-      subtitle:
-        "For questions or concerns regarding this Privacy Policy, please contact us at:",
+        "Al usar nuestros servicios y acceder a nuestro sitio web, aceptas los términos y condiciones de nuestra política de privacidad. Si no estás de acuerdo con esta política, por favor abstente de utilizar nuestros servicios.",
     },
   ];
   return (
@@ -109,10 +57,8 @@ const PrivacyPolicy = ({ darkMode }) => {
           className={`  pink__gradient absolute z-[0] w-[50%] h-[50%] -left-1/2 bottom-0 rounded-full `}
         />
         <div className="w-full flex justify-between items-center flex-col sm:mb-16 mb-6 relative z-[1]">
-          <h2
-            className={`font-semibold xs:text-[48px] text-[40px]  xs:leading-[76.8px] leading-[66.8px] w-full text-primary mr-4`}
-          >
-            Privacy Policy
+          <h2 className={`${styles.heading2} mt-20`}>
+            Políticas de privacidad{" "}
           </h2>
         </div>
         <section
@@ -126,11 +72,13 @@ const PrivacyPolicy = ({ darkMode }) => {
             </div>
           ))}
           <div className="w-full">
-            <a href="mailto:info@ebvisalaw">
-              <p className={`${styles.subtitle}`}>info@ebvisalaw</p>
+            <a href="mailto:vet.academyeducacion@gmai.com">
+              <p className={`${styles.subtitle}`}>
+                vet.academyeducacion@gmai.com
+              </p>
             </a>
             <a href="tel:+13057915610">
-              <p className={`${styles.subtitle}`}>+1 (305) 791-5610</p>
+              <p className={`${styles.subtitle}`}>+57 (324) 3291412</p>
             </a>
           </div>
         </section>
