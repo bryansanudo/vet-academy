@@ -2,7 +2,7 @@ import styles from "@/style";
 import { motion } from "framer-motion";
 import { staggerContainer, zoomIn, fadeIn } from "@/utils/motion";
 import { FaBars, FaTimes, FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Gallery = ({ darkMode }) => {
   const [selectedImageIndex, setSelectedImageIndex] = useState(null);
@@ -40,6 +40,24 @@ const Gallery = ({ darkMode }) => {
       prevIndex === images.length - 1 ? 0 : prevIndex + 1
     );
   };
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (selectedImageIndex !== null) {
+        if (event.key === "ArrowLeft") {
+          goToPreviousImage();
+        } else if (event.key === "ArrowRight") {
+          goToNextImage();
+        }
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [selectedImageIndex]);
 
   return (
     <motion.section
