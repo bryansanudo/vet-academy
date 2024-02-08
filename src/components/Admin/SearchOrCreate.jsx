@@ -4,6 +4,7 @@ import { doc, getDoc, setDoc } from "firebase/firestore";
 import { useSelector } from "react-redux";
 import { selectEmail } from "@/redux/slice/authSlice";
 import UserProfilePanel from "./UserProfilePanel"; // Importa el componente UserProfilePanel
+import { useNavigate } from "react-router-dom";
 
 const SearchOrCreate = () => {
   const [userData, setUserData] = useState({});

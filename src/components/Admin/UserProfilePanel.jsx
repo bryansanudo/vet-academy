@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { db } from "@/configFirebase";
 import { toast } from "react-toastify";
 import { doc, setDoc } from "firebase/firestore";
+import { useNavigate } from "react-router-dom";
 
 const availableCourses = [
   "bovinos",
@@ -11,6 +12,7 @@ const availableCourses = [
 ];
 
 const UserProfilePanel = ({ userData, onReturn }) => {
+  const redirect = useNavigate();
   const initialState = {
     name: userData.name,
     title: userData.title,
@@ -48,6 +50,7 @@ const UserProfilePanel = ({ userData, onReturn }) => {
     try {
       await setDoc(doc(db, "users", initialState.email), { ...updateUser });
       toast.success("Usuario actualizado con éxito");
+      redirect("/admin/all-users");
     } catch (error) {
       toast.error(error.message);
     }
