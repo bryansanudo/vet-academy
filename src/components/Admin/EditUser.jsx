@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { db } from "@/configFirebase";
 import { toast } from "react-toastify";
-import { doc, setDoc } from "firebase/firestore";
+import { doc, getDoc, setDoc } from "firebase/firestore";
 import { useNavigate, useParams } from "react-router-dom";
 
 const availableCourses = [
@@ -11,47 +11,61 @@ const availableCourses = [
   "enfermedades",
 ];
 
-const EditUser = ({ userData, onReturn }) => {
+const EditUser = () => {
   const { id } = useParams();
   const redirect = useNavigate();
-  /*  const initialState = {
-    name: userData.name,
-    title: userData.title,
-    email: userData.email,
-    courses: userData.courses,
-  }; */
-  const initialState = {
-    name: "bryan",
-    title: "a",
-    email: "bryan@gmail.com",
-    courses: [1, 2, 3, 4],
+
+  const [userData, setUserData] = useState({
+    name: "",
+    title: "",
+    email: "",
+    courses: [],
+  });
+
+  const getUserData = async (id) => {
+    const docRef = doc(db, "users", id);
+
+    const search = await getDoc(docRef);
+
+    const infoDocu = search.data();
+    return infoDocu;
   };
 
-  const [updateUser, setUpdateUser] = useState({ ...initialState });
+  useEffect(() => {
+    async function fetch() {
+      const response = await getUserData(id);
+      console.log(response);
+      setUserData(response);
+      console.log(userData);
+    }
+
+    fetch();
+  }, []);
 
   const handleCourseChange = (course) => {
-    const isChecked = updateUser.courses.includes(course);
+    const isChecked = userData.courses && userData.courses.includes(course);
     if (isChecked) {
-      setUpdateUser((prevState) => ({
+      setUserData((prevState) => ({
         ...prevState,
         courses: prevState.courses.filter((item) => item !== course),
       }));
     } else {
-      setUpdateUser((prevState) => ({
+      setUserData((prevState) => ({
         ...prevState,
         courses: [...prevState.courses, course],
       }));
     }
   };
+
   const handleInputChange = (e) => {
-    setUpdateUser({ ...updateUser, [e.target.name]: e.target.value });
+    setUserData({ ...userData, [e.target.name]: e.target.value });
   };
 
   const editUser = async (e) => {
     e.preventDefault();
 
     try {
-      await setDoc(doc(db, "users", initialState.email), { ...updateUser });
+      await setDoc(doc(db, "users", id), { ...userData });
       toast.success("Usuario actualizado con éxito");
       redirect("/admin/all-users");
     } catch (error) {
@@ -66,11 +80,20 @@ const EditUser = ({ userData, onReturn }) => {
           Panel de Usuario {id}
         </h2>
 
-        <div className="flex flex-col gap-6 w-[300px] lg:w-[500px] items-center shadow-lg shadow-gray-500 rounded-xl p-8 mt-16">
-          <p>Correo: {updateUser.email}</p>
-          <p>Nombre: {updateUser.name}</p>
-          <p>Titulo: {updateUser.title}</p>
-          <p>Cursos: {updateUser.courses.join(", ")}</p>
+        <div className="flex flex-col gap-6 w-[300px] lg:w-[500px] items-start shadow-lg shadow-gray-500 rounded-xl p-8 mt-16">
+          <p>Correo: {userData.email}</p>
+          <p>Nombre: {userData.name}</p>
+          <p>Titulo: {userData.title}</p>
+          <div>
+            Cursos:
+            {userData.courses && userData.courses.length > 0
+              ? userData.courses.map((course, index) => (
+                  <div key={index}>
+                    <span className="">{course}</span>
+                  </div>
+                ))
+              : "No hay cursos disponibles"}
+          </div>
         </div>
       </div>
       <div className="bg-green-500">
@@ -81,7 +104,7 @@ const EditUser = ({ userData, onReturn }) => {
             type="text"
             className="input input-primary text-lg input-md w-full"
             name="name"
-            value={updateUser.name}
+            value={userData.name}
             onChange={(e) => handleInputChange(e)}
           />
           <label className="w-full text-left">Titulo</label>
@@ -90,7 +113,7 @@ const EditUser = ({ userData, onReturn }) => {
             type="text"
             className="input input-primary text-lg input-md w-full"
             name="title"
-            value={updateUser.title}
+            value={userData.title}
             onChange={(e) => handleInputChange(e)}
           />
           <label className="w-full text-left">Cursos</label>
@@ -100,7 +123,7 @@ const EditUser = ({ userData, onReturn }) => {
                 type="checkbox"
                 id={course}
                 name={course}
-                checked={updateUser.courses.includes(course)}
+                checked={userData.courses.includes(course)}
                 onChange={() => handleCourseChange(course)}
               />
               <label htmlFor={course}>{course}</label>
