@@ -34,6 +34,9 @@ const UserProfilePanel = ({ userData, onReturn }) => {
       }));
     }
   };
+  const handleInputChange = (e) => {
+    setUpdateUser({ ...updateUser, [e.target.name]: e.target.value });
+  };
 
   const handleReturn = () => {
     onReturn();
