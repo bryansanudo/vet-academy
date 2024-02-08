@@ -74,10 +74,13 @@ const AllUsers = () => {
             const { email, name, title, courses } = user;
             return (
               <div key={email} className="flex flex-col my-10  ">
-                <div className=" border-black bg-green-500 w-[400px]   ">
+                <div className=" border-black bg-blue-500 w-[400px]   ">
                   <div>{email}</div>
                   <div>{name}</div>
                   <div>{title}</div>
+                  <Link to={`/admin/edit-user/${email}`}>
+                    <FaEdit className="text-2xl text-green-500" />
+                  </Link>
                   <FaTrashAlt
                     onClick={() => confirmDelete(email)}
                     className="cursor-pointer text-2xl text-red-500"
