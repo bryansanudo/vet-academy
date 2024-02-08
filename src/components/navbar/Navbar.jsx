@@ -56,7 +56,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
   const links = [
     {
       id: 1,
-      name: "Nosotrosssss",
+      name: "Nosotros",
       link: "/about",
     },
     {
