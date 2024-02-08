@@ -1,9 +1,9 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import RegisterUser from "@/components/admin/RegisterUser";
-import SearchOrCreate from "@/components/admin/SearchOrCreate";
-import EditUser from "@/components/admin/EditUser";
-import AllUsers from "@/components/admin/AllUsers";
+import RegisterUser from "@/components/adminPanel/RegisterUser";
+import SearchOrCreate from "@/components/adminPanel/SearchOrCreate";
+import EditUser from "@/components/adminPanel/EditUser";
+import AllUsers from "@/components/adminPanel/AllUsers";
 import { NavLink } from "react-router-dom";
 
 const Admin = () => {

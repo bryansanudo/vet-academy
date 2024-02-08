@@ -6,7 +6,7 @@ import About from "@/components/about/About";
 import Courses from "@/components/courses/Courses";
 import Contact from "@/components/Contact";
 import Bovinos from "@/components/bovinos/Bovinos";
-import Admin from "@/components/admin/Admin";
+import Admin from "@/components/adminPanel/Admin";
 
 import Masterclass from "@/components/masterclass/Masterclass";
 import { ShowOnLogin, ShowOnLogout } from "@/components/HiddenLink";
