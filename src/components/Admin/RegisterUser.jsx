@@ -25,13 +25,13 @@ const RegisterUser = () => {
       toast.error("Las contraseñas no coiciden");
       return;
     }
+
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
         console.log(user);
         setIsLoading(false);
         toast.success("Usuario Creado exitosamente ");
-        redirect("/");
       })
       .catch((error) => {
         toast.error(error.message);
