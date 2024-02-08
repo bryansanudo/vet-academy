@@ -6,9 +6,11 @@ import About from "@/components/about/About";
 import Courses from "@/components/courses/Courses";
 import Contact from "@/components/Contact";
 import Bovinos from "@/components/bovinos/Bovinos";
+import Admin from "@/components/admin/Admin";
 
 import Masterclass from "@/components/masterclass/Masterclass";
 import { ShowOnLogin, ShowOnLogout } from "@/components/HiddenLink";
+import AdminOnlyRoute from "@/components/AdminOnlyRoute";
 
 import Terms from "@/components/TermsOfServices";
 import Privacy from "@/components/PrivacyPolicy";
@@ -74,6 +76,14 @@ const App = () => {
                 <ShowOnLogin>
                   <BovinosLayout darkMode={darkMode} />
                 </ShowOnLogin>
+              }
+            />
+            <Route
+              path="/admin/*"
+              element={
+                <AdminOnlyRoute>
+                  <Admin darkMode={darkMode} />
+                </AdminOnlyRoute>
               }
             />
 

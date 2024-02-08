@@ -14,6 +14,7 @@ import { SET_ACTIVE_USER, REMOVE_ACTIVE_USER } from "@/redux/slice/authSlice";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "@/configFirebase";
 import { ShowOnLogin, ShowOnLogout } from "@/components/HiddenLink";
+import { AdminOnlyLink } from "@/components/AdminOnlyRoute";
 
 const Navbar = ({ darkMode, setDarkMode }) => {
   /* firebase logic */
@@ -102,6 +103,11 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                       alt=""
                     />
                   </NavLink>
+                  <AdminOnlyLink>
+                    <NavLink to="/admin">
+                      <button className={`${styles.button}`}>Admin</button>
+                    </NavLink>
+                  </AdminOnlyLink>
                 </div>
               </div>
               <div className="hidden lg:flex items-center">
