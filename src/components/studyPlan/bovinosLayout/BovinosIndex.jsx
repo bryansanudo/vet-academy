@@ -438,6 +438,16 @@ const BovinosIndex = ({ darkMode }) => {
             }
           />
         ))}
+        <Route
+          path="/"
+          element={
+            <VideoComponent
+              darkMode={darkMode}
+              title="Conceptos generales de bienestar animal en bovinos."
+              module="Bienestar Animal"
+            />
+          }
+        />
       </Routes>
     </section>
   );

@@ -8,23 +8,24 @@ import { NavLink } from "react-router-dom";
 
 const Admin = () => {
   return (
-    <div className="pt-24 md:pt-0 md:grid md:grid-cols-5 h-screen mt-20">
-      <div className="md:mt-24 bg-red-500 cols-span-1 ">
-        <h3 className="text-blue-500">Navegacion Admin</h3>
+    <div className="flex flex-col md:flex-row ">
+      <div className="  bg-red-500 mt-60 w-[300px] ">
+        <h3 className="text-blue-500 ">Navegacion Admin</h3>
         {/* <NavLink to="register-user">
           <div>Registrar Usuario</div>
         </NavLink> */}
-        <NavLink to="search-user">
-          <div>Buscar Usuario</div>
+        <NavLink to="enrollment-user">
+          <div>Matricular Usuario</div>
         </NavLink>
         <NavLink to="all-users">
-          <div>Todos los usuarios</div>
+          <div>Todos los Inscritos</div>
         </NavLink>
       </div>
-      <div className="col-span-4">
+      <div className="w-full bg-green-500">
         <Routes>
           <Route path="register-user" element={<RegisterUser />} />
-          <Route path="search-user" element={<SearchOrCreate />} />
+          <Route path="enrollment-user" element={<SearchOrCreate />} />
+          <Route path="/" element={<AllUsers />} />
           <Route path="all-users" element={<AllUsers />} />
           <Route path="edit-user/:id" element={<EditUser />} />
         </Routes>

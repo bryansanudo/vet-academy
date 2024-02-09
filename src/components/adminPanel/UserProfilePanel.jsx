@@ -105,7 +105,7 @@ const UserProfilePanel = ({ userData, onReturn }) => {
               <label htmlFor={course}>{course}</label>
             </div>
           ))}
-          <button>Actualizar Usuario</button>
+          <button>Matricular Usuario</button>
         </form>
       </div>
     </>

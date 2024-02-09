@@ -70,11 +70,11 @@ const AllUsers = () => {
         <p>No users found.</p>
       ) : (
         <div className=" mt-60">
-          {users.map((user, index) => {
-            const { email, name, title, courses } = user;
-            return (
-              <div key={email} className="flex flex-col my-10  ">
-                <div className=" border-black bg-blue-500 w-[400px]   ">
+          <div className="grid grid-cols-4 gap-20">
+            {users.map((user, index) => {
+              const { email, name, title, courses } = user;
+              return (
+                <div key={email} className=" border-black bg-blue-500    ">
                   <div>{email}</div>
                   <div>{name}</div>
                   <div>{title}</div>
@@ -86,9 +86,9 @@ const AllUsers = () => {
                     className="cursor-pointer text-2xl text-red-500"
                   />
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       )}
     </>
