@@ -13,7 +13,7 @@ const Hero = () => {
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
       id="home"
-      className={`flex md:flex-row flex-col ${styles.paddingY}  h-screen md:mt-0 mt-24 `}
+      className={`flex md:flex-row flex-col ${styles.paddingY} md:mb-40  mt-24 `}
     >
       <div
         className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}
@@ -34,12 +34,12 @@ const Hero = () => {
 
       <motion.div
         variants={fadeIn("left", "spring", 0.3, 2.5)}
-        className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}
+        className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 mx-6 relative`}
       >
         <img
           src={about}
           alt="billing"
-          className="lg:w-[800px] h-[100%] w-[400px]  object-contain relative z-[5]"
+          className="md:h-[80%] h-[30%] rounded-3xl   object-contain relative z-[5]"
         />
 
         {/* gradient start */}

@@ -12,7 +12,7 @@ const About = ({ darkMode }) => {
   }, []);
   return (
     <>
-      <div className={`dark:bg-accent  ${styles.flexStart} `}>
+      <div className={`dark:bg-accent  ${styles.flexStart} mt-10`}>
         <div className={`${styles.boxWidth}`}>
           <HeroAbout darkMode={darkMode} />
         </div>

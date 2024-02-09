@@ -23,7 +23,8 @@ const cards = [
     id: 3,
     img: <MdOutlineMailOutline />,
     title: "Email",
-    subtitle: "vet.academyeducacion@gmail.com",
+    subtitle: "vet.academyeducacion",
+    subtitle2: "@gmail.com",
   },
   {
     id: 4,
@@ -66,7 +67,11 @@ const Contact = ({ darkMode }) => {
 
         <section id="clients" className={` ${styles.flexCenter} mb-40 `}>
           <div className="flex md:flex-row flex-col  w-full gap-12">
-            <form className=" w-full">
+            <form
+              className=" w-full"
+              action="https://getform.io/f/ed40c191-f17c-4c28-89df-09303f63e007"
+              method="POST"
+            >
               <div
                 className={`flex   ${
                   darkMode
@@ -84,7 +89,7 @@ const Contact = ({ darkMode }) => {
                     <input
                       type="text"
                       required
-                      name="Name"
+                      name="Nombre"
                       autoComplete="off"
                       className={` h-10 rounded-[10px] ${
                         darkMode ? " " : " border-black  "
@@ -100,7 +105,7 @@ const Contact = ({ darkMode }) => {
                     <input
                       type="text"
                       required
-                      name="Last Name"
+                      name="Apellido"
                       autoComplete="off"
                       className={` h-10 rounded-[10px] ${
                         darkMode ? " " : " border-black  "
@@ -118,7 +123,7 @@ const Contact = ({ darkMode }) => {
                     <input
                       type="text"
                       required
-                      name="Name"
+                      name="Email"
                       autoComplete="off"
                       className={` h-10 rounded-[10px] ${
                         darkMode ? " " : " border-black  "
@@ -134,7 +139,7 @@ const Contact = ({ darkMode }) => {
                     <input
                       type="text"
                       required
-                      name="Last Name"
+                      name="Telefono"
                       autoComplete="off"
                       className={` h-10 rounded-[10px] ${
                         darkMode ? " " : " border-black  "
@@ -147,10 +152,10 @@ const Contact = ({ darkMode }) => {
                   <label
                     className={` flex items-center justify-start mb-1  ${styles.title} `}
                   >
-                    Mensaje
+                    Preguntas
                   </label>
                   <textarea
-                    name="Questions"
+                    name="Preguntas"
                     rows="3"
                     required
                     autoComplete="off"
@@ -169,7 +174,7 @@ const Contact = ({ darkMode }) => {
             </form>
 
             <div className="grid md:grid-cols-2 grid-cols-1   rounded-[20px]   md:gap-6 gap-4   w-full  ">
-              {cards.map(({ id, img, title, subtitle }) => (
+              {cards.map(({ id, img, title, subtitle, subtitle2 }) => (
                 <div
                   key={id}
                   className={`flex flex-col  px-4 rounded-[20px] items-center justify-center text-center ${
@@ -186,6 +191,7 @@ const Contact = ({ darkMode }) => {
                   <p className={`${styles.title}`}>{title}</p>
 
                   <div className={`${styles.subtitle}`}>{subtitle}</div>
+                  <div className={`${styles.subtitle}`}>{subtitle2}</div>
                 </div>
               ))}
             </div>

@@ -4,9 +4,8 @@ import { motion } from "framer-motion";
 import { staggerContainer, zoomIn } from "@/utils/motion";
 
 const images = [
-  "https://i.ibb.co/M1cJkyt/Foto-2024-02-02-09-25-09-a-m.jpg",
-  "https://i.ibb.co/zbv0WPw/IMG-5083.jpg",
-  "https://i.ibb.co/LY26469/about-us-2.jpg",
+  "https://i.ibb.co/kDyWP33/2-Mesa-de-trabajo-1.png",
+  "https://i.ibb.co/LpgVxCy/Sin-t-tulo-1-Mesa-de-trabajo-1.png",
 ];
 
 function preloadImages(urls) {
@@ -38,7 +37,7 @@ const HeroHome = () => {
   return (
     <>
       <div className="hero min-h-[100vh]" style={currentImageStyle}>
-        <div className="hero-overlay bg-black opacity-30" />
+        {/* <div className="hero-overlay bg-black opacity-30" /> */}
         <div className="hero-content text-center text-white">
           <motion.div
             variants={staggerContainer()}
