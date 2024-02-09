@@ -15,9 +15,9 @@ const Metodology = () => {
         <span className="cursor-pointer text-primary font-bold">
           <a href=""></a>www.vetacademy.com.co
         </span>
-        , donde podrá ver las grabaciones de las clases, material de apoyo y
-        demás, podrá acceder desde cualquier lugar del mundo, desde cualquier
-        navegador y estará a su disposición 24/7.
+        , donde podrás ver las grabaciones de las clases, material de apoyo y
+        demás acceder desde cualquier lugar del mundo, desde cualquier navegador
+        y estará a su disposición 24/7.
       </div>
       <div className={`${styles.subtitle} mb-6 w-full`}>
         <div>
