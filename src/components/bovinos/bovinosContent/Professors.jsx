@@ -88,7 +88,7 @@ const Professors = ({ darkMode }) => (
     <h2 className={`${styles.heading3} w-full text-primary  text-center `}>
       Docentes del curso
     </h2>
-    <div className="w-full h-[1px] bg-gray-200" />
+    <div className="w-full h-[1px] bg-gray-200 mb-6" />
 
     <div className="flex flex-wrap sm:justify-start justify-center w-full  relative z-[1]">
       <motion.div className="flex flex-col items-center justify-center mx-auto ">

@@ -16,7 +16,7 @@ const VideoComponent = ({ title, module, darkMode, id }) => {
           } shadow-lg rounded-xl mt-10`}
           width="100%"
           height="400"
-          src="https://www.youtube.com/embed/-zbghXtvxuE"
+          /* src="https://www.youtube.com/embed/-zbghXtvxuE" */
           frameBorder="0"
           allow="autoplay; encrypted-media; fullscreen"
           allowFullScreen

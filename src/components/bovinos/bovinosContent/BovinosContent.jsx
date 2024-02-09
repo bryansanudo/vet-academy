@@ -31,7 +31,7 @@ const BovinosContent = ({ darkMode }) => (
         <CourseIncludes />
         <TargetPublic />
         <StudyPlan darkMode={darkMode} />
-        <Evaluation />
+
         <Professors darkMode={darkMode} />
       </motion.div>
     </div>
