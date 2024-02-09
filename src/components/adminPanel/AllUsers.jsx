@@ -69,8 +69,11 @@ const AllUsers = () => {
       {users.length === 0 ? (
         <p>No users found.</p>
       ) : (
-        <div className=" mt-60">
-          <div className="grid grid-cols-4 gap-20">
+        <>
+          <h2 className="bg-red-500 flex items-center justify-center">
+            titulo
+          </h2>
+          <div className="grid grid-cols-3 gap-20">
             {users.map((user, index) => {
               const { email, name, title, courses } = user;
               return (
@@ -90,7 +93,7 @@ const AllUsers = () => {
               );
             })}
           </div>
-        </div>
+        </>
       )}
     </>
   );
