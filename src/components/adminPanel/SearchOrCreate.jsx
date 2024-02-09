@@ -57,7 +57,8 @@ const SearchOrCreate = () => {
             className="flex flex-col gap-6 w-[300px] lg:w-[500px] items-center shadow-lg shadow-gray-500 rounded-xl p-8 mt-16 "
           >
             <input
-              type="text"
+              type="email"
+              required
               placeholder="Correo"
               className="input  input-primary  w-full"
               onChange={(e) => setEmail(e.target.value)}

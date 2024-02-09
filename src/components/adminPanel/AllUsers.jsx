@@ -78,6 +78,7 @@ const AllUsers = () => {
                   <div>{email}</div>
                   <div>{name}</div>
                   <div>{title}</div>
+                  <p>Cursos: {courses.join(", ")}</p>
                   <Link to={`/admin/edit-user/${email}`}>
                     <FaEdit className="text-2xl text-green-500" />
                   </Link>
