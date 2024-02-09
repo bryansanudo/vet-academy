@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import { selectEmail } from "@/redux/slice/authSlice";
 import UserProfilePanel from "./UserProfilePanel"; // Importa el componente UserProfilePanel
 import { useNavigate } from "react-router-dom";
+import styles from "@/style";
 
 const SearchOrCreate = () => {
   const [userData, setUserData] = useState({});
@@ -46,15 +47,13 @@ const SearchOrCreate = () => {
   };
 
   return (
-    <div>
+    <div className="flex">
       {showForm ? (
-        <div className="flex flex-col items-center justify-center mx-auto pt-10 ">
-          <h2 className="font-bold text-4xl text-center text-transparent bg-clip-text  bg-gradient-to-r from-[#ffcdc2] to-[#6057ca] hover:from-[#6057ca] hover:to-[#ffcdc2] transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 md:text-5xl p-2">
-            Registrate
-          </h2>
+        <div className="flex flex-col items-center mx-auto   ">
+          <h2 className="">Matricular Usuario</h2>
           <form
             onSubmit={fetch}
-            className="flex flex-col gap-6 w-[300px] lg:w-[500px] items-center shadow-lg shadow-gray-500 rounded-xl p-8 mt-16 "
+            className="flex flex-col gap-6 w-[300px] lg:w-[500px] items-center shadow-lg shadow-gray-500 rounded-xl p-8 mt-10 "
           >
             <input
               type="email"
@@ -64,8 +63,10 @@ const SearchOrCreate = () => {
               onChange={(e) => setEmail(e.target.value)}
             />
 
-            <button className="btn btn-secondary capitalize w-full">
-              Crear documento
+            <button
+              className={`${styles.button} w-full items-center justify-center`}
+            >
+              Matricular
             </button>
           </form>
         </div>

@@ -70,11 +70,11 @@ const AllUsers = () => {
     <>
       {isLoading && <Loader />}
       {users.length === 0 ? (
-        <p>No users found.</p>
+        <div className="h-screen">Cargando...</div>
       ) : (
         <>
-          <h2 className="flex items-center  justify-center mb-6">titulo</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-20">
+          {/* <h2 className="flex items-center  justify-center mb-6">titulo</h2> */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-20 h-screen ">
             {users.map((user, index) => {
               const { email, name, title, courses } = user;
 
@@ -91,7 +91,6 @@ const AllUsers = () => {
                   </div>
                   <div className=" flex items-center justify-center flex-col mt-4">
                     <div className="text-lg">{name}</div>
-                    {/* <div className="  text-md ">{title}</div> */}
                   </div>
 
                   <div className="shadow-sm shadow-gray-400 p-1 rounded-lg my-4">

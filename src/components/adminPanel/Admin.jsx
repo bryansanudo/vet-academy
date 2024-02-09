@@ -13,7 +13,7 @@ import { BsPersonAdd } from "react-icons/bs";
 
 const Admin = () => {
   return (
-    <div className="flex flex-col items-center absolute w-full   bg-gray-100   z-50 ">
+    <div className="flex flex-col items-center absolute w-full  bg-white     z-50 ">
       <div className=" bg-gray-400 h-20   fixed flex items-center justify-between z-50 w-full md:px-24 px-6  ">
         <NavLink to="/">
           <div className="flex flex-col items-center justify-center hover:scale-110 duration-500 text-black ">
@@ -36,8 +36,8 @@ const Admin = () => {
           </div>
         </NavLink>
       </div>
-      <div className="w-full md:px-20 px-6   ">
-        <div className="w-full  mt-40 mb-20  ">
+      <div className="w-full md:px-20 px-6 h-screen    ">
+        <div className="w-full  mt-40 mb-20 h-screen   ">
           <Routes>
             <Route path="register-user" element={<RegisterUser />} />
             <Route path="enrollment-user" element={<SearchOrCreate />} />

@@ -3,6 +3,9 @@ import { db } from "@/configFirebase";
 import { toast } from "react-toastify";
 import { doc, setDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
+import { FaUserDoctor } from "react-icons/fa6";
+import { GoDot } from "react-icons/go";
+import styles from "@/style";
 
 const availableCourses = [
   "bovinos",
@@ -58,55 +61,69 @@ const UserProfilePanel = ({ userData, onReturn }) => {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center mx-auto pt-10">
-        <h2 className="font-bold text-4xl text-center text-transparent bg-clip-text bg-gradient-to-r from-[#ffcdc2] to-[#6057ca] hover:from-[#6057ca] hover:to-[#ffcdc2] transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 md:text-5xl p-2">
-          Panel de Usuario
-        </h2>
-        <h2 onClick={handleReturn} className="cursor-pointer">
-          Volver
-        </h2>
-        <div className="flex flex-col gap-6 w-[300px] lg:w-[500px] items-center shadow-lg shadow-gray-500 rounded-xl p-8 mt-16">
-          <p>Correo: {updateUser.email}</p>
-          <p>Nombre: {updateUser.name}</p>
-          <p>Titulo: {updateUser.title}</p>
-          <p>Cursos: {updateUser.courses.join(", ")}</p>
-        </div>
-      </div>
-      <div className="bg-green-500">
-        <form onSubmit={editUser}>
-          <label className="w-full text-left">Nombre del usuario</label>
-          <input
-            required
-            type="text"
-            className="input input-primary text-lg input-md w-full"
-            name="name"
-            value={updateUser.name}
-            onChange={(e) => handleInputChange(e)}
-          />
-          <label className="w-full text-left">Titulo</label>
-          <input
-            required
-            type="text"
-            className="input input-primary text-lg input-md w-full"
-            name="title"
-            value={updateUser.title}
-            onChange={(e) => handleInputChange(e)}
-          />
-          <label className="w-full text-left">Cursos</label>
-          {availableCourses.map((course) => (
-            <div key={course}>
-              <input
-                type="checkbox"
-                id={course}
-                name={course}
-                checked={updateUser.courses.includes(course)}
-                onChange={() => handleCourseChange(course)}
-              />
-              <label htmlFor={course}>{course}</label>
+      <div className=" flex flex-col-reverse  md:flex-row gap-6 w-full ">
+        <div className="flex flex-col items-center justify-center mx-auto pt-10  md:w-[50%] ">
+          <div
+            key={updateUser.email}
+            className="flex flex-col items-center justify-between shadow-sm shadow-black rounded-xl  pt-4 p-6  "
+          >
+            <div className="flex items-center justify-center gap-4">
+              <div className="">{updateUser.email}</div>
+              <div className="flex items-center justify-center p-2 bg-primary  mask mask-circle ">
+                <FaUserDoctor className="text-2xl text-white" />
+              </div>
             </div>
-          ))}
-          <button>Matricular Usuario</button>
-        </form>
+            <div className=" flex items-center justify-center flex-col mt-4">
+              <div className="text-lg">{updateUser.name}</div>
+            </div>
+
+            <div className="shadow-sm shadow-gray-400 p-1 rounded-lg my-4">
+              <div>
+                {updateUser.courses.map((course, i) => (
+                  <div key={i} className="flex items-center">
+                    <GoDot />
+                    <div>{course}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="w-full">
+          <form
+            onSubmit={editUser}
+            className="flex flex-col gap-6 max-w-[900px] items-center shadow-lg shadow-gray-500 rounded-xl p-8 mt-10"
+          >
+            <label className="w-full text-left">Nombre del usuario</label>
+            <input
+              required
+              type="text"
+              className="input input-primary text-lg input-md w-full"
+              name="name"
+              value={updateUser.name}
+              onChange={(e) => handleInputChange(e)}
+            />
+
+            <label className="w-full text-left">Cursos</label>
+            <div className=" w-full grid  grid-cols-1 md:grid-cols-4">
+              {availableCourses.map((course) => (
+                <div key={course} className="flex items-center justify-center">
+                  <input
+                    type="checkbox"
+                    id={course}
+                    name={course}
+                    checked={updateUser.courses.includes(course)}
+                    onChange={() => handleCourseChange(course)}
+                  />
+                  <label className="ml-2" htmlFor={course}>
+                    {course}
+                  </label>
+                </div>
+              ))}
+            </div>
+            <button>Matricular Usuario</button>
+          </form>
+        </div>
       </div>
     </>
   );
