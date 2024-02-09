@@ -28,7 +28,7 @@ const DropdownFaq = ({ darkMode }) => {
       question:
         "¿Qué requisitos debo cumplir para participar en los cursos de educación veterinaria?",
       answer:
-        "Los requisitos varían según el curso específico, pero en general, la mayoría de nuestros cursos están abiertos a estudiantes con interés en el campo de la veterinaria. Algunos cursos pueden requerir ciertos conocimientos previos o experiencia en el campo.",
+        "Los requisitos varían según el curso específico, pero en general, la mayoría de nuestros cursos están dirigidos a médicos veterinarios y estudiantes con interés en el campo de la veterinaria.",
     },
     {
       id: 5,
