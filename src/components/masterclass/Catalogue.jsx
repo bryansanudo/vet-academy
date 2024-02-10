@@ -6,7 +6,8 @@ import { useEffect } from "react";
 
 import curso1 from "@/assets/masterclass/gratuito1.png";
 import curso2 from "@/assets/masterclass/gratuito2.png";
-import { Link } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
+import VideoComponent from "@/components/studyPlan/bovinosLayout/VideoComponent";
 
 const Catalogue = ({ darkMode }) => {
   const masterclass = [
@@ -16,7 +17,7 @@ const Catalogue = ({ darkMode }) => {
       logo: logo,
       title: "Lipidosis hepática",
       subtitle: "Descripcion del curso 1",
-      link: "/contact",
+      link: "lipidosis",
       price: "350.000",
     },
     {
@@ -25,7 +26,7 @@ const Catalogue = ({ darkMode }) => {
       logo: logo,
       title: "Distemper canino",
       subtitle: "Descripcion del curso 2",
-      link: "/contact",
+      link: "distemper",
       price: "350.000",
       italic: "italic",
     },
@@ -64,20 +65,38 @@ const Catalogue = ({ darkMode }) => {
               <figure className="relative">
                 <img src={img} alt="Shoes" />
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                  <Link to="/contact">
+                  <Link to={link}>
                     <button className={`${styles.button} `}>
-                      Más Información
+                      Ver la clase
                     </button>
                   </Link>
                 </div>
               </figure>
               <div className="card-body">
                 <h2 className={` ${styles.title} ${italic} `}>{title}</h2>
-                <p className={`${styles.subtitle}`}>{subtitle}</p>
               </div>
             </div>
           )
         )}
+      </div>
+      <div className="w-full">
+        <Routes>
+          <Route
+            path="lipidosis"
+            element={
+              <VideoComponent darkMode={darkMode} module="Lipidosis Hepática" />
+            }
+          />
+          <Route
+            path="distemper"
+            element={
+              <VideoComponent
+                darkMode={darkMode}
+                distemper="Distemper Canino"
+              />
+            }
+          />
+        </Routes>
       </div>
     </section>
   );
