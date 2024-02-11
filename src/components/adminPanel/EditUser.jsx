@@ -5,10 +5,19 @@ import { toast } from "react-toastify";
 import { useNavigate, useParams } from "react-router-dom";
 
 const availableCourses = [
-  "bovinos",
-  "manejo del paciente",
-  "infecciones",
-  "enfermedades",
+  "Bovinos",
+  "Manejo del dolor en caninos y felinos",
+  "Etología en la clínica diaria",
+  "Oftalmología",
+  "Endocrinología",
+  "Oncología",
+  "Hospitalización",
+  "Enfermedades infecciosas",
+  "Emergencias veterinarias",
+  "Enfermería",
+  "Paciente crítico",
+  "Mascotas exóticas",
+  "Resistencia microbiana",
 ];
 
 const EditUser = () => {

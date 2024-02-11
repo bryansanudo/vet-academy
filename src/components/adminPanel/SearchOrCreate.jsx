@@ -50,7 +50,7 @@ const SearchOrCreate = () => {
     <div className="flex">
       {showForm ? (
         <div className="flex flex-col items-center mx-auto   ">
-          <h2 className="">Matricular Usuario</h2>
+          <h2 className={`${styles.adminTitle}`}>Matricular Usuario</h2>
           <form
             onSubmit={fetch}
             className="flex flex-col gap-6 w-[300px] lg:w-[500px] items-center shadow-lg shadow-gray-500 rounded-xl p-8 mt-10 "

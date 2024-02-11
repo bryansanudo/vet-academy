@@ -19,8 +19,8 @@ const StudyPlan = ({ darkMode }) => {
             className={`
                pink__gradient absolute z-[0] w-[50%] h-[50%] -left-1/2 bottom-0 rounded-full `}
           />
-          <AvailableCourses darkMode={darkMode} />
-          {/* <ProtectedCourses darkMode={darkMode} /> */}
+          {/* <AvailableCourses darkMode={darkMode} /> */}
+          <ProtectedCourses darkMode={darkMode} />
         </div>
       </div>
     </>

@@ -12,6 +12,8 @@ const styles = {
     "font-poppins font-normal  text-[18px] leading-[30.8px] max-w-[600px] dark:text-dimWhite mt-5",
   title: "font-semibold dark:text-white  text-[18px] leading-[23.4px] ",
   subtitle: "font-normal dark:text-dimWhite text-[16px] leading-[24px]",
+  adminTitle: "font-semibold text-black  text-[18px] leading-[23.4px]",
+  adminSubtitle: "font-normal text-black text-[16px] leading-[24px]",
 
   flexCenter: "flex justify-center items-center",
   flexStart: "flex justify-center items-start",
