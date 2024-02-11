@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { db } from "@/configFirebase";
-import { toast } from "react-toastify";
 import { doc, getDoc, setDoc } from "firebase/firestore";
+import { toast } from "react-toastify";
 import { useNavigate, useParams } from "react-router-dom";
 
 const availableCourses = [

@@ -63,7 +63,7 @@ const App = () => {
             <Route path="/login" element={<Login darkMode={darkMode} />} />
 
             <Route
-              path="/study-plan"
+              path="/study-plan/*"
               element={
                 <ShowOnLogin>
                   <StudyPlan darkMode={darkMode} />

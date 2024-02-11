@@ -24,7 +24,6 @@ import curso12 from "@/assets/courses/curso-12.png";
 import curso13 from "@/assets/courses/curso-13.png";
 
 const AvailableCourses = ({ darkMode }) => {
-  const [language, setLanguage] = useState("en");
   const courses = [
     {
       id: 6,
