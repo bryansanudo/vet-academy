@@ -6,6 +6,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import styles from "@/style";
 import { GoDot } from "react-icons/go";
 import { FaUserDoctor } from "react-icons/fa6";
+import LoaderAdmin from "@/components/LoaderAdmin";
 const availableCourses = [
   "Bovinos",
   "Manejo del dolor en caninos y felinos",
@@ -25,7 +26,7 @@ const availableCourses = [
 const EditUser = () => {
   const { id } = useParams();
   const redirect = useNavigate();
-
+  const [isLoading, setIsLoading] = useState(false);
   const [userData, setUserData] = useState({
     name: "",
     phone: "",
@@ -44,10 +45,11 @@ const EditUser = () => {
 
   useEffect(() => {
     async function fetch() {
+      setIsLoading(true);
       const response = await getUserData(id);
-      console.log(response);
+      setIsLoading(false);
+
       setUserData(response);
-      console.log(userData);
     }
 
     fetch();
@@ -74,18 +76,21 @@ const EditUser = () => {
 
   const editUser = async (e) => {
     e.preventDefault();
-
+    setIsLoading(true);
     try {
       await setDoc(doc(db, "users", id), { ...userData });
       toast.success("Usuario actualizado con éxito");
+      setIsLoading(false);
       redirect("/admin/all-users");
     } catch (error) {
       toast.error(error.message);
+      setIsLoading(false);
     }
   };
 
   return (
     <>
+      {isLoading && <LoaderAdmin />}
       <div className=" flex flex-col-reverse  md:flex-row gap-6 w-full ">
         <div className="flex flex-col items-center justify-center    md:w-[50%]  ">
           <div

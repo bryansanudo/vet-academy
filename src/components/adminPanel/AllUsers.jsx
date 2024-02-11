@@ -9,6 +9,7 @@ import {
   deleteDoc,
   doc,
 } from "firebase/firestore";
+import LoaderAdmin from "@/components/LoaderAdmin";
 import { deleteObject, ref } from "firebase/storage";
 import { Link } from "react-router-dom";
 import { FaEdit, FaTrashAlt } from "react-icons/fa";
@@ -68,9 +69,9 @@ const AllUsers = () => {
   };
   return (
     <>
-      {isLoading && <Loader />}
       {users.length === 0 ? (
-        <div className="h-screen"></div>
+        /*  <div className="h-screen">Cargando...</div> */
+        <LoaderAdmin />
       ) : (
         <>
           {/* <h2 className="flex items-center  justify-center mb-6">titulo</h2> */}
