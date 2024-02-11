@@ -3,7 +3,7 @@ import styles from "@/style";
 import { useSelector } from "react-redux";
 import { selectEmail } from "@/redux/slice/authSlice";
 import { db } from "@/configFirebase";
-import { doc, getDoc, setDoc } from "firebase/firestore";
+import { doc, getDoc } from "firebase/firestore";
 import { Link, Route, Routes } from "react-router-dom";
 import CourseComponent from "@/components/studyPlan/CourseComponent";
 
@@ -68,7 +68,7 @@ const ProtectedCourses = ({ darkMode }) => {
               <Route
                 key={index}
                 path={course}
-                element={<CourseComponent title={course} />}
+                element={<CourseComponent id={course} />}
               />
             ))}
           </Routes>
