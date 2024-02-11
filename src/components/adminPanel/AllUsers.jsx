@@ -37,10 +37,10 @@ const AllUsers = () => {
 
   const confirmDelete = (id) => {
     Notiflix.Confirm.show(
-      "Delete User!!!",
-      "You are about to delete this product",
-      "Delete",
-      "Cancel",
+      "Borrar Usuario!!!",
+      "Se eliminara toda la información del usuario",
+      "Borrar",
+      "Cancelar",
       function okCb() {
         deleteUser(id);
       },
@@ -48,10 +48,10 @@ const AllUsers = () => {
         console.log("Delete Canceleded");
       },
       {
-        width: "320px",
+        width: "400px",
         borderRadius: "4px",
-        titleColor: "orangered",
-        okButtonBackground: "orangeRed",
+        titleColor: "#1E73BE",
+        okButtonBackground: "#F80013",
         cssAnimationStyle: "zoom",
       }
     );
@@ -70,13 +70,13 @@ const AllUsers = () => {
     <>
       {isLoading && <Loader />}
       {users.length === 0 ? (
-        <div className="h-screen">Cargando...</div>
+        <div className="h-screen"></div>
       ) : (
         <>
           {/* <h2 className="flex items-center  justify-center mb-6">titulo</h2> */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-20 h-screen ">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-20  ">
             {users.map((user, index) => {
-              const { email, name, title, courses } = user;
+              const { email, name, phone, courses } = user;
 
               return (
                 <div
@@ -84,13 +84,14 @@ const AllUsers = () => {
                   className="flex flex-col items-center justify-between shadow-sm shadow-black rounded-xl  pt-4   "
                 >
                   <div className="flex items-center justify-center gap-4">
-                    <div className="">{email}</div>
+                    <div className={`${styles.adminTitle}`}>{email}</div>
                     <div className="flex items-center justify-center p-2 bg-primary  mask mask-circle ">
                       <FaUserDoctor className="text-2xl text-white" />
                     </div>
                   </div>
                   <div className=" flex items-center justify-center flex-col mt-4">
-                    <div className="text-lg">{name}</div>
+                    <div className={`${styles.adminTitle}`}>{name}</div>
+                    <div className="text-lg">{phone}</div>
                   </div>
 
                   <div className="shadow-sm shadow-gray-400 p-1 rounded-lg my-4">
@@ -122,6 +123,7 @@ const AllUsers = () => {
               );
             })}
           </div>
+          <div className=" h-52 " />
         </>
       )}
     </>

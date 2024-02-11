@@ -69,90 +69,88 @@ const UserProfilePanel = ({ userData, onReturn }) => {
   };
 
   return (
-    <>
-      <div className=" flex flex-col-reverse  md:flex-row gap-6 w-full ">
-        <div className="flex flex-col items-center justify-center    md:w-[50%]  ">
-          <div
-            key={updateUser.email}
-            className="flex flex-col items-center justify-between shadow-sm h-full shadow-black rounded-xl  pt-4 p-6 w-full  "
-          >
-            <div className="flex items-center justify-center gap-4">
-              <div className={`${styles.adminTitle}`}>{updateUser.email}</div>
-              <div className="flex items-center justify-center p-2 bg-primary  mask mask-circle ">
-                <FaUserDoctor className="text-2xl text-white" />
-              </div>
-            </div>
-            <div className=" flex items-center justify-center flex-col mt-4">
-              <div className={`${styles.adminTitle}`}>{updateUser.name}</div>
-              <div className="text-lg">{updateUser.phone}</div>
-            </div>
-
-            <div className="shadow-sm shadow-gray-400 p-1 rounded-lg my-4">
-              <div>
-                {updateUser.courses.map((course, i) => (
-                  <div key={i} className="flex items-center">
-                    <GoDot />
-                    <div className="capitalize">{course}</div>
-                  </div>
-                ))}
-              </div>
+    <div className=" flex flex-col-reverse  md:flex-row gap-6 w-full ">
+      <div className="flex flex-col items-center justify-center    md:w-[50%]  ">
+        <div
+          key={updateUser.email}
+          className="flex flex-col items-center justify-between shadow-sm h-full shadow-black rounded-xl  pt-4 p-6 w-full  "
+        >
+          <div className="flex items-center justify-center gap-4">
+            <div className={`${styles.adminTitle}`}>{updateUser.email}</div>
+            <div className="flex items-center justify-center p-2 bg-primary  mask mask-circle ">
+              <FaUserDoctor className="text-2xl text-white" />
             </div>
           </div>
-        </div>
-        <div className="w-full  h-full">
-          <form
-            onSubmit={editUser}
-            className="flex flex-col gap-4 max-w-[900px] items-center shadow-sm shadow-black rounded-xl p-8  "
-          >
-            <label className={`${styles.adminTitle} w-full text-left`}>
-              Nombre
-            </label>
-            <input
-              required
-              type="text"
-              className="input input-primary text-lg input-md w-full"
-              name="name"
-              value={updateUser.name}
-              onChange={(e) => handleInputChange(e)}
-            />
-            <label className={`${styles.adminTitle} w-full text-left`}>
-              Telefono
-            </label>
-            <input
-              required
-              type="text"
-              className="input input-primary text-lg input-md w-full"
-              name="phone"
-              value={updateUser.phone}
-              onChange={(e) => handleInputChange(e)}
-            />
+          <div className=" flex items-center justify-center flex-col mt-4">
+            <div className={`${styles.adminTitle}`}>{updateUser.name}</div>
+            <div className="text-lg">{updateUser.phone}</div>
+          </div>
 
-            <label className={`${styles.adminTitle} w-full text-left`}>
-              Cursos
-            </label>
-            <div className=" w-full grid  grid-cols-1 md:grid-cols-4">
-              {availableCourses.map((course) => (
-                <div key={course} className="flex items-center justify-start">
-                  <input
-                    type="checkbox"
-                    id={course}
-                    name={course}
-                    checked={updateUser.courses.includes(course)}
-                    onChange={() => handleCourseChange(course)}
-                  />
-                  <label className="ml-2 py-1 " htmlFor={course}>
-                    {course}
-                  </label>
+          <div className="shadow-sm shadow-gray-400 p-1 rounded-lg my-4">
+            <div>
+              {updateUser.courses.map((course, i) => (
+                <div key={i} className="flex items-center">
+                  <GoDot />
+                  <div className="capitalize">{course}</div>
                 </div>
               ))}
             </div>
-            <button className={`${styles.button} mt-6`}>
-              Matricular Usuario
-            </button>
-          </form>
+          </div>
         </div>
       </div>
-    </>
+      <div className="w-full  h-full">
+        <form
+          onSubmit={editUser}
+          className="flex flex-col gap-4 max-w-[900px] items-center shadow-sm shadow-black rounded-xl p-8  "
+        >
+          <label className={`${styles.adminTitle} w-full text-left`}>
+            Nombre
+          </label>
+          <input
+            required
+            type="text"
+            className="input input-primary text-lg input-md w-full"
+            name="name"
+            value={updateUser.name}
+            onChange={(e) => handleInputChange(e)}
+          />
+          <label className={`${styles.adminTitle} w-full text-left`}>
+            Telefono
+          </label>
+          <input
+            required
+            type="text"
+            className="input input-primary text-lg input-md w-full"
+            name="phone"
+            value={updateUser.phone}
+            onChange={(e) => handleInputChange(e)}
+          />
+
+          <label className={`${styles.adminTitle} w-full text-left`}>
+            Cursos
+          </label>
+          <div className=" w-full grid  grid-cols-1 md:grid-cols-4">
+            {availableCourses.map((course) => (
+              <div key={course} className="flex items-center justify-start">
+                <input
+                  type="checkbox"
+                  id={course}
+                  name={course}
+                  checked={updateUser.courses.includes(course)}
+                  onChange={() => handleCourseChange(course)}
+                />
+                <label className="ml-2 py-1 " htmlFor={course}>
+                  {course}
+                </label>
+              </div>
+            ))}
+          </div>
+          <button className={`${styles.button} mt-6`}>
+            Actualizar Usuario
+          </button>
+        </form>
+      </div>
+    </div>
   );
 };
 

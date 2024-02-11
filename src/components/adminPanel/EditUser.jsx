@@ -3,7 +3,9 @@ import { db } from "@/configFirebase";
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import { toast } from "react-toastify";
 import { useNavigate, useParams } from "react-router-dom";
-
+import styles from "@/style";
+import { GoDot } from "react-icons/go";
+import { FaUserDoctor } from "react-icons/fa6";
 const availableCourses = [
   "Bovinos",
   "Manejo del dolor en caninos y felinos",
@@ -26,7 +28,7 @@ const EditUser = () => {
 
   const [userData, setUserData] = useState({
     name: "",
-    title: "",
+    phone: "",
     email: "",
     courses: [],
   });
@@ -84,62 +86,87 @@ const EditUser = () => {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center mx-auto pt-10">
-        <h2 className="font-bold text-4xl text-center text-transparent bg-clip-text bg-gradient-to-r from-[#ffcdc2] to-[#6057ca] hover:from-[#6057ca] hover:to-[#ffcdc2] transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 md:text-5xl p-2">
-          Panel de Usuario {id}
-        </h2>
+      <div className=" flex flex-col-reverse  md:flex-row gap-6 w-full ">
+        <div className="flex flex-col items-center justify-center    md:w-[50%]  ">
+          <div
+            key={userData.email}
+            className="flex flex-col items-center justify-between shadow-sm h-full shadow-black rounded-xl  pt-4 p-6 w-full  "
+          >
+            <div className="flex items-center justify-center gap-4">
+              <div className={`${styles.adminTitle}`}>{userData.email}</div>
+              <div className="flex items-center justify-center p-2 bg-primary  mask mask-circle ">
+                <FaUserDoctor className="text-2xl text-white" />
+              </div>
+            </div>
+            <div className=" flex items-center justify-center flex-col mt-4">
+              <div className={`${styles.adminTitle}`}>{userData.name}</div>
+              <div className="text-lg">{userData.phone}</div>
+            </div>
 
-        <div className="flex flex-col gap-6 w-[300px] lg:w-[500px] items-start shadow-lg shadow-gray-500 rounded-xl p-8 mt-16">
-          <p>Correo: {userData.email}</p>
-          <p>Nombre: {userData.name}</p>
-          <p>Titulo: {userData.title}</p>
-          <div>
-            Cursos:
-            {userData.courses && userData.courses.length > 0
-              ? userData.courses.map((course, index) => (
-                  <div key={index}>
-                    <span className="">{course}</span>
+            <div className="shadow-sm shadow-gray-400 p-1 rounded-lg my-4">
+              <div>
+                {userData.courses.map((course, i) => (
+                  <div key={i} className="flex items-center">
+                    <GoDot />
+                    <div className="capitalize">{course}</div>
                   </div>
-                ))
-              : "No hay cursos disponibles"}
+                ))}
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="bg-green-500">
-        <form onSubmit={editUser}>
-          <label className="w-full text-left">Nombre del usuario</label>
-          <input
-            required
-            type="text"
-            className="input input-primary text-lg input-md w-full"
-            name="name"
-            value={userData.name}
-            onChange={(e) => handleInputChange(e)}
-          />
-          <label className="w-full text-left">Titulo</label>
-          <input
-            required
-            type="text"
-            className="input input-primary text-lg input-md w-full"
-            name="title"
-            value={userData.title}
-            onChange={(e) => handleInputChange(e)}
-          />
-          <label className="w-full text-left">Cursos</label>
-          {availableCourses.map((course) => (
-            <div key={course}>
-              <input
-                type="checkbox"
-                id={course}
-                name={course}
-                checked={userData.courses.includes(course)}
-                onChange={() => handleCourseChange(course)}
-              />
-              <label htmlFor={course}>{course}</label>
+        <div className="w-full  h-full">
+          <form
+            onSubmit={editUser}
+            className="flex flex-col gap-4 max-w-[900px] items-center shadow-sm shadow-black rounded-xl p-8  "
+          >
+            <label className={`${styles.adminTitle} w-full text-left`}>
+              Nombre
+            </label>
+            <input
+              required
+              type="text"
+              className="input input-primary text-lg input-md w-full"
+              name="name"
+              value={userData.name}
+              onChange={(e) => handleInputChange(e)}
+            />
+            <label className={`${styles.adminTitle} w-full text-left`}>
+              Telefono
+            </label>
+            <input
+              required
+              type="text"
+              className="input input-primary text-lg input-md w-full"
+              name="phone"
+              value={userData.phone}
+              onChange={(e) => handleInputChange(e)}
+            />
+
+            <label className={`${styles.adminTitle} w-full text-left`}>
+              Cursos
+            </label>
+            <div className=" w-full grid  grid-cols-1 md:grid-cols-4">
+              {availableCourses.map((course) => (
+                <div key={course} className="flex items-center justify-start">
+                  <input
+                    type="checkbox"
+                    id={course}
+                    name={course}
+                    checked={userData.courses.includes(course)}
+                    onChange={() => handleCourseChange(course)}
+                  />
+                  <label className="ml-2 py-1 " htmlFor={course}>
+                    {course}
+                  </label>
+                </div>
+              ))}
             </div>
-          ))}
-          <button>Actualizar Usuario</button>
-        </form>
+            <button className={`${styles.button} mt-6`}>
+              Actualizar Usuario
+            </button>
+          </form>
+        </div>
       </div>
     </>
   );

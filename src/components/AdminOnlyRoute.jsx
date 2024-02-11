@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import { selectEmail } from "@/redux/slice/authSlice";
 import { Link } from "react-router-dom";
+import styles from "@/style";
 const AdminOnlyRoute = ({ children }) => {
   const userEmail = useSelector(selectEmail);
 
@@ -9,12 +10,12 @@ const AdminOnlyRoute = ({ children }) => {
   }
   return (
     <section style={{ height: "80vh" }} className="pt-40">
-      <div className="container">
-        <h2>Permission Denied.</h2>
-        <p>This page can only be view by an Admin user</p>
+      <div className="flex items-center justify-center">
+        <h2>Permisos Denegados</h2>
+        <p>Esta pagina necesita permisos de administrador</p>
         <hr />
         <Link to="/">
-          <button className="btn btn-primary "> &larr; Back To Home</button>
+          <button className={`${styles.button}`}> &larr; Back To Home</button>
         </Link>
       </div>
     </section>

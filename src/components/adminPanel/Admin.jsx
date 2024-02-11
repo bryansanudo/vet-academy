@@ -37,7 +37,7 @@ const Admin = () => {
         </NavLink>
       </div>
       <div className="w-full md:px-20 px-6 h-screen    ">
-        <div className="w-full  mt-40 mb-20 h-screen   ">
+        <div className="w-full  mt-40 mb-20   ">
           <Routes>
             <Route path="register-user" element={<RegisterUser />} />
             <Route path="enrollment-user" element={<SearchOrCreate />} />
