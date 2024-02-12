@@ -15,23 +15,17 @@ const CourseComponent = ({ id }) => {
     return infoDocu;
   };
 
-  useEffect(() => {
+  /*   useEffect(() => {
     async function fetch() {
       const response = await getUserData(id);
       setUserData(response);
     }
     fetch();
-  }, [id]);
-
-  const funciono = () => {
-    console.log(userData.sessions);
-  };
+  }, [id]); */
 
   return (
     <div>
-      CourseComponent
       <h2 className="bg-pink-500">{id}</h2>
-      <h2 onClick={funciono}>funciono</h2>
       <div className="flex flex-col gap-10">
         {userData.sessions.length > 0 ? (
           userData.sessions.map((session) => (
