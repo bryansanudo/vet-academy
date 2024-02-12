@@ -24,7 +24,7 @@ const services = [
         title: "Conceptos generales de bienestar animal en bovinos.",
         date: "Febrero 20",
       },
-      { id: 2, title: "Etologia bovina.", date: "Febrero 21" },
+      { id: 2, title: "Etología bovina.", date: "Febrero 21" },
       { id: 3, title: "Manejo racional de bovinos.", date: "Febrero 27" },
       {
         id: 4,
