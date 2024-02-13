@@ -33,11 +33,15 @@ const CTA = ({ darkMode }) => (
       </div>
 
       <div className={`${styles.flexCenter} sm:ml-10 ml-0 sm:mt-0 mt-10`}>
-        <Link to="/contact">
+        <a
+          href="https://api.whatsapp.com/send?phone=573243291412"
+          className=""
+          target="_blank"
+        >
           <button className={`${styles.button} bg-primary `}>
             ¡Quiero saber más!
           </button>
-        </Link>
+        </a>
       </div>
     </motion.section>
   </motion.div>

@@ -11,7 +11,7 @@ import VideoComponent from "@/components/studyPlan/bovinosLayout/VideoComponent"
 
 const Catalogue = ({ darkMode }) => {
   const masterclass = [
-    {
+    /*  {
       id: 1,
       img: curso1,
       logo: logo,
@@ -19,7 +19,7 @@ const Catalogue = ({ darkMode }) => {
       subtitle: "Descripcion del curso 1",
       link: "lipidosis",
       price: "350.000",
-    },
+    }, */
     {
       id: 2,
       img: curso2,

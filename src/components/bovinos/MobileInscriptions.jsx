@@ -19,11 +19,15 @@ const MobileInscriptions = ({ darkMode }) => {
         </div>
 
         <span className={`font-bold ${styles.title} mt-4 `}>$300 USD</span>
-        <Link to="/contact">
+        <a
+          href="https://api.whatsapp.com/send?phone=573243291412"
+          className=""
+          target="_blank"
+        >
           <button className={`${styles.button} bg-primary my-4`}>
             Inscripciones
           </button>
-        </Link>
+        </a>
       </div>
     </div>
   );
