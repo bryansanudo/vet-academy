@@ -99,21 +99,22 @@ const NavbarTop = ({ displayName }) => {
             {/*  login */}
             <div className="flex items-center justify-center gap-2">
               <ShowOnLogout>
-                <NavLink to="/register" className={activeLink}>
-                  <div
-                    className={`flex items-center justify-center text-white gap-2 cursor-pointer hover:scale-105 duration-500  `}
-                  >
-                    <div>Regístrate</div>
-                  </div>
-                </NavLink>
-              </ShowOnLogout>
-              <div className="bg-white w-[1px] h-6"></div>
-              <ShowOnLogout>
                 <NavLink to="/login" className={activeLink}>
                   <div
                     className={`flex items-center justify-center text-white gap-2 cursor-pointer hover:scale-105 duration-500  `}
                   >
                     <div>Iniciar Sesión</div>
+                  </div>
+                </NavLink>
+                <div className="bg-white w-[1px] h-6"></div>
+              </ShowOnLogout>
+
+              <ShowOnLogout>
+                <NavLink to="/register" className={activeLink}>
+                  <div
+                    className={`flex items-center justify-center text-white gap-2 cursor-pointer hover:scale-105 duration-500  `}
+                  >
+                    <div>Regístrate</div>
                   </div>
                 </NavLink>
               </ShowOnLogout>

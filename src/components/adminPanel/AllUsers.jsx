@@ -46,7 +46,7 @@ const AllUsers = () => {
         deleteUser(id);
       },
       function cancelCb() {
-        console.log("Delete Canceleded");
+        console.log("Borrado Cancelado");
       },
       {
         width: "400px",
@@ -62,7 +62,7 @@ const AllUsers = () => {
     try {
       await deleteDoc(doc(db, "users", id));
 
-      toast.success("product deleted successfully.");
+      toast.success("Usuario eliminado con exito de la base de datos");
     } catch (error) {
       toast.error(error.message);
     }
@@ -77,7 +77,8 @@ const AllUsers = () => {
           {/* <h2 className="flex items-center  justify-center mb-6">titulo</h2> */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-20  ">
             {users.map((user, index) => {
-              const { email, name, phone, courses } = user;
+              const { email, name, phone, country, city, ocupation, courses } =
+                user;
 
               return (
                 <div
@@ -93,6 +94,9 @@ const AllUsers = () => {
                   <div className=" flex items-center justify-center flex-col mt-4">
                     <div className={`${styles.adminTitle}`}>{name}</div>
                     <div className="text-lg">{phone}</div>
+                    <div className="text-lg">{country}</div>
+                    <div className="text-lg">{city}</div>
+                    <div className="text-lg">{ocupation}</div>
                   </div>
 
                   <div className="shadow-sm shadow-gray-400 p-1 rounded-lg my-4">

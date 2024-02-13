@@ -31,6 +31,9 @@ const EditUser = () => {
     name: "",
     phone: "",
     email: "",
+    country: "",
+    city: "",
+    ocupation: "",
     courses: [],
   });
 
@@ -91,7 +94,7 @@ const EditUser = () => {
   return (
     <>
       {isLoading && <LoaderAdmin />}
-      <div className=" flex flex-col-reverse  md:flex-row gap-6 w-full ">
+      <div className=" flex flex-col-reverse  md:flex-row gap-6 w-full  pb-20 ">
         <div className="flex flex-col items-center justify-center    md:w-[50%]  ">
           <div
             key={userData.email}
@@ -106,6 +109,9 @@ const EditUser = () => {
             <div className=" flex items-center justify-center flex-col mt-4">
               <div className={`${styles.adminTitle}`}>{userData.name}</div>
               <div className="text-lg">{userData.phone}</div>
+              <div className="text-lg">{userData.country}</div>
+              <div className="text-lg">{userData.city}</div>
+              <div className="text-lg">{userData.ocupation}</div>
             </div>
 
             <div className="shadow-sm shadow-gray-400 p-1 rounded-lg my-4">
@@ -145,6 +151,39 @@ const EditUser = () => {
               className="input input-primary text-lg input-md w-full"
               name="phone"
               value={userData.phone}
+              onChange={(e) => handleInputChange(e)}
+            />
+            <label className={`${styles.adminTitle} w-full text-left`}>
+              País
+            </label>
+            <input
+              required
+              type="text"
+              className="input input-primary text-lg input-md w-full"
+              name="country"
+              value={userData.country}
+              onChange={(e) => handleInputChange(e)}
+            />
+            <label className={`${styles.adminTitle} w-full text-left`}>
+              Ciudad
+            </label>
+            <input
+              required
+              type="text"
+              className="input input-primary text-lg input-md w-full"
+              name="city"
+              value={userData.city}
+              onChange={(e) => handleInputChange(e)}
+            />
+            <label className={`${styles.adminTitle} w-full text-left`}>
+              Ocupación
+            </label>
+            <input
+              required
+              type="text"
+              className="input input-primary text-lg input-md w-full"
+              name="ocupation"
+              value={userData.ocupation}
               onChange={(e) => handleInputChange(e)}
             />
 

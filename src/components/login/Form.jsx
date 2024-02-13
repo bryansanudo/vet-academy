@@ -107,11 +107,11 @@ const Form = ({ darkMode }) => {
               </div>
             </div>
           </div>
-          <div className=" flex items-center justify-end my-8 ">
+          {/* <div className=" flex items-center justify-end my-8 ">
             <span className="link link-primary">Cambiar Contraseña</span>
-          </div>
+          </div> */}
           <button
-            className={`${styles.button} flex items-center justify-center`}
+            className={`${styles.button} flex items-center justify-center mt-8`}
           >
             Iniciar Sesión
           </button>
