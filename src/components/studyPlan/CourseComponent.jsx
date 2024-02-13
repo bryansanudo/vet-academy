@@ -15,13 +15,13 @@ const CourseComponent = ({ id }) => {
     return infoDocu;
   };
 
-  /*   useEffect(() => {
+  useEffect(() => {
     async function fetch() {
       const response = await getUserData(id);
       setUserData(response);
     }
     fetch();
-  }, [id]); */
+  }, [id]);
 
   return (
     <div>

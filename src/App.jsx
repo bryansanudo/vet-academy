@@ -16,6 +16,7 @@ import Terms from "@/components/TermsOfServices";
 import Privacy from "@/components/PrivacyPolicy";
 
 import Login from "@/components/login/Login";
+import Register from "@/components/register/Register";
 
 import styles from "@/style";
 import { Routes, Route } from "react-router-dom";
@@ -61,6 +62,10 @@ const App = () => {
             <Route path="/faq" element={<Faq darkMode={darkMode} />} />
 
             <Route path="/login" element={<Login darkMode={darkMode} />} />
+            <Route
+              path="/register"
+              element={<Register darkMode={darkMode} />}
+            />
 
             <Route
               path="/study-plan/*"
