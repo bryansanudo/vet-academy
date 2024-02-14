@@ -4,6 +4,9 @@ import { useSelector } from "react-redux";
 import { selectEmail } from "@/redux/slice/authSlice";
 import { db } from "@/configFirebase";
 import { doc, getDoc } from "firebase/firestore";
+import { NavLink, Route, Routes } from "react-router-dom";
+
+import VideoComponent from "@/components/studyPlan/bovinosLayout/VideoComponent";
 
 const CourseComponent = ({ id }) => {
   const [userData, setUserData] = useState({ sessions: [] }); // Inicializa userData con un objeto vacío que tiene un array sessions
@@ -24,21 +27,34 @@ const CourseComponent = ({ id }) => {
   }, [id]);
 
   return (
-    <div>
-      <h2 className="bg-pink-500">{id}</h2>
+    <div className="bg-blue-500 p-4 flex">
+      {/* navegacion */}
       <div className="flex flex-col gap-10">
+        <h2 className="bg-pink-500">{id}</h2>
         {userData.sessions.length > 0 ? (
           userData.sessions.map((session) => (
             <div key={session.id}>
               <h2>{session.title}</h2>
-              <p>ID: {session.id}</p>
-              <p>Módulo: {session.module}</p>
-              <a href={session.link}>Enlace de la clase</a>
+              <NavLink to={session.title}>
+                <h2>-z</h2>
+              </NavLink>
             </div>
           ))
         ) : (
           <p>No hay sesiones disponibles</p>
         )}
+      </div>
+      {/* rutas */}
+      <div className="bg-red-500 w-full">
+        <Routes>
+          {userData.sessions.map(({ id, title, link }) => (
+            <Route
+              key={id}
+              path={title}
+              element={<VideoComponent title={title} src={link} />}
+            />
+          ))}
+        </Routes>
       </div>
     </div>
   );

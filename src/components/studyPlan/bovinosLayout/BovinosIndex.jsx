@@ -157,7 +157,7 @@ const videosComponents = [
   },
   {
     id: 2,
-    title: "Etologia bovina.",
+    title: "Etología bovina.",
     date: "Febrero 21",
     module: "Bienestar Animal",
   },
@@ -363,7 +363,7 @@ const BovinosIndex = ({ darkMode }) => {
       <div
         className={`red__gradient absolute z-[0] w-[30%] h-[60%] -left-[50%] rounded-full  bottom-40`}
       />
-
+      {/* navegacion */}
       <motion.div className="max-w-[400px] border-r-2 pr-4 mx-auto md:mx-10 flex flex-col items-center justify-center  ">
         {services.map(({ id, name, sessions, motionTime }) => (
           <div
@@ -405,7 +405,7 @@ const BovinosIndex = ({ darkMode }) => {
                                 darkMode ? "text-white" : "text-black"
                               } mr-4 mt-[2px] `}
                             >
-                              {title}
+                              <span>{title}</span>
                             </div>
                             <div>
                               <LuFileVideo className="text-2xl hover:scale-105 duration-500 cursor-pointer" />
@@ -422,9 +422,9 @@ const BovinosIndex = ({ darkMode }) => {
           </div>
         ))}
       </motion.div>
-
+      {/* rutas */}
       <Routes>
-        {videosComponents.map(({ id, title, module }) => (
+        {videosComponents.map(({ id, title, module, date }) => (
           <Route
             key={id}
             path={title}
@@ -434,6 +434,7 @@ const BovinosIndex = ({ darkMode }) => {
                 id={id}
                 title={title}
                 module={module}
+                date={date}
               />
             }
           />
@@ -445,6 +446,7 @@ const BovinosIndex = ({ darkMode }) => {
               darkMode={darkMode}
               title="Conceptos generales de bienestar animal en bovinos."
               module="Bienestar Animal"
+              date="Frebrero 20"
             />
           }
         />

@@ -59,44 +59,32 @@ const ProtectedCourses = ({ darkMode }) => {
   return (
     <>
       {isLoading && <Loader />}
-      <section
-        className={`${styles.paddingY} ${styles.flexCenter} flex-col relative `}
-      >
+      <section id="clients" className={`flex flex-col ${styles.paddingY} `}>
         <div
-          className={`  red__gradient absolute z-[0] w-[30%] h-[70%] -right-[50%] rounded-full  bottom-0`}
+          className={`red__gradient absolute z-[0] w-[30%] h-[60%] -left-[50%] rounded-full  bottom-40`}
         />
-        {/* header */}
-        <div className="w-full flex justify-between items-center md:flex-row flex-col sm:mb-16 mb-6 relative z-[1]">
-          <h2 className={styles.heading2}>
-            Mi plan de estudios - {userEmail}
-            <br className="sm:block hidden" />
-          </h2>
-        </div>
-        {/* content */}
-        <div className="bg-green-200">
-          <p>Correo: {userData.email}</p>
 
-          {/*  navegacion */}
-          <div>
-            Cursos:
+        {/* content */}
+
+        {/*  navegacion */}
+        <div className=" bg-yellow-500">
+          {userData.courses.map((course, index) => (
+            <div key={index} className="">
+              <Link to={course}>{course}</Link>
+            </div>
+          ))}
+        </div>
+        {/* rutas */}
+        <div className="bg-green-500 w-full p-4  ">
+          <Routes>
             {userData.courses.map((course, index) => (
-              <div key={index} className="">
-                <Link to={course}>{course}</Link>
-              </div>
+              <Route
+                key={index}
+                path={`${course}/*`}
+                element={<CourseComponent id={course} />}
+              />
             ))}
-          </div>
-          {/* rutas */}
-          <div className="bg-red-500">
-            <Routes>
-              {userData.courses.map((course, index) => (
-                <Route
-                  key={index}
-                  path={course}
-                  element={<CourseComponent id={course} />}
-                />
-              ))}
-            </Routes>
-          </div>
+          </Routes>
         </div>
       </section>
     </>
