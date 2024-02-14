@@ -29,14 +29,14 @@ const Catalogue = ({ darkMode }) => {
       subtitle: "Descripcion del curso 2",
       link: "neonatologia",
     },
-    {
+    /* {
       id: 2,
       img: curso2,
       logo: logo,
       title: "Distemper canino",
       subtitle: "Descripcion del curso 2",
       link: "distemper",
-    },
+    }, */
   ];
 
   useEffect(() => {

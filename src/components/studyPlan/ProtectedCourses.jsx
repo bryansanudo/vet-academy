@@ -75,7 +75,7 @@ const ProtectedCourses = ({ darkMode }) => {
           ))}
         </div>
         {/* rutas */}
-        <div className="bg-green-500 w-full p-4  ">
+        <div className=" w-full  ">
           <Routes>
             {userData.courses.map((course, index) => (
               <Route
