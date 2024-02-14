@@ -42,7 +42,7 @@ const Admin = () => {
           <Routes>
             <Route path="register-user" element={<RegisterUser />} />
             <Route path="enrollment-user" element={<SearchOrCreate />} />
-            <Route path="/" element={<AllUsers />} />
+            <Route path="/" element={<AllUsersList />} />
             <Route path="all-users" element={<AllUsersList />} />
             <Route path="edit-user/:id" element={<EditUser />} />
           </Routes>
