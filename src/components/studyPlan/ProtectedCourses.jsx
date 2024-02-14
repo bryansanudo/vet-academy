@@ -67,7 +67,7 @@ const ProtectedCourses = ({ darkMode }) => {
         {/* content */}
 
         {/*  navegacion */}
-        <div className=" bg-yellow-500">
+        <div className="  flex justify-between py-1 px-6 border-primary border-[1px] rounded-xl">
           {userData.courses.map((course, index) => (
             <div key={index} className="">
               <Link to={course}>{course}</Link>

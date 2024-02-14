@@ -11,18 +11,15 @@ const VideoComponent = ({
   date,
 }) => {
   return (
-    <div className=" w-full mr-10   mt-40 md:mt-0 ">
-      <div className={`${styles.title} mb-20`}> Disponible {date}</div>
-      <div className={`${styles.title}`}>{module}</div>
+    <div className=" w-full  ">
+      <div className={`${styles.title} mb-10`}> Disponible {date}</div>
+
       <div className={`${styles.subtitle} `}>
         <span className="text-primary font-bold mr-2">{id}</span>
         {title}
-
-        <span className={`${styles.title}`}>{distemper}</span>
       </div>
 
       <div className="w-full   ">
-        <h2>{src}</h2>
         <iframe
           className={`${
             darkMode ? "shadow-white" : "shadow-black"

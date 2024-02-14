@@ -7,8 +7,14 @@ import { doc, getDoc } from "firebase/firestore";
 import { NavLink, Route, Routes } from "react-router-dom";
 
 import VideoComponent from "@/components/studyPlan/bovinosLayout/VideoComponent";
+import { LuFileVideo } from "react-icons/lu";
 
-const CourseComponent = ({ id }) => {
+const CourseComponent = ({ id, darkMode }) => {
+  const scroltop = () => {
+    window.scrollTo(0, 0);
+  };
+  const activeLink = ({ isActive }) =>
+    isActive ? " border border-primary m-4 p-1 rounded-xl" : "";
   const [userData, setUserData] = useState({ sessions: [] }); // Inicializa userData con un objeto vacío que tiene un array sessions
 
   const getUserData = async (id) => {
@@ -27,35 +33,56 @@ const CourseComponent = ({ id }) => {
   }, [id]);
 
   return (
-    <div className="bg-blue-500 p-4 flex">
+    <div className={`flex md:flex-row flex-col-reverse ${styles.paddingY}`}>
+      <div
+        className={`red__gradient absolute z-[0] w-[30%] h-[60%] -left-[50%] rounded-full  bottom-40`}
+      />
       {/* navegacion */}
-      <div className="flex flex-col gap-10">
-        <h2 className="bg-pink-500">{id}</h2>
-        {userData.sessions.length > 0 ? (
-          userData.sessions.map((session) => (
-            <div key={session.id}>
-              <h2>{session.title}</h2>
-              <NavLink to={session.title}>
-                <h2>-z</h2>
-              </NavLink>
-            </div>
-          ))
-        ) : (
-          <p>No hay sesiones disponibles</p>
-        )}
+      <div className="max-w-[400px] md:border-r-2  pr-4 mx-auto md:mx-10 flex flex-col ">
+        <h2 className="bg-pink-500 mb-4 mt-10">{id}</h2>
+        <ul>
+          {userData.sessions.length > 0 ? (
+            userData.sessions.map((session) => (
+              <li key={session.id} className=" w-full">
+                <div className="flex items-center ">
+                  {session.id}
+                  <NavLink
+                    onClick={scroltop}
+                    to={session.title}
+                    className={activeLink}
+                  >
+                    <div className="flex items-center  w-full">
+                      <div
+                        className={` ${styles.subtitle} ${
+                          darkMode ? "text-white" : "text-black"
+                        } mr-4 mt-[2px] `}
+                      >
+                        <span>{session.title}</span>
+                      </div>
+                      <div>
+                        <LuFileVideo className="text-2xl hover:scale-105 duration-500 cursor-pointer" />
+                      </div>
+                    </div>
+                  </NavLink>
+                </div>
+              </li>
+            ))
+          ) : (
+            <p>No hay sesiones disponibles</p>
+          )}
+        </ul>
       </div>
       {/* rutas */}
-      <div className="bg-red-500 w-full">
-        <Routes>
-          {userData.sessions.map(({ id, title, link }) => (
-            <Route
-              key={id}
-              path={title}
-              element={<VideoComponent title={title} src={link} />}
-            />
-          ))}
-        </Routes>
-      </div>
+
+      <Routes>
+        {userData.sessions.map(({ id, title, link }) => (
+          <Route
+            key={id}
+            path={title}
+            element={<VideoComponent title={title} src={link} id={id} />}
+          />
+        ))}
+      </Routes>
     </div>
   );
 };
