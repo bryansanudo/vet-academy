@@ -108,10 +108,10 @@ const EditUser = () => {
             </div>
             <div className=" flex items-center justify-center flex-col mt-4">
               <div className={`${styles.adminTitle}`}>{userData.name}</div>
-              <div className="text-lg">{userData.phone}</div>
+              {/* <div className="text-lg">{userData.phone}</div>
               <div className="text-lg">{userData.country}</div>
               <div className="text-lg">{userData.city}</div>
-              <div className="text-lg">{userData.ocupation}</div>
+              <div className="text-lg">{userData.ocupation}</div> */}
             </div>
 
             <div className="shadow-sm shadow-gray-400 p-1 rounded-lg my-4">
@@ -142,7 +142,7 @@ const EditUser = () => {
               value={userData.name}
               onChange={(e) => handleInputChange(e)}
             />
-            <label className={`${styles.adminTitle} w-full text-left`}>
+            {/*  <label className={`${styles.adminTitle} w-full text-left`}>
               Telefono
             </label>
             <input
@@ -185,7 +185,7 @@ const EditUser = () => {
               name="ocupation"
               value={userData.ocupation}
               onChange={(e) => handleInputChange(e)}
-            />
+            /> */}
 
             <label className={`${styles.adminTitle} w-full text-left`}>
               Cursos

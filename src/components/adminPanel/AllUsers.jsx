@@ -91,13 +91,13 @@ const AllUsers = () => {
                       <FaUserDoctor className="text-2xl text-white" />
                     </div>
                   </div>
-                  <div className=" flex items-center justify-center flex-col mt-4">
+                  {/*   <div className=" flex items-center justify-center flex-col mt-4">
                     <div className={`${styles.adminTitle}`}>{name}</div>
                     <div className="text-lg">{phone}</div>
                     <div className="text-lg">{country}</div>
                     <div className="text-lg">{city}</div>
                     <div className="text-lg">{ocupation}</div>
-                  </div>
+                  </div> */}
 
                   <div className="shadow-sm shadow-gray-400 p-1 rounded-lg my-4">
                     <div>

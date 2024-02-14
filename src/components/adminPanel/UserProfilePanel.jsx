@@ -29,11 +29,11 @@ const UserProfilePanel = ({ userData, onReturn }) => {
   const [isLoading, setIsLoading] = useState(false);
   const initialState = {
     name: userData.name,
-    phone: userData.phone,
+    /* phone: userData.phone, */
     email: userData.email,
-    country: userData.country,
+    /*  country: userData.country,
     city: userData.city,
-    ocupation: userData.ocupation,
+    ocupation: userData.ocupation, */
     courses: userData.courses,
   };
 
@@ -126,7 +126,7 @@ const UserProfilePanel = ({ userData, onReturn }) => {
               value={updateUser.name}
               onChange={(e) => handleInputChange(e)}
             />
-            <label className={`${styles.adminTitle} w-full text-left`}>
+            {/*    <label className={`${styles.adminTitle} w-full text-left`}>
               Telefono
             </label>
             <input
@@ -169,7 +169,7 @@ const UserProfilePanel = ({ userData, onReturn }) => {
               name="ocupation"
               value={updateUser.ocupation}
               onChange={(e) => handleInputChange(e)}
-            />
+            /> */}
 
             <label className={`${styles.adminTitle} w-full text-left`}>
               Cursos
