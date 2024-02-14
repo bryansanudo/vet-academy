@@ -7,7 +7,8 @@ import { useEffect } from "react";
 import curso1 from "@/assets/masterclass/gratuito1.png";
 import curso2 from "@/assets/masterclass/gratuito2.png";
 import { Link, Route, Routes } from "react-router-dom";
-import VideoComponent from "@/components/studyPlan/bovinosLayout/VideoComponent";
+import VideoComponent from "@/components/masterclass/VideoComponent";
+import neonatologia from "@/assets/masterclass/neonatologia.png";
 
 const Catalogue = ({ darkMode }) => {
   const masterclass = [
@@ -21,14 +22,20 @@ const Catalogue = ({ darkMode }) => {
       price: "350.000",
     }, */
     {
+      id: 1,
+      img: neonatologia,
+      logo: logo,
+      title: "Neonatología",
+      subtitle: "Descripcion del curso 2",
+      link: "neonatologia",
+    },
+    {
       id: 2,
       img: curso2,
       logo: logo,
       title: "Distemper canino",
       subtitle: "Descripcion del curso 2",
       link: "distemper",
-      price: "350.000",
-      italic: "italic",
     },
   ];
 
@@ -90,9 +97,16 @@ const Catalogue = ({ darkMode }) => {
           <Route
             path="distemper"
             element={
+              <VideoComponent darkMode={darkMode} title="Distemper Canino" />
+            }
+          />
+          <Route
+            path="neonatologia"
+            element={
               <VideoComponent
                 darkMode={darkMode}
-                distemper="Distemper Canino"
+                title="Neonatología"
+                src="aCsYFKCkv0M"
               />
             }
           />
