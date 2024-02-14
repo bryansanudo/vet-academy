@@ -39,7 +39,7 @@ const SearchOrCreate = () => {
   async function fetch(e) {
     e.preventDefault();
     setIsLoading(true);
-    const response = await searchDocumentOrCreateDocument(email);
+    const response = await searchDocumentOrCreateDocument(email.toLowerCase()); // Convertir el correo a minúsculas
     setIsLoading(false);
     setUserData(response);
     setShowForm(false); // Oculta el formulario después de obtener los datos del usuario
@@ -48,6 +48,10 @@ const SearchOrCreate = () => {
   const handleReturnToForm = () => {
     setShowForm(true); // Muestra el formulario nuevamente
     setUserData({}); // Resetea los datos del usuario
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value.toLowerCase()); // Convertir el valor del correo electrónico a minúsculas
   };
 
   return (
@@ -66,7 +70,8 @@ const SearchOrCreate = () => {
                 required
                 placeholder="Correo"
                 className="input  input-primary  w-full"
-                onChange={(e) => setEmail(e.target.value)}
+                value={email}
+                onChange={handleEmailChange} // Utiliza la función para convertir el correo a minúsculas en el evento onChange
               />
 
               <button
