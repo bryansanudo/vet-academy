@@ -9,10 +9,12 @@ const VideoComponent = ({
   src,
   distemper,
   date,
+  professor,
 }) => {
   return (
     <div className=" w-full  ">
       <div className={`${styles.title} mb-10`}> Disponible {date}</div>
+      <div className={`${styles.title} mb-10`}> Dictado Por {professor}</div>
 
       <div className={`${styles.subtitle} `}>
         <span className="text-primary font-bold mr-2">{id}</span>

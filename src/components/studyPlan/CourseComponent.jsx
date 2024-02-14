@@ -39,7 +39,7 @@ const CourseComponent = ({ id, darkMode }) => {
       />
       {/* navegacion */}
       <div className="max-w-[400px] md:border-r-2  pr-4 mx-auto md:mx-10 flex flex-col ">
-        <h2 className="bg-pink-500 mb-4 mt-10">{id}</h2>
+        <h2 className="bg-pink-500 mb-4 ">{id}</h2>
         <ul>
           {userData.sessions.length > 0 ? (
             userData.sessions.map((session) => (
@@ -75,11 +75,19 @@ const CourseComponent = ({ id, darkMode }) => {
       {/* rutas */}
 
       <Routes>
-        {userData.sessions.map(({ id, title, link }) => (
+        {userData.sessions.map(({ id, title, link, professor, date }) => (
           <Route
             key={id}
             path={title}
-            element={<VideoComponent title={title} src={link} id={id} />}
+            element={
+              <VideoComponent
+                title={title}
+                src={link}
+                id={id}
+                professor={professor}
+                date={date}
+              />
+            }
           />
         ))}
       </Routes>
