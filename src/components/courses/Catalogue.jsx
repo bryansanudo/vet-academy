@@ -61,19 +61,19 @@ const Catalogue = ({ darkMode }) => {
       usd: "70",
       sessions: "10",
     },
-  ];
-  const coursesAnchor = [
     {
       id: 2,
       img: curso2,
       logo: logo,
       title: "Oftalmología",
       subtitle: "Descripcion del curso 2",
-      link: "/contact",
+      link: "/oftalmologia",
       cop: "600.000",
       usd: "150",
       sessions: "6",
     },
+  ];
+  const coursesAnchor = [
     {
       id: 3,
       img: curso3,

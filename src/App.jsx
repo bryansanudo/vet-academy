@@ -8,6 +8,7 @@ import Contact from "@/components/Contact";
 import Bovinos from "@/components/courseInscriptions/bovinos/Bovinos";
 import ManejoDelDolor from "@/components/courseInscriptions/manejoDelDolor/ManejoDelDolor";
 import Etologia from "@/components/courseInscriptions/etologia/Etologia";
+import Oftalmologia from "@/components/courseInscriptions/oftalmologia/Oftalmologia";
 import Admin from "@/components/adminPanel/Admin";
 
 import Masterclass from "@/components/masterclass/Masterclass";
@@ -63,6 +64,10 @@ const App = () => {
             <Route
               path="/etologia"
               element={<Etologia darkMode={darkMode} />}
+            />
+            <Route
+              path="/oftalmologia"
+              element={<Oftalmologia darkMode={darkMode} />}
             />
             <Route path="/courses" element={<Courses darkMode={darkMode} />} />
             <Route
