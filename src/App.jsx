@@ -11,6 +11,7 @@ import Etologia from "@/components/courseInscriptions/etologia/Etologia";
 import Oftalmologia from "@/components/courseInscriptions/oftalmologia/Oftalmologia";
 import Endocrinologia from "@/components/courseInscriptions/endocrinologia/Endocrinologia";
 import Oncologia from "@/components/courseInscriptions/oncologia/Oncologia";
+import Hospitalizacion from "@/components/courseInscriptions/hospitalizacion/Hospitalizacion";
 import Admin from "@/components/adminPanel/Admin";
 
 import Masterclass from "@/components/masterclass/Masterclass";
@@ -72,12 +73,16 @@ const App = () => {
               element={<Oftalmologia darkMode={darkMode} />}
             />
             <Route
-              path="/Endocrinologia"
+              path="/endocrinologia"
               element={<Endocrinologia darkMode={darkMode} />}
             />
             <Route
               path="/oncologia"
               element={<Oncologia darkMode={darkMode} />}
+            />
+            <Route
+              path="/hospitalizacion"
+              element={<Hospitalizacion darkMode={darkMode} />}
             />
             <Route path="/courses" element={<Courses darkMode={darkMode} />} />
             <Route
