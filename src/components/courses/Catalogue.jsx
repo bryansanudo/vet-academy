@@ -27,18 +27,31 @@ import curso13 from "@/assets/courses/curso-13.png";
 
 const Catalogue = ({ darkMode }) => {
   const [language, setLanguage] = useState("en");
-  const courses = [
+  const coursesLink = [
+    {
+      id: 1,
+      img: curso6,
+      logo: logo,
+      title: "Bovinos",
+      subtitle: "Descripcion del curso 12",
+      link: "/bovinos",
+      cop: "1.000.000",
+      usd: "300",
+      sessions: "32",
+    },
     {
       id: 13,
       img: curso13,
       logo: logo,
       title: "Manejo del dolor en Caninos y Felinos",
       subtitle: "Descripcion del curso 12",
-      link: "/contact",
+      link: "/manejo-del-dolor",
       cop: "300.000",
       usd: "80",
       sessions: "7",
     },
+  ];
+  const coursesAnchor = [
     {
       id: 1,
       img: curso1,
@@ -189,47 +202,75 @@ const Catalogue = ({ darkMode }) => {
         />
       </div>
       <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1  w-full gap-10 mb-16  ">
-        <div
-          className={`card   shadow-sm ${
-            darkMode ? "bg-dark shadow-white" : "bg-base-100 shadow-gray-300"
-          }`}
-        >
-          <figure className="relative">
-            <img src={curso6} alt="Shoes" />
-            <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-              <Link to="/bovinos">
-                <button className={`${styles.button}`}>Más Información</button>
-              </Link>
-            </div>
-          </figure>
-          <div className="card-body justify-between">
-            <h2 className={`${styles.title}`}>Bovinos</h2>
+        {/* bovinos */}
+        {coursesLink.map(
+          ({
+            id,
+            img,
+            logo,
+            title,
+            subtitle,
+            usd,
+            cop,
+            link,
+            sessions,
+            href,
+          }) => (
+            <div
+              key={id}
+              className={`card   shadow-sm ${
+                darkMode
+                  ? "bg-dark shadow-white"
+                  : "bg-base-100 shadow-gray-300"
+              }`}
+            >
+              <figure className="relative">
+                <img src={img} alt="Shoes" />
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                  <a
+                    href="https://api.whatsapp.com/send?phone=573243291412"
+                    className=""
+                    target="_blank"
+                  >
+                    <Link to={link}>
+                      <button className={`${styles.button} `}>
+                        Más Información
+                      </button>
+                    </Link>
+                  </a>
+                </div>
+              </figure>
+              <div className="card-body justify-between">
+                <h2 className={`${styles.title}`}>{title}</h2>
 
-            <div className="card-actions justify-between ">
-              <div>
-                <span className="text-primary">32 clases</span>
-              </div>
-              <div className="flex justify-between">
-                {language === "en" ? (
-                  <div className="flex  gap-2 items-end justify-center">
-                    <span className="text-primary ">$300</span>
-                    <span className="text-primary ">USD</span>
-                    <img src={enImg} className="h-6" alt="" />
+                <div className="card-actions justify-between ">
+                  <div>
+                    <span className="text-primary">{sessions} clases</span>
                   </div>
-                ) : language === "es" ? (
-                  <div className="flex  gap-2 items-end justify-center">
-                    <span className="text-primary ">$1.000.000 </span>
-                    <span className="text-primary ">COP</span>
-                    <img src={colImg} className="h-6" alt="" />
+                  <div className="flex justify-between">
+                    {language === "en" ? (
+                      <div className="flex  gap-2 items-end justify-center">
+                        <span className="text-primary ">${usd}</span>
+                        <span className="text-primary ">USD</span>
+                        <img src={enImg} className="h-6" alt="" />
+                      </div>
+                    ) : language === "es" ? (
+                      <div className="flex  gap-2 items-end justify-center">
+                        <span className="text-primary ">${cop} </span>
+                        <span className="text-primary ">COP</span>
+                        <img src={colImg} className="h-6" alt="" />
+                      </div>
+                    ) : (
+                      <span className="text-primary">Otro</span>
+                    )}
                   </div>
-                ) : (
-                  <span className="text-primary">Otro</span>
-                )}
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-        {courses.map(
+          )
+        )}
+        {/* los otros */}
+        {coursesAnchor.map(
           ({
             id,
             img,

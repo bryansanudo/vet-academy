@@ -5,7 +5,8 @@ import Home from "@/components/home/Home";
 import About from "@/components/about/About";
 import Courses from "@/components/courses/Courses";
 import Contact from "@/components/Contact";
-import Bovinos from "@/components/bovinos/Bovinos";
+import Bovinos from "@/components/courseInscriptions/bovinos/Bovinos";
+import ManejoDelDolor from "@/components/courseInscriptions/manejoDelDolor/manejoDelDolor";
 import Admin from "@/components/adminPanel/Admin";
 
 import Masterclass from "@/components/masterclass/Masterclass";
@@ -53,6 +54,10 @@ const App = () => {
             />
             <Route path="/about" element={<About darkMode={darkMode} />} />
             <Route path="/bovinos" element={<Bovinos darkMode={darkMode} />} />
+            <Route
+              path="/manejo-del-dolor"
+              element={<ManejoDelDolor darkMode={darkMode} />}
+            />
             <Route path="/courses" element={<Courses darkMode={darkMode} />} />
             <Route
               path="/masterclass/*"

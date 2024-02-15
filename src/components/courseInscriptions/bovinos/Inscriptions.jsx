@@ -1,18 +1,18 @@
 import styles from "@/style";
-import bovinos from "@/assets/courses/curso-6.png";
+
 import CountDown from "@/components/CountDown";
-import { Link } from "react-router-dom";
+import bovinos from "@/assets/courses/curso-6.png";
+
+import Price from "@/components/courseInscriptions/bovinos/Price";
 import { useState } from "react";
-import Price from "@/components/bovinos/Price";
 
-const MobileInscriptions = ({ darkMode }) => {
+const Inscriptions = ({ darkMode }) => {
   const [language, setLanguage] = useState("en");
-
   return (
     <div
       className={`card  ${
         darkMode ? "bg-dark shadow-white" : "bg-base-100 shadow-gray-300"
-      }   shadow-sm mb-20 flex md:hidden `}
+      }   shadow-sm  fixed right-5 top-36 z-30 hidden md:flex  md:w-[20%]      `}
     >
       <figure className="relative">
         <img src={bovinos} className=" object-contain" alt="Shoes" />
@@ -47,7 +47,7 @@ const MobileInscriptions = ({ darkMode }) => {
           className=""
           target="_blank"
         >
-          <button className={`${styles.button} bg-primary my-4`}>
+          <button className={`${styles.button} bg-primary my-4  `}>
             Inscripciones
           </button>
         </a>
@@ -56,4 +56,4 @@ const MobileInscriptions = ({ darkMode }) => {
   );
 };
 
-export default MobileInscriptions;
+export default Inscriptions;

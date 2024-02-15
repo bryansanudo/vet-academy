@@ -8,12 +8,12 @@ const VideoComponent = ({
   id,
   src,
   distemper,
-  date = "Febrero 20",
+  date,
   professor,
 }) => {
   return (
     <div className=" w-full  ">
-      <div className={`${styles.title} mb-10`}> Disponible {date}</div>
+      <div className={`${styles.title} mb-10`}> {date}</div>
       <div className={`${styles.title} mb-10`}> {professor}</div>
 
       <div className={`${styles.subtitle} `}>

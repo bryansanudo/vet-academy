@@ -1,9 +1,9 @@
 import styles from "@/style";
-import bovinos from "@/assets/courses/curso-6.png";
-import CountDown from "@/components/CountDown";
-import { Link } from "react-router-dom";
+
+import curso13 from "@/assets/courses/curso-13.png";
+
 import { useState } from "react";
-import Price from "@/components/bovinos/Price";
+import Price from "@/components/courseInscriptions/bovinos/Price";
 
 const MobileInscriptions = ({ darkMode }) => {
   const [language, setLanguage] = useState("en");
@@ -15,13 +15,9 @@ const MobileInscriptions = ({ darkMode }) => {
       }   shadow-sm mb-20 flex md:hidden `}
     >
       <figure className="relative">
-        <img src={bovinos} className=" object-contain" alt="Shoes" />
+        <img src={curso13} className=" object-contain" alt="Shoes" />
       </figure>
       <div className="flex flex-col items-center rounded-b-2xl justify-center mt-4  ">
-        <div className="flex items-center justify-center  ">
-          <CountDown />
-        </div>
-
         <div className="flex flex-col  items-center justify-center mt-4">
           <Price
             language={language}
@@ -31,11 +27,11 @@ const MobileInscriptions = ({ darkMode }) => {
           <div className="flex justify-between mt-2">
             {language === "en" ? (
               <div className="flex  gap-2 items-end justify-center">
-                <span className="text-primary ">$350</span>
+                <span className="text-primary ">$80</span>
               </div>
             ) : language === "es" ? (
               <div className="flex  gap-2 items-end justify-center">
-                <span className="text-primary ">$1.000.000 </span>
+                <span className="text-primary ">$300.000 </span>
               </div>
             ) : (
               <span className="text-primary">Otro</span>

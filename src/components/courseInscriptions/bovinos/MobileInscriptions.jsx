@@ -1,9 +1,9 @@
 import styles from "@/style";
 import bovinos from "@/assets/courses/curso-6.png";
 import CountDown from "@/components/CountDown";
-import { Link } from "react-router-dom";
+
 import { useState } from "react";
-import Price from "@/components/bovinos/Price";
+import Price from "@/components/courseInscriptions/bovinos/Price";
 
 const MobileInscriptions = ({ darkMode }) => {
   const [language, setLanguage] = useState("en");
