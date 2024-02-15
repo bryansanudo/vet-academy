@@ -12,6 +12,7 @@ import Oftalmologia from "@/components/courseInscriptions/oftalmologia/Oftalmolo
 import Endocrinologia from "@/components/courseInscriptions/endocrinologia/Endocrinologia";
 import Oncologia from "@/components/courseInscriptions/oncologia/Oncologia";
 import Hospitalizacion from "@/components/courseInscriptions/hospitalizacion/Hospitalizacion";
+import Enfermedades from "@/components/courseInscriptions/enfermedades/Enfermedades";
 import Admin from "@/components/adminPanel/Admin";
 
 import Masterclass from "@/components/masterclass/Masterclass";
@@ -83,6 +84,10 @@ const App = () => {
             <Route
               path="/hospitalizacion"
               element={<Hospitalizacion darkMode={darkMode} />}
+            />
+            <Route
+              path="/enfermedades"
+              element={<Enfermedades darkMode={darkMode} />}
             />
             <Route path="/courses" element={<Courses darkMode={darkMode} />} />
             <Route

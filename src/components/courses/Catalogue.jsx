@@ -105,19 +105,19 @@ const Catalogue = ({ darkMode }) => {
       usd: "180",
       sessions: "13",
     },
-  ];
-  const coursesAnchor = [
     {
       id: 7,
       img: curso7,
       logo: logo,
       title: "Enfermedades Infecciosas",
       subtitle: "Descripcion del curso 7",
-      link: "/contact",
+      link: "/enfermedades",
       cop: "700.000",
       usd: "180",
       sessions: "14",
     },
+  ];
+  const coursesAnchor = [
     {
       id: 8,
       img: curso8,
