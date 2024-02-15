@@ -127,19 +127,19 @@ const Catalogue = ({ darkMode }) => {
       usd: "180",
       sessions: "20",
     },
-  ];
-  const coursesAnchor = [
     {
       id: 9,
       img: curso9,
       logo: logo,
       title: "Enfermería",
       subtitle: "Descripcion del curso 9",
-      link: "/contact",
+      link: "/enfermeria",
       cop: "350.000",
       usd: "90",
       sessions: "18",
     },
+  ];
+  const coursesAnchor = [
     {
       id: 11,
       img: curso11,
