@@ -116,19 +116,19 @@ const Catalogue = ({ darkMode }) => {
       usd: "180",
       sessions: "14",
     },
-  ];
-  const coursesAnchor = [
     {
       id: 8,
       img: curso8,
       logo: logo,
       title: "Emergencias Veterinarias",
       subtitle: "Descripcion del curso 8",
-      link: "/contact",
+      link: "/emergencias",
       cop: "700.000",
       usd: "180",
       sessions: "20",
     },
+  ];
+  const coursesAnchor = [
     {
       id: 9,
       img: curso9,
