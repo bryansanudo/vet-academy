@@ -1,6 +1,6 @@
 import styles from "@/style";
 
-import ManejoDelDolorLayout from "@/components/courseInscriptions/manejoDelDolor/manejoDelDolorContent/ManejoDelDolorLayout";
+import ManejoDelDolorLayout from "@/components/courseInscriptions/manejoDelDolor/ManejoDelDolorLayout";
 
 import Inscriptions from "@/components/courseInscriptions/manejoDelDolor/Inscriptions";
 import { useEffect } from "react";

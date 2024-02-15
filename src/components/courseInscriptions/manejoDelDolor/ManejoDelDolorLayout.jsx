@@ -3,7 +3,7 @@ import { layout } from "@/style";
 import { motion } from "framer-motion";
 import { staggerContainer } from "@/utils/motion";
 
-import ManejoDelDolorContent from "@/components/courseInscriptions/manejoDelDolor/manejoDelDolorContent/ManejoDelDolorContent";
+import ManejoDelDolorContent from "@/components/courseInscriptions/manejoDelDolor/ManejoDelDolorContent";
 
 const ManejoDelDolorLayout = ({ darkMode }) => {
   return (

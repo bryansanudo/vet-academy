@@ -5,9 +5,9 @@ import styles from "@/style";
 import Metodology from "@/components/courseInscriptions/bovinos/bovinosContent/Metodology";
 import CourseIncludes from "@/components/courseInscriptions/bovinos/bovinosContent/CourseIncludes";
 import TargetPublic from "@/components/courseInscriptions/bovinos/bovinosContent/TargetPublic";
-
 import MobileInscriptions from "@/components/courseInscriptions/manejoDelDolor/MobileInscriptions";
-import StudyPlan from "@/components/courseInscriptions/manejoDelDolor/manejoDelDolorContent/StudyPlan";
+
+import StudyPlan from "@/components/courseInscriptions/manejoDelDolor/StudyPlan";
 
 const ManejoDelDolorContent = ({ darkMode }) => (
   <section
