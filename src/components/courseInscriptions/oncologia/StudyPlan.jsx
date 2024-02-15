@@ -4,35 +4,31 @@ const StudyPlan = ({ darkMode }) => {
     {
       id: 100,
       motionTime: 1,
-      name: "Endocrinología",
+      name: "Oncología",
       sessions: [
         {
           id: 1,
-          title: "Introducción a la endocrinología",
+          title: "Toma de muestras para citología e histopatología",
         },
         {
           id: 2,
-          title: "Hipotiroidismo",
+          title: "Interpretación de resultados de citología e histoparología",
         },
         {
           id: 3,
-          title: "Hipertiroidismo",
+          title: "Ayudas diagnósticas y estadificación del cáncer",
         },
         {
           id: 4,
-          title: "Hipoadrenocortisismo",
+          title: "Quimioterapia",
         },
         {
           id: 5,
-          title: "Hipercortisolismo",
+          title: "Inmunoterapia",
         },
         {
           id: 6,
-          title: "Diabetes en caninos",
-        },
-        {
-          id: 7,
-          title: "Diabetes en felinos",
+          title: "Cirugía oncológica",
         },
       ],
     },
