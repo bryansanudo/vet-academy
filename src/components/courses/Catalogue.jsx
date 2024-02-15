@@ -29,7 +29,7 @@ const Catalogue = ({ darkMode }) => {
   const [language, setLanguage] = useState("en");
   const coursesLink = [
     {
-      id: 1,
+      id: 6,
       img: curso6,
       logo: logo,
       title: "Bovinos",
@@ -50,19 +50,19 @@ const Catalogue = ({ darkMode }) => {
       usd: "80",
       sessions: "7",
     },
-  ];
-  const coursesAnchor = [
     {
       id: 1,
       img: curso1,
       logo: logo,
       title: "Etología en la clínica diaria",
       subtitle: "Descripcion de Etología en la clínica diaria",
-      link: "/contact",
+      link: "/etologia",
       cop: "250.000",
       usd: "70",
       sessions: "10",
     },
+  ];
+  const coursesAnchor = [
     {
       id: 2,
       img: curso2,
