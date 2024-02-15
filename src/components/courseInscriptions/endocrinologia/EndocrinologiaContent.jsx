@@ -6,11 +6,11 @@ import Metodology from "@/components/courseInscriptions/bovinos/bovinosContent/M
 import CourseIncludes from "@/components/courseInscriptions/bovinos/bovinosContent/CourseIncludes";
 import TargetPublic from "@/components/courseInscriptions/bovinos/bovinosContent/TargetPublic";
 
-import MobileInscriptions from "@/components/courseInscriptions/oftalmologia/MobileInscriptions";
+import MobileInscriptions from "@/components/courseInscriptions/endocrinologia/MobileInscriptions";
 
-import StudyPlan from "@/components/courseInscriptions/oftalmologia/StudyPlan";
+import StudyPlan from "@/components/courseInscriptions/endocrinologia/StudyPlan";
 
-const OftalmologiaContent = ({ darkMode }) => (
+const EndocrinologiaContent = ({ darkMode }) => (
   <section
     id="clients"
     className={`${styles.paddingY} ${styles.flexCenter} flex-col relative `}
@@ -20,7 +20,7 @@ const OftalmologiaContent = ({ darkMode }) => (
     />
 
     <div className="w-full flex justify-between items-center md:flex-row flex-col sm:mb-16 mb-6 relative z-[1]">
-      <h2 className={styles.heading2}>Curso Oftalmología</h2>
+      <h2 className={styles.heading2}>Curso Endocrinología</h2>
       <MobileInscriptions darkMode={darkMode} />
     </div>
 
@@ -36,4 +36,4 @@ const OftalmologiaContent = ({ darkMode }) => (
   </section>
 );
 
-export default OftalmologiaContent;
+export default EndocrinologiaContent;

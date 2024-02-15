@@ -72,19 +72,19 @@ const Catalogue = ({ darkMode }) => {
       usd: "150",
       sessions: "6",
     },
-  ];
-  const coursesAnchor = [
     {
       id: 3,
       img: curso3,
       logo: logo,
       title: "Endocrinología",
       subtitle: "Descripcion del curso 3",
-      link: "/contact",
+      link: "/endocrinologia",
       cop: "600.000",
       usd: "150",
       sessions: "7",
     },
+  ];
+  const coursesAnchor = [
     {
       id: 4,
       img: curso4,
