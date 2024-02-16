@@ -27,26 +27,26 @@ const CourseIncludes = () => {
             después de la última clase).
           </div>
         </div>
-        <div className="flex items-center justify-center  gap-2 py-2">
+        {/* <div className="flex items-center justify-center  gap-2 py-2">
           <GoDot className="text-primary text-3xl" />
           <div className={` w-full `}>
             Quiz para evaluar los conocimientos adquiridos.
           </div>
-        </div>
-        <div className="flex items-center justify-center   gap-2 py-2 ">
+        </div> */}
+        {/* <div className="flex items-center justify-center   gap-2 py-2 ">
           <GoDot className="text-primary text-3xl" />
           <div className={` w-full  `}>Literatura descargable.</div>
-        </div>
+        </div> */}
         <div className="flex items-center justify-center   gap-2 py-2 ">
           <GoDot className="text-primary text-3xl" />
           <div className={` w-full  `}>Certificado digital.</div>
         </div>
-        <div className="flex items-center justify-center   gap-2 py-2 ">
+        {/* <div className="flex items-center justify-center   gap-2 py-2 ">
           <GoDot className="text-primary text-3xl" />
           <div className={` w-full  `}>
             Acumulas puntos que te dan descuento en futuros cursos.
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );
