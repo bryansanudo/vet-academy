@@ -160,6 +160,17 @@ const Catalogue = ({ darkMode }) => {
       usd: "180",
       sessions: "17",
     },
+    {
+      id: 12,
+      img: curso12,
+      logo: logo,
+      title: "Resistencia Microbiana",
+      subtitle: "Descripcion del curso 12",
+      link: "/resistencia",
+      cop: "350.000",
+      usd: "90",
+      sessions: "9",
+    },
   ];
   const coursesAnchor = [
     {
@@ -202,7 +213,6 @@ const Catalogue = ({ darkMode }) => {
         />
       </div>
       <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1  w-full gap-10 mb-16  ">
-        {/* bovinos */}
         {coursesLink.map(
           ({
             id,
@@ -237,71 +247,6 @@ const Catalogue = ({ darkMode }) => {
                         Más Información
                       </button>
                     </Link>
-                  </a>
-                </div>
-              </figure>
-              <div className="card-body justify-between">
-                <h2 className={`${styles.title}`}>{title}</h2>
-
-                <div className="card-actions justify-between ">
-                  <div>
-                    <span className="text-primary">{sessions} clases</span>
-                  </div>
-                  <div className="flex justify-between">
-                    {language === "en" ? (
-                      <div className="flex  gap-2 items-end justify-center">
-                        <span className="text-primary ">${usd}</span>
-                        <span className="text-primary ">USD</span>
-                        <img src={enImg} className="h-6" alt="" />
-                      </div>
-                    ) : language === "es" ? (
-                      <div className="flex  gap-2 items-end justify-center">
-                        <span className="text-primary ">${cop} </span>
-                        <span className="text-primary ">COP</span>
-                        <img src={colImg} className="h-6" alt="" />
-                      </div>
-                    ) : (
-                      <span className="text-primary">Otro</span>
-                    )}
-                  </div>
-                </div>
-              </div>
-            </div>
-          )
-        )}
-        {/* los otros */}
-        {coursesAnchor.map(
-          ({
-            id,
-            img,
-            logo,
-            title,
-            subtitle,
-            usd,
-            cop,
-            link,
-            sessions,
-            href,
-          }) => (
-            <div
-              key={id}
-              className={`card   shadow-sm ${
-                darkMode
-                  ? "bg-dark shadow-white"
-                  : "bg-base-100 shadow-gray-300"
-              }`}
-            >
-              <figure className="relative">
-                <img src={img} alt="Shoes" />
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                  <a
-                    href="https://api.whatsapp.com/send?phone=573243291412"
-                    className=""
-                    target="_blank"
-                  >
-                    <button className={`${styles.button} `}>
-                      Más Información
-                    </button>
                   </a>
                 </div>
               </figure>
