@@ -149,19 +149,19 @@ const Catalogue = ({ darkMode }) => {
       usd: "180",
       sessions: "18",
     },
-  ];
-  const coursesAnchor = [
     {
       id: 10,
       img: curso10,
       logo: logo,
       title: "Mascotas exóticas",
       subtitle: "Descripcion del curso 10",
-      link: "/contact",
+      link: "/mascotas",
       cop: "700.000",
       usd: "180",
       sessions: "17",
     },
+  ];
+  const coursesAnchor = [
     {
       id: 12,
       img: curso12,

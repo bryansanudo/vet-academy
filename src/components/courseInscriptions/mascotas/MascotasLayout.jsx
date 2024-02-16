@@ -3,9 +3,9 @@ import { layout } from "@/style";
 import { motion } from "framer-motion";
 import { staggerContainer } from "@/utils/motion";
 
-import PacienteContent from "@/components/courseInscriptions/paciente/PacienteContent";
+import MascotasContent from "@/components/courseInscriptions/mascotas/MascotasContent";
 
-const PacienteLayout = ({ darkMode }) => {
+const MascotasLayout = ({ darkMode }) => {
   return (
     <motion.section
       variants={staggerContainer()}
@@ -16,10 +16,10 @@ const PacienteLayout = ({ darkMode }) => {
       className="w-full  md:w-[60%] lg:w-[80%] flex flex-col md:flex-row justify-start mr-4 "
     >
       <div className={`${layout.sectionInfo}   items-start `}>
-        <PacienteContent darkMode={darkMode} />
+        <MascotasContent darkMode={darkMode} />
       </div>
     </motion.section>
   );
 };
 
-export default PacienteLayout;
+export default MascotasLayout;

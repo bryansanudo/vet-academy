@@ -1,11 +1,11 @@
 import styles from "@/style";
 
-import PacienteLayout from "@/components/courseInscriptions/paciente/PacienteLayout";
+import MascotasLayout from "@/components/courseInscriptions/mascotas/MascotasLayout";
 
-import Inscriptions from "@/components/courseInscriptions/paciente/Inscriptions";
+import Inscriptions from "@/components/courseInscriptions/mascotas/Inscriptions";
 import { useEffect } from "react";
 
-const Paciente = ({ darkMode }) => {
+const Mascotas = ({ darkMode }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -29,11 +29,11 @@ const Paciente = ({ darkMode }) => {
             pink__gradient absolute z-[0] w-[50%] h-[50%] -left-1/2 bottom-0 rounded-full `}
           />
 
-          <PacienteLayout darkMode={darkMode} />
+          <MascotasLayout darkMode={darkMode} />
         </div>
       </div>
     </>
   );
 };
 
-export default Paciente;
+export default Mascotas;
