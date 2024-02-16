@@ -16,10 +16,10 @@ const CourseIncludes = () => {
             Curso impartido por docentes con gran experiencia y reconocimiento.
           </div>
         </div>
-        <div className="flex items-center justify-center  gap-2 py-2">
+        {/* <div className="flex items-center justify-center  gap-2 py-2">
           <GoDot className="text-primary text-3xl" />
           <div className={` w-full `}>Clases en vivo.</div>
-        </div>
+        </div> */}
         <div className="flex items-center justify-center  gap-2 py-2">
           <GoDot className="text-primary text-3xl" />
           <div className={` w-full `}>
