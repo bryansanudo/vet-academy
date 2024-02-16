@@ -5,7 +5,7 @@ import Home from "@/components/home/Home";
 import About from "@/components/about/About";
 import Courses from "@/components/courses/Courses";
 import Contact from "@/components/Contact";
-import Bovinos from "@/components/courseInscriptions/bovinos/Bovinos";
+import Bovinos from "@/components/bovinos/Bovinos";
 import ManejoDelDolor from "@/components/courseInscriptions/manejoDelDolor/ManejoDelDolor";
 import Etologia from "@/components/courseInscriptions/etologia/Etologia";
 import Oftalmologia from "@/components/courseInscriptions/oftalmologia/Oftalmologia";

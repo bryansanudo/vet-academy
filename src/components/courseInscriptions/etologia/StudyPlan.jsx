@@ -4,7 +4,7 @@ const StudyPlan = ({ darkMode }) => {
     {
       id: 100,
       motionTime: 1,
-      name: "Manejo del dolor en caninos y felinos		",
+      name: "Etología",
       sessions: [
         {
           id: 1,

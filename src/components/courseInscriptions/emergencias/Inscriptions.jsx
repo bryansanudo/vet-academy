@@ -1,6 +1,6 @@
 import styles from "@/style";
 
-import curso7 from "@/assets/courses/curso-7.png";
+import curso8 from "@/assets/courses/curso-8.png";
 
 import Price from "@/components/courseInscriptions/bovinos/Price";
 import { useState } from "react";
@@ -14,7 +14,7 @@ const Inscriptions = ({ darkMode }) => {
       }   shadow-sm  fixed right-5 top-36 z-30 hidden md:flex  md:w-[20%]      `}
     >
       <figure className="relative">
-        <img src={curso7} className=" object-contain" alt="Shoes" />
+        <img src={curso8} className=" object-contain" alt="Shoes" />
       </figure>
       <div className="flex flex-col items-center rounded-b-2xl justify-center mt-4  ">
         <div className="flex flex-col  items-center justify-center mt-4">

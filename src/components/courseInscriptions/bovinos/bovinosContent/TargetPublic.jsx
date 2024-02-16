@@ -10,8 +10,8 @@ const TargetPublic = () => {
       <div className="w-full h-[1px] bg-gray-200" />
       <div className={`${styles.subtitle} my-6`}>
         Médicos veterinarios y estudiantes de medicina veterinaria que estén
-        interesados en profundizar sus conocimientos en temas que se presentan
-        en la clínica diaria de bovinos.
+        interesados en profundizar sus conocimientos en el campo de la salud
+        animal y la medicina veterinaria.
       </div>
     </>
   );

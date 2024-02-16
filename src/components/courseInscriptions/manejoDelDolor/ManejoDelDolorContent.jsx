@@ -19,9 +19,7 @@ const ManejoDelDolorContent = ({ darkMode }) => (
     />
 
     <div className="w-full flex justify-between items-center md:flex-row flex-col sm:mb-16 mb-6 relative z-[1]">
-      <h2 className={styles.heading2}>
-        Curso Manejo del dolor en caninos y felinos
-      </h2>
+      <h2 className={styles.heading2}>Manejo del dolor en caninos y felinos</h2>
       <MobileInscriptions darkMode={darkMode} />
     </div>
 

@@ -1,6 +1,6 @@
 import styles from "@/style";
 
-import curso7 from "@/assets/courses/curso-7.png";
+import curso8 from "@/assets/courses/curso-8.png";
 
 import { useState } from "react";
 import Price from "@/components/courseInscriptions/bovinos/Price";
@@ -15,7 +15,7 @@ const MobileInscriptions = ({ darkMode }) => {
       }   shadow-sm mb-20 flex md:hidden `}
     >
       <figure className="relative">
-        <img src={curso7} className=" object-contain" alt="Shoes" />
+        <img src={curso8} className=" object-contain" alt="Shoes" />
       </figure>
       <div className="flex flex-col items-center rounded-b-2xl justify-center mt-4  ">
         <div className="flex flex-col  items-center justify-center mt-4">

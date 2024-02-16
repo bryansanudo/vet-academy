@@ -20,7 +20,7 @@ const EtologiaContent = ({ darkMode }) => (
     />
 
     <div className="w-full flex justify-between items-center md:flex-row flex-col sm:mb-16 mb-6 relative z-[1]">
-      <h2 className={styles.heading2}>Curso Etología en la clínica diaria</h2>
+      <h2 className={styles.heading2}>Etología en la clínica diaria</h2>
       <MobileInscriptions darkMode={darkMode} />
     </div>
 
