@@ -59,7 +59,10 @@ const ProtectedCourses = ({ darkMode }) => {
   return (
     <>
       {isLoading && <Loader />}
-      <section id="clients" className={`flex flex-col ${styles.paddingY} `}>
+      <section
+        id="clients"
+        className={`flex flex-col h-screen ${styles.paddingY} `}
+      >
         <div
           className={`red__gradient absolute z-[0] w-[30%] h-[60%] -left-[50%] rounded-full  bottom-40`}
         />
@@ -67,7 +70,7 @@ const ProtectedCourses = ({ darkMode }) => {
         {/* content */}
 
         {/*  navegacion */}
-        <div className="  flex justify-between py-1 px-6 border-primary border-[1px] rounded-xl">
+        <div className="  flex flex-col md:flex-row justify-between py-1 px-6 border-primary border-[1px] rounded-xl">
           {userData.courses.map((course, index) => (
             <div key={index} className="">
               <Link to={course}>{course}</Link>
