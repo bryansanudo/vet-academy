@@ -8,6 +8,8 @@ import { Link, Route, Routes } from "react-router-dom";
 import CourseComponent from "@/components/studyPlan/CourseComponent";
 import { useNavigate } from "react-router-dom";
 import Loader from "@/components/Loader";
+import { AiOutlineFolderOpen } from "react-icons/ai";
+
 const ProtectedCourses = ({ darkMode }) => {
   const redirect = useNavigate();
   const userEmail = useSelector(selectEmail);
@@ -70,12 +72,30 @@ const ProtectedCourses = ({ darkMode }) => {
         {/* content */}
 
         {/*  navegacion */}
-        <div className="  flex flex-col md:flex-row justify-between py-1 px-6 border-primary border-[1px] rounded-xl">
-          {userData.courses.map((course, index) => (
-            <div key={index} className="">
-              <Link to={course}>{course}</Link>
-            </div>
-          ))}
+        <div className="flex items-center justify-start">
+          <ul
+            className={` ${
+              darkMode ? "shadow-white" : "shadow-black"
+            } rounded-lg max-w-[400px] w-full shadow-sm`}
+          >
+            <li>
+              <details open>
+                <summary className=" p-3 cursor-pointer">
+                  <span className={`${styles.title}`}>Mi Plan de Estudios</span>
+                </summary>
+                <ul className={`px-4 pb-4 ${styles.subtitle}`}>
+                  {userData.courses.map((course, index) => (
+                    <Link key={index} to={course}>
+                      <li className="flex items-center gap-2 hover:scale-105 duration-500">
+                        <AiOutlineFolderOpen className="text-primary text-2xl" />
+                        {course}
+                      </li>
+                    </Link>
+                  ))}
+                </ul>
+              </details>
+            </li>
+          </ul>
         </div>
         {/* rutas */}
         <div className=" w-full  ">

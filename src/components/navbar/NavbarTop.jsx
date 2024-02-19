@@ -128,7 +128,7 @@ const NavbarTop = ({ displayName }) => {
                   >
                     <div className="flex items-center justify-center gap-2  rounded-lg">
                       <FaUserDoctor className="text-xl " />
-                      <div>Mi Plan de Estudios</div>
+                      <div>Plan de Estudios</div>
                     </div>
                   </div>
                 </NavLink>

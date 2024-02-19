@@ -50,7 +50,7 @@ const CourseComponent = ({ id, darkMode }) => {
                     to={session.title}
                     className={activeLink}
                   >
-                    <div className="flex items-center py-2  w-full">
+                    <div className="flex items-center py-2  w-full hover:scale-105 duration-500">
                       <div
                         className={` ${styles.subtitle} ${
                           darkMode ? "text-white" : "text-black"
@@ -86,6 +86,7 @@ const CourseComponent = ({ id, darkMode }) => {
               <VideoComponent
                 title={title}
                 src={link}
+                darkMode={darkMode}
                 id={id}
                 professor={professor}
                 date={date}

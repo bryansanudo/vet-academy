@@ -24,7 +24,7 @@ const VideoComponent = ({
       <div className="w-full   ">
         <iframe
           className={`${
-            darkMode ? "shadow-white" : "shadow-black"
+            darkMode ? "shadow-black" : "shadow-gray-600"
           } shadow-lg rounded-xl mt-10`}
           width="100%"
           height="400"
