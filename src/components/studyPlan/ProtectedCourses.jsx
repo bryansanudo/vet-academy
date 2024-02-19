@@ -61,7 +61,7 @@ const ProtectedCourses = ({ darkMode }) => {
       {isLoading && <Loader />}
       <section
         id="clients"
-        className={`flex flex-col h-screen ${styles.paddingY} `}
+        className={`flex flex-col min-h-screen ${styles.paddingY} `}
       >
         <div
           className={`red__gradient absolute z-[0] w-[30%] h-[60%] -left-[50%] rounded-full  bottom-40`}
