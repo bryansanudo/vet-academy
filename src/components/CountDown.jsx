@@ -3,7 +3,7 @@ import styles from "@/style";
 
 const CountDown = () => {
   const calculateTimeLeft = () => {
-    const targetDate = new Date("2024-02-19 20:00:00"); // Puedes ajustar esta fecha y hora según tus necesidades
+    const targetDate = new Date("2024-02-20 19:00:00"); // Puedes ajustar esta fecha y hora según tus necesidades
     const difference = targetDate - new Date();
     let days = 0;
     let hours = 0;
