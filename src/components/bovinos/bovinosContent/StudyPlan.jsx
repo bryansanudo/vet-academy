@@ -96,15 +96,15 @@ const StudyPlan = ({ darkMode }) => {
       motionTime: 4,
       name: "Anestesia y Cirugía",
       sessions: [
-        { id: 25, title: "Anestesia.", date: "Mayo 9" },
-        { id: 24, title: "Cirugías frecuentes", date: "Mayo 14" },
+        { id: 21, title: "Anestesia.", date: "Mayo 9" },
+        { id: 22, title: "Cirugías frecuentes", date: "Mayo 14" },
         { id: 23, title: "Cirugías electivas reproductivas", date: "Mayo 15" },
         {
-          id: 22,
+          id: 24,
           title: "Cirugía en patologías reproductivas.",
           date: "Mayo 16",
         },
-        { id: 21, title: "Cirugias digestivas.", date: "Mayo 20" },
+        { id: 25, title: "Cirugias digestivas.", date: "Mayo 20" },
       ],
     },
     {
