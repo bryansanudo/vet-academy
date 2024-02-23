@@ -72,21 +72,21 @@ const ProtectedCourses = ({ darkMode }) => {
         {/* content */}
 
         {/*  navegacion */}
-        <div className="flex items-center justify-start">
+        <div className="flex items-center justify-start ">
           <ul
             className={` ${
               darkMode ? "shadow-white" : "shadow-black"
-            } rounded-lg max-w-[400px] w-full shadow-sm`}
+            } rounded-lg  w-[330px] p-3 shadow-sm `}
           >
             <li>
               <details open>
-                <summary className=" p-3 cursor-pointer">
+                <summary className=" cursor-pointer">
                   <span className={`${styles.title}`}>Mi Plan de Estudios</span>
                 </summary>
-                <ul className={`px-4 pb-4 ${styles.subtitle}`}>
+                <ul className={`  ${styles.subtitle}`}>
                   {userData.courses.map((course, index) => (
                     <Link key={index} to={course}>
-                      <li className="flex items-center gap-2 hover:scale-105 duration-500">
+                      <li className="flex items-start gap-2 hover:scale-105 duration-500">
                         <AiOutlineFolderOpen className="text-primary text-2xl" />
                         {course}
                       </li>
@@ -104,7 +104,7 @@ const ProtectedCourses = ({ darkMode }) => {
               <Route
                 key={index}
                 path={`${course}/*`}
-                element={<CourseComponent id={course} />}
+                element={<CourseComponent id={course} name={userData.name} />}
               />
             ))}
           </Routes>
