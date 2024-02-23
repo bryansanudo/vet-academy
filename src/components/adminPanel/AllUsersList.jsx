@@ -115,7 +115,7 @@ const AllUsersList = () => {
               <select
                 id="filter"
                 name="filter"
-                className="shadow-sm shadow-primary rounded-xl p-2 mt-2"
+                className="shadow-sm shadow-primary rounded-xl p-2 mt-2 outline-none"
                 value={filter}
                 onChange={handleFilterChange}
               >
@@ -139,7 +139,7 @@ const AllUsersList = () => {
                 type="text"
                 id="search"
                 name="search"
-                className="shadow-sm shadow-primary rounded-xl p-2 mt-2"
+                className="shadow-sm shadow-primary rounded-xl p-2 mt-2 outline-none"
                 value={search}
                 onChange={handleSearchChange}
               />
@@ -148,11 +148,11 @@ const AllUsersList = () => {
           <table className="w-full md:mt-[90px] text-sm ">
             <thead className="">
               <tr className="h-20">
-                <th className="shadow-md shadow-primary rounded-xl">#</th>
-                <th className="shadow-md shadow-primary rounded-xl">Correo</th>
-                <th className="shadow-md shadow-primary rounded-xl">Nombre</th>
-                <th className="shadow-md shadow-primary rounded-xl">Cursos</th>
-                <th className="shadow-md shadow-primary rounded-xl">
+                <th className="shadow-sm shadow-primary rounded-xl">#</th>
+                <th className="shadow-sm shadow-primary rounded-xl">Correo</th>
+                <th className="shadow-sm shadow-primary rounded-xl">Nombre</th>
+                <th className="shadow-sm shadow-primary rounded-xl">Cursos</th>
+                <th className="shadow-sm shadow-primary rounded-xl">
                   Acciones
                 </th>
               </tr>
