@@ -47,45 +47,47 @@ const CourseComponent = ({ id, darkMode, name }) => {
         {/* navegacion */}
         <div className=" md:w-[450px] w-[200px] mx-auto   md:mr-16 flex flex-col ">
           {/* archivos */}
-          <div className="flex items-center justify-start mb-6 ">
-            <div
-              className={` ${
-                darkMode ? "shadow-white" : "shadow-black"
-              } rounded-lg  w-full shadow-sm`}
-            >
-              <details>
-                <summary className=" p-3 cursor-pointer">
-                  <div className="flex items-center gap-2 ">
-                    <span className={`${styles.title}`}>Documentos </span>
-                    <GrDocumentPdf className="text-2xl hover:scale-105 duration-500 cursor-pointer text-primary" />
-                  </div>
-                </summary>
-                <ul className={`mx-4 ${styles.subtitle}`}>
-                  {userData.reading.map((read) => (
-                    <li key={read.id} className=" w-full">
-                      <div className="flex flex-col ">
-                        <NavLink to="">
-                          <div className="flex items-center py-2  w-full hover:scale-105 duration-500">
-                            <div
-                              className={` ${styles.subtitle} ${
-                                darkMode ? "text-white" : "text-black"
-                              } mr-4 mt-[2px] `}
-                            >
-                              <span className="mr-2 text-primary font-bold">
-                                {read.id}
-                              </span>
-                              <span>{read.title}</span>
-                            </div>
+
+          <div
+            className={` ${
+              darkMode ? "shadow-white" : "shadow-black"
+            } rounded-lg  w-full shadow-sm mb-6  `}
+          >
+            <details className="">
+              <summary className=" p-3 cursor-pointer text-primary">
+                <div className="flex items-center gap-2 ">
+                  <span className={`${darkMode ? "text-white" : "text-black"}`}>
+                    Documentos{" "}
+                  </span>
+                  <GrDocumentPdf className="text-2xl hover:scale-105 duration-500 cursor-pointer text-primary" />
+                </div>
+              </summary>
+              <ul className={`mx-4 ${styles.subtitle}`}>
+                {userData.reading.map((read) => (
+                  <li key={read.id} className=" w-full">
+                    <div className="flex flex-col ">
+                      <NavLink to="">
+                        <div className="flex items-center py-2  w-full hover:scale-105 duration-500">
+                          <div
+                            className={` ${styles.subtitle} ${
+                              darkMode ? "text-white" : "text-black"
+                            } mr-4 mt-[2px] `}
+                          >
+                            <span className="mr-2 text-primary font-bold">
+                              {read.id}
+                            </span>
+                            <span>{read.title}</span>
                           </div>
-                        </NavLink>
-                        <div className="w-full h-[1px] bg-gray-200" />
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </details>
-            </div>
+                        </div>
+                      </NavLink>
+                      <div className="w-full h-[1px] bg-gray-200" />
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </details>
           </div>
+
           {/*  clases */}
           <div
             className={` ${

@@ -104,7 +104,13 @@ const ProtectedCourses = ({ darkMode }) => {
               <Route
                 key={index}
                 path={`${course}/*`}
-                element={<CourseComponent id={course} name={userData.name} />}
+                element={
+                  <CourseComponent
+                    darkMode={darkMode}
+                    id={course}
+                    name={userData.name}
+                  />
+                }
               />
             ))}
           </Routes>
