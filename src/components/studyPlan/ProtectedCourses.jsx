@@ -11,6 +11,7 @@ import Loader from "@/components/Loader";
 import { AiOutlineFolderOpen } from "react-icons/ai";
 import { GrDocumentPdf } from "react-icons/gr";
 import { FaUserDoctor } from "react-icons/fa6";
+
 const ProtectedCourses = ({ darkMode }) => {
   const redirect = useNavigate();
   const userEmail = useSelector(selectEmail);
@@ -39,6 +40,9 @@ const ProtectedCourses = ({ darkMode }) => {
 
     fetch();
   }, []);
+  const scroll = () => {
+    window.scrollTo(0, 350);
+  };
 
   // Si userData aún no está definido, muestra un mensaje de carga o espera.
   if (!userData) {
@@ -95,7 +99,7 @@ const ProtectedCourses = ({ darkMode }) => {
                 </summary>
                 <ul className={`${styles.subtitle}  mt-2`}>
                   {userData.courses.map((course, index) => (
-                    <Link key={index} to={course}>
+                    <Link key={index} to={course} onClick={scroll}>
                       <li className="flex items-center  gap-2 hover:bg-primary hover:text-white rounded-lg p-2 ">
                         <AiOutlineFolderOpen className="text-3xl " />
                         {course}

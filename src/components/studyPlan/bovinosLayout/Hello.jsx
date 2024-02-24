@@ -4,13 +4,15 @@ import styles from "@/style";
 
 const Hello = ({ name, course }) => {
   return (
-    <div className="bg-red-500 w-full flex flex-col items-center">
-      <div className="">
-        Hola {name},es un placer para todo el equipo de vetAcademy darte la
-        bienvenida al curso de
-        {course}
+    <div className=" w-full flex flex-col items-center">
+      <div
+        className={`font-semibold xs:text-[48px] text-[28px]  xs:leading-[76.8px] leading-[66.8px] w-full dark:text-white text-black`}
+      >
+        Hola {name}, en VetAcademy nos complace darte la bienvenida al curso{" "}
+        {course}.
       </div>
-      <img src={about} alt="" className="rounded-xl w-[50%]" />
+
+      {/* <img src={about} alt="" className="rounded-xl w-[50%]" /> */}
     </div>
   );
 };
