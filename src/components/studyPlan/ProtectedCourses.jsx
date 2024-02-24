@@ -9,7 +9,8 @@ import CourseComponent from "@/components/studyPlan/CourseComponent";
 import { useNavigate } from "react-router-dom";
 import Loader from "@/components/Loader";
 import { AiOutlineFolderOpen } from "react-icons/ai";
-
+import { GrDocumentPdf } from "react-icons/gr";
+import { FaUserDoctor } from "react-icons/fa6";
 const ProtectedCourses = ({ darkMode }) => {
   const redirect = useNavigate();
   const userEmail = useSelector(selectEmail);
@@ -80,14 +81,23 @@ const ProtectedCourses = ({ darkMode }) => {
           >
             <li>
               <details open>
-                <summary className=" cursor-pointer">
-                  <span className={`${styles.title}`}>Mi Plan de Estudios</span>
+                <summary className=" p-3 cursor-pointer text-primary">
+                  <div className="flex items-center gap-2 ">
+                    <span
+                      className={`${darkMode ? "text-white" : "text-black"} ${
+                        styles.title
+                      }`}
+                    >
+                      Mi Plan de Estudios
+                    </span>
+                    <FaUserDoctor className="text-2xl  text-primary" />
+                  </div>
                 </summary>
-                <ul className={`  ${styles.subtitle}`}>
+                <ul className={`${styles.subtitle}  mt-2`}>
                   {userData.courses.map((course, index) => (
                     <Link key={index} to={course}>
-                      <li className="flex items-start gap-2 hover:scale-105 duration-500">
-                        <AiOutlineFolderOpen className="text-primary text-2xl" />
+                      <li className="flex items-center  gap-2 hover:bg-primary hover:text-white rounded-lg p-2 ">
+                        <AiOutlineFolderOpen className="text-3xl " />
                         {course}
                       </li>
                     </Link>
