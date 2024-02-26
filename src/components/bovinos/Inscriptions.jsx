@@ -32,9 +32,9 @@ const Inscriptions = ({ darkMode }) => {
       <div className="flex flex-col items-center rounded-b-2xl justify-center mt-4  ">
         {/*   <h2 className={`${styles.title}`}>Bovinos en la clínica diaria</h2> */}
 
-        <div className="flex items-center justify-center  ">
+        {/*  <div className="flex items-center justify-center  ">
           <CountDown />
-        </div>
+        </div> */}
         {/* <span className={`font-bold mt-4  ${styles.title}`}>
           $1.000.000 COP
         </span> */}
@@ -47,11 +47,11 @@ const Inscriptions = ({ darkMode }) => {
           <div className="flex justify-between mt-2">
             {language === "en" ? (
               <div className="flex  gap-2 items-end justify-center">
-                <span className="text-primary ">$350</span>
+                <span className="text-primary ">$220</span>
               </div>
             ) : language === "es" ? (
               <div className="flex  gap-2 items-end justify-center">
-                <span className="text-primary ">$1.000.000 </span>
+                <span className="text-primary ">$750.000 </span>
               </div>
             ) : (
               <span className="text-primary">Otro</span>

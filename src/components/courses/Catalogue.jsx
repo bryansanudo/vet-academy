@@ -35,8 +35,8 @@ const Catalogue = ({ darkMode }) => {
       title: "Bovinos",
       subtitle: "Descripcion del curso 12",
       link: "/bovinos",
-      cop: "1.000.000",
-      usd: "300",
+      cop: "750.000",
+      usd: "220",
       sessions: "32",
     },
     {
