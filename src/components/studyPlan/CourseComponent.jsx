@@ -18,7 +18,7 @@ const CourseComponent = ({ id, darkMode, name }) => {
     window.scrollTo(0, 0);
   };
   const activeLink = ({ isActive }) =>
-    isActive ? " border border-primary m-4  rounded-xl" : "";
+    isActive ? " border border-primary my-4  rounded-xl" : "";
   const [userData, setUserData] = useState({ sessions: [], reading: [] }); // Inicializa userData con un objeto vacío que tiene un array sessions
 
   const getUserData = async (id) => {
@@ -45,7 +45,7 @@ const CourseComponent = ({ id, darkMode, name }) => {
           className={`red__gradient absolute z-[0] w-[30%] h-[60%] -left-[50%] rounded-full  bottom-40`}
         />
         {/* navegacion */}
-        <div className=" md:w-[450px] w-[200px] mx-auto   md:mr-16 flex flex-col ">
+        <div className=" md:w-[560px] w-full mx-auto   md:mr-16 flex flex-col md:mt-4 mt-12 ">
           {/* archivos */}
 
           <div
@@ -73,7 +73,7 @@ const CourseComponent = ({ id, darkMode, name }) => {
                       <div
                         className={` ${styles.subtitle} ${
                           darkMode ? "text-white" : "text-black"
-                        } hover:bg-primary hover:text-white rounded-lg p-2 cursor-pointer   `}
+                        } hover:bg-primary hover:text-white rounded-xl p-2 cursor-pointer   `}
                       >
                         <span className="mr-2  font-bold">{read.id}</span>
                         <span>{read.title}</span>
@@ -105,31 +105,30 @@ const CourseComponent = ({ id, darkMode, name }) => {
                 </div>
               </summary>
               <ul className="">
-                {userData.sessions.map(
-                  (session) =>
-                    session.link && (
-                      <li key={session.id} className="w-full">
-                        <div className="flex flex-col mx-3">
-                          <NavLink
-                            onClick={scroltop}
-                            to={session.title}
-                            className={activeLink}
+                {
+                  userData.sessions.map((session) => (
+                    /*  session.link && ( */
+                    <li key={session.id} className="w-full">
+                      <div className="flex flex-col mx-3">
+                        <NavLink
+                          onClick={scroltop}
+                          to={session.title}
+                          className={activeLink}
+                        >
+                          <div
+                            className={` ${styles.subtitle} ${
+                              darkMode ? "text-white" : "text-black"
+                            } hover:bg-primary hover:text-white rounded-xl p-2`}
                           >
-                            <div
-                              className={` ${styles.subtitle} ${
-                                darkMode ? "text-white" : "text-black"
-                              } hover:bg-primary hover:text-white rounded-lg p-2`}
-                            >
-                              <span className="mr-2 font-bold">
-                                {session.id}
-                              </span>
-                              <span>{session.title}</span>
-                            </div>
-                          </NavLink>
-                        </div>
-                      </li>
-                    )
-                )}
+                            <span className="mr-2 font-bold">{session.id}</span>
+                            <span>{session.title}</span>
+                          </div>
+                        </NavLink>
+                      </div>
+                    </li>
+                  ))
+                  /* ) */
+                }
               </ul>
             </details>
           </div>

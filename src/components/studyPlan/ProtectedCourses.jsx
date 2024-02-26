@@ -11,6 +11,8 @@ import Loader from "@/components/Loader";
 import { AiOutlineFolderOpen } from "react-icons/ai";
 import { GrDocumentPdf } from "react-icons/gr";
 import { FaUserDoctor } from "react-icons/fa6";
+import { GoDot } from "react-icons/go";
+import Hello from "@/components/studyPlan/bovinosLayout/Hello";
 
 const ProtectedCourses = ({ darkMode }) => {
   const redirect = useNavigate();
@@ -77,11 +79,11 @@ const ProtectedCourses = ({ darkMode }) => {
         {/* content */}
 
         {/*  navegacion */}
-        <div className="flex items-center justify-start ">
+        <div className="flex items-center justify-start gap-16  ">
           <ul
             className={` ${
               darkMode ? "shadow-white" : "shadow-black"
-            } rounded-lg  w-[330px] p-3 shadow-sm `}
+            } rounded-lg  w-[370px] p-3 shadow-sm  `}
           >
             <li>
               <details open>
@@ -94,14 +96,14 @@ const ProtectedCourses = ({ darkMode }) => {
                     >
                       Mi Plan de Estudios
                     </span>
-                    <FaUserDoctor className="text-2xl  text-primary" />
+                    <AiOutlineFolderOpen className="text-2xl  text-primary" />
                   </div>
                 </summary>
                 <ul className={`${styles.subtitle}  mt-2`}>
                   {userData.courses.map((course, index) => (
                     <Link key={index} to={course} onClick={scroll}>
-                      <li className="flex items-center  gap-2 hover:bg-primary hover:text-white rounded-lg p-2 ">
-                        <AiOutlineFolderOpen className="text-3xl " />
+                      <li className="flex items-center  gap-2 hover:bg-primary hover:text-white rounded-xl p-2 ">
+                        <GoDot className="text-2xl " />
                         {course}
                       </li>
                     </Link>
@@ -110,6 +112,10 @@ const ProtectedCourses = ({ darkMode }) => {
               </details>
             </li>
           </ul>
+
+          {/*  <div className="bg-red-500 w-[1000px] ">
+            <Hello name={userData.name} />
+          </div> */}
         </div>
         {/* rutas */}
         <div className=" w-full  ">

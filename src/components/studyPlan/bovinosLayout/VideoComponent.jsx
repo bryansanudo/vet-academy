@@ -12,12 +12,12 @@ const VideoComponent = ({
   professor,
 }) => {
   return (
-    <div className=" w-full  ">
+    <div className=" w-full mt-4  ">
       <div className={`${styles.title} mb-10`}> {date}</div>
       <div className={`${styles.title} mb-10`}> {professor}</div>
 
       <div className={`${styles.subtitle} `}>
-        <span className="text-primary font-bold mr-2">{id}</span>
+        <span className=" font-bold mr-2">{id}</span>
         {title}
       </div>
 
