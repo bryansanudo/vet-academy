@@ -26,11 +26,11 @@ const Inscriptions = ({ darkMode }) => {
           <div className="flex justify-between mt-2">
             {language === "en" ? (
               <div className="flex  gap-2 items-end justify-center">
-                <span className="text-primary ">$100</span>
+                <span className="text-primary ">$70</span>
               </div>
             ) : language === "es" ? (
               <div className="flex  gap-2 items-end justify-center">
-                <span className="text-primary ">$500.000 </span>
+                <span className="text-primary ">$250.000 </span>
               </div>
             ) : (
               <span className="text-primary">Otro</span>
