@@ -24,10 +24,22 @@ import curso10 from "@/assets/courses/curso-10.png";
 import curso11 from "@/assets/courses/curso-11.png";
 import curso12 from "@/assets/courses/curso-12.png";
 import curso13 from "@/assets/courses/curso-13.png";
+import curso14 from "@/assets/courses/curso-14.png";
 
 const Catalogue = ({ darkMode }) => {
   const [language, setLanguage] = useState("en");
   const coursesLink = [
+    {
+      id: 14,
+      img: curso14,
+      logo: logo,
+      title: "Equinos",
+      subtitle: "Descripcion del curso 12",
+      link: "/equinos",
+      cop: "700.000",
+      usd: "180",
+      sessions: "24",
+    },
     {
       id: 6,
       img: curso6,

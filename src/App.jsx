@@ -18,6 +18,7 @@ import Enfermeria from "@/components/courseInscriptions/enfermeria/Enfermeria";
 import Paciente from "@/components/courseInscriptions/paciente/Paciente";
 import Mascotas from "@/components/courseInscriptions/mascotas/Mascotas";
 import Resistencia from "@/components/courseInscriptions/resistencia/Resistencia";
+import Equinos from "@/components/courseInscriptions/equinos/Equinos";
 import Admin from "@/components/adminPanel/Admin";
 
 import Masterclass from "@/components/masterclass/Masterclass";
@@ -114,6 +115,7 @@ const App = () => {
               path="/resistencia"
               element={<Resistencia darkMode={darkMode} />}
             />
+            <Route path="/equinos" element={<Equinos darkMode={darkMode} />} />
             <Route path="/courses" element={<Courses darkMode={darkMode} />} />
             <Route
               path="/masterclass/*"

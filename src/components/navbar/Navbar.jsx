@@ -61,8 +61,8 @@ const Navbar = ({ darkMode, setDarkMode }) => {
     },
     {
       id: 2,
-      name: "Bovinos",
-      link: "/bovinos",
+      name: "Equinos",
+      link: "/equinos",
     },
     {
       id: 3,

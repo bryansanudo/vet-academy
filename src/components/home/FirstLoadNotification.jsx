@@ -1,5 +1,5 @@
 import styles from "@/style";
-import posterBovinos from "@/assets/poster-bovinos.png";
+import posterBovinos from "@/assets/courses/curso-14.png";
 import { FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -26,7 +26,7 @@ const FirstLoadNotification = ({ setB }) => {
             className="w-[100%] max-h-[80vh] rounded-2xl"
           />
           <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-            <Link to="/bovinos">
+            <Link to="/equinos">
               <button
                 onClick={closeModal}
                 className={`${styles.button} bg-primary `}
